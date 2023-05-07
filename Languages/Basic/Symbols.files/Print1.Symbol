@@ -1,0 +1,17 @@
+/name=Print
+/Author=SEH
+/version=1
+/filename = Print1.symbol
+/stroke=ABCDEFGHIJKLMNOP
+/programtext= [CameFrom] : Print TextString :Goto [GotoNextLine.Pathname]
+/syntax= Print [TextString.name]
+/notes=none
+/opcode=
+/line = -250, 250, 250, 250, Cyan
+/line = -250, -250, -250, 250, Crimson
+/line = 250, -250, -250, -250, Cornsilk
+/line = 250, 250, 250, -250, CornflowerBlue
+/line = -250, 250, 250, -250, Coral
+/line = 250, 250, -250, -250, Chocolate
+/point = -50,  250,  Output,  Logic,  GotoNextLine
+/point=-250,  0,  input,  string,  TextString

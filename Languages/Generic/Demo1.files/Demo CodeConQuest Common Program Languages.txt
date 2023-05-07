@@ -1,0 +1,171 @@
+/Comment= https://www.codeconquest.com/what-is-coding/common-programming-languages/
+
+
+/Comment= Code Conquest
+/Comment= There are thousands of coding languages in existence today.
+/Comment= This page is here to give you some background info on 12 of the most common coding languages in use today.
+/Comment= JavaScript
+/Comment= JavaScript is a very prominent coding language for websites that first appeared in 1995. It is a high-level interpreted scripting language. Its main platform is web browsers, but it’s also gained recent popularity on web servers through Node.js.
+
+function myFunc(a, b) {
+    return a * b;
+}
+document.getElementById('demo').innerHTML = myFunc(4, 3);
+
+/Comment= JavaScript example code courtesy of W3Schools
+
+/Comment= JavaScript is widely used to add functionality and interactivity to web pages. All of us rely on it every day – try turning off JavaScript in your browser settings and see how much functionality your favorite websites lose!
+
+/Comment= Although JavaScript was dismissed as a ‘toy’ coding language in its early days, it has since gained respect from coders. Its popularity has grown to the point where it’s now the most used coding language in the world.
+
+/Comment= Python
+
+/Comment= Python is a high-level interpreted coding language that runs on a range of different platforms. It was created in 1991 by Guido van Rossum. Python was designed to emphasize code readability, with clear and expressive syntax. A lot of people choose to learn Python first for this very reason.
+
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+    print w, len(w)
+
+/Comment= Python example code courtesy of Python.org
+
+/Comment= Python is a multi-purpose language, mainly used to write scientific and numerical software. It’s also one of the lesser used coding languages on the web, with some big players using it – most notably Google.
+
+/Comment= SQL
+
+/Comment= SQL stands for Structured Query Language. It’s been used to interact with databases since 1974. SQL code is often written as standalone lines known as queries. Each query is designed to either create, read, update or delete data in a database.
+
+SELECT Country FROM Customers WHERE Country <> 'USA'
+
+/Comment= SQL example code courtesy of W3Schools
+
+/Comment= SQL is a vital part of software such as WordPress and MediaWiki. This website runs on WordPress and it relies on SQL to create, read, update and delete content like articles, images and metadata. Similarly, MediaWiki powers Wikipedia and relies on SQL to store all its articles and handle all its edits.
+/Comment= PHP
+
+/Comment= PHP is a coding language for producing dynamic web pages. It was created by Rasmus Lerdorf in 1995. It has the abilities to send SQL queries and to output HTML, and can be described as the link between the database that stores all the content on a site, and the HTML that lets you view it.
+
+/Comment= PHP’s platform is the web server. It’s a high-level interpreted scripting language, but it has the lowest-level access of any web server language.
+
+<?php function add($x, $y) {
+    $total = $x + $y;
+    return $total;
+}
+echo "1 + 16 = " . add(1, 16);
+
+/Comment= PHP example code courtesy of W3Schools
+
+/Comment= PHP is a bit different to JavaScript. PHP scripts are executed by the server that hosts a website, while JavaScripts are executed by the browser viewing a website. While JavaScript focuses on effects and interaction, PHP’s main jobs are to send SQL queries to the MySQL database program, and to receive data from the database to output as HTML.
+
+/Comment= Although some modern coders have neglected it in recent years, PHP remains hugely popular as a web coding language. It’s used by the likes of Facebook, WordPress and Wikipedia.
+
+/Comment= Ruby was created in 1995 by Yukihiro Matsumoto. It was designed to be fun and productive to write, with the needs of coders – rather than computers – in mind. Ruby is a high-level interpreted language that’s gained popularity on the web through the Ruby on Rails framework.
+
+cities = %w[London Oslo Paris Amsterdam Berlin]
+visited = %w[Berlin Oslo]
+puts "I still need to visit:", cities - visited
+
+/Comment= Ruby example code courtesy of Ruby-lang.org
+
+/Comment= C
+
+/Comment= Arguably, the daddy of modern coding languages is C. C has been around since 1972, and although it’s not easy to learn, it’s extremely powerful. C is a compiled language and the lowest-level of all the languages listed here. It’s readily built into nearly every operating system.
+
+typedef struct Bert Bert;
+typedef struct Wilma Wilma;
+struct Bert {
+    Wilma *wilma;
+};
+struct Wilma {
+    Bert *bert;
+};
+
+/Comment= C example code courtesy of Wikipedia
+
+/Comment= C is used in a range of areas and platforms, including Microsoft Windows and much of its software. C is truly an all-rounder coding language.
+
+/Comment= C++
+
+/Comment= C++ is an enhanced version of C that adds the object-oriented paradigm. It was created by Bjarne Stroustrup in 1979. C++ is a compiled language and runs on multiple hardware platforms.
+
+#include 
+using namespace std;
+int main () {
+  cout << "Hello World!";
+  return 0;
+}
+
+/Comment= C++ example code courtesy of CPlusPlus.com
+
+/Comment= Most computer games are written in C++. The language also accompanies C in the source code of Microsoft Windows and accompanying software.
+
+/Comment= C Sharp
+
+/Comment= C Sharp, like C++, has its roots in C. Also written C#, the language was developed by Microsoft in 2000 and is used extensively in its .NET framework. C Sharp is a compiled high-level language and runs on Windows only.
+
+class Foo {
+    public int Value;
+    public static explicit operator Foo(int value) {
+        return new Foo(value);
+    }
+}
+Foo foo = (Foo)2;
+
+/Comment= C Sharp example code courtesy of Wikipedia
+
+/Comment= C Sharp is used for desktop software on Windows platforms, and also forms the basis of Microsoft's ASP.NET web development framework.
+
+/Comment= Visual Basic
+
+/Comment= Visual Basic is another Microsoft language, developed in 1991. It is an event-driven language, meaning it's designed to respond to user events such as mouse clicks or key presses. Visual Basic is a high-level compiled language and its platform is Windows.
+
+Private Sub Form_Load()
+    MsgBox "Hello, World!"
+End Sub
+
+/Comment= Visual Basic example code courtesy of Wikipedia
+
+/Comment= Visual Basic is used as an easy way to develop graphical user interface programs for Windows, but ultimately it's limited and would not be considered a 'serious' coding language.
+
+/Comment= Java
+
+/Comment= Java is a ubiquitous coding language designed for cross-platform compatibility. It was developed by Oracle Corporation and first appeared in 1995. Java is a high-level compiled language and is designed to run on just about any operating system.
+
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+/Comment= Java example code courtesy of Wikipedia
+
+/Comment= Java is seen all over the coding world, from the web to desktops. These days it's used to create Android apps. Java is also the featured language in most computer science courses, and as a result many coders have some experience in this language.
+
+
+/Comment= Objective-C
+
+/Comment= Objective-C, like C++ and C#, was derived from the C language. It was developed by Apple in 1983 and is designed to be used in conjunction with the company's Cocoa framework. Objective-C is a high-level compiled language and runs only on Apple operating systems.
+
+- (int)method:(int)i {
+    return [self square_root:i];
+}
+
+/Comment= Objective-C example code courtesy of Wikipedia
+
+/Comment= Objective-C is unsurprisingly Apple's language of choice. The language is used to create software for iPhone, iPad and Mac OS X.
+
+/Comment= Perl
+
+/Comment= Finally, Perl is a web language that was developed by Larry Wall in 1987. It's a powerful and practical language that was originally designed for text processing. Perl has been called 'the duct tape that holds the Internet together', referring to its power and perceived ugliness.
+
+/Comment= Perl is a high-level interpreted language and has been used extensively on the web.
+
+while (<>) {
+    chomp;
+    if (s/$//) {
+        $_ .= <>;
+        redo unless eof();
+    }
+}
+
+/Comment= Perl example code courtesy of Perl.org
+
+/Comment= Perl was once a major web coding language, but newer technologies like Rails tend to replace it in more recent times. These days, Perl mostly does what it has always done best - text processing.

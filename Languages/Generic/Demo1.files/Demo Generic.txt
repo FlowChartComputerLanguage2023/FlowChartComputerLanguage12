@@ -1,0 +1,2585 @@
+10 REM INSTRUCTIONS FOR "SUPER STARTREK"  MAR 5, 1978
+20 FOR I=1 TO 12:PRINT:NEXT I
+25 PRINT CHR$(26)
+30 PRINT TAB(10);"*************************************"
+40 PRINT TAB(10);"*                                   *"
+50 PRINT TAB(10);"*                                   *"
+60 PRINT TAB(10);"*      * * SUPER STAR TREK * *      *"
+70 PRINT TAB(10);"*                                   *"
+80 PRINT TAB(10);"*                                   *"
+90 PRINT TAB(10);"*************************************"
+100 FOR I=1 TO 8:PRINT:NEXT I
+110 INPUT "DO YOU NEED INSTRUCTIONS (Y/N)";K$:IF K$="N" THEN 1210
+120 PRINT CHR$(26)
+130 PRINT "NOTE:  YOU MUST BE RUNNING 40K CP/M TO RUN STARTREK."
+140 PRINT "       THIS MEANS THAT BASIC MUST HAVE ABOUT 18K OF FREE MEMORY."
+150 PRINT
+160 PRINT"   INSTRUCTIONS FOR 'SUPER STAR TREK'"
+170 PRINT
+180 PRINT"1. WHEN YOU SEE \COMMAND ?\ PRINTED, ENTER ONE OF THE LEGAL"
+190 PRINT"     COMMANDS (NAV,SRS,LRS,PHA,TOR,SHE,DAM,COM, OR XXX)."
+200 PRINT"2. IF YOU SHOULD TYPE IN AN ILLEGAL COMMAND, YOU'LL GET A SHORT" 
+210 PRINT"     LIST OF THE LEGAL COMMANDS PRINTED OUT."
+220 PRINT"3. SOME COMMANDS REQUIRE YOU TO ENTER DATA (FOR EXAMPLE, THE"
+230 PRINT"     'NAV' COMMAND COMES BACK WITH 'COURSE (1-9) ?'.)  IF YOU"
+240 PRINT"     TYPE IN ILLEGAL DATA (LIKE NEGATIVE NUMBERS), THAT COMMAND"
+250 PRINT"     WILL BE ABORTED"
+260 PRINT
+270 PRINT"     THE GALAXY IS DIVIDED INTO AN 8 X 8 QUADRANT GRID,"
+280 PRINT"AND EACH QUADRANT IS FURTHER DIVIDED INTO AN 8 X 8 SECTOR GRID."
+290 PRINT
+300 PRINT"     YOU WILL BE ASSIGNED A STARTING POINT SOMEWHERE IN THE"
+310 PRINT"GALAXY TO BEGIN A TOUR OF DUTY AS COMMANDER OF THE STARSHIP"
+320 PRINT"\ENTERPRISE\; YOUR MISSION: TO SEEK AND DESTROY THE FLEET OF"
+330 PRINT"KLINGON WARWHIPS WHICH ARE MENACING THE UNITED FEDERATION OF"
+340 PRINT"PLANETS."
+350 PRINT
+352 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26)
+360 PRINT"     YOU HAVE THE FOLLOWING COMMANDS AVAILABLE TO YOU AS CAPTAIN"
+370 PRINT"OF THE STARSHIP ENTERPRISE:"
+380 PRINT
+390 PRINT"\NAV\ COMMAND = WARP ENGINE CONTROL --"
+400 PRINT"     COURSE IS IN A CIRCULAR NUMERICAL      4  3  2"
+410 PRINT"     VECTOR ARRANGEMENT AS SHOWN             . . ."
+420 PRINT"     INTEGER AND REAL VALUES MAY BE           ..."
+430 PRINT"     USED.  (THUS COURSE 1.5 IS HALF-     5 ---*--- 1"
+440 PRINT"     WAY BETWEEN 1 AND 2                      ..."
+450 PRINT"                                             . . ."
+460 PRINT"     VALUES MAY APPROACH 9.0, WHICH         6  7  8"
+470 PRINT"     ITSELF IS EQUIVALENT TO 1.0"
+480 PRINT"                                            COURSE"
+490 PRINT"     ONE WARP FACTOR IS THE SIZE OF "
+500 PRINT"     ONE QUADTANT.  THEREFORE, TO GET"
+510 PRINT"     FROM QUADRANT 6,5 TO 5,5, YOU WOULD"
+520 PRINT"     USE COURSE 3, WARP FACTOR 1."
+530 PRINT:PRINT
+531 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26)
+540 PRINT"\SRS\ COMMAND = SHORT RANGE SENSOR SCAN"
+550 PRINT"     SHOWS YOU A SCAN OF YOUR PRESENT QUADRANT."
+560 PRINT
+570 PRINT"     SYMBOLOGY ON YOUR SENSOR SCREEN IS AS FOLLOWS:"
+580 PRINT"        <*> = YOUR STARSHIP'S POSITION"
+590 PRINT"        +K+ = KLINGON BATTLE CRUISER"
+600 PRINT"        >!< = FEDERATION STARBASE (REFUEL/REPAIR/RE-ARM HERE!)"
+610 PRINT"         *  = STAR"
+620 PRINT
+630 PRINT"     A CONDENSED 'STATUS REPORT' WILL ALSO BE PRESENTED."
+640 PRINT
+650 PRINT"\LRS\ COMMAND = LONG RANGE SENSOR SCAN"
+660 PRINT"     SHOWS CONDITIONS IN SPACE FOR ONE QUADRANT ON EACH SIDE"
+670 PRINT"     OF THE ENTERPRISE (WHICH IS IN THE MIDDLE OF THE SCAN)"
+680 PRINT"     THE SCAN IS CODED IN THE FORM \###\, WHERE TH UNITS DIGIT"
+690 PRINT"     IS THE NUMBER OF STARS, THE TENS DIGIT IS THE NUMBER OF"
+700 PRINT"     STARBASES, AND THE HUNDRESDS DIGIT IS THE NUMBER OF"
+710 PRINT"     KLINGONS."
+720 PRINT
+730 PRINT"     EXAMPLE - 207 = 2 KLINGONS, NO STARBASES, & 7 STARS."
+740 PRINT:PRINT
+741 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26)
+750 PRINT"\PHA\ COMMAND = PHASER CONTROL."
+760 PRINT"     ALLOWS YOU TO DESTROY THE KLINGON BATTLE CRUISERS BY "
+770 PRINT"     ZAPPING THEM WITH SUITABLY LARGE UNITS OF ENERGY TO"
+780 PRINT"     DEPLETE THEIR SHIELD POWER.  (REMEMBER, KLINGONS HAVE"
+790 PRINT"     PHASERS TOO!)"
+800 PRINT
+810 PRINT"\TOR\ COMMAND = PHOTON TORPEDO CONTROL"
+820 PRINT"     TORPEDO COURSE IS THE SAME AS USED IN WARP ENGINE CONTROL"
+830 PRINT"     IF YOU HIT THE KLINGON VESSEL, HE IS DESTROYED AND"
+840 PRINT"     CANNOT FIRE BACK AT YOU.  IF YOU MISS, YOU ARE SUBJECT TO"
+850 PRINT"     HIS PHASER FIRE.  IN EITHER CASE, YOU ARE ALSO SUBJECT TO "
+860 PRINT"     THE PHASER FIRE OF ALL OTHER KLINGONS IN THE QUADRANT."
+870 PRINT
+880 PRINT"     THE LIBRARY-COMPUTER (\COM\ COMMAND) HAS AN OPTION TO "
+890 PRINT"     COMPUTE TORPEDO TRAJECTORY FOR YOU (OPTION 2)"
+900 PRINT
+910 PRINT"\SHE\ COMMAND = SHIELD CONTROL"
+920 PRINT"     DEFINES THE NUMBER OF ENERGY UNITS TO BE ASSIGNED TO THE"
+930 PRINT"     SHIELDS.  ENERGY IS TAKEN FROM TOTAL SHIP'S ENERGY.  NOTE"
+940 PRINT"     THAT THE STATUS DISPLAY TOTAL ENERGY INCLUDES SHIELD ENERGY"
+950 PRINT
+951 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26)
+960 PRINT"\DAM\ COMMAND = DAMMAGE CONTROL REPORT"
+970 PRINT"     GIVES THE STATE OF REPAIR OF ALL DEVICES.  WHERE A NEGATIVE"
+980 PRINT"     'STATE OF REPAIR' SHOWS THAT THE DEVICE IS TEMPORARILY"
+990 PRINT"     DAMAGED."
+1000 PRINT
+1010 PRINT"\COM\ COMMAND = LIBRARY-COMPUTER"
+1020 PRINT"     THE LIBRARY-COMPUTER CONTAINS SIX OPTIONS:"
+1030 PRINT"     OPTION 0 = CUMULATIVE GALACTIC RECORD"
+1040 PRINT"        THIS OPTION SHOWES COMPUTER MEMORY OF THE RESULTS OF ALL"
+1050 PRINT"        PREVIOUS SHORT AND LONG RANGE SENSOR SCANS"
+1060 PRINT"     OPTION 1 = STATUS REPORT"
+1070 PRINT"        THIS OPTION SHOWS THE NUMBER OF KLINGONS, STARDATES,"
+1080 PRINT"        AND STARBASES REMAINING IN THE GAME."
+1090 PRINT"     OPTION 2 = PHOTON TORPEDO DATA"
+1100 PRINT"        WHICH GIVES DIRECTIONS AND DISTANCE FROM THE ENTERPRISE"
+1110 PRINT"        TO ALL KLINGONS IN YOUR QUADRANT"
+1115 PRINT:PRINT
+1116 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26)
+1117 PRINT"\COM\ COMMAND = LIBRARY-COMPUTER"
+1118 PRINT
+1120 PRINT"     OPTION 3 = STARBASE NAV DATA"
+1130 PRINT"        THIS OPTION GIVES DIRECTION AND DISTANCE TO ANY "
+1140 PRINT"        STARBASE WITHIN YOUR QUADRANT"
+1150 PRINT"     OPTION 4 = DIRECTION/DISTANCE CALCULATOR"
+1160 PRINT"        THIS OPTION ALLOWS YOU TO ENTER COORDINATES FOR"
+1170 PRINT"        DIRECTION/DISTANCE CALCULATIONS"
+1180 PRINT"     OPTION 5 = CALACTIC /REGION NAME/ MAP"
+1190 PRINT"        THIS OPTION PRINTS THE NAMES OF THE SIXTEEN MAJOR "
+1200 PRINT"        GALACTIC REGIONS REFERRED TO IN THE GAME."
+1210 PRINT:PRINT:PRINT
+1220 PRINT "...CHAINING TO STARTREK..."
+1230 LOAD "STARTREK.BAS",R
+1240 END
+
+
+10 REM SUPER STARTREK - MAY 16,1978 - REQUIRES 24K MEMORY (AT LEAST)
+30 REM
+40 REM ****        **** STAR TREK ****      ****
+50 REM **** SIMULATION OF A MISSION OF THE STARSHIP ENTERPRISE,
+60 REM **** AS SEEN ON THE STAR TREK TV SHOW.
+70 REM **** ORIGINAL PROGRAM BY MIKE MAYFIELD, MODIFIED VERSION
+80 REM **** PUBLISHED IN DEC'S "101 BASIC GAMES", BY DAVE AHL.
+90 REM **** MODIFICATIONS TO THE LATTER (PLUS DEBUGGING) BY BOB
+100 REM *** LEEDOM - APRIL & DECEMBER 1974,
+110 REM *** WITH A LITTLE HELP FROM HIS FRIENDS . . .
+120 REM *** COMMENTS, EPHITETS, AND SUGGESTIONS SOLICITED --
+130 REM *** SEND TO: R.C. LEEDOM
+140 REM ***          WESTINGHOSE DEFENSE & ELECTRONICS SYSTEMS CNIR
+150 REM ***          BOX 746, M.S. 338
+160 REM ***          BALTIMORE, MD 21203
+170 REM ***
+180 REM *** CONVERTED TO MICROSOFT 8 K BASIC 3/16/78 BY JOHN BORDERS
+190 REM *** LINE NUMBERS FROm VERSION TREK7 OF 1/12/75 PRESERVED AS
+200 REM *** MUCH AS POSSIBLE WHILE USING MULTIPLE STATEMENTS PER LINE
+205 WIDTH 80
+210 PRINT CHR$(26)
+220 FOR XX=1 TO 6:PRINT:NEXT:PRINT TAB(20);"THE USS ENTERPRISE --- NCC-1701":PRINT:FOR YY=1 TO 40 STEP 2
+221 PRINT TAB(YY);"                  ,------*------,"
+222 PRINT TAB(YY);"  ,-------------   '---  ------'"
+223 PRINT TAB(YY);"   '-------- --'      / /"
+224 PRINT TAB(YY);"       ,---' '-------/ /--,"
+225 PRINT TAB(YY);"        '----------------'"
+226 PRINT:PRINT:FOR ZZ=1 TO 7:PRINT CHR$(11);:NEXT ZZ:NEXT YY
+227 PRINT:PRINT:PRINT:PRINT:PRINT
+260 CLEAR 600
+270 Z$="                         "
+330 DIM G(8,8),C(9,2),K(3,3),N(3),Z(8,8),D(8)
+370 T=INT(RND(1)*20+20)*100:T0=T:T9=25+INT(RND(1)*10):D0=0:E=3000:E0=E
+440 P=10:P0=P:S9=200:S=0:B9=0:K9=0:X$="":X0$=" IS "
+470 DEF FND(D)=SQR((K(I,1)-S1)^2+(K(I,2)-S2)^2)
+475 DEF FNR(R)=INT(RND(R)*7.98+1.01)
+490 Q1=FNR(1):Q2=FNR(1):S1=FNR(1):S2=FNR(1)
+530 FOR I=1 TO 9:C(I,1)=0:C(I,2)=0:NEXT I
+540 C(3,1)=-1:C(2,1)=-1:C(4,1)=-1:C(4,2)=-1:C(5,2)=-1:C(6,2)=-1
+600 C(1,2)=1:C(2,2)=1:C(6,1)=1:C(7,1)=1:C(8,1)=1:C(8,2)=1:C(9,2)=1
+670 FOR I=1 TO 8:D(I)=0:NEXT I
+710 A1$="NAVSRSLRSPHATORSHEDAMCOMXXX"
+820 FOR I=1 TO 8:FOR J=1 TO 8:K3=0:Z(I,J)=0:R1=RND(1)
+850 IF R1>.98 THEN K3=3:K9=K9+3:GOTO 980
+860 IF R1>.95 THEN K3=2:K9=K9+2:GOTO 980
+870 IF R1>.8 THEN K3=1:K9=K9+1
+980 B3=0:IF RND(1)>.96 THEN B3=1:B9=B9+1
+1040 G(I,J)=K3*100+B3*10+FNR(1):NEXT J:NEXT I:IF K9>T9 THEN T9=K9+1
+1100 IF B9<>0 THEN 1200
+1150 IF G(Q1,Q2)<200 THEN G(Q1,Q2)=G(Q1,Q2)+100:K9=K9+1
+1160 B9=1:G(Q1,Q2)=G(Q1,Q2)+10:Q1=FNR(1):Q2=FNR(1)
+1200 K7=K9:IF B9<>1 THEN X$="S":X0$=" ARE "
+1230 PRINT"YOUR ORDERS ARE AS FOLLOWS:"
+1235 PRINT "--------------------------"
+1240 PRINT"   DESTROY THE";K9;"KLINGON WARSHIPS WHICH HAVE INVADED"
+1250 PRINT"   THE GALAXY BEFORE THEY CAN ATTACK FEDERATION HEADQUARTERS"
+1260 PRINT"   ON STARDATE";T0+T9;CHR$(8);". THIS GIVES YOU";T9;"DAYS. THERE";X0$
+1270 PRINT"  ";B9;"STARBASE";X$;" IN THE GALAXY FOR RESUPPLYING YOUR SHIP."
+1280 PRINT:PRINT "ARE YOU READY TO ACCEPT COMMAND ('N' FOR INSTRUCTIONS)";
+1300 INPUT I5$:IF LEFT$(I5$,1)="N" OR LEFT$(I5$,1)="n" THEN RUN "TREKINST" ELSE IF LEFT$(I5$,1)="Y" OR LEFT$(I5$,1)="y" THEN 1310 ELSE 1280
+1310 PRINT CHR$(26)
+1320 Z4=Q1:Z5=Q2:K3=0:B3=0:S3=0:G5=0:D4=.5*RND(1):Z(Q1,Q2)=G(Q1,Q2)
+1390 IF Q1<1 OR Q1>8 OR Q2<1 OR Q2>8 THEN 1600
+1430 GOSUB 9030:PRINT:IF T0<>T THEN 1490
+1460 PRINT"YOUR MISSION BEGINS WITH YOUR STARSHIP LOCATED"
+1470 PRINT"IN THE GALACTIC QUADRANT, '";G2$;"'.":GOTO 1500
+1490 PRINT"NOW ENTERING ";G2$;" QUADRANT . . ."
+1500 PRINT:K3=INT(G(Q1,Q2)*.01):B3=INT(G(Q1,Q2)*.1)-10*K3
+1540 S3=G(Q1,Q2)-100*K3-10*B3:IF K3=0 THEN 1590
+1560 PRINT TAB(3);CHR$(22);"  COMBAT AREA      CONDITION RED  ";CHR$(22):IF S>200 THEN PRINT:GOTO 1590
+1580 PRINT TAB(3);CHR$(22);"      SHIELDS DANGEROUSLY LOW     ";CHR$(22):PRINT
+1590 FOR I=1 TO 3:K(I,1)=0:K(I,2)=0:NEXT I
+1600 FOR I=1 TO 3:K(I,3)=0:NEXT I:Q$=Z$+Z$+Z$+Z$+Z$+Z$+Z$+LEFT$(Z$,17)
+1680 A$="<E>":Z1=S1:Z2=S2:GOSUB 8670:IF K3<1 THEN 1820
+1720 FOR I=1 TO K3:GOSUB 8590:A$="+K+":Z1=R1:Z2=R2
+1780 GOSUB 8670:K(I,1)=R1:K(I,2)=R2:K(I,3)=S9*(.5+RND(1)):NEXT I
+1820 IF B3<1 THEN 1910
+1880 GOSUB 8590:A$=">B<":Z1=R1:B4=R1:Z2=R2:B5=R2:GOSUB 8670
+1910 FOR I=1 TO S3:GOSUB 8590:A$=" * ":Z1=R1:Z2=R2:GOSUB 8670:NEXT I
+1980 GOSUB 6430
+1990 IF S+E>10 THEN IF E>10 OR D(7)=0 THEN 2060
+2020 PRINT:PRINT TAB(10);CHR$(22);"** FATAL ERROR **";CHR$(22):PRINT"YOU'VE JUST STRANDED YOUR SHIP IN SPACE."
+2030 PRINT"YOU HAVE INSUFFICIENT MANEUVERING ENERGY,"
+2040 PRINT"AND SHIELD CONTROL IS PRESENTLY INCAPABLE OF"
+2050 PRINT"CROSS-CIRCUITING TO ENGINE ROOM!!":PRINT:GOTO 6220
+2060 PRINT:INPUT"COMMAND";A$:PRINT
+2080 FOR I=1 TO 9:IF LEFT$(A$,3)<>MID$(A1$,3*I-2,3)THEN 2160
+2140 ON I GOTO 2300,1980,4000,4260,4700,5530,5690,7290,6270
+2160 NEXT I:PRINT"ENTER ONE OF THE FOLLOWING:"
+2170 PRINT "--------------------------"
+2180 PRINT"  NAV  (TO SET COURSE)"
+2190 PRINT"  SRS  (FOR SHORT RANGE SENSOR SCAN)"
+2200 PRINT"  LRS  (FOR LONG RANGE SENSOR SCAN)"
+2210 PRINT"  PHA  (TO FIRE PHASERS)"
+2220 PRINT"  TOR  (TO FIRE PHOTON TORPEDOES)"
+2230 PRINT"  SHE  (TO RAISE OR LOWER SHIELDS)"
+2240 PRINT"  DAM  (FOR DAMAGE CONTROL REPORTS)"
+2250 PRINT"  COM  (TO CALL ON LIBRARY-COMPUTER)"
+2260 PRINT"  XXX  (TO RESIGN YOUR COMMAND)":PRINT:GOTO 1990
+2300 INPUT"COURSE (0-9)";C1:IF C1=9 THEN C1=1
+2310 IF C1>=1 AND C1<9 THEN 2350
+2330 PRINT"   LT. SULU: 'INCORRECT COURSE DATA, SIR!'":GOTO 1990
+2350 X$="8":IF D(1)<0 THEN X$="0.2"
+2360 PRINT"WARP FACTOR (0-";X$;")";:INPUT W1:PRINT:IF D(1)<0 AND W1>.2 THEN 2470
+2380 IF W1>0 AND W1<=8 THEN 2490
+2390 IF W1=0 THEN 1990
+2420 PRINT"   CHIEF ENGINEER SCOTT: 'THE ENGINES WON'T TAKE";
+2430 PRINT" WARP";W1;CHR$(8);"!'":GOTO 1990
+2470 PRINT"WARP ENGINES ARE DAMAGED.  MAXIUM SPEED = WARP 0.2":GOTO 1990
+2490 N=INT(W1*8+.5):IF E-N>=0 THEN 2590
+2500 PRINT"ENGINEERING:  'INSUFFICIENT ENERGY AVAILABLE"
+2510 PRINT"               FOR MANEUVERING AT WARP";W1;CHR$(8);"!'"
+2530 IF S<N-E OR D(7)<0 THEN 1990
+2550 PRINT"DEFLECTOR CONTROL ROOM:  ";S;"UNITS OF ENERGY"
+2560 PRINT"                          PRESENTLY DEPLOYED TO SHIELDS."
+2570 GOTO 1990
+2590 FOR I=1 TO K3:IF K(I,3)=0 THEN 2700
+2610 A$="   ":Z1=K(I,1):Z2=K(I,2):GOSUB 8670:GOSUB 8590
+2660 K(I,1)=Z1:K(I,2)=Z2:A$="+K+":GOSUB 8670
+2700 NEXT I:GOSUB 6000:D1=0:D6=W1:IF W1>=1 THEN D6=1
+2770 FOR I=1 TO 8:IF D(I)>=0 THEN 2880
+2790 D(I)=D(I)+D6:IF D(I)>-.1 AND D(I)<0 THEN D(I)=-.1:GOTO 2880
+2800 IF D(I)<0 THEN 2880
+2810 IF D1<>1 THEN D1=1:PRINT"DAMAGE CONTROL REPORT:  ";
+2840 PRINT TAB(8);:R1=I:GOSUB 8790:PRINT G2$;" REPAIR COMPLETED."
+2880 NEXT I:IF RND(1)>.2 THEN 3070
+2910 R1=FNR(1):IF RND(1)>=.6 THEN 3000
+2930 D(R1)=D(R1)-(RND(1)*5+1):PRINT"DAMAGE CONTROL REPORT:  ";
+2960 GOSUB 8790:PRINT G2$;" DAMAGED":PRINT:GOTO 3070
+3000 D(R1)=D(R1)+RND(1)*3+1:PRINT"DAMAGE CONTROL REPORT:  ";
+3030 GOSUB 8790:PRINT G2$;" STATE OF REPAIR IMPROVED":PRINT
+3070 A$="   ":Z1=INT(S1):Z2=INT(S2):GOSUB 8670
+3110 X1=C(C1,1)+(C(C1+1,1)-C(C1,1))*(C1-INT(C1)):X=S1:Y=S2
+3140 X2=C(C1,2)+(C(C1+1,2)-C(C1,2))*(C1-INT(C1)):Q4=Q1:Q5=Q2
+3170 FOR I=1 TO N:S1=S1+X1:S2=S2+X2:IF S1<1 OR S1>=9 OR S2<1 OR S2>=9 THEN 3500
+3240 S8=INT(S1)*24+INT(S2)*3-26:IF MID$(Q$,S8,2)="  "THEN 3360
+3320 S1=INT(S1-X1):S2=INT(S2-X2):PRINT"WARP ENGINES SHUT DOWN AT ";
+3350 PRINT"SECTOR";S1;CHR$(8);",";S2;"DUE TO BAD NAVAGATION":GOTO 3370
+3360 NEXT I:S1=INT(S1):S2=INT(S2)
+3370 A$="<E>":Z1=INT(S1):Z2=INT(S2):GOSUB 8670:GOSUB 3910:T8=1
+3430 IF W1<1 THEN T8=.1*INT(10*W1)
+3450 T=T+T8:IF T>T0+T9 THEN 6220
+3480 GOTO 1980
+3500 X=8*Q1+X+N*X1:Y=8*Q2+Y+N*X2:Q1=INT(X/8):Q2=INT(Y/8):S1=INT(X-Q1*8)
+3550 S2=INT(Y-Q2*8):IF S1=0 THEN Q1=Q1-1:S1=8
+3590 IF S2=0 THEN Q2=Q2-1:S2=8
+3620 X5=0:IF Q1<1 THEN X5=1:Q1=1:S1=1
+3670 IF Q1>8 THEN X5=1:Q1=8:S1=8
+3710 IF Q2<1 THEN X5=1:Q2=1:S2=1
+3750 IF Q2>8 THEN X5=1:Q2=8:S2=8
+3790 IF X5=0 THEN 3860
+3800 PRINT"LT. UHURA: MESSAGE FROM STARFLEET COMMAND --"
+3810 PRINT"  'PERMISSION TO ATTEMPT CROSSING OF GALACTIC PERIMETER"
+3820 PRINT"  IS HEREBY *DENIED*.  SHUT DOWN YOUR ENGINES.'"
+3830 PRINT"CHIEF ENGINEER SCOTT:  'WARP ENGINES SHUT DOWN"
+3840 PRINT"  AT SECTOR";S1;CHR$(8);",";S2;"OF QUADRANT";Q1;CHR$(8);",";Q2;CHR$(8);".'"
+3850 IF T>T0+T9 THEN 6220
+3860 IF 8*Q1+Q2=8*Q4+Q5 THEN 3370
+3870 T=T+1:GOSUB 3910:GOTO 1320
+3910 E=E-N-10:IF E>=0 THEN RETURN
+3930 PRINT"SHIELD CONTROL SUPPLIES ENERGY TO COMPLETE THE MANEUVER."
+3940 S=S+E:E=0:IF S<=0 THEN S=0
+3980 RETURN
+4000 IF D(3)<0 THEN PRINT"LONG RANGE SENSORS ARE INOPERABLE.":GOTO 1990
+4030 PRINT"LONG RANGE SCAN FOR QUADRANT";Q1;CHR$(8);",";Q2:PRINT
+4040 O1$="-------------------":PRINT O1$
+4060 FOR I=Q1-1 TO Q1+1:N(1)=-1:N(2)=-2:N(3)=-3:FOR J=Q2-1 TO Q2+1
+4120 IF I>0 AND I<9 AND J>0 AND J<9 THEN N(J-Q2+2)=G(I,J):Z(I,J)=G(I,J)
+4180 NEXT J:FOR L=1 TO 3:PRINT"| ";:IF N(L)<0 THEN PRINT"*** ";:GOTO 4230
+4210 PRINT RIGHT$(STR$(N(L)+1000),3);" ";
+4230 NEXT L:PRINT"|":PRINT O1$:NEXT I:GOTO 1990
+4260 IF D(4)<0 THEN PRINT"PHASERS INOPERATIVE.":GOTO 1990
+4265 IF K3>0 THEN 4330
+4270 PRINT"SCIENCE OFFICER SPOCK:  'SENSORS SHOW NO ENEMY SHIPS"
+4280 PRINT"                         IN THIS QUADRANT'":GOTO 1990
+4330 IF D(8)<0 THEN PRINT"COMPUTER FAILURE HAMPERS ACCURACY."
+4350 PRINT"PHASERS LOCKED ON TARGET;  ";
+4360 PRINT"ENERGY AVAILABLE =";E;"UNITS"
+4370 INPUT"NUMBER OF UNITS TO FIRE";X:IF X<=0 THEN 1990
+4400 IF E-X<0 THEN 4360
+4410 E=E-X:IF D(7)<0 THEN X=X*RND(1)
+4450 H1=INT(X/K3):FOR I=1 TO 3:IF K(I,3)<=0 THEN 4670
+4480 H=INT((H1/FND(0))*(RND(1)+2)):IF H>.15*K(I,3)THEN 4530
+4500 PRINT"SENSORS SHOW NO DAMAGE TO ENEMY AT";K(I,1);CHR$(8);",";K(I,2);CHR$(8);".":GOTO 4670
+4530 K(I,3)=K(I,3)-H:PRINT H;"UNIT HIT ON KLINGON AT SECTOR";K(I,1);CHR$(8);",";
+4550 PRINT K(I,2);CHR$(8);".":IF K(I,3)<=0 THEN PRINT:PRINT CHR$(22);"*** KLINGON DESTROYED ***";CHR$(22):PRINT:GOTO 4580
+4560 PRINT" (SENSORS SHOW";K(I,3);"UNITS REMAINING)":GOTO 4670
+4580 K3=K3-1:K9=K9-1:Z1=K(I,1):Z2=K(I,2):A$="   ":GOSUB 8670
+4650 K(I,3)=0:G(Q1,Q2)=G(Q1,Q2)-100:Z(Q1,Q2)=G(Q1,Q2):IF K9<=0 THEN 6370
+4670 NEXT I:GOSUB 6000:GOTO 1990
+4700 IF P<=0 THEN PRINT"ALL PHOTON TORPEDOES EXPENDED.":GOTO 1990
+4730 IF D(5)<0 THEN PRINT"PHOTON TUBES ARE NOT OPERATIONAL.":GOTO 1990
+4760 INPUT"PHOTON TORPEDO COURSE (1-9)";C1:IF C1=9 THEN C1=1
+4780 IF C1>=1 AND C1<9 THEN 4850
+4790 PRINT"ENSIGN CHEKOV:  'INCORRECT COURSE DATA, SIR!'"
+4800 GOTO 1990
+4850 X1=C(C1,1)+(C(C1+1,1)-C(C1,1))*(C1-INT(C1)):E=E-2:P=P-1
+4860 X2=C(C1,2)+(C(C1+1,2)-C(C1,2))*(C1-INT(C1)):X=S1:Y=S2
+4910 PRINT"TORPEDO TRACK:"
+4920 X=X+X1:Y=Y+X2:X3=INT(X+.5):Y3=INT(Y+.5)
+4960 IF X3<1 OR X3>8 OR Y3<1 OR Y3>8 THEN 5490
+5000 PRINT"               ";X3;CHR$(8);",";Y3:A$="   ":Z1=X:Z2=Y:GOSUB 8830
+5050 IF Z3<>0 THEN 4920
+5060 A$="+K+":Z1=X:Z2=Y:GOSUB 8830:IF Z3=0 THEN 5210
+5110 PRINT:PRINT CHR$(22);"*** KLINGON DESTROYED ***";CHR$(22):PRINT:K3=K3-1:K9=K9-1:IF K9<=0 THEN 6370
+5150 FOR I=1 TO 3:IF X3=K(I,1)AND Y3=K(I,2)THEN 5190
+5180 NEXT I:I=3
+5190 K(I,3)=0:GOTO 5430
+5210 A$=" * ":Z1=X:Z2=Y:GOSUB 8830:IF Z3=0 THEN 5280
+5260 PRINT"STAR AT";X3;",";Y3;"ABSORBED TORPEDO ENERGY.":GOSUB 6000:GOTO 1990
+5280 A$=">!<":Z1=X:Z2=Y:GOSUB 8830:IF Z3=0 THEN 4760
+5330 PRINT CHR$(22);"*** STARBASE DESTROYED ***";CHR$(22):B3=B3-1:B9=B9-1
+5360 IF B9>0 OR K9>T-T0-T9 THEN 5400
+5370 PRINT"THAT DOES IT, CAPTAIN!!  YOU ARE HEREBY RELIEVED OF COMMAND"
+5380 PRINT"AND SENTENCED TO 99 STARDATES AT HARD LABOR ON CYGNUS 12!!"
+5390 GOTO 6270
+5400 PRINT"STARFLEET COMMAND REVIEWING YOUR RECORD TO CONSIDER"
+5410 PRINT"COURT MARTIAL!":D0=0
+5430 Z1=X:Z2=Y:A$="   ":GOSUB 8670
+5470 G(Q1,Q2)=K3*100+B3*10+S3:Z(Q1,Q2)=G(Q1,Q2):GOSUB 6000:GOTO 1990
+5490 PRINT"TORPEDO MISSED.":PRINT:GOSUB 6000:GOTO 1990
+5530 IF D(7)<0 THEN PRINT"SHIELD CONTROL INOPERABLE.":GOTO 1990
+5560 PRINT"ENERGY AVAILABLE =";E+S;:INPUT"NUMBER OF UNITS TO SHIELDS";X
+5580 IF X<0 OR S=X THEN PRINT"<SHIELDS UNCHANGED>":GOTO 1990
+5590 IF X<=E+S THEN 5630
+5600 PRINT"SHIELD CONTROL:  'THIS IS NOT THE FEDERATION TREASURY.'" 
+5610 PRINT"<SHIELDS UNCHANGED>":GOTO 1990
+5630 E=E+S-X:S=X:PRINT"DEFLECTOR CONTROL ROOM:"
+5660 PRINT"  'SHIELDS NOW AT";INT(S);"UNITS PER YOUR COMMAND.'":GOTO 1990
+5690 IF D(6)>=0 THEN 5910
+5700 PRINT"DAMAGE CONTROL REPORT NOT AVAILABLE.":IF D0=0 THEN 1990
+5720 D3=0:FOR I=1 TO 8:IF D(I)<0 THEN D3=D3+.1
+5760 NEXT I:IF D3=0 THEN 1990
+5780 PRINT:D3=D3+D4:IF D3>=1 THEN D3=.9
+5810 PRINT"TECHNICIANS STANDING BY TO EFFECT REPAIRS TO YOUR SHIP;"
+5820 PRINT"ESTIMATED TIME TO REPAIR:";.01*INT(100*D3);"STARDATES."
+5840 INPUT"WILL YOU AUTHORIZE THE REPAIR ORDER (Y/N)";A$
+5860 IF A$<>"Y"THEN 1990
+5870 FOR I=1 TO 8:IF D(I)<0 THEN D(I)=0
+5890 NEXT I:T=T+D3+.1
+5910 PRINT:PRINT"DEVICE             STATE OF REPAIR":PRINT"------             ---------------":FOR R1=1 TO 8
+5920 GOSUB 8790:PRINT G2$;LEFT$(Z$,25-LEN(G2$));INT(D(R1)*100)*.01
+5950 NEXT R1:PRINT:IF D0<>0 THEN 5720
+5980 GOTO 1990
+6000 IF K3<=0 THEN RETURN
+6010 IF D0<>0 THEN PRINT"STARBASE SHIELDS PROTECT THE ENTERPRISE.":RETURN
+6040 FOR I=1 TO 3:IF K(I,3)<=0 THEN 6200
+6060 H=INT((K(I,3)/FND(1))*(2+RND(1))):S=S-H:K(I,3)=K(I,3)/(3+RND(0))
+6080 PRINT:PRINT H;"UNIT HIT ON ENTERPRISE FROM SECTOR";K(I,1);CHR$(8);",";K(I,2);CHR$(8);"."
+6090 IF S<=0 THEN 6240
+6100 PRINT"      <SHIELDS DOWN TO";S;"UNITS>":IF H<20 THEN 6200
+6120 IF RND(1)>.6 OR H/S<=.02 THEN 6200
+6140 R1=FNR(1):D(R1)=D(R1)-H/S-.5*RND(1):GOSUB 8790
+6170 PRINT"DAMAGE CONTROL: '";G2$;" DAMAGED BY THE HIT'"
+6200 NEXT I:RETURN
+6220 PRINT:PRINT"IT IS STARDATE";T;CHR$(8);".":PRINT:GOTO 6270
+6240 PRINT:PRINT"THE ENTERPRISE HAS BEEN DESTROYED.  THE FEDERATION ";
+6250 PRINT"WILL BE CONQUERED.":GOTO 6220
+6270 PRINT"THERE WERE";K9;"KLINGON BATTLE CRUISERS LEFT AT"
+6280 PRINT"THE END OF YOUR MISSION."
+6290 PRINT:PRINT:IF B9=0 THEN 6360
+6310 PRINT"THE FEDERATION IS IN NEED OF A NEW STARSHIP COMMANDER"
+6320 PRINT"FOR A SIMILAR MISSION -- IF THERE IS A VOLUNTEER,"
+6330 INPUT"LET HIM STEP FORWARD AND ENTER 'AYE'";A$:IF A$="AYE"THEN 10
+6360 PRINT:PRINT "BACK TO SYSTEM.":SYSTEM
+6370 PRINT"CONGRATULATIONS, CAPTAIN!  THE LAST KLINGON BATTLE CRUISER"
+6380 PRINT"MENACING THE FEDERATION HAS BEEN DESTROYED.":PRINT
+6400 PRINT"YOUR EFFICIENCY RATING IS";1000*(K7/(T-T0))^2:GOTO 6290
+6430 FOR I=S1-1 TO S1+1:FOR J=S2-1 TO S2+1
+6450 IF INT(I+.5)<1 OR INT(I+.5)>8 OR INT(J+.5)<1 OR INT(J+.5)>8 THEN 6540
+6490 A$=">B<":Z1=I:Z2=J:GOSUB 8830:IF Z3=1 THEN 6580
+6540 NEXT J:NEXT I:D0=0:GOTO 6650
+6580 D0=1:C$="DOCKED":E=E0:P=P0
+6620 PRINT"SHIELDS DROPPED FOR DOCKING PURPOSES.":S=0:GOTO 6720
+6650 IF K3>0 THEN C$="*RED*":GOTO 6720
+6660 C$="GREEN":IF E<E0*.1 THEN C$="YELLOW"
+6720 IF D(2)>=0 THEN 6770
+6730 PRINT:PRINT"*** SHORT RANGE SENSORS ARE OUT ***":PRINT:RETURN
+6770 O1$="   +--1---2---3---4---5---6---7---8-+":PRINT O1$:FOR I=1 TO 8:PRINT I;"|";
+6820 FOR J=(I-1)*24+1 TO(I-1)*24+22 STEP 3:PRINT" ";MID$(Q$,J,3);:NEXT J:PRINT"|";I;
+6830 ON I GOTO 6850,6900,6960,7020,7070,7120,7180,7240
+6850 PRINT"        STARDATE          ";:PRINT USING"####.#";INT(T*10)*.1:GOTO 7260
+6900 PRINT"        CONDITION          ";:IF C$="*RED*" THEN PRINT CHR$(22);"*RED*";CHR$(22) ELSE IF C$="DOCKED" THEN PRINT CHR$(22);"DOCKED";CHR$(22) ELSE PRINT C$
+6902 GOTO 7260
+6960 PRINT"        QUADRANT           ";Q1;CHR$(8);",";Q2;CHR$(8):GOTO 7260
+7020 PRINT"        SECTOR             ";S1;CHR$(8);",";S2;CHR$(8):GOTO 7260
+7070 PRINT"        PHOTON TORPEDOES  ";:PRINT USING"######";INT(P):GOTO 7260
+7120 PRINT"        TOTAL ENERGY      ";:PRINT USING"######";INT(E+S):GOTO 7260
+7180 PRINT"        SHIELDS           ";:PRINT USING"######";INT(S):GOTO 7260
+7240 PRINT"        KLINGONS REMAINING";:PRINT USING"######";INT(K9)
+7260 NEXT I:PRINT O1$:RETURN
+7290 IF D(8)<0 THEN PRINT"COMPUTER DISABLED.":GOTO 1990
+7320 INPUT"COMPUTER ACTIVE AND AWAITING COMMAND";A:IF A<0 THEN 1990
+7350 PRINT:H8=1:ON A+1 GOTO 7540,7900,8070,8500,8150,7400
+7360 PRINT"FUNCTIONS AVAILABLE FROM LIBRARY-COMPUTER:"
+7365 PRINT "-----------------------------------------":PRINT
+7370 PRINT"   0 = CUMULATIVE GALTIC RECORD"
+7372 PRINT"   1 = STATUS REPORT"
+7374 PRINT"   2 = PHOTON TORPEDO DATA"
+7376 PRINT"   3 = STARBASE NAV DATA"
+7378 PRINT"   4 = DIRECTION/DISTANCE CALCULATOR"
+7380 PRINT"   5 = GALAXY 'REGION NAME' MAP":PRINT:GOTO 7320
+7400 H8=0:G5=1:PRINT"                        THE GALAXY":GOTO 7550
+7540 REM
+7542 REM
+7543 PRINT:PRINT"       ";
+7544 PRINT"COMPUTER RECORD OF GALAXY FOR QUADRANT";Q1;CHR$(8);",";Q2
+7546 PRINT
+7550 PRINT"       1     2     3     4     5     6     7     8"
+7560 O1$="    +-----+-----+-----+-----+-----+-----+-----+-----+"
+7570 PRINT O1$:FOR I=1 TO 8:PRINT I;" ";:IF H8=0 THEN 7740
+7630 FOR J=1 TO 8:PRINT"| ";:IF Z(I,J)=0 THEN PRINT"*** ";:GOTO 7720
+7700 PRINT RIGHT$(STR$(Z(I,J)+1000),3);" ";
+7720 IF J=8 THEN PRINT "|"
+7721 NEXT J:GOTO 7850
+7740 Z4=I:Z5=1:GOSUB 9030:J0=INT(15-.5*LEN(G2$)):PRINT TAB(J0);G2$;
+7800 Z5=5:GOSUB 9030:J0=INT(39-.5*LEN(G2$)):PRINT TAB(J0);G2$
+7850 PRINT O1$:NEXT I:PRINT:GOTO 1990
+7900 PRINT "   STATUS REPORT:":PRINT "   -------------":X$="":IF K9>1 THEN X$="S"
+7940 PRINT K9;"KLINGON";X$;" LEFT."
+7960 PRINT" MISSION MUST BE COMPLETED IN";.1*INT((T0+T9-T)*10);"STARDATES."
+7970 X$="S":IF B9<2 THEN X$="":IF B9<1 THEN 8010
+7980 PRINT" THE FEDERATION IS MAINTAINING";B9;"STARBASE";X$;" IN THE GALAXY."
+7990 GOTO 5690
+8010 PRINT"YOUR STUPIDITY HAS LEFT YOU ON YOUR OWN IN"
+8020 PRINT"  THE GALAXY -- YOU HAVE NO STARBASES LEFT!":GOTO 5690
+8070 IF K3<=0 THEN 4270
+8080 X$="":IF K3>1 THEN X$="S"
+8090 PRINT"FROM ENTERPRISE TO KLINGON BATTLE CRUSER";X$
+8100 H8=0:FOR I=1 TO 3:IF K(I,3)<=0 THEN 8480
+8110 W1=K(I,1):X=K(I,2)
+8120 C1=S1:A=S2:GOTO 8220
+8150 PRINT"DIRECTION/DISTANCE CALCULATOR:"
+8160 PRINT"YOU ARE AT QUADRANT ";Q1;CHR$(8);",";Q2;" SECTOR ";S1;CHR$(8);",";S2;CHR$(8);"."
+8170 INPUT"PLEASE ENTER INITIAL COORDINATES (X,Y)";C1,A
+8200 INPUT"FINAL COORDINATES (X,Y)";W1,X
+8220 X=X-A:A=C1-W1:IF X<0 THEN 8350
+8250 IF A<0 THEN 8410
+8260 IF X>0 THEN 8280
+8270 IF A=0 THEN C1=5:GOTO 8290
+8280 C1=1
+8290 IF ABS(A)<=ABS(X)THEN 8330
+8310 PRINT"DIRECTION =";C1+(((ABS(A)-ABS(X))+ABS(A))/ABS(A)):GOTO 8460
+8330 PRINT"DIRECTION =";C1+(ABS(A)/ABS(X)):GOTO 8460
+8350 IF A>0 THEN C1=3:GOTO 8420
+8360 IF X<>0 THEN C1=5:GOTO 8290
+8410 C1=7
+8420 IF ABS(A)>=ABS(X)THEN 8450
+8430 PRINT"DIRECTION =";C1+(((ABS(X)-ABS(A))+ABS(X))/ABS(X)):GOTO 8460
+8450 PRINT"DIRECTION =";C1+(ABS(X)/ABS(A))
+8460 PRINT"DISTANCE =";SQR(X^2+A^2):IF H8=1 THEN 1990
+8480 NEXT I:GOTO 1990
+8500 IF B3<>0 THEN PRINT"FROM ENTERPRISE TO STARBASE:":W1=B4:X=B5:GOTO 8120
+8510 PRINT"MR. SPOCK:  'SENSORS SHOW NO STARBASES IN THIS QUADRANT.'"";
+8520 GOTO 1990
+8590 R1=FNR(1):R2=FNR(1):A$="   ":Z1=R1:Z2=R2:GOSUB 8830:IF Z3=0 THEN 8590
+8600 RETURN
+8670 S8=INT(Z2-.5)*3+INT(Z1-.5)*24+1
+8675 IF LEN(A$)<>3 THEN PRINT"ERROR":STOP
+8680 IF S8=1 THEN Q$=A$+RIGHT$(Q$,189):RETURN
+8690 IF S8=190 THEN Q$=LEFT$(Q$,189)+A$:RETURN
+8700 Q$=LEFT$(Q$,S8-1)+A$+RIGHT$(Q$,190-S8):RETURN
+8790 ON R1 GOTO 8792,8794,8796,8798,8800,8802,8804,8806
+8792 G2$="WARP ENGINES":RETURN
+8794 G2$="SHORT RANGE SENSORS":RETURN
+8796 G2$="LONG RANGE SENSORS":RETURN
+8798 G2$="PHASER CONTROL":RETURN
+8800 G2$="PHOTON TUBES":RETURN
+8802 G2$="DAMAGE CONTROL":RETURN
+8804 G2$="SHIELD CONTROL":RETURN
+8806 G2$="LIBRARY-COMPUTER":RETURN
+8830 Z1=INT(Z1+.5):Z2=INT(Z2+.5):S8=(Z2-1)*3+(Z1-1)*24+1:Z3=0
+8890 IF MID$(Q$,S8,3)<>A$THEN RETURN
+8900 Z3=1:RETURN
+9030 IF Z5<=4 THEN ON Z4 GOTO 9040,9050,9060,9070,9080,9090,9100,9110
+9035 GOTO 9120
+9040 G2$="ANTARES":GOTO 9210
+9050 G2$="RIGEL":GOTO 9210
+9060 G2$="PROCYON":GOTO 9210
+9070 G2$="VEGA":GOTO 9210
+9080 G2$="CANOPUS":GOTO 9210
+9090 G2$="ALTAIR":GOTO 9210
+9100 G2$="SAGITTARIUS":GOTO 9210
+9110 G2$="POLLUX":GOTO 9210
+9120 ON Z4 GOTO 9130,9140,9150,9160,9170,9180,9190,9200
+9130 G2$="SIRIUS":GOTO 9210
+9140 G2$="DENEB":GOTO 9210
+9150 G2$="CAPELLA":GOTO 9210
+9160 G2$="BETELGEUSE":GOTO 9210
+9170 G2$="ALDEBARAN":GOTO 9210
+9180 G2$="REGULUS":GOTO 9210
+9190 G2$="ARCTURUS":GOTO 9210
+9200 G2$="SPICA"
+9210 IF G5<>1 THEN ON Z5 GOTO 9230,9240,9250,9260,9230,9240,9250,9260
+9220 RETURN
+9230 G2$=G2$+" I":RETURN
+9240 G2$=G2$+" II":RETURN
+9250 G2$=G2$+" III":RETURN
+9260 G2$=G2$+" IV":RETURN
+9999 END
+// Copyright 2012 Rui Ueyama. Released under the MIT license.
+
+/*
+ * This implements Dave Prosser's C Preprocessing algorithm, described
+ * in this document: https://github.com/rui314/8cc/wiki/cpp.algo.pdf
+ */
+
+#include <ctype.h>
+#include <libgen.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#include "8cc.h"
+
+static Map *macros = &EMPTY_MAP;
+static Map *once = &EMPTY_MAP;
+static Map *keywords = &EMPTY_MAP;
+static Map *include_guard = &EMPTY_MAP;
+static Vector *cond_incl_stack = &EMPTY_VECTOR;
+static Vector *std_include_path = &EMPTY_VECTOR;
+static struct tm now;
+static Token *cpp_token_zero = &(Token){ .kind = TNUMBER, .sval = "0" };
+static Token *cpp_token_one = &(Token){ .kind = TNUMBER, .sval = "1" };
+
+typedef void SpecialMacroHandler(Token *tok);
+typedef enum { IN_THEN, IN_ELIF, IN_ELSE } CondInclCtx;
+typedef enum { MACRO_OBJ, MACRO_FUNC, MACRO_SPECIAL } MacroType;
+
+typedef struct {
+    CondInclCtx ctx;
+    char *include_guard;
+    File *file;
+    bool wastrue;
+} CondIncl;
+
+typedef struct {
+    MacroType kind;
+    int nargs;
+    Vector *body;
+    bool is_varg;
+    SpecialMacroHandler *fn;
+} Macro;
+
+static Macro *make_obj_macro(Vector *body);
+static Macro *make_func_macro(Vector *body, int nargs, bool is_varg);
+static Macro *make_special_macro(SpecialMacroHandler *fn);
+static void define_obj_macro(char *name, Token *value);
+static void read_directive(Token *hash);
+static Token *read_expand(void);
+
+/*
+ * Constructors
+ */
+
+static CondIncl *make_cond_incl(bool wastrue) {
+    CondIncl *r = calloc(1, sizeof(CondIncl));
+    r->ctx = IN_THEN;
+    r->wastrue = wastrue;
+    return r;
+}
+
+static Macro *make_macro(Macro *tmpl) {
+    Macro *r = malloc(sizeof(Macro));
+    *r = *tmpl;
+    return r;
+}
+
+static Macro *make_obj_macro(Vector *body) {
+    return make_macro(&(Macro){ MACRO_OBJ, .body = body });
+}
+
+static Macro *make_func_macro(Vector *body, int nargs, bool is_varg) {
+    return make_macro(&(Macro){
+            MACRO_FUNC, .nargs = nargs, .body = body, .is_varg = is_varg });
+}
+
+static Macro *make_special_macro(SpecialMacroHandler *fn) {
+    return make_macro(&(Macro){ MACRO_SPECIAL, .fn = fn });
+}
+
+static Token *make_macro_token(int position, bool is_vararg) {
+    Token *r = malloc(sizeof(Token));
+    r->kind = TMACRO_PARAM;
+    r->is_vararg = is_vararg;
+    r->hideset = NULL;
+    r->position = position;
+    r->space = false;
+    r->bol = false;
+    return r;
+}
+
+static Token *copy_token(Token *tok) {
+    Token *r = malloc(sizeof(Token));
+    *r = *tok;
+    return r;
+}
+
+static void expect(char id) {
+    Token *tok = lex();
+    if (!is_keyword(tok, id))
+        errort(tok, "%c expected, but got %s", id, tok2s(tok));
+}
+
+/*
+ * Utility functions
+ */
+
+bool is_ident(Token *tok, char *s) {
+    return tok->kind == TIDENT && !strcmp(tok->sval, s);
+}
+
+static bool next(int id) {
+    Token *tok = lex();
+    if (is_keyword(tok, id))
+        return true;
+    unget_token(tok);
+    return false;
+}
+
+static void propagate_space(Vector *tokens, Token *tmpl) {
+    if (vec_len(tokens) == 0)
+        return;
+    Token *tok = copy_token(vec_head(tokens));
+    tok->space = tmpl->space;
+    vec_set(tokens, 0, tok);
+}
+
+/*
+ * Macro expander
+ */
+
+static Token *read_ident() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    return tok;
+}
+
+void expect_newline() {
+    Token *tok = lex();
+    if (tok->kind != TNEWLINE)
+        errort(tok, "newline expected, but got %s", tok2s(tok));
+}
+
+static Vector *read_one_arg(Token *ident, bool *end, bool readall) {
+    Vector *r = make_vector();
+    int level = 0;
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TEOF)
+            errort(ident, "unterminated macro argument list");
+        if (tok->kind == TNEWLINE)
+            continue;
+        if (tok->bol && is_keyword(tok, '#')) {
+            read_directive(tok);
+            continue;
+        }
+        if (level == 0 && is_keyword(tok, ')')) {
+            unget_token(tok);
+            *end = true;
+            return r;
+        }
+        if (level == 0 && is_keyword(tok, ',') && !readall)
+            return r;
+        if (is_keyword(tok, '('))
+            level++;
+        if (is_keyword(tok, ')'))
+            level--;
+        // C11 6.10.3p10: Within the macro argument list,
+        // newline is considered a normal whitespace character.
+        // I don't know why the standard specifies such a minor detail,
+        // but the difference of newline and space is observable
+        // if you stringize tokens using #.
+        if (tok->bol) {
+            tok = copy_token(tok);
+            tok->bol = false;
+            tok->space = true;
+        }
+        vec_push(r, tok);
+    }
+}
+
+static Vector *do_read_args(Token *ident, Macro *macro) {
+    Vector *r = make_vector();
+    bool end = false;
+    while (!end) {
+        bool in_ellipsis = (macro->is_varg && vec_len(r) + 1 == macro->nargs);
+        vec_push(r, read_one_arg(ident, &end, in_ellipsis));
+    }
+    if (macro->is_varg && vec_len(r) == macro->nargs - 1)
+        vec_push(r, make_vector());
+    return r;
+}
+
+static Vector *read_args(Token *tok, Macro *macro) {
+    if (macro->nargs == 0 && is_keyword(peek_token(), ')')) {
+        // If a macro M has no parameter, argument list of M()
+        // is an empty list. If it has one parameter,
+        // argument list of M() is a list containing an empty list.
+        return make_vector();
+    }
+    Vector *args = do_read_args(tok, macro);
+    if (vec_len(args) != macro->nargs)
+        errort(tok, "macro argument number does not match");
+    return args;
+}
+
+static Vector *add_hide_set(Vector *tokens, Set *hideset) {
+    Vector *r = make_vector();
+    for (int i = 0; i < vec_len(tokens); i++) {
+        Token *t = copy_token(vec_get(tokens, i));
+        t->hideset = set_union(t->hideset, hideset);
+        vec_push(r, t);
+    }
+    return r;
+}
+
+static Token *glue_tokens(Token *t, Token *u) {
+    Buffer *b = make_buffer();
+    buf_printf(b, "%s", tok2s(t));
+    buf_printf(b, "%s", tok2s(u));
+    Token *r = lex_string(buf_body(b));
+    return r;
+}
+
+static void glue_push(Vector *tokens, Token *tok) {
+    Token *last = vec_pop(tokens);
+    vec_push(tokens, glue_tokens(last, tok));
+}
+
+static Token *stringize(Token *tmpl, Vector *args) {
+    Buffer *b = make_buffer();
+    for (int i = 0; i < vec_len(args); i++) {
+        Token *tok = vec_get(args, i);
+        if (buf_len(b) && tok->space)
+            buf_printf(b, " ");
+        buf_printf(b, "%s", tok2s(tok));
+    }
+    buf_write(b, '\0');
+    Token *r = copy_token(tmpl);
+    r->kind = TSTRING;
+    r->sval = buf_body(b);
+    r->slen = buf_len(b);
+    r->enc = ENC_NONE;
+    return r;
+}
+
+static Vector *expand_all(Vector *tokens, Token *tmpl) {
+    token_buffer_stash(vec_reverse(tokens));
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = read_expand();
+        if (tok->kind == TEOF)
+            break;
+        vec_push(r, tok);
+    }
+    propagate_space(r, tmpl);
+    token_buffer_unstash();
+    return r;
+}
+
+static Vector *subst(Macro *macro, Vector *args, Set *hideset) {
+    Vector *r = make_vector();
+    int len = vec_len(macro->body);
+    for (int i = 0; i < len; i++) {
+        Token *t0 = vec_get(macro->body, i);
+        Token *t1 = (i == len - 1) ? NULL : vec_get(macro->body, i + 1);
+        bool t0_param = (t0->kind == TMACRO_PARAM);
+        bool t1_param = (t1 && t1->kind == TMACRO_PARAM);
+
+        if (is_keyword(t0, '#') && t1_param) {
+            vec_push(r, stringize(t0, vec_get(args, t1->position)));
+            i++;
+            continue;
+        }
+        if (is_keyword(t0, KHASHHASH) && t1_param) {
+            Vector *arg = vec_get(args, t1->position);
+            // [GNU] [,##__VA_ARG__] is expanded to the empty token sequence
+            // if __VA_ARG__ is empty. Otherwise it's expanded to
+            // [,<tokens in __VA_ARG__>].
+            if (t1->is_vararg && vec_len(r) > 0 && is_keyword(vec_tail(r), ',')) {
+                if (vec_len(arg) > 0)
+                    vec_append(r, arg);
+                else
+                    vec_pop(r);
+            } else if (vec_len(arg) > 0) {
+                glue_push(r, vec_head(arg));
+                for (int i = 1; i < vec_len(arg); i++)
+                    vec_push(r, vec_get(arg, i));
+            }
+            i++;
+            continue;
+        }
+        if (is_keyword(t0, KHASHHASH) && t1) {
+            hideset = t1->hideset;
+            glue_push(r, t1);
+            i++;
+            continue;
+        }
+        if (t0_param && t1 && is_keyword(t1, KHASHHASH)) {
+            hideset = t1->hideset;
+            Vector *arg = vec_get(args, t0->position);
+            if (vec_len(arg) == 0)
+                i++;
+            else
+                vec_append(r, arg);
+            continue;
+        }
+        if (t0_param) {
+            Vector *arg = vec_get(args, t0->position);
+            vec_append(r, expand_all(arg, t0));
+            continue;
+        }
+        vec_push(r, t0);
+    }
+    return add_hide_set(r, hideset);
+}
+
+static void unget_all(Vector *tokens) {
+    for (int i = vec_len(tokens) - 1; i >= 0; i--)
+        unget_token(vec_get(tokens, i));
+}
+
+// This is "expand" function in the Dave Prosser's document.
+static Token *read_expand_newline() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        return tok;
+    char *name = tok->sval;
+    Macro *macro = map_get(macros, name);
+    if (!macro || set_has(tok->hideset, name))
+        return tok;
+
+    switch (macro->kind) {
+    case MACRO_OBJ: {
+        Set *hideset = set_add(tok->hideset, name);
+        Vector *tokens = subst(macro, NULL, hideset);
+        propagate_space(tokens, tok);
+        unget_all(tokens);
+        return read_expand();
+    }
+    case MACRO_FUNC: {
+        if (!next('('))
+            return tok;
+        Vector *args = read_args(tok, macro);
+        Token *rparen = peek_token();
+        expect(')');
+        Set *hideset = set_add(set_intersection(tok->hideset, rparen->hideset), name);
+        Vector *tokens = subst(macro, args, hideset);
+        propagate_space(tokens, tok);
+        unget_all(tokens);
+        return read_expand();
+    }
+    case MACRO_SPECIAL:
+        macro->fn(tok);
+        return read_expand();
+    default:
+        error("internal error");
+    }
+}
+
+static Token *read_expand() {
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind != TNEWLINE)
+            return tok;
+    }
+}
+
+static bool read_funclike_macro_params(Token *name, Map *param) {
+    int pos = 0;
+    for (;;) {
+        Token *tok = lex();
+        if (is_keyword(tok, ')'))
+            return false;
+        if (pos) {
+            if (!is_keyword(tok, ','))
+                errort(tok, ", expected, but got %s", tok2s(tok));
+            tok = lex();
+        }
+        if (tok->kind == TNEWLINE)
+            errort(name, "missing ')' in macro parameter list");
+        if (is_keyword(tok, KELLIPSIS)) {
+            map_put(param, "__VA_ARGS__", make_macro_token(pos++, true));
+            expect(')');
+            return true;
+        }
+        if (tok->kind != TIDENT)
+            errort(tok, "identifier expected, but got %s", tok2s(tok));
+        char *arg = tok->sval;
+        if (next(KELLIPSIS)) {
+            expect(')');
+            map_put(param, arg, make_macro_token(pos++, true));
+            return true;
+        }
+        map_put(param, arg, make_macro_token(pos++, false));
+    }
+}
+
+static void hashhash_check(Vector *v) {
+    if (vec_len(v) == 0)
+        return;
+    if (is_keyword(vec_head(v), KHASHHASH))
+        errort(vec_head(v), "'##' cannot appear at start of macro expansion");
+    if (is_keyword(vec_tail(v), KHASHHASH))
+        errort(vec_tail(v), "'##' cannot appear at end of macro expansion");
+}
+
+static Vector *read_funclike_macro_body(Map *param) {
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            return r;
+        if (tok->kind == TIDENT) {
+            Token *subst = map_get(param, tok->sval);
+            if (subst) {
+                subst = copy_token(subst);
+                subst->space = tok->space;
+                vec_push(r, subst);
+                continue;
+            }
+        }
+        vec_push(r, tok);
+    }
+}
+
+static void read_funclike_macro(Token *name) {
+    Map *param = make_map();
+    bool is_varg = read_funclike_macro_params(name, param);
+    Vector *body = read_funclike_macro_body(param);
+    hashhash_check(body);
+    Macro *macro = make_func_macro(body, map_len(param), is_varg);
+    map_put(macros, name->sval, macro);
+}
+
+static void read_obj_macro(char *name) {
+    Vector *body = make_vector();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            break;
+        vec_push(body, tok);
+    }
+    hashhash_check(body);
+    map_put(macros, name, make_obj_macro(body));
+}
+
+/*
+ * #define
+ */
+
+static void read_define() {
+    Token *name = read_ident();
+    Token *tok = lex();
+    if (is_keyword(tok, '(') && !tok->space) {
+        read_funclike_macro(name);
+        return;
+    }
+    unget_token(tok);
+    read_obj_macro(name->sval);
+}
+
+/*
+ * #undef
+ */
+
+static void read_undef() {
+    Token *name = read_ident();
+    expect_newline();
+    map_remove(macros, name->sval);
+}
+
+/*
+ * #if and the like
+ */
+
+static Token *read_defined_op() {
+    Token *tok = lex();
+    if (is_keyword(tok, '(')) {
+        tok = lex();
+        expect(')');
+    }
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    return map_get(macros, tok->sval) ? cpp_token_one : cpp_token_zero;
+}
+
+static Vector *read_intexpr_line() {
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind == TNEWLINE)
+            return r;
+        if (is_ident(tok, "defined")) {
+            vec_push(r, read_defined_op());
+        } else if (tok->kind == TIDENT) {
+            // C11 6.10.1.4 says that remaining identifiers
+            // should be replaced with pp-number 0.
+            vec_push(r, cpp_token_zero);
+        } else {
+            vec_push(r, tok);
+        }
+    }
+}
+
+static bool read_constexpr() {
+    token_buffer_stash(vec_reverse(read_intexpr_line()));
+    Node *expr = read_expr();
+    Token *tok = lex();
+    if (tok->kind != TEOF)
+        errort(tok, "stray token: %s", tok2s(tok));
+    token_buffer_unstash();
+    return eval_intexpr(expr, NULL);
+}
+
+static void do_read_if(bool istrue) {
+    vec_push(cond_incl_stack, make_cond_incl(istrue));
+    if (!istrue)
+        skip_cond_incl();
+}
+
+static void read_if() {
+    do_read_if(read_constexpr());
+}
+
+static void read_ifdef() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    expect_newline();
+    do_read_if(map_get(macros, tok->sval));
+}
+
+static void read_ifndef() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    expect_newline();
+    do_read_if(!map_get(macros, tok->sval));
+    if (tok->count == 2) {
+        // "ifndef" is the second token in this file.
+        // Prepare to detect an include guard.
+        CondIncl *ci = vec_tail(cond_incl_stack);
+        ci->include_guard = tok->sval;
+        ci->file = tok->file;
+    }
+}
+
+static void read_else(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #else");
+    CondIncl *ci = vec_tail(cond_incl_stack);
+    if (ci->ctx == IN_ELSE)
+        errort(hash, "#else appears in #else");
+    expect_newline();
+    ci->ctx = IN_ELSE;
+    ci->include_guard = NULL;
+    if (ci->wastrue)
+        skip_cond_incl();
+}
+
+static void read_elif(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #elif");
+    CondIncl *ci = vec_tail(cond_incl_stack);
+    if (ci->ctx == IN_ELSE)
+        errort(hash, "#elif after #else");
+    ci->ctx = IN_ELIF;
+    ci->include_guard = NULL;
+    if (ci->wastrue || !read_constexpr()) {
+        skip_cond_incl();
+        return;
+    }
+    ci->wastrue = true;
+}
+
+// Skips all newlines and returns the first non-newline token.
+static Token *skip_newlines() {
+    Token *tok = lex();
+    while (tok->kind == TNEWLINE)
+        tok = lex();
+    unget_token(tok);
+    return tok;
+}
+
+static void read_endif(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #endif");
+    CondIncl *ci = vec_pop(cond_incl_stack);
+    expect_newline();
+
+    // Detect an #ifndef and #endif pair that guards the entire
+    // header file. Remember the macro name guarding the file
+    // so that we can skip the file next time.
+    if (!ci->include_guard || ci->file != hash->file)
+        return;
+    Token *last = skip_newlines();
+    if (ci->file != last->file)
+        map_put(include_guard, ci->file->name, ci->include_guard);
+}
+
+/*
+ * #error and #warning
+ */
+
+static char *read_error_message() {
+    Buffer *b = make_buffer();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            return buf_body(b);
+        if (buf_len(b) != 0 && tok->space)
+            buf_write(b, ' ');
+        buf_printf(b, "%s", tok2s(tok));
+    }
+}
+
+static void read_error(Token *hash) {
+    errort(hash, "#error: %s", read_error_message());
+}
+
+static void read_warning(Token *hash) {
+    warnt(hash, "#warning: %s", read_error_message());
+}
+
+/*
+ * #include
+ */
+
+static char *join_paths(Vector *args) {
+    Buffer *b = make_buffer();
+    for (int i = 0; i < vec_len(args); i++)
+        buf_printf(b, "%s", tok2s(vec_get(args, i)));
+    return buf_body(b);
+}
+
+static char *read_cpp_header_name(Token *hash, bool *std) {
+    // Try reading a filename using a special tokenizer for #include.
+    char *path = read_header_file_name(std);
+    if (path)
+        return path;
+
+    // If a token following #include does not start with < nor ",
+    // try to read the token as a regular token. Macro-expanded
+    // form may be a valid header file path.
+    Token *tok = read_expand_newline();
+    if (tok->kind == TNEWLINE)
+        errort(hash, "expected filename, but got newline");
+    if (tok->kind == TSTRING) {
+        *std = false;
+        return tok->sval;
+    }
+    if (!is_keyword(tok, '<'))
+        errort(tok, "< expected, but got %s", tok2s(tok));
+    Vector *tokens = make_vector();
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind == TNEWLINE)
+            errort(hash, "premature end of header name");
+        if (is_keyword(tok, '>'))
+            break;
+        vec_push(tokens, tok);
+    }
+    *std = true;
+    return join_paths(tokens);
+}
+
+static bool guarded(char *path) {
+    char *guard = map_get(include_guard, path);
+    bool r = (guard && map_get(macros, guard));
+    define_obj_macro("__8cc_include_guard", r ? cpp_token_one : cpp_token_zero);
+    return r;
+}
+
+static bool try_include(char *dir, char *filename, bool isimport) {
+    char *path = fullpath(format("%s/%s", dir, filename));
+    if (map_get(once, path))
+        return true;
+    if (guarded(path))
+        return true;
+    FILE *fp = fopen(path, "r");
+    if (!fp)
+        return false;
+    if (isimport)
+        map_put(once, path, (void *)1);
+    stream_push(make_file(fp, path));
+    return true;
+}
+
+static void read_include(Token *hash, File *file, bool isimport) {
+    bool std;
+    char *filename = read_cpp_header_name(hash, &std);
+    expect_newline();
+    if (filename[0] == '/') {
+        if (try_include("/", filename, isimport))
+            return;
+        goto err;
+    }
+    if (!std) {
+        char *dir = file->name ? dirname(strdup(file->name)) : ".";
+        if (try_include(dir, filename, isimport))
+            return;
+    }
+    for (int i = 0; i < vec_len(std_include_path); i++)
+        if (try_include(vec_get(std_include_path, i), filename, isimport))
+            return;
+  err:
+    errort(hash, "cannot find header file: %s", filename);
+}
+
+static void read_include_next(Token *hash, File *file) {
+    // [GNU] #include_next is a directive to include the "next" file
+    // from the search path. This feature is used to override a
+    // header file without getting into infinite inclusion loop.
+    // This directive doesn't distinguish <> and "".
+    bool std;
+    char *filename = read_cpp_header_name(hash, &std);
+    expect_newline();
+    if (filename[0] == '/') {
+        if (try_include("/", filename, false))
+            return;
+        goto err;
+    }
+    char *cur = fullpath(file->name);
+    int i = 0;
+    for (; i < vec_len(std_include_path); i++) {
+        char *dir = vec_get(std_include_path, i);
+        if (!strcmp(cur, fullpath(format("%s/%s", dir, filename))))
+            break;
+    }
+    for (i++; i < vec_len(std_include_path); i++)
+        if (try_include(vec_get(std_include_path, i), filename, false))
+            return;
+  err:
+    errort(hash, "cannot find header file: %s", filename);
+}
+
+/*
+ * #pragma
+ */
+
+static void parse_pragma_operand(Token *tok) {
+    char *s = tok->sval;
+    if (!strcmp(s, "once")) {
+        char *path = fullpath(tok->file->name);
+        map_put(once, path, (void *)1);
+    } else if (!strcmp(s, "enable_warning")) {
+        enable_warning = true;
+    } else if (!strcmp(s, "disable_warning")) {
+        enable_warning = false;
+    } else {
+        errort(tok, "unknown #pragma: %s", s);
+    }
+}
+
+static void read_pragma() {
+    Token *tok = read_ident();
+    parse_pragma_operand(tok);
+}
+
+/*
+ * #line
+ */
+
+static bool is_digit_sequence(char *p) {
+    for (; *p; p++)
+        if (!isdigit(*p))
+            return false;
+    return true;
+}
+
+static void read_line() {
+    Token *tok = read_expand_newline();
+    if (tok->kind != TNUMBER || !is_digit_sequence(tok->sval))
+        errort(tok, "number expected after #line, but got %s", tok2s(tok));
+    int line = atoi(tok->sval);
+    tok = read_expand_newline();
+    char *filename = NULL;
+    if (tok->kind == TSTRING) {
+        filename = tok->sval;
+        expect_newline();
+    } else if (tok->kind != TNEWLINE) {
+        errort(tok, "newline or a source name are expected, but got %s", tok2s(tok));
+    }
+    File *f = current_file();
+    f->line = line;
+    if (filename)
+        f->name = filename;
+}
+
+// GNU CPP outputs "# linenum filename flags" to preserve original
+// source file information. This function reads them. Flags are ignored.
+static void read_linemarker(Token *tok) {
+    if (!is_digit_sequence(tok->sval))
+        errort(tok, "line number expected, but got %s", tok2s(tok));
+    int line = atoi(tok->sval);
+    tok = lex();
+    if (tok->kind != TSTRING)
+        errort(tok, "filename expected, but got %s", tok2s(tok));
+    char *filename = tok->sval;
+    do {
+        tok = lex();
+    } while (tok->kind != TNEWLINE);
+    File *file = current_file();
+    file->line = line;
+    file->name = filename;
+}
+
+/*
+ * #-directive
+ */
+
+static void read_directive(Token *hash) {
+    Token *tok = lex();
+    if (tok->kind == TNEWLINE)
+        return;
+    if (tok->kind == TNUMBER) {
+        read_linemarker(tok);
+        return;
+    }
+    if (tok->kind != TIDENT)
+        goto err;
+    char *s = tok->sval;
+    if (!strcmp(s, "define"))            read_define();
+    else if (!strcmp(s, "elif"))         read_elif(hash);
+    else if (!strcmp(s, "else"))         read_else(hash);
+    else if (!strcmp(s, "endif"))        read_endif(hash);
+    else if (!strcmp(s, "error"))        read_error(hash);
+    else if (!strcmp(s, "if"))           read_if();
+    else if (!strcmp(s, "ifdef"))        read_ifdef();
+    else if (!strcmp(s, "ifndef"))       read_ifndef();
+    else if (!strcmp(s, "import"))       read_include(hash, tok->file, true);
+    else if (!strcmp(s, "include"))      read_include(hash, tok->file, false);
+    else if (!strcmp(s, "include_next")) read_include_next(hash, tok->file);
+    else if (!strcmp(s, "line"))         read_line();
+    else if (!strcmp(s, "pragma"))       read_pragma();
+    else if (!strcmp(s, "undef"))        read_undef();
+    else if (!strcmp(s, "warning"))      read_warning(hash);
+    else goto err;
+    return;
+
+  err:
+    errort(hash, "unsupported preprocessor directive: %s", tok2s(tok));
+}
+
+/*
+ * Special macros
+ */
+
+static void make_token_pushback(Token *tmpl, int kind, char *sval) {
+    Token *tok = copy_token(tmpl);
+    tok->kind = kind;
+    tok->sval = sval;
+    tok->slen = strlen(sval) + 1;
+    tok->enc = ENC_NONE;
+    unget_token(tok);
+}
+
+static void handle_date_macro(Token *tmpl) {
+    char buf[20];
+    strftime(buf, sizeof(buf), "%b %e %Y", &now);
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_time_macro(Token *tmpl) {
+    char buf[10];
+    strftime(buf, sizeof(buf), "%T", &now);
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_timestamp_macro(Token *tmpl) {
+    // [GNU] __TIMESTAMP__ is expanded to a string that describes the date
+    // and time of the last modification time of the current source file.
+    char buf[30];
+    strftime(buf, sizeof(buf), "%a %b %e %T %Y", localtime(&tmpl->file->mtime));
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_file_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TSTRING, tmpl->file->name);
+}
+
+static void handle_line_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TNUMBER, format("%d", tmpl->file->line));
+}
+
+static void handle_pragma_macro(Token *tmpl) {
+    expect('(');
+    Token *operand = read_token();
+    if (operand->kind != TSTRING)
+        errort(operand, "_Pragma takes a string literal, but got %s", tok2s(operand));
+    expect(')');
+    parse_pragma_operand(operand);
+    make_token_pushback(tmpl, TNUMBER, "1");
+}
+
+static void handle_base_file_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TSTRING, get_base_file());
+}
+
+static void handle_counter_macro(Token *tmpl) {
+    static int counter = 0;
+    make_token_pushback(tmpl, TNUMBER, format("%d", counter++));
+}
+
+static void handle_include_level_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TNUMBER, format("%d", stream_depth() - 1));
+}
+
+/*
+ * Initializer
+ */
+
+void add_include_path(char *path) {
+    vec_push(std_include_path, path);
+}
+
+static void define_obj_macro(char *name, Token *value) {
+    map_put(macros, name, make_obj_macro(make_vector1(value)));
+}
+
+static void define_special_macro(char *name, SpecialMacroHandler *fn) {
+    map_put(macros, name, make_special_macro(fn));
+}
+
+static void init_keywords() {
+#define op(id, str)         map_put(keywords, str, (void *)id);
+#define keyword(id, str, _) map_put(keywords, str, (void *)id);
+#include "keyword.inc"
+#undef keyword
+#undef op
+}
+
+static void init_predefined_macros() {
+    vec_push(std_include_path, BUILD_DIR "/include");
+    vec_push(std_include_path, "/usr/local/lib/8cc/include");
+    vec_push(std_include_path, "/usr/local/include");
+    vec_push(std_include_path, "/usr/include");
+    vec_push(std_include_path, "/usr/include/linux");
+    vec_push(std_include_path, "/usr/include/x86_64-linux-gnu");
+
+    define_special_macro("__DATE__", handle_date_macro);
+    define_special_macro("__TIME__", handle_time_macro);
+    define_special_macro("__FILE__", handle_file_macro);
+    define_special_macro("__LINE__", handle_line_macro);
+    define_special_macro("_Pragma",  handle_pragma_macro);
+    // [GNU] Non-standard macros
+    define_special_macro("__BASE_FILE__", handle_base_file_macro);
+    define_special_macro("__COUNTER__", handle_counter_macro);
+    define_special_macro("__INCLUDE_LEVEL__", handle_include_level_macro);
+    define_special_macro("__TIMESTAMP__", handle_timestamp_macro);
+
+    read_from_string("#include <" BUILD_DIR "/include/8cc.h>");
+}
+
+void init_now() {
+    time_t timet = time(NULL);
+    localtime_r(&timet, &now);
+}
+
+void cpp_init() {
+    setlocale(LC_ALL, "C");
+    init_keywords();
+    init_now();
+    init_predefined_macros();
+}
+
+/*
+ * Public intefaces
+ */
+
+static Token *maybe_convert_keyword(Token *tok) {
+    if (tok->kind != TIDENT)
+        return tok;
+    int id = (intptr_t)map_get(keywords, tok->sval);
+    if (!id)
+        return tok;
+    Token *r = copy_token(tok);
+    r->kind = TKEYWORD;
+    r->id = id;
+    return r;
+}
+
+// Reads from a string as if the string is a content of input file.
+// Convenient for evaluating small string snippet contaiing preprocessor macros.
+void read_from_string(char *buf) {
+    stream_stash(make_file_string(buf));
+    Vector *toplevels = read_toplevels();
+    for (int i = 0; i < vec_len(toplevels); i++)
+        emit_toplevel(vec_get(toplevels, i));
+    stream_unstash();
+}
+
+Token *peek_token() {
+    Token *r = read_token();
+    unget_token(r);
+    return r;
+}
+
+Token *read_token() {
+    Token *tok;
+    for (;;) {
+        tok = read_expand();
+        if (tok->bol && is_keyword(tok, '#') && tok->hideset == NULL) {
+            read_directive(tok);
+            continue;
+        }
+        assert(tok->kind < MIN_CPP_TOKEN);
+        return maybe_convert_keyword(tok);
+    }
+}
+
+
+
+#include <stdio.h>
+int main() {
+   int i, j, rows;
+   printf("Enter the number of rows: ");
+   scanf("%d", &rows);
+   for (i = 1; i <= rows; ++i) {
+      for (j = 1; j <= i; ++j) {
+         printf("* ");
+      }
+      printf("\n");
+   }
+   return 0;
+}
+
+
+
+// Copyright 2012 Rui Ueyama. Released under the MIT license.
+
+/*
+ * This implements Dave Prosser's C Preprocessing algorithm, described
+ * in this document: https://github.com/rui314/8cc/wiki/cpp.algo.pdf
+ */
+
+#include <ctype.h>
+#include <libgen.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+#include "8cc.h"
+
+static Map *macros = &EMPTY_MAP;
+static Map *once = &EMPTY_MAP;
+static Map *keywords = &EMPTY_MAP;
+static Map *include_guard = &EMPTY_MAP;
+static Vector *cond_incl_stack = &EMPTY_VECTOR;
+static Vector *std_include_path = &EMPTY_VECTOR;
+static struct tm now;
+static Token *cpp_token_zero = &(Token){ .kind = TNUMBER, .sval = "0" };
+static Token *cpp_token_one = &(Token){ .kind = TNUMBER, .sval = "1" };
+
+typedef void SpecialMacroHandler(Token *tok);
+typedef enum { IN_THEN, IN_ELIF, IN_ELSE } CondInclCtx;
+typedef enum { MACRO_OBJ, MACRO_FUNC, MACRO_SPECIAL } MacroType;
+
+typedef struct {
+    CondInclCtx ctx;
+    char *include_guard;
+    File *file;
+    bool wastrue;
+} CondIncl;
+
+typedef struct {
+    MacroType kind;
+    int nargs;
+    Vector *body;
+    bool is_varg;
+    SpecialMacroHandler *fn;
+} Macro;
+
+static Macro *make_obj_macro(Vector *body);
+static Macro *make_func_macro(Vector *body, int nargs, bool is_varg);
+static Macro *make_special_macro(SpecialMacroHandler *fn);
+static void define_obj_macro(char *name, Token *value);
+static void read_directive(Token *hash);
+static Token *read_expand(void);
+
+/*
+ * Constructors
+ */
+
+static CondIncl *make_cond_incl(bool wastrue) {
+    CondIncl *r = calloc(1, sizeof(CondIncl));
+    r->ctx = IN_THEN;
+    r->wastrue = wastrue;
+    return r;
+}
+
+static Macro *make_macro(Macro *tmpl) {
+    Macro *r = malloc(sizeof(Macro));
+    *r = *tmpl;
+    return r;
+}
+
+static Macro *make_obj_macro(Vector *body) {
+    return make_macro(&(Macro){ MACRO_OBJ, .body = body });
+}
+
+static Macro *make_func_macro(Vector *body, int nargs, bool is_varg) {
+    return make_macro(&(Macro){
+            MACRO_FUNC, .nargs = nargs, .body = body, .is_varg = is_varg });
+}
+
+static Macro *make_special_macro(SpecialMacroHandler *fn) {
+    return make_macro(&(Macro){ MACRO_SPECIAL, .fn = fn });
+}
+
+static Token *make_macro_token(int position, bool is_vararg) {
+    Token *r = malloc(sizeof(Token));
+    r->kind = TMACRO_PARAM;
+    r->is_vararg = is_vararg;
+    r->hideset = NULL;
+    r->position = position;
+    r->space = false;
+    r->bol = false;
+    return r;
+}
+
+static Token *copy_token(Token *tok) {
+    Token *r = malloc(sizeof(Token));
+    *r = *tok;
+    return r;
+}
+
+static void expect(char id) {
+    Token *tok = lex();
+    if (!is_keyword(tok, id))
+        errort(tok, "%c expected, but got %s", id, tok2s(tok));
+}
+
+/*
+ * Utility functions
+ */
+
+bool is_ident(Token *tok, char *s) {
+    return tok->kind == TIDENT && !strcmp(tok->sval, s);
+}
+
+static bool next(int id) {
+    Token *tok = lex();
+    if (is_keyword(tok, id))
+        return true;
+    unget_token(tok);
+    return false;
+}
+
+static void propagate_space(Vector *tokens, Token *tmpl) {
+    if (vec_len(tokens) == 0)
+        return;
+    Token *tok = copy_token(vec_head(tokens));
+    tok->space = tmpl->space;
+    vec_set(tokens, 0, tok);
+}
+
+/*
+ * Macro expander
+ */
+
+static Token *read_ident() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    return tok;
+}
+
+void expect_newline() {
+    Token *tok = lex();
+    if (tok->kind != TNEWLINE)
+        errort(tok, "newline expected, but got %s", tok2s(tok));
+}
+
+static Vector *read_one_arg(Token *ident, bool *end, bool readall) {
+    Vector *r = make_vector();
+    int level = 0;
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TEOF)
+            errort(ident, "unterminated macro argument list");
+        if (tok->kind == TNEWLINE)
+            continue;
+        if (tok->bol && is_keyword(tok, '#')) {
+            read_directive(tok);
+            continue;
+        }
+        if (level == 0 && is_keyword(tok, ')')) {
+            unget_token(tok);
+            *end = true;
+            return r;
+        }
+        if (level == 0 && is_keyword(tok, ',') && !readall)
+            return r;
+        if (is_keyword(tok, '('))
+            level++;
+        if (is_keyword(tok, ')'))
+            level--;
+        // C11 6.10.3p10: Within the macro argument list,
+        // newline is considered a normal whitespace character.
+        // I don't know why the standard specifies such a minor detail,
+        // but the difference of newline and space is observable
+        // if you stringize tokens using #.
+        if (tok->bol) {
+            tok = copy_token(tok);
+            tok->bol = false;
+            tok->space = true;
+        }
+        vec_push(r, tok);
+    }
+}
+
+static Vector *do_read_args(Token *ident, Macro *macro) {
+    Vector *r = make_vector();
+    bool end = false;
+    while (!end) {
+        bool in_ellipsis = (macro->is_varg && vec_len(r) + 1 == macro->nargs);
+        vec_push(r, read_one_arg(ident, &end, in_ellipsis));
+    }
+    if (macro->is_varg && vec_len(r) == macro->nargs - 1)
+        vec_push(r, make_vector());
+    return r;
+}
+
+static Vector *read_args(Token *tok, Macro *macro) {
+    if (macro->nargs == 0 && is_keyword(peek_token(), ')')) {
+        // If a macro M has no parameter, argument list of M()
+        // is an empty list. If it has one parameter,
+        // argument list of M() is a list containing an empty list.
+        return make_vector();
+    }
+    Vector *args = do_read_args(tok, macro);
+    if (vec_len(args) != macro->nargs)
+        errort(tok, "macro argument number does not match");
+    return args;
+}
+
+static Vector *add_hide_set(Vector *tokens, Set *hideset) {
+    Vector *r = make_vector();
+    for (int i = 0; i < vec_len(tokens); i++) {
+        Token *t = copy_token(vec_get(tokens, i));
+        t->hideset = set_union(t->hideset, hideset);
+        vec_push(r, t);
+    }
+    return r;
+}
+
+static Token *glue_tokens(Token *t, Token *u) {
+    Buffer *b = make_buffer();
+    buf_printf(b, "%s", tok2s(t));
+    buf_printf(b, "%s", tok2s(u));
+    Token *r = lex_string(buf_body(b));
+    return r;
+}
+
+static void glue_push(Vector *tokens, Token *tok) {
+    Token *last = vec_pop(tokens);
+    vec_push(tokens, glue_tokens(last, tok));
+}
+
+static Token *stringize(Token *tmpl, Vector *args) {
+    Buffer *b = make_buffer();
+    for (int i = 0; i < vec_len(args); i++) {
+        Token *tok = vec_get(args, i);
+        if (buf_len(b) && tok->space)
+            buf_printf(b, " ");
+        buf_printf(b, "%s", tok2s(tok));
+    }
+    buf_write(b, '\0');
+    Token *r = copy_token(tmpl);
+    r->kind = TSTRING;
+    r->sval = buf_body(b);
+    r->slen = buf_len(b);
+    r->enc = ENC_NONE;
+    return r;
+}
+
+static Vector *expand_all(Vector *tokens, Token *tmpl) {
+    token_buffer_stash(vec_reverse(tokens));
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = read_expand();
+        if (tok->kind == TEOF)
+            break;
+        vec_push(r, tok);
+    }
+    propagate_space(r, tmpl);
+    token_buffer_unstash();
+    return r;
+}
+
+static Vector *subst(Macro *macro, Vector *args, Set *hideset) {
+    Vector *r = make_vector();
+    int len = vec_len(macro->body);
+    for (int i = 0; i < len; i++) {
+        Token *t0 = vec_get(macro->body, i);
+        Token *t1 = (i == len - 1) ? NULL : vec_get(macro->body, i + 1);
+        bool t0_param = (t0->kind == TMACRO_PARAM);
+        bool t1_param = (t1 && t1->kind == TMACRO_PARAM);
+
+        if (is_keyword(t0, '#') && t1_param) {
+            vec_push(r, stringize(t0, vec_get(args, t1->position)));
+            i++;
+            continue;
+        }
+        if (is_keyword(t0, KHASHHASH) && t1_param) {
+            Vector *arg = vec_get(args, t1->position);
+            // [GNU] [,##__VA_ARG__] is expanded to the empty token sequence
+            // if __VA_ARG__ is empty. Otherwise it's expanded to
+            // [,<tokens in __VA_ARG__>].
+            if (t1->is_vararg && vec_len(r) > 0 && is_keyword(vec_tail(r), ',')) {
+                if (vec_len(arg) > 0)
+                    vec_append(r, arg);
+                else
+                    vec_pop(r);
+            } else if (vec_len(arg) > 0) {
+                glue_push(r, vec_head(arg));
+                for (int i = 1; i < vec_len(arg); i++)
+                    vec_push(r, vec_get(arg, i));
+            }
+            i++;
+            continue;
+        }
+        if (is_keyword(t0, KHASHHASH) && t1) {
+            hideset = t1->hideset;
+            glue_push(r, t1);
+            i++;
+            continue;
+        }
+        if (t0_param && t1 && is_keyword(t1, KHASHHASH)) {
+            hideset = t1->hideset;
+            Vector *arg = vec_get(args, t0->position);
+            if (vec_len(arg) == 0)
+                i++;
+            else
+                vec_append(r, arg);
+            continue;
+        }
+        if (t0_param) {
+            Vector *arg = vec_get(args, t0->position);
+            vec_append(r, expand_all(arg, t0));
+            continue;
+        }
+        vec_push(r, t0);
+    }
+    return add_hide_set(r, hideset);
+}
+
+static void unget_all(Vector *tokens) {
+    for (int i = vec_len(tokens) - 1; i >= 0; i--)
+        unget_token(vec_get(tokens, i));
+}
+
+// This is "expand" function in the Dave Prosser's document.
+static Token *read_expand_newline() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        return tok;
+    char *name = tok->sval;
+    Macro *macro = map_get(macros, name);
+    if (!macro || set_has(tok->hideset, name))
+        return tok;
+
+    switch (macro->kind) {
+    case MACRO_OBJ: {
+        Set *hideset = set_add(tok->hideset, name);
+        Vector *tokens = subst(macro, NULL, hideset);
+        propagate_space(tokens, tok);
+        unget_all(tokens);
+        return read_expand();
+    }
+    case MACRO_FUNC: {
+        if (!next('('))
+            return tok;
+        Vector *args = read_args(tok, macro);
+        Token *rparen = peek_token();
+        expect(')');
+        Set *hideset = set_add(set_intersection(tok->hideset, rparen->hideset), name);
+        Vector *tokens = subst(macro, args, hideset);
+        propagate_space(tokens, tok);
+        unget_all(tokens);
+        return read_expand();
+    }
+    case MACRO_SPECIAL:
+        macro->fn(tok);
+        return read_expand();
+    default:
+        error("internal error");
+    }
+}
+
+static Token *read_expand() {
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind != TNEWLINE)
+            return tok;
+    }
+}
+
+static bool read_funclike_macro_params(Token *name, Map *param) {
+    int pos = 0;
+    for (;;) {
+        Token *tok = lex();
+        if (is_keyword(tok, ')'))
+            return false;
+        if (pos) {
+            if (!is_keyword(tok, ','))
+                errort(tok, ", expected, but got %s", tok2s(tok));
+            tok = lex();
+        }
+        if (tok->kind == TNEWLINE)
+            errort(name, "missing ')' in macro parameter list");
+        if (is_keyword(tok, KELLIPSIS)) {
+            map_put(param, "__VA_ARGS__", make_macro_token(pos++, true));
+            expect(')');
+            return true;
+        }
+        if (tok->kind != TIDENT)
+            errort(tok, "identifier expected, but got %s", tok2s(tok));
+        char *arg = tok->sval;
+        if (next(KELLIPSIS)) {
+            expect(')');
+            map_put(param, arg, make_macro_token(pos++, true));
+            return true;
+        }
+        map_put(param, arg, make_macro_token(pos++, false));
+    }
+}
+
+static void hashhash_check(Vector *v) {
+    if (vec_len(v) == 0)
+        return;
+    if (is_keyword(vec_head(v), KHASHHASH))
+        errort(vec_head(v), "'##' cannot appear at start of macro expansion");
+    if (is_keyword(vec_tail(v), KHASHHASH))
+        errort(vec_tail(v), "'##' cannot appear at end of macro expansion");
+}
+
+static Vector *read_funclike_macro_body(Map *param) {
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            return r;
+        if (tok->kind == TIDENT) {
+            Token *subst = map_get(param, tok->sval);
+            if (subst) {
+                subst = copy_token(subst);
+                subst->space = tok->space;
+                vec_push(r, subst);
+                continue;
+            }
+        }
+        vec_push(r, tok);
+    }
+}
+
+static void read_funclike_macro(Token *name) {
+    Map *param = make_map();
+    bool is_varg = read_funclike_macro_params(name, param);
+    Vector *body = read_funclike_macro_body(param);
+    hashhash_check(body);
+    Macro *macro = make_func_macro(body, map_len(param), is_varg);
+    map_put(macros, name->sval, macro);
+}
+
+static void read_obj_macro(char *name) {
+    Vector *body = make_vector();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            break;
+        vec_push(body, tok);
+    }
+    hashhash_check(body);
+    map_put(macros, name, make_obj_macro(body));
+}
+
+/*
+ * #define
+ */
+
+static void read_define() {
+    Token *name = read_ident();
+    Token *tok = lex();
+    if (is_keyword(tok, '(') && !tok->space) {
+        read_funclike_macro(name);
+        return;
+    }
+    unget_token(tok);
+    read_obj_macro(name->sval);
+}
+
+/*
+ * #undef
+ */
+
+static void read_undef() {
+    Token *name = read_ident();
+    expect_newline();
+    map_remove(macros, name->sval);
+}
+
+/*
+ * #if and the like
+ */
+
+static Token *read_defined_op() {
+    Token *tok = lex();
+    if (is_keyword(tok, '(')) {
+        tok = lex();
+        expect(')');
+    }
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    return map_get(macros, tok->sval) ? cpp_token_one : cpp_token_zero;
+}
+
+static Vector *read_intexpr_line() {
+    Vector *r = make_vector();
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind == TNEWLINE)
+            return r;
+        if (is_ident(tok, "defined")) {
+            vec_push(r, read_defined_op());
+        } else if (tok->kind == TIDENT) {
+            // C11 6.10.1.4 says that remaining identifiers
+            // should be replaced with pp-number 0.
+            vec_push(r, cpp_token_zero);
+        } else {
+            vec_push(r, tok);
+        }
+    }
+}
+
+static bool read_constexpr() {
+    token_buffer_stash(vec_reverse(read_intexpr_line()));
+    Node *expr = read_expr();
+    Token *tok = lex();
+    if (tok->kind != TEOF)
+        errort(tok, "stray token: %s", tok2s(tok));
+    token_buffer_unstash();
+    return eval_intexpr(expr, NULL);
+}
+
+static void do_read_if(bool istrue) {
+    vec_push(cond_incl_stack, make_cond_incl(istrue));
+    if (!istrue)
+        skip_cond_incl();
+}
+
+static void read_if() {
+    do_read_if(read_constexpr());
+}
+
+static void read_ifdef() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    expect_newline();
+    do_read_if(map_get(macros, tok->sval));
+}
+
+static void read_ifndef() {
+    Token *tok = lex();
+    if (tok->kind != TIDENT)
+        errort(tok, "identifier expected, but got %s", tok2s(tok));
+    expect_newline();
+    do_read_if(!map_get(macros, tok->sval));
+    if (tok->count == 2) {
+        // "ifndef" is the second token in this file.
+        // Prepare to detect an include guard.
+        CondIncl *ci = vec_tail(cond_incl_stack);
+        ci->include_guard = tok->sval;
+        ci->file = tok->file;
+    }
+}
+
+static void read_else(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #else");
+    CondIncl *ci = vec_tail(cond_incl_stack);
+    if (ci->ctx == IN_ELSE)
+        errort(hash, "#else appears in #else");
+    expect_newline();
+    ci->ctx = IN_ELSE;
+    ci->include_guard = NULL;
+    if (ci->wastrue)
+        skip_cond_incl();
+}
+
+static void read_elif(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #elif");
+    CondIncl *ci = vec_tail(cond_incl_stack);
+    if (ci->ctx == IN_ELSE)
+        errort(hash, "#elif after #else");
+    ci->ctx = IN_ELIF;
+    ci->include_guard = NULL;
+    if (ci->wastrue || !read_constexpr()) {
+        skip_cond_incl();
+        return;
+    }
+    ci->wastrue = true;
+}
+
+// Skips all newlines and returns the first non-newline token.
+static Token *skip_newlines() {
+    Token *tok = lex();
+    while (tok->kind == TNEWLINE)
+        tok = lex();
+    unget_token(tok);
+    return tok;
+}
+
+static void read_endif(Token *hash) {
+    if (vec_len(cond_incl_stack) == 0)
+        errort(hash, "stray #endif");
+    CondIncl *ci = vec_pop(cond_incl_stack);
+    expect_newline();
+
+    // Detect an #ifndef and #endif pair that guards the entire
+    // header file. Remember the macro name guarding the file
+    // so that we can skip the file next time.
+    if (!ci->include_guard || ci->file != hash->file)
+        return;
+    Token *last = skip_newlines();
+    if (ci->file != last->file)
+        map_put(include_guard, ci->file->name, ci->include_guard);
+}
+
+/*
+ * #error and #warning
+ */
+
+static char *read_error_message() {
+    Buffer *b = make_buffer();
+    for (;;) {
+        Token *tok = lex();
+        if (tok->kind == TNEWLINE)
+            return buf_body(b);
+        if (buf_len(b) != 0 && tok->space)
+            buf_write(b, ' ');
+        buf_printf(b, "%s", tok2s(tok));
+    }
+}
+
+static void read_error(Token *hash) {
+    errort(hash, "#error: %s", read_error_message());
+}
+
+static void read_warning(Token *hash) {
+    warnt(hash, "#warning: %s", read_error_message());
+}
+
+/*
+ * #include
+ */
+
+static char *join_paths(Vector *args) {
+    Buffer *b = make_buffer();
+    for (int i = 0; i < vec_len(args); i++)
+        buf_printf(b, "%s", tok2s(vec_get(args, i)));
+    return buf_body(b);
+}
+
+static char *read_cpp_header_name(Token *hash, bool *std) {
+    // Try reading a filename using a special tokenizer for #include.
+    char *path = read_header_file_name(std);
+    if (path)
+        return path;
+
+    // If a token following #include does not start with < nor ",
+    // try to read the token as a regular token. Macro-expanded
+    // form may be a valid header file path.
+    Token *tok = read_expand_newline();
+    if (tok->kind == TNEWLINE)
+        errort(hash, "expected filename, but got newline");
+    if (tok->kind == TSTRING) {
+        *std = false;
+        return tok->sval;
+    }
+    if (!is_keyword(tok, '<'))
+        errort(tok, "< expected, but got %s", tok2s(tok));
+    Vector *tokens = make_vector();
+    for (;;) {
+        Token *tok = read_expand_newline();
+        if (tok->kind == TNEWLINE)
+            errort(hash, "premature end of header name");
+        if (is_keyword(tok, '>'))
+            break;
+        vec_push(tokens, tok);
+    }
+    *std = true;
+    return join_paths(tokens);
+}
+
+static bool guarded(char *path) {
+    char *guard = map_get(include_guard, path);
+    bool r = (guard && map_get(macros, guard));
+    define_obj_macro("__8cc_include_guard", r ? cpp_token_one : cpp_token_zero);
+    return r;
+}
+
+static bool try_include(char *dir, char *filename, bool isimport) {
+    char *path = fullpath(format("%s/%s", dir, filename));
+    if (map_get(once, path))
+        return true;
+    if (guarded(path))
+        return true;
+    FILE *fp = fopen(path, "r");
+    if (!fp)
+        return false;
+    if (isimport)
+        map_put(once, path, (void *)1);
+    stream_push(make_file(fp, path));
+    return true;
+}
+
+static void read_include(Token *hash, File *file, bool isimport) {
+    bool std;
+    char *filename = read_cpp_header_name(hash, &std);
+    expect_newline();
+    if (filename[0] == '/') {
+        if (try_include("/", filename, isimport))
+            return;
+        goto err;
+    }
+    if (!std) {
+        char *dir = file->name ? dirname(strdup(file->name)) : ".";
+        if (try_include(dir, filename, isimport))
+            return;
+    }
+    for (int i = 0; i < vec_len(std_include_path); i++)
+        if (try_include(vec_get(std_include_path, i), filename, isimport))
+            return;
+  err:
+    errort(hash, "cannot find header file: %s", filename);
+}
+
+static void read_include_next(Token *hash, File *file) {
+    // [GNU] #include_next is a directive to include the "next" file
+    // from the search path. This feature is used to override a
+    // header file without getting into infinite inclusion loop.
+    // This directive doesn't distinguish <> and "".
+    bool std;
+    char *filename = read_cpp_header_name(hash, &std);
+    expect_newline();
+    if (filename[0] == '/') {
+        if (try_include("/", filename, false))
+            return;
+        goto err;
+    }
+    char *cur = fullpath(file->name);
+    int i = 0;
+    for (; i < vec_len(std_include_path); i++) {
+        char *dir = vec_get(std_include_path, i);
+        if (!strcmp(cur, fullpath(format("%s/%s", dir, filename))))
+            break;
+    }
+    for (i++; i < vec_len(std_include_path); i++)
+        if (try_include(vec_get(std_include_path, i), filename, false))
+            return;
+  err:
+    errort(hash, "cannot find header file: %s", filename);
+}
+
+/*
+ * #pragma
+ */
+
+static void parse_pragma_operand(Token *tok) {
+    char *s = tok->sval;
+    if (!strcmp(s, "once")) {
+        char *path = fullpath(tok->file->name);
+        map_put(once, path, (void *)1);
+    } else if (!strcmp(s, "enable_warning")) {
+        enable_warning = true;
+    } else if (!strcmp(s, "disable_warning")) {
+        enable_warning = false;
+    } else {
+        errort(tok, "unknown #pragma: %s", s);
+    }
+}
+
+static void read_pragma() {
+    Token *tok = read_ident();
+    parse_pragma_operand(tok);
+}
+
+/*
+ * #line
+ */
+
+static bool is_digit_sequence(char *p) {
+    for (; *p; p++)
+        if (!isdigit(*p))
+            return false;
+    return true;
+}
+
+static void read_line() {
+    Token *tok = read_expand_newline();
+    if (tok->kind != TNUMBER || !is_digit_sequence(tok->sval))
+        errort(tok, "number expected after #line, but got %s", tok2s(tok));
+    int line = atoi(tok->sval);
+    tok = read_expand_newline();
+    char *filename = NULL;
+    if (tok->kind == TSTRING) {
+        filename = tok->sval;
+        expect_newline();
+    } else if (tok->kind != TNEWLINE) {
+        errort(tok, "newline or a source name are expected, but got %s", tok2s(tok));
+    }
+    File *f = current_file();
+    f->line = line;
+    if (filename)
+        f->name = filename;
+}
+
+// GNU CPP outputs "# linenum filename flags" to preserve original
+// source file information. This function reads them. Flags are ignored.
+static void read_linemarker(Token *tok) {
+    if (!is_digit_sequence(tok->sval))
+        errort(tok, "line number expected, but got %s", tok2s(tok));
+    int line = atoi(tok->sval);
+    tok = lex();
+    if (tok->kind != TSTRING)
+        errort(tok, "filename expected, but got %s", tok2s(tok));
+    char *filename = tok->sval;
+    do {
+        tok = lex();
+    } while (tok->kind != TNEWLINE);
+    File *file = current_file();
+    file->line = line;
+    file->name = filename;
+}
+
+/*
+ * #-directive
+ */
+
+static void read_directive(Token *hash) {
+    Token *tok = lex();
+    if (tok->kind == TNEWLINE)
+        return;
+    if (tok->kind == TNUMBER) {
+        read_linemarker(tok);
+        return;
+    }
+    if (tok->kind != TIDENT)
+        goto err;
+    char *s = tok->sval;
+    if (!strcmp(s, "define"))            read_define();
+    else if (!strcmp(s, "elif"))         read_elif(hash);
+    else if (!strcmp(s, "else"))         read_else(hash);
+    else if (!strcmp(s, "endif"))        read_endif(hash);
+    else if (!strcmp(s, "error"))        read_error(hash);
+    else if (!strcmp(s, "if"))           read_if();
+    else if (!strcmp(s, "ifdef"))        read_ifdef();
+    else if (!strcmp(s, "ifndef"))       read_ifndef();
+    else if (!strcmp(s, "import"))       read_include(hash, tok->file, true);
+    else if (!strcmp(s, "include"))      read_include(hash, tok->file, false);
+    else if (!strcmp(s, "include_next")) read_include_next(hash, tok->file);
+    else if (!strcmp(s, "line"))         read_line();
+    else if (!strcmp(s, "pragma"))       read_pragma();
+    else if (!strcmp(s, "undef"))        read_undef();
+    else if (!strcmp(s, "warning"))      read_warning(hash);
+    else goto err;
+    return;
+
+  err:
+    errort(hash, "unsupported preprocessor directive: %s", tok2s(tok));
+}
+
+/*
+ * Special macros
+ */
+
+static void make_token_pushback(Token *tmpl, int kind, char *sval) {
+    Token *tok = copy_token(tmpl);
+    tok->kind = kind;
+    tok->sval = sval;
+    tok->slen = strlen(sval) + 1;
+    tok->enc = ENC_NONE;
+    unget_token(tok);
+}
+
+static void handle_date_macro(Token *tmpl) {
+    char buf[20];
+    strftime(buf, sizeof(buf), "%b %e %Y", &now);
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_time_macro(Token *tmpl) {
+    char buf[10];
+    strftime(buf, sizeof(buf), "%T", &now);
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_timestamp_macro(Token *tmpl) {
+    // [GNU] __TIMESTAMP__ is expanded to a string that describes the date
+    // and time of the last modification time of the current source file.
+    char buf[30];
+    strftime(buf, sizeof(buf), "%a %b %e %T %Y", localtime(&tmpl->file->mtime));
+    make_token_pushback(tmpl, TSTRING, strdup(buf));
+}
+
+static void handle_file_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TSTRING, tmpl->file->name);
+}
+
+static void handle_line_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TNUMBER, format("%d", tmpl->file->line));
+}
+
+static void handle_pragma_macro(Token *tmpl) {
+    expect('(');
+    Token *operand = read_token();
+    if (operand->kind != TSTRING)
+        errort(operand, "_Pragma takes a string literal, but got %s", tok2s(operand));
+    expect(')');
+    parse_pragma_operand(operand);
+    make_token_pushback(tmpl, TNUMBER, "1");
+}
+
+static void handle_base_file_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TSTRING, get_base_file());
+}
+
+static void handle_counter_macro(Token *tmpl) {
+    static int counter = 0;
+    make_token_pushback(tmpl, TNUMBER, format("%d", counter++));
+}
+
+static void handle_include_level_macro(Token *tmpl) {
+    make_token_pushback(tmpl, TNUMBER, format("%d", stream_depth() - 1));
+}
+
+/*
+ * Initializer
+ */
+
+void add_include_path(char *path) {
+    vec_push(std_include_path, path);
+}
+
+static void define_obj_macro(char *name, Token *value) {
+    map_put(macros, name, make_obj_macro(make_vector1(value)));
+}
+
+static void define_special_macro(char *name, SpecialMacroHandler *fn) {
+    map_put(macros, name, make_special_macro(fn));
+}
+
+static void init_keywords() {
+#define op(id, str)         map_put(keywords, str, (void *)id);
+#define keyword(id, str, _) map_put(keywords, str, (void *)id);
+#include "keyword.inc"
+#undef keyword
+#undef op
+}
+
+static void init_predefined_macros() {
+    vec_push(std_include_path, BUILD_DIR "/include");
+    vec_push(std_include_path, "/usr/local/lib/8cc/include");
+    vec_push(std_include_path, "/usr/local/include");
+    vec_push(std_include_path, "/usr/include");
+    vec_push(std_include_path, "/usr/include/linux");
+    vec_push(std_include_path, "/usr/include/x86_64-linux-gnu");
+
+    define_special_macro("__DATE__", handle_date_macro);
+    define_special_macro("__TIME__", handle_time_macro);
+    define_special_macro("__FILE__", handle_file_macro);
+    define_special_macro("__LINE__", handle_line_macro);
+    define_special_macro("_Pragma",  handle_pragma_macro);
+    // [GNU] Non-standard macros
+    define_special_macro("__BASE_FILE__", handle_base_file_macro);
+    define_special_macro("__COUNTER__", handle_counter_macro);
+    define_special_macro("__INCLUDE_LEVEL__", handle_include_level_macro);
+    define_special_macro("__TIMESTAMP__", handle_timestamp_macro);
+
+    read_from_string("#include <" BUILD_DIR "/include/8cc.h>");
+}
+
+void init_now() {
+    time_t timet = time(NULL);
+    localtime_r(&timet, &now);
+}
+
+void cpp_init() {
+    setlocale(LC_ALL, "C");
+    init_keywords();
+    init_now();
+    init_predefined_macros();
+}
+
+/*
+ * Public intefaces
+ */
+
+static Token *maybe_convert_keyword(Token *tok) {
+    if (tok->kind != TIDENT)
+        return tok;
+    int id = (intptr_t)map_get(keywords, tok->sval);
+    if (!id)
+        return tok;
+    Token *r = copy_token(tok);
+    r->kind = TKEYWORD;
+    r->id = id;
+    return r;
+}
+
+// Reads from a string as if the string is a content of input file.
+// Convenient for evaluating small string snippet contaiing preprocessor macros.
+void read_from_string(char *buf) {
+    stream_stash(make_file_string(buf));
+    Vector *toplevels = read_toplevels();
+    for (int i = 0; i < vec_len(toplevels); i++)
+        emit_toplevel(vec_get(toplevels, i));
+    stream_unstash();
+}
+
+Token *peek_token() {
+    Token *r = read_token();
+    unget_token(r);
+    return r;
+}
+
+Token *read_token() {
+    Token *tok;
+    for (;;) {
+        tok = read_expand();
+        if (tok->bol && is_keyword(tok, '#') && tok->hideset == NULL) {
+            read_directive(tok);
+            continue;
+        }
+        assert(tok->kind < MIN_CPP_TOKEN);
+        return maybe_convert_keyword(tok);
+    }
+}
+
+
+

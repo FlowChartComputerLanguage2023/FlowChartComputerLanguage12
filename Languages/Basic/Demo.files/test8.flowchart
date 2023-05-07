@@ -1,0 +1,2211 @@
+/Ignore= /Color=Color Name, Alpha, Red, Green, Blue, Style, StartCap, EndCap, ,REM,1
+/Ignore= /datatype=datatypename, Number Of Bytes, Color Name, Color Width, Describtion, ,REM,2
+/Ignore= /Name=Symbol Name, options, ,REM,3
+/Ignore= /Point = X, Y, {Input/Output...}, Data Type, Name, ,REM,4
+/Ignore= /Line=x1, y1, x2, y2, Color, ,REM,5
+/Ignore= /FileName=Device:/Path/FileName.Extension, ,REM,6
+/Ignore= /language=(Language Name),{case Sensitive Yes,No},{inline comment},{.Extension},{between Statements on one line},{Last character to continue next line},{Characters in variable names besides a-z,A-Z},{[(GoToNextLine)]},{[(CameFromLast)]},{reserved},{reserved}, ,REM,7
+/Ignore= /Stroke={}, ,REM,8
+/Ignore= /Notes={}, ,REM,9
+/Ignore= /Version={}, ,REM,10
+/Ignore= /Author={}, ,REM,11
+/Ignore= /OpCode={}, ,REM,12
+/Ignore= /Path=Name, x1, y1, x2, y2, Data type, ,REM,13
+/Ignore= /Use=Name, X, Y, rotation, future dynamic options, ,REM,14
+/Ignore= /Constant=name , X, Y, Value, ,REM,15
+/Ignore= /programtext= Text {[( replacements)]} text ..., ,REM,16
+/Ignore= /Option=number,{on or off}, ,REM,17
+/Ignore= /error = Code, name, x1, y1, Name , {other things maybe}, ,REM,18
+/Ignore= /Delete ..., ,REM,19
+/Ignore= /ThisCode added to /path or /constant , ,REM,20
+/Ignore= /Keyword=ReservedWord  {,only one word, no spaces allowed currently}, ,REM,21
+/Ignore= /Operator=Operator  {,only one operator ie: +, no space allowed currently}, ,REM,22
+/Ignore= /Function=FunctionWord  ,only one function name no (), {}, [] etc ,, ,REM,23
+/Ignore= /programtext= Text {[( replacements)]} text ..., ,REM,24
+/Ignore= /Syntax={keyword,special characters,{[(variables)]} for variables ,quote marks , between each one   ect..., ,REM,25
+/Option=1010,off, ,REM,26
+/Option=1021,off, ,REM,27
+/Option=1032,off, ,REM,28
+/Option=1037,off, ,REM,29
+/Option=1116,off, ,REM,30
+/Option=1136,off, ,REM,31
+/Option=1149,off, ,REM,32
+/Option=1246,off, ,REM,33
+/Option=1248,off, ,REM,34
+/Option=1293,off, ,REM,35
+/Option=1294,off, ,REM,36
+/Option=1295,off, ,REM,37
+/keyword=$dynamic, ,REM,38
+/keyword=$static, ,REM,39
+/keyword=?, ,REM,40
+/keyword=_DEFINE, ,REM,41
+/keyword=_PRESERVE, ,REM,42
+/keyword=ABSOLUTE, ,REM,43
+/keyword=ACCESS, ,REM,44
+/keyword=Alert, ,REM,45
+/keyword=ALIAS, ,REM,46
+/keyword=andalso, ,REM,47
+/keyword=APPEND, ,REM,48
+/keyword=Arc, ,REM,49
+/keyword=ArrayBase, ,REM,50
+/keyword=ArrayLength, ,REM,51
+/keyword=As, ,REM,52
+/keyword=Assigned, ,REM,53
+/keyword=Base, ,REM,54
+/keyword=basic, ,REM,55
+/keyword=BEEP, ,REM,56
+/keyword=Begin, ,REM,57
+/keyword=BINARY, ,REM,58
+/keyword=BLOAD, ,REM,59
+/keyword=Boolean, ,REM,60
+/keyword=BSAVE, ,REM,61
+/keyword=BYE, ,REM,62
+/keyword=Byte, ,REM,63
+/keyword=BYVAL, ,REM,64
+/keyword=Call, ,REM,65
+/keyword=CALLS, ,REM,66
+/keyword=Case, ,REM,67
+/keyword=CAT, ,REM,68
+/keyword=Catch, ,REM,69
+/keyword=CDECL, ,REM,70
+/keyword=CHAIN, ,REM,71
+/keyword=Changedir, ,REM,72
+/keyword=CHDIR, ,REM,73
+/keyword=Chord, ,REM,74
+/keyword=Circle, ,REM,75
+/keyword=CLEAR, ,REM,76
+/keyword=Clg, ,REM,77
+/keyword=Clickb, ,REM,78
+/keyword=Clickclear, ,REM,79
+/keyword=Clickx, ,REM,80
+/keyword=Clicky, ,REM,81
+/keyword=clngint, ,REM,82
+/keyword=Close, ,REM,83
+/keyword=Cls, ,REM,84
+/keyword=Color, ,REM,85
+/keyword=COM, ,REM,86
+/keyword=COM(n), ,REM,87
+/keyword=COMMON, ,REM,88
+/keyword=Confirm, ,REM,89
+/keyword=CONST, ,REM,90
+/keyword=continue, ,REM,91
+/keyword=Continue Do, ,REM,92
+/keyword=Continue For, ,REM,93
+/keyword=Continue While, ,REM,94
+/keyword=Count, ,REM,95
+/keyword=Countx, ,REM,96
+/keyword=cubyte, ,REM,97
+/keyword=culngint, ,REM,98
+/keyword=Currency, ,REM,99
+/keyword=Currentdir, ,REM,100
+/keyword=DATA, ,REM,101
+/keyword=Day, ,REM,102
+/keyword=DBClose, ,REM,103
+/keyword=DBCloseSet, ,REM,104
+/keyword=DBExecute, ,REM,105
+/keyword=DBFloat, ,REM,106
+/keyword=DBInt, ,REM,107
+/keyword=DBNull, ,REM,108
+/keyword=DBOpen, ,REM,109
+/keyword=DBOpenSet, ,REM,110
+/keyword=DBRow, ,REM,111
+/keyword=DBString, ,REM,112
+/keyword=Declare, ,REM,113
+/keyword=DEF, ,REM,114
+/keyword=DEFDBL, ,REM,115
+/keyword=DEFINT, ,REM,116
+/keyword=DEFLNG, ,REM,117
+/keyword=DEFSNG, ,REM,118
+/keyword=DEFSTR, ,REM,119
+/keyword=Dim, ,REM,120
+/keyword=Dir, ,REM,121
+/keyword=Do, ,REM,122
+/keyword=DO...LOOP, ,REM,123
+/keyword=Double, ,REM,124
+/keyword=DRAW, ,REM,125
+/keyword=Each, ,REM,126
+/keyword=EditVisible, ,REM,127
+/keyword=Else, ,REM,128
+/keyword=ElseIf, ,REM,129
+/keyword=End, ,REM,130
+/keyword=End Case, ,REM,131
+/keyword=End Try, ,REM,132
+/keyword=End While, ,REM,133
+/keyword=EndFunction, ,REM,134
+/keyword=EndIf, ,REM,135
+/keyword=EndSubroutine, ,REM,136
+/keyword=EndWhile, ,REM,137
+/keyword=Enum, ,REM,138
+/keyword=Eof, ,REM,139
+/keyword=EQV, ,REM,140
+/keyword=Erase, ,REM,141
+/keyword=ERL, ,REM,142
+/keyword=Error, ,REM,143
+/keyword=Exists, ,REM,144
+/keyword=Exit, ,REM,145
+/keyword=Exit Do, ,REM,146
+/keyword=Exit For, ,REM,147
+/keyword=Exit While, ,REM,148
+/keyword=Explode, ,REM,149
+/keyword=Explodex, ,REM,150
+/keyword=False, ,REM,151
+/keyword=FastGraphics, ,REM,152
+/keyword=FIELD, ,REM,153
+/keyword=FILES, ,REM,154
+/keyword=Fill, ,REM,155
+/keyword=Font, ,REM,156
+/keyword=For, ,REM,157
+/keyword=For Each, ,REM,158
+/keyword=FOR...NEXT, ,REM,159
+/keyword=FREE, ,REM,160
+/keyword=Freedb, ,REM,161
+/keyword=Freedbset, ,REM,162
+/keyword=Freefile, ,REM,163
+/keyword=Freenet, ,REM,164
+/keyword=FromBinary, ,REM,165
+/keyword=FromHex, ,REM,166
+/keyword=FromOctal, ,REM,167
+/keyword=FromRadix, ,REM,168
+/keyword=Function, ,REM,169
+/keyword=Get, ,REM,170
+/keyword=GetBrushColor, ,REM,171
+/keyword=GetClipboardImage, ,REM,172
+/keyword=GetClipboardString, ,REM,173
+/keyword=GetColor, ,REM,174
+/keyword=GetPenWidth, ,REM,175
+/keyword=GetSetting, ,REM,176
+/keyword=GetSlice, ,REM,177
+/keyword=Global, ,REM,178
+/keyword=GOOODBYE, ,REM,179
+/keyword=Gosub, ,REM,180
+/keyword=Goto, ,REM,181
+/keyword=Graphheight, ,REM,182
+/keyword=Graphsize, ,REM,183
+/keyword=GraphToolBarVisible, ,REM,184
+/keyword=GraphVisible, ,REM,185
+/keyword=Graphwidth, ,REM,186
+/keyword=HELLO, ,REM,187
+/keyword=Hour, ,REM,188
+/keyword=If, ,REM,189
+/keyword=If Then, ,REM,190
+/keyword=IF...THEN, ,REM,191
+/keyword=ImageAutoCrop, ,REM,192
+/keyword=ImageCentered, ,REM,193
+/keyword=ImageCopy, ,REM,194
+/keyword=ImageCrop, ,REM,195
+/keyword=ImageDraw, ,REM,196
+/keyword=ImageFlip, ,REM,197
+/keyword=ImageHeight, ,REM,198
+/keyword=ImageLoad, ,REM,199
+/keyword=ImageNew, ,REM,200
+/keyword=ImagePixel, ,REM,201
+/keyword=ImageResize, ,REM,202
+/keyword=ImageRotate, ,REM,203
+/keyword=imageSetPixel, ,REM,204
+/keyword=ImageSmooth, ,REM,205
+/keyword=ImageTransformed, ,REM,206
+/keyword=ImageWidth, ,REM,207
+/keyword=Imgload, ,REM,208
+/keyword=Imgsave, ,REM,209
+/keyword=IMP, ,REM,210
+/keyword=Implode, ,REM,211
+/keyword=Include, ,REM,212
+/keyword=Input, ,REM,213
+/keyword=Input Float, ,REM,214
+/keyword=Input Integer, ,REM,215
+/keyword=Input String, ,REM,216
+/keyword=Instrx, ,REM,217
+/keyword=Integer, ,REM,218
+/keyword=INTERRUPT, ,REM,219
+/keyword=INTERRUPTX, ,REM,220
+/keyword=IOCTL, ,REM,221
+/keyword=Is, ,REM,222
+/keyword=Key, ,REM,223
+/keyword=Keypressed, ,REM,224
+/keyword=Kill, ,REM,225
+/keyword=Lasterror, ,REM,226
+/keyword=Lasterrorextra, ,REM,227
+/keyword=Lasterrorline, ,REM,228
+/keyword=Lasterrormessage, ,REM,229
+/keyword=Length, ,REM,230
+/keyword=Let, ,REM,231
+/keyword=Lib, ,REM,232
+/keyword=LIBRARY, ,REM,233
+/keyword=Like, ,REM,234
+/keyword=Line, ,REM,235
+/keyword=LIST, ,REM,236
+/keyword=Ljust, ,REM,237
+/keyword=LOCATE, ,REM,238
+/keyword=LOCK, ,REM,239
+/keyword=Long, ,REM,240
+/keyword=longint, ,REM,241
+/keyword=Loop, ,REM,242
+/keyword=LPRINT, ,REM,243
+/keyword=MainToolBarVisible, ,REM,244
+/keyword=Map, ,REM,245
+/keyword=MD5, ,REM,246
+/keyword=Midx, ,REM,247
+/keyword=Minute, ,REM,248
+/keyword=mkdir, ,REM,249
+/keyword=Month, ,REM,250
+/keyword=Mouseb, ,REM,251
+/keyword=Mousex, ,REM,252
+/keyword=Mousey, ,REM,253
+/keyword=Msec, ,REM,254
+/keyword=NAME, ,REM,255
+/keyword=NetAddress, ,REM,256
+/keyword=NetClose, ,REM,257
+/keyword=NetConnect, ,REM,258
+/keyword=NetData, ,REM,259
+/keyword=NetListen, ,REM,260
+/keyword=NetRead, ,REM,261
+/keyword=NetWrite, ,REM,262
+/keyword=NEW, ,REM,263
+/keyword=Next, ,REM,264
+/keyword=Not, ,REM,265
+/keyword=Nothing, ,REM,266
+/keyword=Null, ,REM,267
+/keyword=OFF, ,REM,268
+/keyword=Offerror, ,REM,269
+/keyword=OLD, ,REM,270
+/keyword=On, ,REM,271
+/keyword=Onerror, ,REM,272
+/keyword=OnStop, ,REM,273
+/keyword=Open, ,REM,274
+/keyword=Openb, ,REM,275
+/keyword=OpenFileDialog, ,REM,276
+/keyword=OpenSerial, ,REM,277
+/keyword=OPTION, ,REM,278
+/keyword=orelse, ,REM,279
+/keyword=Ostype, ,REM,280
+/keyword=OUT, ,REM,281
+/keyword=OUTPUT, ,REM,282
+/keyword=OutputToolBarVisible, ,REM,283
+/keyword=OutputVisible, ,REM,284
+/keyword=PAINT, ,REM,285
+/keyword=PALETTE, ,REM,286
+/keyword=Pause, ,REM,287
+/keyword=PCOPY, ,REM,288
+/keyword=PenWidth, ,REM,289
+/keyword=Pie, ,REM,290
+/keyword=Pixel, ,REM,291
+/keyword=Plot, ,REM,292
+/keyword=POKE, ,REM,293
+/keyword=Poly, ,REM,294
+/keyword=PortIn, ,REM,295
+/keyword=PortOut, ,REM,296
+/keyword=PRESET, ,REM,297
+/keyword=Print, ,REM,298
+/keyword=Printercancel, ,REM,299
+/keyword=Printeroff, ,REM,300
+/keyword=Printeron, ,REM,301
+/keyword=Printerpage, ,REM,302
+/keyword=Prompt, ,REM,303
+/keyword=Property, ,REM,304
+/keyword=PSET, ,REM,305
+/keyword=Public, ,REM,306
+/keyword=PUT, ,REM,307
+/keyword=PutSlice, ,REM,308
+/keyword=RANDOM, ,REM,309
+/keyword=RANDOMIZE, ,REM,310
+/keyword=Read, ,REM,311
+/keyword=Readbyte, ,REM,312
+/keyword=Readline, ,REM,313
+/keyword=Rect, ,REM,314
+/keyword=Redim, ,REM,315
+/keyword=Ref, ,REM,316
+/keyword=Refresh, ,REM,317
+/keyword=RegexMinimal, ,REM,318
+/keyword=RENAME, ,REM,319
+/keyword=Replacex, ,REM,320
+/keyword=Reset, ,REM,321
+/keyword=RESTORE, ,REM,322
+/keyword=Resume, ,REM,323
+/keyword=Return, ,REM,324
+/keyword=Rgb, ,REM,325
+/keyword=Rjust, ,REM,326
+/keyword=rmdir, ,REM,327
+/keyword=RUN, ,REM,328
+/keyword=SAVE, ,REM,329
+/keyword=SaveFileDialog, ,REM,330
+/keyword=Say, ,REM,331
+/keyword=Second, ,REM,332
+/keyword=SEG, ,REM,333
+/keyword=Select, ,REM,334
+/keyword=Serialize, ,REM,335
+/keyword=Set, ,REM,336
+/keyword=SetClipboardImage, ,REM,337
+/keyword=SetClipboardString, ,REM,338
+/keyword=SetSetting, ,REM,339
+/keyword=SHARED, ,REM,340
+/keyword=SHELL, ,REM,341
+/keyword=shl, ,REM,342
+/keyword=short, ,REM,343
+/keyword=shr, ,REM,344
+/keyword=SIGNAL, ,REM,345
+/keyword=Single, ,REM,346
+/keyword=Size, ,REM,347
+/keyword=SLEEP, ,REM,348
+/keyword=Sound, ,REM,349
+/keyword=SoundLength, ,REM,350
+/keyword=SoundLoad, ,REM,351
+/keyword=SoundPause, ,REM,352
+/keyword=SoundPlay, ,REM,353
+/keyword=SoundPosition, ,REM,354
+/keyword=SoundResume, ,REM,355
+/keyword=SoundSeek, ,REM,356
+/keyword=SoundState, ,REM,357
+/keyword=SoundStop, ,REM,358
+/keyword=SoundVolume, ,REM,359
+/keyword=SoundWait, ,REM,360
+/keyword=Spritecollide, ,REM,361
+/keyword=Spritedim, ,REM,362
+/keyword=Spriteh, ,REM,363
+/keyword=Spritehide, ,REM,364
+/keyword=Spriteload, ,REM,365
+/keyword=Spritemove, ,REM,366
+/keyword=Spriteo, ,REM,367
+/keyword=Spriteplace, ,REM,368
+/keyword=Spritepoly, ,REM,369
+/keyword=Spriter, ,REM,370
+/keyword=Sprites, ,REM,371
+/keyword=Spriteshow, ,REM,372
+/keyword=Spriteslice, ,REM,373
+/keyword=Spritetext, ,REM,374
+/keyword=Spritev, ,REM,375
+/keyword=Spritew, ,REM,376
+/keyword=Spritex, ,REM,377
+/keyword=Spritey, ,REM,378
+/keyword=Stamp, ,REM,379
+/keyword=Static, ,REM,380
+/keyword=Step, ,REM,381
+/keyword=Stop, ,REM,382
+/keyword=STRIG(n), ,REM,383
+/keyword=String, ,REM,384
+/keyword=Sub, ,REM,385
+/keyword=Subroutine, ,REM,386
+/keyword=SWAP, ,REM,387
+/keyword=System, ,REM,388
+/keyword=Text, ,REM,389
+/keyword=TextHeight, ,REM,390
+/keyword=TextWidth, ,REM,391
+/keyword=Then, ,REM,392
+/keyword=ThrowError, ,REM,393
+/keyword=To, ,REM,394
+/keyword=ToBinary, ,REM,395
+/keyword=ToHex, ,REM,396
+/keyword=ToOctal, ,REM,397
+/keyword=ToRadix, ,REM,398
+/keyword=True, ,REM,399
+/keyword=Try, ,REM,400
+/keyword=Type, ,REM,401
+/keyword=TypeOf, ,REM,402
+/keyword=ubyte, ,REM,403
+/keyword=UEVENT, ,REM,404
+/keyword=uinteger, ,REM,405
+/keyword=ulongint, ,REM,406
+/keyword=Unassign, ,REM,407
+/keyword=Unload, ,REM,408
+/keyword=UNLOCK, ,REM,409
+/keyword=UNSAVE, ,REM,410
+/keyword=Unserialize, ,REM,411
+/keyword=Until, ,REM,412
+/keyword=ushort, ,REM,413
+/keyword=USING, ,REM,414
+/keyword=VariableWatch, ,REM,415
+/keyword=Version, ,REM,416
+/keyword=VIEW, ,REM,417
+/keyword=Volume, ,REM,418
+/keyword=WAIT, ,REM,419
+/keyword=WAVlength, ,REM,420
+/keyword=WAVpause, ,REM,421
+/keyword=WAVplay, ,REM,422
+/keyword=WAVpos, ,REM,423
+/keyword=WAVseek, ,REM,424
+/keyword=WAVstate, ,REM,425
+/keyword=WAVstop, ,REM,426
+/keyword=WAVwait, ,REM,427
+/keyword=Wend, ,REM,428
+/keyword=While, ,REM,429
+/keyword=WIDTH, ,REM,430
+/keyword=WINDOW, ,REM,431
+/keyword=With, ,REM,432
+/keyword=Write, ,REM,433
+/keyword=Writebyte, ,REM,434
+/keyword=Writeline, ,REM,435
+/keyword=xor, ,REM,436
+/keyword=Year, ,REM,437
+/keyword=Zfill, ,REM,438
+/keyword=zzzzzzzzzKeywords, ,REM,439
+/operator=', ,REM,440
+/operator=-, ,REM,441
+/operator=!, ,REM,442
+/operator=%, ,REM,443
+/operator=&, ,REM,444
+/operator=(, ,REM,445
+/operator=), ,REM,446
+/operator=*, ,REM,447
+/operator=*=, ,REM,448
+/operator=/, ,REM,449
+/operator=/=, ,REM,450
+/operator=[, ,REM,451
+/operator=\, ,REM,452
+/operator=], ,REM,453
+/operator=|, ,REM,454
+/operator=~, ,REM,455
+/operator=+, ,REM,456
+/operator=++, ,REM,457
+/operator=+=, ,REM,458
+/operator=<, ,REM,459
+/operator=<=, ,REM,460
+/operator=<>, ,REM,461
+/operator==, ,REM,462
+/operator=-=, ,REM,463
+/operator=>, ,REM,464
+/operator=>=, ,REM,465
+/operator=AND, ,REM,466
+/operator=OR, ,REM,467
+/operator=zzzzzzzzzOperators, ,REM,468
+/Function=Abs, ,REM,469
+/Function=Acos, ,REM,470
+/Function=Acosh, ,REM,471
+/Function=Asc, ,REM,472
+/Function=AscW, ,REM,473
+/Function=Asin, ,REM,474
+/Function=Asinh, ,REM,475
+/Function=Atan, ,REM,476
+/Function=Atan2, ,REM,477
+/Function=Atanh, ,REM,478
+/Function=atn, ,REM,479
+/Function=BigMul, ,REM,480
+/Function=BitDecrement, ,REM,481
+/Function=BitIncrement, ,REM,482
+/Function=CBool, ,REM,483
+/Function=Cbrt, ,REM,484
+/Function=CByte, ,REM,485
+/Function=CChar, ,REM,486
+/Function=CDate, ,REM,487
+/Function=CDbl, ,REM,488
+/Function=CDec, ,REM,489
+/Function=Ceil, ,REM,490
+/Function=Ceiling, ,REM,491
+/Function=Chr, ,REM,492
+/Function=CHR$, ,REM,493
+/Function=ChrW, ,REM,494
+/Function=CInt, ,REM,495
+/Function=Clamp, ,REM,496
+/Function=CLng, ,REM,497
+/Function=CObj, ,REM,498
+/Function=COMMAND$, ,REM,499
+/Function=CopySign, ,REM,500
+/Function=Cos, ,REM,501
+/Function=Cosh, ,REM,502
+/Function=CSByte, ,REM,503
+/Function=CShort, ,REM,504
+/Function=CSng, ,REM,505
+/Function=CSRLIN, ,REM,506
+/Function=CStr, ,REM,507
+/Function=CType, ,REM,508
+/Function=CUInt, ,REM,509
+/Function=CULng, ,REM,510
+/Function=CUShort, ,REM,511
+/Function=CVD, ,REM,512
+/Function=CVDMBF, ,REM,513
+/Function=CVI, ,REM,514
+/Function=CVL, ,REM,515
+/Function=CVS, ,REM,516
+/Function=CVSMBF, ,REM,517
+/Function=DATE, ,REM,518
+/Function=DATE$, ,REM,519
+/Function=Degrees, ,REM,520
+/Function=DivRem, ,REM,521
+/Function=ENVIRON$, ,REM,522
+/Function=ERDEV, ,REM,523
+/Function=ERDEV$, ,REM,524
+/Function=ERR, ,REM,525
+/Function=Exp, ,REM,526
+/Function=FILEATTR, ,REM,527
+/Function=Filter, ,REM,528
+/Function=FIX, ,REM,529
+/Function=Float, ,REM,530
+/Function=Floor, ,REM,531
+/Function=Format, ,REM,532
+/Function=FormatCurrency, ,REM,533
+/Function=FormatDateTime, ,REM,534
+/Function=FormatNumber, ,REM,535
+/Function=FormatPercent, ,REM,536
+/Function=FRE, ,REM,537
+/Function=FusedMultiplyAdd, ,REM,538
+/Function=Hex, ,REM,539
+/Function=HEX$, ,REM,540
+/Function=IEEERemainder, ,REM,541
+/Function=ILogB, ,REM,542
+/Function=INKEY$, ,REM,543
+/Function=INP, ,REM,544
+/Function=INPUT$, ,REM,545
+/Function=InStr, ,REM,546
+/Function=InStrRev, ,REM,547
+/Function=Int, ,REM,548
+/Function=IOCTL$, ,REM,549
+/Function=IsNumeric, ,REM,550
+/Function=Join, ,REM,551
+/Function=LBOUND, ,REM,552
+/Function=LCase, ,REM,553
+/Function=LCASE$, ,REM,554
+/Function=Left, ,REM,555
+/Function=LEFT$, ,REM,556
+/Function=Len, ,REM,557
+/Function=LOC, ,REM,558
+/Function=LOF, ,REM,559
+/Function=Log, ,REM,560
+/Function=Log10, ,REM,561
+/Function=Log2, ,REM,562
+/Function=lower, ,REM,563
+/Function=LPOS, ,REM,564
+/Function=LSet, ,REM,565
+/Function=LTrim, ,REM,566
+/Function=LTRIM$, ,REM,567
+/Function=Max, ,REM,568
+/Function=MaxMagnitude, ,REM,569
+/Function=Mid, ,REM,570
+/Function=Min, ,REM,571
+/Function=MinMagnitude, ,REM,572
+/Function=MKD$, ,REM,573
+/Function=MKDMBF$, ,REM,574
+/Function=MKI$, ,REM,575
+/Function=MKL$, ,REM,576
+/Function=MKS$, ,REM,577
+/Function=MKSMBF$, ,REM,578
+/Function=mod, ,REM,579
+/Function=Oct, ,REM,580
+/Function=OCT$, ,REM,581
+/Function=PEEK, ,REM,582
+/Function=PEN, ,REM,583
+/Function=PLAY, ,REM,584
+/Function=PMAP, ,REM,585
+/Function=POINT, ,REM,586
+/Function=POS, ,REM,587
+/Function=Pow, ,REM,588
+/Function=Radians, ,REM,589
+/Function=Rand, ,REM,590
+/Function=Replace, ,REM,591
+/Function=Right, ,REM,592
+/Function=RIGHT$, ,REM,593
+/Function=rnd, ,REM,594
+/Function=Round, ,REM,595
+/Function=RSet, ,REM,596
+/Function=RTrim, ,REM,597
+/Function=RTRIM$, ,REM,598
+/Function=SADD, ,REM,599
+/Function=ScaleB, ,REM,600
+/Function=SCREEN, ,REM,601
+/Function=Seed, ,REM,602
+/Function=SEEK, ,REM,603
+/Function=SETMEM, ,REM,604
+/Function=SGN, ,REM,605
+/Function=Sign, ,REM,606
+/Function=Sin, ,REM,607
+/Function=Sinh, ,REM,608
+/Function=Space, ,REM,609
+/Function=SPACE$, ,REM,610
+/Function=SPC, ,REM,611
+/Function=Split, ,REM,612
+/Function=Sqr, ,REM,613
+/Function=Sqrt, ,REM,614
+/Function=STICK, ,REM,615
+/Function=Str, ,REM,616
+/Function=STR$, ,REM,617
+/Function=StrComp, ,REM,618
+/Function=StrConv, ,REM,619
+/Function=StrDup, ,REM,620
+/Function=STRIG, ,REM,621
+/Function=STRING$, ,REM,622
+/Function=StrReverse, ,REM,623
+/Function=TAB, ,REM,624
+/Function=Tan, ,REM,625
+/Function=Tanh, ,REM,626
+/Function=TIME$, ,REM,627
+/Function=TIMER, ,REM,628
+/Function=Trim, ,REM,629
+/Function=Truncate, ,REM,630
+/Function=UBOUND, ,REM,631
+/Function=UCase, ,REM,632
+/Function=UCASE$, ,REM,633
+/Function=upper, ,REM,634
+/Function=Val, ,REM,635
+/Function=VARPTR, ,REM,636
+/Function=VARPTR$, ,REM,637
+/Function=VARSEG, ,REM,638
+/Function=zzzzzzzzzFunctions, ,REM,639
+/color = AliceBlue,255,240,248,255,2,Triangle,RoundAnchor, ,REM,640
+/color = AntiqueWhite,255,250,235,215,4,RoundAnchor,ArrowAnchor, ,REM,641
+/color = aqua,255,1,255,255,0,Round,Round, ,REM,642
+/color = aquamarine,255,127,255,212,2,Round,NoAnchor, ,REM,643
+/color = Azure,255,240,255,255,4,Flat,NoAnchor, ,REM,644
+/color = beige,255,245,245,220,3,Flat,Square, ,REM,645
+/color = bisque,255,255,228,196,2,DiamondAnchor,SquareAnchor, ,REM,646
+/color = Black,255,1,1,1,0,Round,Round, ,REM,647
+/color = BlanchedAlmond,255,255,235,205,1,DiamondAnchor,Triangle, ,REM,648
+/color = Blue,255,1,1,255,0,Round,Round, ,REM,649
+/color = BlueViolet,255,138,43,226,2,Triangle,SquareAnchor, ,REM,650
+/color = Brown,255,165,42,42,1,NoAnchor,Flat, ,REM,651
+/color = BurlyWood,255,222,184,135,2,NoAnchor,NoAnchor, ,REM,652
+/color = CadetBlue,255,95,158,160,4,NoAnchor,Flat, ,REM,653
+/color = Chartreuse,255,127,255,1,1,DiamondAnchor,Round, ,REM,654
+/color = Chocolate,255,210,105,30,2,NoAnchor,Square, ,REM,655
+/color = Coral,255,255,127,80,4,NoAnchor,Flat, ,REM,656
+/color = CornflowerBlue,255,100,149,237,3,RoundAnchor,SquareAnchor, ,REM,657
+/color = Cornsilk,255,255,248,220,2,RoundAnchor,NoAnchor, ,REM,658
+/color = Crimson,255,220,20,60,4,Round,NoAnchor, ,REM,659
+/color = Cyan,255,1,255,255,0,Round,Round, ,REM,660
+/color = DarkBlue,255,1,1,139,3,Flat,SquareAnchor, ,REM,661
+/color = DarkCyan,255,1,139,139,2,Round,Flat, ,REM,662
+/color = DarkGoldenrod,255,184,134,11,4,Square,NoAnchor, ,REM,663
+/color = DarkGray,255,169,169,169,1,Square,Flat, ,REM,664
+/color = DarkGreen,255,1,100,1,3,Triangle,NoAnchor, ,REM,665
+/color = DarkKhaki,255,189,183,107,2,NoAnchor,SquareAnchor, ,REM,666
+/color = DarkMagenta,255,139,1,139,4,RoundAnchor,DiamondAnchor, ,REM,667
+/color = DarkOliveGreen,255,85,107,47,1,DiamondAnchor,RoundAnchor, ,REM,668
+/color = DarkOrange,255,255,140,1,3,Triangle,RoundAnchor, ,REM,669
+/color = DarkOrchid,255,153,50,204,2,NoAnchor,Round, ,REM,670
+/color = DarkRed,255,139,1,1,4,DiamondAnchor,Round, ,REM,671
+/color = DarkSalmon,255,233,150,122,3,Square,Square, ,REM,672
+/color = DarkSeaGreen,255,143,188,139,2,Flat,SquareAnchor, ,REM,673
+/color = DarkSlateBlue,255,72,61,139,4,NoAnchor,DiamondAnchor, ,REM,674
+/color = DarkSlateGray,255,47,79,79,1,Square,Triangle, ,REM,675
+/color = DarkTurquoise,255,1,206,209,3,Square,Square, ,REM,676
+/color = DarkViolet,255,148,1,211,2,Triangle,DiamondAnchor, ,REM,677
+/color = DataTypeError,255,255,1,1,2,Triangle,DiamondAnchor, ,REM,678
+/color = DeepPink,255,255,20,147,4,Square,Flat, ,REM,679
+/color = DeepSkyBlue,255,1,191,255,1,NoAnchor,Flat, ,REM,680
+/color = DimGray,255,105,105,105,3,NoAnchor,Square, ,REM,681
+/color = DodgerBlue,255,30,144,255,2,Triangle,ArrowAnchor, ,REM,682
+/color = Firebrick,255,178,34,34,4,Round,Triangle, ,REM,683
+/color = FloralWhite,255,255,250,240,1,Triangle,Flat, ,REM,684
+/color = ForestGreen,255,34,139,34,3,NoAnchor,Triangle, ,REM,685
+/color = Fuchsia,255,255,1,255,2,SquareAnchor,Round, ,REM,686
+/color = Gainsboro,255,220,220,220,1,Round,ArrowAnchor, ,REM,687
+/color = GhostWhite,255,248,248,255,3,NoAnchor,SquareAnchor, ,REM,688
+/color = Gold,255,255,215,1,0,Round,Round, ,REM,689
+/color = Goldenrod,255,218,165,32,4,NoAnchor,SquareAnchor, ,REM,690
+/color = Gray,255,128,128,128,0,Round,Round, ,REM,691
+/color = Green,255,1,128,1,0,Round,Round, ,REM,692
+/color = GreenYellow,255,173,255,47,4,NoAnchor,NoAnchor, ,REM,693
+/color = Honeydew,255,240,255,240,1,ArrowAnchor,NoAnchor, ,REM,694
+/color = HotPink,255,255,105,180,3,SquareAnchor,NoAnchor, ,REM,695
+/color = IndianRed,255,205,92,92,4,Triangle,NoAnchor, ,REM,696
+/color = Indigo,255,75,1,130,1,ArrowAnchor,NoAnchor, ,REM,697
+/color = Ivory,255,255,255,240,0,Round,Round, ,REM,698
+/color = Khaki,255,240,230,140,2,Flat,Round, ,REM,699
+/color = Lavender,255,230,230,250,4,RoundAnchor,SquareAnchor, ,REM,700
+/color = LavenderBlush,255,255,240,245,1,RoundAnchor,ArrowAnchor, ,REM,701
+/color = LawnGreen,255,124,252,1,3,SquareAnchor,ArrowAnchor, ,REM,702
+/color = LemonChiffon,255,255,250,205,4,Triangle,RoundAnchor, ,REM,703
+/color = LightBlue,255,173,216,230,2,NoAnchor,Flat, ,REM,704
+/color = LightCoral,255,240,128,128,4,Flat,NoAnchor, ,REM,705
+/color = LightCyan,255,224,255,255,1,Flat,Round, ,REM,706
+/color = LightGoldenrodYellow,255,250,250,210,3,Triangle,Square, ,REM,707
+/color = LightGray,255,211,211,211,2,RoundAnchor,Square, ,REM,708
+/color = LightGreen,255,144,238,144,4,Triangle,Round, ,REM,709
+/color = LightPink,255,255,182,193,1,SquareAnchor,NoAnchor, ,REM,710
+/color = LightSalmon,255,255,160,122,3,Triangle,SquareAnchor, ,REM,711
+/color = LightSeaGreen,255,32,178,170,2,ArrowAnchor,Flat, ,REM,712
+/color = LightSkyBlue,255,135,206,250,4,Triangle,NoAnchor, ,REM,713
+/color = LightSlateGray,255,119,136,153,3,DiamondAnchor,RoundAnchor, ,REM,714
+/color = LightSteelBlue,255,176,196,222,2,RoundAnchor,SquareAnchor, ,REM,715
+/color = LightYellow,255,255,255,224,4,ArrowAnchor,NoAnchor, ,REM,716
+/color = Lime,255,1,255,1,1,ArrowAnchor,Round, ,REM,717
+/color = LimeGreen,255,50,205,50,3,Flat,Round, ,REM,718
+/color = Linen,255,250,240,230,2,Round,Triangle, ,REM,719
+/color = Magenta,255,255,1,255,4,NoAnchor,Triangle, ,REM,720
+/color = Maroon,255,128,1,1,3,Triangle,ArrowAnchor, ,REM,721
+/color = MediumAquamarine,255,102,205,170,1,SquareAnchor,Square, ,REM,722
+/color = MediumBlue,255,1,1,205,3,NoAnchor,Round, ,REM,723
+/color = MediumOrchid,255,186,85,211,2,ArrowAnchor,Round, ,REM,724
+/color = MediumPurple,255,147,112,219,4,Square,RoundAnchor, ,REM,725
+/color = MediumSeaGreen,255,60,179,113,1,Triangle,NoAnchor, ,REM,726
+/color = MediumSlateBlue,255,123,104,238,3,SquareAnchor,Flat, ,REM,727
+/color = MediumSpringGreen,255,1,250,154,4,Triangle,Triangle, ,REM,728
+/color = MediumTurquoise,255,72,209,204,1,Flat,Triangle, ,REM,729
+/color = MediumVioletRed,255,199,21,133,3,NoAnchor,Round, ,REM,730
+/color = MidnightBlue,255,25,25,112,2,RoundAnchor,Square, ,REM,731
+/color = MintCream,255,245,255,250,4,RoundAnchor,DiamondAnchor, ,REM,732
+/color = MistyRose,255,255,228,225,1,ArrowAnchor,NoAnchor, ,REM,733
+/color = Moccasin,255,255,228,181,3,Square,DiamondAnchor, ,REM,734
+/color = NavajoWhite,255,255,222,173,2,SquareAnchor,NoAnchor, ,REM,735
+/color = Navy,255,1,1,128,0,Round,Round, ,REM,736
+/color = OldLace,255,253,245,230,1,NoAnchor,SquareAnchor, ,REM,737
+/color = Olive,255,128,128,1,3,Round,DiamondAnchor, ,REM,738
+/color = OliveDrab,255,107,142,35,4,NoAnchor,Square, ,REM,739
+/color = Orange,255,255,165,1,0,Round,Round, ,REM,740
+/color = OrangeRed,255,255,69,1,3,SquareAnchor,NoAnchor, ,REM,741
+/color = Orchid,255,218,112,214,2,Round,RoundAnchor, ,REM,742
+/color = PaleGoldenrod,255,238,232,170,1,SquareAnchor,SquareAnchor, ,REM,743
+/color = PaleGreen,255,152,251,152,3,RoundAnchor,DiamondAnchor, ,REM,744
+/color = PaleTurquoise,255,175,238,238,2,SquareAnchor,Triangle, ,REM,745
+/color = PaleVioletRed,255,219,112,147,4,ArrowAnchor,Square, ,REM,746
+/color = PapayaWhip,255,255,239,213,1,ArrowAnchor,Flat, ,REM,747
+/color = PeachPuff,255,255,218,185,3,Triangle,Round, ,REM,748
+/color = Peru,255,205,133,63,2,Triangle,Round, ,REM,749
+/color = Pink,255,255,192,203,0,Round,Round, ,REM,750
+/color = Plum,255,221,160,221,1,DiamondAnchor,Round, ,REM,751
+/color = PowderBlue,255,176,224,230,2,Round,Square, ,REM,752
+/color = Purple,255,128,1,128,0,Round,Round, ,REM,753
+/color = Red,255,255,1,1,0,Round,Round, ,REM,754
+/color = RosyBrown,255,188,143,143,4,SquareAnchor,NoAnchor, ,REM,755
+/color = RoyalBlue,255,65,105,225,1,SquareAnchor,DiamondAnchor, ,REM,756
+/color = SaddleBrown,255,139,69,19,2,RoundAnchor,Triangle, ,REM,757
+/color = Salmon,255,250,128,114,4,RoundAnchor,ArrowAnchor, ,REM,758
+/color = SandyBrown,255,244,164,96,1,RoundAnchor,Round, ,REM,759
+/color = SeaGreen,255,46,139,87,0,Round,Round, ,REM,760
+/color = SeaShell,255,255,245,238,2,Round,SquareAnchor, ,REM,761
+/color = Sienna,255,160,82,45,4,DiamondAnchor,SquareAnchor, ,REM,762
+/color = Silver,255,192,192,192,1,DiamondAnchor,NoAnchor, ,REM,763
+/color = SkyBlue,255,135,206,235,3,Square,NoAnchor, ,REM,764
+/color = SlateBlue,255,106,90,205,4,ArrowAnchor,RoundAnchor, ,REM,765
+/color = SlateGray,255,112,128,144,1,Triangle,Square, ,REM,766
+/color = Snow,255,255,250,250,3,Flat,ArrowAnchor, ,REM,767
+/color = SpringGreen,255,1,255,127,2,NoAnchor,Triangle, ,REM,768
+/color = SteelBlue,255,70,130,180,4,NoAnchor,Triangle, ,REM,769
+/color = Tan,255,210,180,140,0,Round,Round, ,REM,770
+/color = Teal,255,1,128,128,0,Round,Round, ,REM,771
+/color = Thistle,255,216,191,216,2,NoAnchor,RoundAnchor, ,REM,772
+/color = Tomato,255,255,99,71,4,Round,DiamondAnchor, ,REM,773
+/color = Transparent,1,1,1,1,0,NoAnchor,NoAnchor, ,REM,774
+/color = Turquoise,255,64,224,208,1,ArrowAnchor,SquareAnchor, ,REM,775
+/color = Violet,255,238,130,238,0,Round,Round, ,REM,776
+/color = Wheat,255,245,222,179,2,SquareAnchor,DiamondAnchor, ,REM,777
+/color = White,255,255,255,255,0,Round,Round, ,REM,778
+/color = WhiteSmoke,255,245,245,245,1,NoAnchor,SquareAnchor, ,REM,779
+/color = Yellow,255,255,255,1,0,Round,Round, ,REM,780
+/datatype = Bit,1,Blue,3,A Single On/off, ,REM,781
+/datatype = Byte,8,MistyRose,4,A Byte (8 bits), ,REM,782
+/datatype = erase,1,Orange,1,Logic Path For Errors, ,REM,783
+/datatype = errored,1,Red,1,Logic Path For Errors, ,REM,784
+/datatype = Floating,8,DodgerBlue,8,A floating-point variable WinDef, ,REM,785
+/datatype = Int16,2,aquamarine,2,A 16-bit Or 2 bytes signed Integer BaseTsd, ,REM,786
+/datatype = Int32,4,aqua,4,A 32-bit Or 4 bytes signed Integer -2147483648 through 2147483647 BaseTsd, ,REM,787
+/datatype = Int64,8,Red,8,A 64-bit Or 8 bytes signed Integer ?+/- 9223372036854775807, ,REM,788
+/datatype = INT8,1,Orange,2,An 8-bit Or 1 Byte signed Integer BaseTsd, ,REM,789
+/datatype = Integer,2,Orange,2,An 16-bit Or 2 Byte signed Integer, ,REM,790
+/datatype = logic,1,Black,3,Logic Path, ,REM,791
+/datatype = Long,4,CadetBlue,4,4 bytes – 32 bits, ,REM,792
+/datatype = Word,2,BlueViolet,2,2 bytes - 16 Bits, ,REM,793
+/name=Start, ,REM,794
+/Author = FlowChart Program, ,REM,795
+/version = 0.1, ,REM,796
+/filename = Internal, ,REM,797
+/stroke = ABCDEFGHIJKLMNOP, ,REM,798
+/programtext = GoToNextLine Start, ,REM,799
+/Syntax = 	jmp ,{[(GoToNextLine.PathName)]},	;ReplaceStart, ,REM,800
+/notes = Start of the Program, ,REM,801
+/opcode = jmp main, ,REM,802
+/point = 0 , 250 , both , -1 , GotoNextLine, ,REM,803
+/point = 250 , 250 , both , -1 , CommandLine, ,REM,804
+/error = 0,-250 = 0,-1,-250,Symbol7_4_1101,1001 Symbol does not have a /point CameFrom  Symbol Start, ,REM,805
+/error = -250,0 = 0,-1,0,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Start, ,REM,806
+/error = -250,0 = 0,-1,0,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Start, ,REM,807
+/error = -250,-100 = 0,-1,-100,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Start, ,REM,808
+/error = -250,-100 = 0,-1,-100,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,809
+/error = -250,100 = 0,-1,100,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,810
+/error = -250,100 = 0,-1,100,Symbol7_4_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,811
+/line = 250,250,250,-1,BurlyWood, ,REM,812
+/line = 250,-250,250,-1,Brown, ,REM,813
+/line = 250,-250,250,-1,BlueViolet, ,REM,814
+/line = 250,250,250,-1,Blue, ,REM,815
+/line = -250,250,250,-1,BlanchedAlmond, ,REM,816
+/line = 250,250,250,-1,Black, ,REM,817
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,818
+/name=Symbol7_4_1101, ,REM,819
+/Author = FlowChart Decompile, ,REM,820
+/version = .01, ,REM,821
+/filename = NumberComputerLanguageMultiLine_AlphaSpecialAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,822
+/stroke = , ,REM,823
+/programtext = {[(number)]} : 'OptionScreen.ComboBoxRotation:GoTo {[(number)]} :{[(Black.pathname)]}:{[(Black.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(ComboBoxRotation.pathname)]}, ,REM,824
+/Syntax = {[(Number)]},:,',{[(Alpha)]},{[(Special)]},{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,825
+/notes = Made with DeCompile, ,REM,826
+/opcode = nop, ,REM,827
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,828
+/point = -250 , 0 , both , -1 , ComboBoxRotation, ,REM,829
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,830
+/error = 0,-250 = 0,-1,-250,Symbol7_5_1102,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_4_1101, ,REM,831
+/error = -250,0 = 0,-1,0,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,832
+/error = -250,0 = 0,-1,0,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,833
+/error = -250,-100 = 0,-1,-100,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1101, ,REM,834
+/error = -250,-100 = 0,-1,-100,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,835
+/error = -250,100 = 0,-1,100,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,836
+/error = -250,100 = 0,-1,100,Symbol7_5_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,837
+/line = 250,250,250,-1,DarkOrchid, ,REM,838
+/line = 250,-250,250,-1,DarkOrange, ,REM,839
+/line = 250,-250,250,-1,DarkOliveGreen, ,REM,840
+/line = 250,250,250,-1,DarkMagenta, ,REM,841
+/line = -250,250,250,-1,DarkKhaki, ,REM,842
+/line = 250,250,250,-1,DarkGreen, ,REM,843
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,844
+/name=Symbol7_5_1102, ,REM,845
+/Author = FlowChart Decompile, ,REM,846
+/version = .01, ,REM,847
+/filename = NumberComputerLanguageMultiLine_OptionAlphaAlphaNumber.symbol, ,REM,848
+/stroke = , ,REM,849
+/programtext = {[(number)]} : Option Strict On:GoTo {[(number)]} :{[(DarkGreen.pathname)]}:{[(DarkGreen.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Strict.pathname)]}, ,REM,850
+/Syntax = {[(Number)]},:,Option,{[(Alpha)]},{[(Alpha)]},{[(Number)]},, ,REM,851
+/notes = Made with DeCompile, ,REM,852
+/opcode = nop, ,REM,853
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,854
+/point = -250 , 0 , both , -1 , Strict, ,REM,855
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,856
+/error = 0,-250 = 0,-1,-250,Symbol7_9_1103,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_5_1102, ,REM,857
+/error = -250,0 = 0,-1,0,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,858
+/error = -250,0 = 0,-1,0,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,859
+/error = -250,-100 = 0,-1,-100,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1102, ,REM,860
+/error = -250,-100 = 0,-1,-100,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,861
+/error = -250,100 = 0,-1,100,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,862
+/error = -250,100 = 0,-1,100,Symbol7_9_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,863
+/line = 250,250,250,-1,GhostWhite, ,REM,864
+/line = 250,-250,250,-1,Gainsboro, ,REM,865
+/line = 250,-250,250,-1,Fuchsia, ,REM,866
+/line = 250,250,250,-1,ForestGreen, ,REM,867
+/line = -250,250,250,-1,FloralWhite, ,REM,868
+/line = 250,250,250,-1,Firebrick, ,REM,869
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,870
+/name=Symbol7_9_1103, ,REM,871
+/Author = FlowChart Decompile, ,REM,872
+/version = .01, ,REM,873
+/filename = NumberComputerLanguageMultiLine_AlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,874
+/stroke = , ,REM,875
+/programtext = {[(number)]} : Namespace MyFlowChartNameSpace:GoTo {[(number)]} :{[(Firebrick.pathname)]}:{[(Firebrick.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(MyFlowChartNameSpace.pathname)]}, ,REM,876
+/Syntax = {[(Number)]},:,{[(Alpha)]},{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,877
+/notes = Made with DeCompile, ,REM,878
+/opcode = nop, ,REM,879
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,880
+/point = -250 , 0 , both , -1 , MyFlowChartNameSpace, ,REM,881
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,882
+/error = 0,-250 = 0,-1,-250,Symbol7_10_1104,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_9_1103, ,REM,883
+/error = -250,0 = 0,-1,0,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,884
+/error = -250,0 = 0,-1,0,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,885
+/error = -250,-100 = 0,-1,-100,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,886
+/error = -250,-100 = 0,-1,-100,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,887
+/error = -250,100 = 0,-1,100,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_9_1103, ,REM,888
+/error = -250,100 = 0,-1,100,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,889
+/error = -250,-250 = 0,-1,-250,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,890
+/error = -250,-250 = 0,-1,-250,Symbol7_10_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,891
+/line = 250,250,250,-1,LightGoldenrodYellow, ,REM,892
+/line = 250,-250,250,-1,LightCyan, ,REM,893
+/line = 250,-250,250,-1,LightCoral, ,REM,894
+/line = 250,250,250,-1,LightBlue, ,REM,895
+/line = -250,250,250,-1,LemonChiffon, ,REM,896
+/line = 250,250,250,-1,LawnGreen, ,REM,897
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,898
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,899
+/point = -250 , -100 , both , -1 , _C, ,REM,900
+/name=Symbol7_10_1104, ,REM,901
+/Author = FlowChart Decompile, ,REM,902
+/version = .01, ,REM,903
+/filename = NumberComputerLanguageMultiLine_PublicAlphaAlphaVariableComputerLanguageMultiLine_GoToNumber.symbol, ,REM,904
+/stroke = , ,REM,905
+/programtext = {[(number)]} :     Public Class F_C:GoTo {[(number)]} :{[(LawnGreen.pathname)]}:{[(LawnGreen.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[(_C.pathname)]}:{[(_C.pathname)]}:{[(_C.pathname)]}:{[(Class.pathname)]}, ,REM,906
+/Syntax = {[(Number)]},:,Public,{[(Alpha)]},{[(Alpha)]},{[(Variable)]},:,GoTo,{[(Number)]},, ,REM,907
+/notes = Made with DeCompile, ,REM,908
+/opcode = nop, ,REM,909
+/point = -250 , 0 , both , -1 , Class, ,REM,910
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,911
+/error = 0,0 = 0,-1,0,Symbol7_11_1105,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_10_1104, ,REM,912
+/error = -250,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,913
+/error = -250,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,914
+/error = 250,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,915
+/error = 250,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,916
+/error = -150,250 = 0,-1,250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,917
+/error = -150,250 = 0,-1,250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_10_1104, ,REM,918
+/error = -150,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,919
+/error = -150,-250 = 0,-1,-250,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,920
+/error = -250,-200 = 0,-1,-200,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,921
+/error = -250,-200 = 0,-1,-200,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,922
+/error = -250,-50 = 0,-1,-50,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,923
+/error = -250,-50 = 0,-1,-50,Symbol7_11_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,924
+/line = 250,250,250,-1,MistyRose, ,REM,925
+/line = 250,-250,250,-1,MintCream, ,REM,926
+/line = 250,-250,250,-1,MidnightBlue, ,REM,927
+/line = 250,250,250,-1,MediumVioletRed, ,REM,928
+/line = -250,250,250,-1,MediumTurquoise, ,REM,929
+/line = 250,250,250,-1,MediumSpringGreen, ,REM,930
+/point = -250 , -50 , both , -1 , {[(number)]}_19, ,REM,931
+/point = -250 , -200 , both , -1 , {[(number)]}_17, ,REM,932
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,933
+/point = -150 , 250 , both , -1 , form, ,REM,934
+/point = 250 , -250 , both , -1 , show, ,REM,935
+/point = -250 , -250 , both , -1 , means, ,REM,936
+/point = -250 , 100 , both , -1 , 1_7, ,REM,937
+/name=Symbol7_11_1105, ,REM,938
+/Author = FlowChart Decompile, ,REM,939
+/version = .01, ,REM,940
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsIntNumberNumberNumberAlphatoAlphaAlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,941
+/stroke = , ,REM,942
+/programtext = {[(number)]} :         Public Const ShowScreen As Int32 = 1 '1 means to show this form:GoTo {[(number)]} :{[(MediumSpringGreen.pathname)]}:{[(MediumSpringGreen.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[(form.pathname)]}:{[(form.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(show.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(means.pathname)]}, ,REM,943
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,Int,{[(Number)]},=,{[(Number)]},',{[(Number)]},{[(Alpha)]},to,{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,944
+/notes = Made with DeCompile, ,REM,945
+/opcode = nop, ,REM,946
+/point = -250 , -100 , both , -1 , 32_5, ,REM,947
+/point = -250 , 0 , both , -1 , ShowScreen, ,REM,948
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,949
+/error = 0,0 = 0,-1,0,Symbol7_13_1106,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_11_1105, ,REM,950
+/error = 0,-250 = 0,-1,-250,Symbol7_13_1106,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_11_1105, ,REM,951
+/error = -250,0 = 0,-1,0,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,952
+/error = -250,0 = 0,-1,0,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,953
+/error = -250,-100 = 0,-1,-100,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,954
+/error = -250,-100 = 0,-1,-100,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,955
+/error = -250,100 = 0,-1,100,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,956
+/error = -250,100 = 0,-1,100,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,957
+/error = -250,-250 = 0,-1,-250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_11_1105, ,REM,958
+/error = -250,-250 = 0,-1,-250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,959
+/error = -150,250 = 0,-1,250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,960
+/error = -150,250 = 0,-1,250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,961
+/error = -150,-250 = 0,-1,-250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,962
+/error = -150,-250 = 0,-1,-250,Symbol7_13_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,963
+/line = 250,250,250,-1,SeaShell, ,REM,964
+/line = 250,-250,250,-1,SeaGreen, ,REM,965
+/line = 250,-250,250,-1,SandyBrown, ,REM,966
+/line = 250,250,250,-1,Salmon, ,REM,967
+/line = -250,250,250,-1,SaddleBrown, ,REM,968
+/line = 250,250,250,-1,RoyalBlue, ,REM,969
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,970
+/point = -150 , 250 , both , -1 , anything, ,REM,971
+/point = 250 , -250 , both , -1 , anything, ,REM,972
+/point = -250 , -250 , both , -1 , means, ,REM,973
+/point = -250 , 100 , both , -1 , 1_7, ,REM,974
+/point = -250 , -100 , both , -1 , 32_5, ,REM,975
+/point = -250 , 0 , both , -1 , LeaveScreenAlone, ,REM,976
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,977
+/name=Symbol7_13_1106, ,REM,978
+/Author = FlowChart Decompile, ,REM,979
+/version = .01, ,REM,980
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsIntNumberNumberNumberAlphatonotdoAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,981
+/stroke = , ,REM,982
+/programtext = {[(number)]} :         Public Const LeaveScreenAlone As Int32 = -1 ' -1 means to not do anything:GoTo {[(number)]} :{[(RoyalBlue.pathname)]}:{[(RoyalBlue.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[(anything.pathname)]}:{[(anything.pathname)]}:{[(anything.pathname)]}:{[(means.pathname)]}:{[(means.pathname)]}:{[(means.pathname)]}:{[(1_7.pathname)]}:{[(1_7.pathname)]}:{[(1_7.pathname)]}:{[(32_5.pathname)]}:{[(32_5.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(LeaveScreenAlone.pathname)]}, ,REM,983
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,Int,{[(Number)]},=,-,{[(Number)]},',-,{[(Number)]},{[(Alpha)]},to,not,do,{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,984
+/notes = Made with DeCompile, ,REM,985
+/opcode = nop, ,REM,986
+/error = 0,0 = 0,-1,0,Symbol7_14_1107,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_13_1106, ,REM,987
+/error = -250,-100 = 0,-1,-100,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,988
+/error = -250,-100 = 0,-1,-100,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,989
+/error = -250,100 = 0,-1,100,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,990
+/error = -250,100 = 0,-1,100,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,991
+/error = -250,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,992
+/error = -250,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,993
+/error = 250,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_13_1106, ,REM,994
+/error = 250,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,995
+/error = -150,250 = 0,-1,250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,996
+/error = -150,250 = 0,-1,250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,997
+/error = -150,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,998
+/error = -150,-250 = 0,-1,-250,Symbol7_14_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,999
+/line = 250,250,250,-1,BlanchedAlmond, ,REM,1000
+/line = 250,-250,250,-1,Black, ,REM,1001
+/line = 250,-250,250,-1,bisque, ,REM,1002
+/line = 250,250,250,-1,beige, ,REM,1003
+/line = -250,250,250,-1,Azure, ,REM,1004
+/line = 250,250,250,-1,aquamarine, ,REM,1005
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,1006
+/point = -150 , 250 , both , -1 , {[(number)]}_13, ,REM,1007
+/point = 250 , -250 , both , -1 , {[(number)]}_11, ,REM,1008
+/point = -250 , -250 , both , -1 , faster, ,REM,1009
+/point = -250 , 100 , both , -1 , make, ,REM,1010
+/point = -250 , -100 , both , -1 , Yes, ,REM,1011
+/point = -250 , 0 , both , -1 , Faster, ,REM,1012
+/name=Symbol7_14_1107, ,REM,1013
+/Author = FlowChart Decompile, ,REM,1014
+/version = .01, ,REM,1015
+/filename = NumberComputerLanguageMultiLine_AlphaAlphatoAlphatoAlphaAlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1016
+/stroke = , ,REM,1017
+/programtext = {[(number)]} :         ' Turn Faster to Yes to make it faster:GoTo {[(number)]} :{[(aquamarine.pathname)]}:{[(aquamarine.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[(faster.pathname)]}:{[(faster.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(make.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(Yes.pathname)]}, ,REM,1018
+/Syntax = {[(Number)]},:,',{[(Alpha)]},{[(Alpha)]},to,{[(Alpha)]},to,{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,1019
+/notes = Made with DeCompile, ,REM,1020
+/opcode = nop, ,REM,1021
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1022
+/error = 0,-250 = 0,-1,-250,Symbol7_15_1108,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_14_1107, ,REM,1023
+/error = -250,0 = 0,-1,0,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,1024
+/error = -250,0 = 0,-1,0,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,1025
+/error = -250,-100 = 0,-1,-100,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,1026
+/error = -250,-100 = 0,-1,-100,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,1027
+/error = -250,100 = 0,-1,100,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1107, ,REM,1028
+/error = -250,100 = 0,-1,100,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1029
+/error = -250,-250 = 0,-1,-250,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1030
+/error = -250,-250 = 0,-1,-250,Symbol7_15_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1031
+/line = 250,250,250,-1,DarkSeaGreen, ,REM,1032
+/line = 250,-250,250,-1,DarkSalmon, ,REM,1033
+/line = 250,-250,250,-1,DarkRed, ,REM,1034
+/line = 250,250,250,-1,DarkOrchid, ,REM,1035
+/line = -250,250,250,-1,DarkOrange, ,REM,1036
+/line = 250,250,250,-1,DarkOliveGreen, ,REM,1037
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,1038
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,1039
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1040
+/name=Symbol7_15_1108, ,REM,1041
+/Author = FlowChart Decompile, ,REM,1042
+/version = .01, ,REM,1043
+/filename = NumberComputerLanguageMultiLine_VariableAlphaQuoteComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1044
+/stroke = , ,REM,1045
+/programtext = {[(number)]} :         '#Const Faster = "No":GoTo {[(number)]} :{[(DarkOliveGreen.pathname)]}:{[(DarkOliveGreen.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Faster.pathname)]}, ,REM,1046
+/Syntax = {[(Number)]},:,',{[(Variable)]},{[(Alpha)]},=,{[("")]},:,GoTo,{[(Number)]},, ,REM,1047
+/notes = Made with DeCompile, ,REM,1048
+/opcode = nop, ,REM,1049
+/point = -250 , 0 , both , -1 , Faster, ,REM,1050
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1051
+/error = 0,0 = 0,-1,0,Symbol7_19_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_15_1108, ,REM,1052
+/error = -250,-200 = 0,-1,-200,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1053
+/error = -250,-200 = 0,-1,-200,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1054
+/error = -250,-50 = 0,-1,-50,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1055
+/error = -250,-50 = 0,-1,-50,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_15_1108, ,REM,1056
+/error = -250,150 = 0,-1,150,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1057
+/error = -250,150 = 0,-1,150,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1058
+/error = -200,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1059
+/error = -200,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1060
+/error = -50,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1061
+/error = -50,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1062
+/error = 100,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1063
+/error = 100,250 = 0,-1,250,Symbol7_19_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1064
+/line = 250,250,250,-1,LemonChiffon, ,REM,1065
+/line = 250,-250,250,-1,LawnGreen, ,REM,1066
+/line = 250,-250,250,-1,LavenderBlush, ,REM,1067
+/line = 250,250,250,-1,Lavender, ,REM,1068
+/line = -250,250,250,-1,Khaki, ,REM,1069
+/line = 250,250,250,-1,Ivory, ,REM,1070
+/point = 100 , 250 , both , -1 , {[(number)]}_27, ,REM,1071
+/point = -50 , 250 , both , -1 , {[(number)]}_25, ,REM,1072
+/point = -200 , 250 , both , -1 , {[(number)]}_23, ,REM,1073
+/point = -250 , 150 , both , -1 , symbol, ,REM,1074
+/point = -250 , -50 , both , -1 , the, ,REM,1075
+/point = -250 , -200 , both , -1 , go, ,REM,1076
+/point = -150 , -250 , both , -1 , know, ,REM,1077
+/name=Symbol7_19_1109, ,REM,1078
+/Author = FlowChart Decompile, ,REM,1079
+/version = .01, ,REM,1080
+/filename = NumberComputerLanguageMultiLine_PublicSharedAlphaAsIntNumberAlphaisAlphaforAlphaAlphaAlphatoAlphatoAlphatoAlphanextAlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1081
+/stroke = , ,REM,1082
+/programtext = {[(number)]} :         Public Shared TimerCounter As Int32 ' This is only for the timers routines to know to go to the next symbol/path:GoTo {[(number)]} :{[(Ivory.pathname)]}:{[(Ivory.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[(symbol.pathname)]}:{[(symbol.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(the.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(go.pathname)]}, ,REM,1083
+/Syntax = {[(Number)]},:,Public,Shared,{[(Alpha)]},As,Int,{[(Number)]},',{[(Alpha)]},is,{[(Alpha)]},for,{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},to,{[(Alpha)]},to,{[(Alpha)]},to,{[(Alpha)]},next,{[(Alpha)]},/,{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,1084
+/notes = Made with DeCompile, ,REM,1085
+/opcode = nop, ,REM,1086
+/point = -150 , 250 , both , -1 , routines, ,REM,1087
+/point = 250 , -250 , both , -1 , the, ,REM,1088
+/point = -250 , -250 , both , -1 , only, ,REM,1089
+/point = -250 , 100 , both , -1 , This, ,REM,1090
+/point = -250 , -100 , both , -1 , 32_5, ,REM,1091
+/point = -250 , 0 , both , -1 , TimerCounter, ,REM,1092
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1093
+/error = 0,-250 = 0,-1,-250,Symbol7_20_1110,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_19_1109, ,REM,1094
+/error = -250,0 = 0,-1,0,Symbol7_20_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1095
+/error = -250,0 = 0,-1,0,Symbol7_20_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_19_1109, ,REM,1096
+/error = -250,-100 = 0,-1,-100,Symbol7_20_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_20_1110, ,REM,1097
+/error = -250,-100 = 0,-1,-100,Symbol7_20_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_20_1110, ,REM,1098
+/line = 250,250,250,-1,MediumSeaGreen, ,REM,1099
+/line = 250,-250,250,-1,MediumPurple, ,REM,1100
+/line = 250,-250,250,-1,MediumOrchid, ,REM,1101
+/line = 250,250,250,-1,MediumBlue, ,REM,1102
+/line = -250,250,250,-1,MediumAquamarine, ,REM,1103
+/name=Symbol7_20_1110, ,REM,1104
+/Author = FlowChart Decompile, ,REM,1105
+/version = .01, ,REM,1106
+/filename = NumberComputerLanguageMultiLine_PublicSharedAlphaSpecialAsStringSpecialComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1107
+/stroke = , ,REM,1108
+/programtext = {[(number)]} :         Public Shared MyErrorList() As String = {:GoTo {[(number)]} :{[(Maroon.pathname)]}:{[(Maroon.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(MyErrorList.pathname)]}, ,REM,1109
+/Syntax = {[(Number)]},:,Public,Shared,{[(Alpha)]},{[(Special)]},As,String,=,{[(Special)]},:,GoTo,{[(Number)]},, ,REM,1110
+/notes = Made with DeCompile, ,REM,1111
+/opcode = nop, ,REM,1112
+/line = 250,250,250,-1,Maroon, ,REM,1113
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1114
+/point = -250 , 0 , both , -1 , MyErrorList, ,REM,1115
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1116
+/error = 0,-250 = 0,-1,-250,Symbol7_21_1111,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_20_1110, ,REM,1117
+/error = -250,0 = 0,-1,0,Symbol7_21_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_20_1110, ,REM,1118
+/error = -250,0 = 0,-1,0,Symbol7_21_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_20_1110, ,REM,1119
+/error = -250,-100 = 0,-1,-100,Symbol7_21_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_21_1111, ,REM,1120
+/error = -250,-100 = 0,-1,-100,Symbol7_21_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_21_1111, ,REM,1121
+/line = 250,250,250,-1,OrangeRed, ,REM,1122
+/line = 250,-250,250,-1,Orange, ,REM,1123
+/line = 250,-250,250,-1,OliveDrab, ,REM,1124
+/line = 250,250,250,-1,Olive, ,REM,1125
+/line = -250,250,250,-1,OldLace, ,REM,1126
+/name=Symbol7_21_1111, ,REM,1127
+/Author = FlowChart Decompile, ,REM,1128
+/version = .01, ,REM,1129
+/filename = NumberComputerLanguageMultiLine_QuoteSpecialComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1130
+/stroke = , ,REM,1131
+/programtext = {[(number)]} :         "1001 Symbol does not have a /point CameFrom",:GoTo {[(number)]} :{[(Navy.pathname)]}:{[(Navy.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_3.pathname)]}, ,REM,1132
+/Syntax = {[(Number)]},:,{[("")]},{[(Special)]},:,GoTo,{[(Number)]},, ,REM,1133
+/notes = Made with DeCompile, ,REM,1134
+/opcode = nop, ,REM,1135
+/line = 250,250,250,-1,Navy, ,REM,1136
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1137
+/point = -250 , 0 , both , -1 , {[(number)]}_3, ,REM,1138
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1139
+/error = 0,-250 = 0,-1,-250,Symbol7_35_1112,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_21_1111, ,REM,1140
+/error = -250,0 = 0,-1,0,Symbol7_35_1112,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_21_1111, ,REM,1141
+/error = -250,0 = 0,-1,0,Symbol7_35_1112,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_21_1111, ,REM,1142
+/error = -250,-100 = 0,-1,-100,Symbol7_35_1112,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_35_1112, ,REM,1143
+/error = -250,-100 = 0,-1,-100,Symbol7_35_1112,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_35_1112, ,REM,1144
+/line = 250,250,250,-1,RoyalBlue, ,REM,1145
+/line = 250,-250,250,-1,RosyBrown, ,REM,1146
+/line = 250,-250,250,-1,Red, ,REM,1147
+/line = 250,250,250,-1,Purple, ,REM,1148
+/line = -250,250,250,-1,PowderBlue, ,REM,1149
+/name=Symbol7_35_1112, ,REM,1150
+/Author = FlowChart Decompile, ,REM,1151
+/version = .01, ,REM,1152
+/filename = NumberComputerLanguageMultiLine_QuoteComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1153
+/stroke = , ,REM,1154
+/programtext = {[(number)]} :         "1015 No Syntax and No Program Code to make it from":GoTo {[(number)]} :{[(Plum.pathname)]}:{[(Plum.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_3.pathname)]}, ,REM,1155
+/Syntax = {[(Number)]},:,{[("")]},:,GoTo,{[(Number)]},, ,REM,1156
+/notes = Made with DeCompile, ,REM,1157
+/opcode = nop, ,REM,1158
+/line = 250,250,250,-1,Plum, ,REM,1159
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1160
+/point = -250 , 0 , both , -1 , {[(number)]}_3, ,REM,1161
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1162
+/error = 0,-250 = 0,-1,-250,Symbol7_36_1113,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_35_1112, ,REM,1163
+/error = -250,0 = 0,-1,0,Symbol7_36_1113,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1164
+/error = -250,0 = 0,-1,0,Symbol7_36_1113,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1165
+/line = 250,250,250,-1,Tan, ,REM,1166
+/line = 250,-250,250,-1,SteelBlue, ,REM,1167
+/line = 250,-250,250,-1,SpringGreen, ,REM,1168
+/name=Symbol7_36_1113, ,REM,1169
+/Author = FlowChart Decompile, ,REM,1170
+/version = .01, ,REM,1171
+/filename = NumberComputerLanguageMultiLine_SpecialComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1172
+/stroke = , ,REM,1173
+/programtext = {[(number)]} :             }:GoTo {[(number)]} :{[(SlateBlue.pathname)]}:{[(SlateBlue.pathname)]}:{[({[(number)]}_3.pathname)]}, ,REM,1174
+/Syntax = {[(Number)]},:,{[(Special)]},:,GoTo,{[(Number)]},, ,REM,1175
+/notes = Made with DeCompile, ,REM,1176
+/opcode = nop, ,REM,1177
+/line = 250,250,250,-1,Snow, ,REM,1178
+/line = -250,250,250,-1,SlateGray, ,REM,1179
+/line = 250,250,250,-1,SlateBlue, ,REM,1180
+/point = -250 , 0 , both , -1 , {[(number)]}_3, ,REM,1181
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1182
+/error = 0,-250 = 0,-1,-250,Symbol7_37_1114,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_36_1113, ,REM,1183
+/error = -250,0 = 0,-1,0,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1184
+/error = -250,0 = 0,-1,0,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1185
+/error = -250,-100 = 0,-1,-100,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1186
+/error = -250,-100 = 0,-1,-100,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1187
+/error = -250,100 = 0,-1,100,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_36_1113, ,REM,1188
+/error = -250,100 = 0,-1,100,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1114, ,REM,1189
+/error = -250,-250 = 0,-1,-250,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1114, ,REM,1190
+/error = -250,-250 = 0,-1,-250,Symbol7_37_1114,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1114, ,REM,1191
+/line = 250,250,250,-1,aquamarine, ,REM,1192
+/line = 250,-250,250,-1,aqua, ,REM,1193
+/line = 250,-250,250,-1,AntiqueWhite, ,REM,1194
+/line = 250,250,250,-1,AliceBlue, ,REM,1195
+/line = -250,250,250,-1,AliceBlue, ,REM,1196
+/line = 250,250,250,-1,Yellow, ,REM,1197
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,1198
+/point = -250 , 100 , both , -1 , 256_7, ,REM,1199
+/point = -250 , -100 , both , -1 , 32_5, ,REM,1200
+/name=Symbol7_37_1114, ,REM,1201
+/Author = FlowChart Decompile, ,REM,1202
+/version = .01, ,REM,1203
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsIntNumberNumberComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1204
+/stroke = , ,REM,1205
+/programtext = {[(number)]} :         Public Const constantALLFILES As Int32 = 256:GoTo {[(number)]} :{[(Yellow.pathname)]}:{[(Yellow.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[(256_7.pathname)]}:{[(256_7.pathname)]}:{[(256_7.pathname)]}:{[(32_5.pathname)]}:{[(32_5.pathname)]}:{[(32_5.pathname)]}:{[(constantALLFILES.pathname)]}, ,REM,1206
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,Int,{[(Number)]},=,{[(Number)]},:,GoTo,{[(Number)]},, ,REM,1207
+/notes = Made with DeCompile, ,REM,1208
+/opcode = nop, ,REM,1209
+/point = -250 , 0 , both , -1 , constantALLFILES, ,REM,1210
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1211
+/error = 0,-250 = 0,-1,-250,Symbol7_40_1115,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1114, ,REM,1212
+/error = -250,0 = 0,-1,0,Symbol7_40_1115,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1114, ,REM,1213
+/error = -250,0 = 0,-1,0,Symbol7_40_1115,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1214
+/error = -250,100 = 0,-1,100,Symbol7_40_1115,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1215
+/error = -250,100 = 0,-1,100,Symbol7_40_1115,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1216
+/line = 250,250,250,-1,DarkGoldenrod, ,REM,1217
+/line = 250,-250,250,-1,DarkCyan, ,REM,1218
+/line = 250,-250,250,-1,DarkBlue, ,REM,1219
+/line = 250,250,250,-1,Cyan, ,REM,1220
+/line = -250,250,250,-1,Crimson, ,REM,1221
+/name=Symbol7_40_1115, ,REM,1222
+/Author = FlowChart Decompile, ,REM,1223
+/version = .01, ,REM,1224
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringQuoteComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1225
+/stroke = , ,REM,1226
+/programtext = {[(number)]} :         Public Const MyConstantIgnoreFunctionOperatorsKeywords As String = "zzzzzzzzz":GoTo {[(number)]} :{[(Cornsilk.pathname)]}:{[(Cornsilk.pathname)]}:{[(Quote_40.pathname)]}:{[(Quote_40.pathname)]}:{[(Quote_40.pathname)]}:{[(MyConstantIgnoreFunctionOperatorsKeywords.pathname)]}, ,REM,1227
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,String,=,{[("")]},:,GoTo,{[(Number)]},, ,REM,1228
+/notes = Made with DeCompile, ,REM,1229
+/opcode = nop, ,REM,1230
+/line = 250,250,250,-1,Cornsilk, ,REM,1231
+/point = -250 , 100 , both , -1 , Quote_40, ,REM,1232
+/point = -250 , -100 , both , -1 , Quote_40, ,REM,1233
+/point = -250 , 0 , both , -1 , MyConstantIgnoreFunctionOperatorsKeywords, ,REM,1234
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1235
+/error = 0,0 = 0,-1,0,Symbol7_42_1116,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_40_1115, ,REM,1236
+/error = -250,-200 = 0,-1,-200,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1237
+/error = -250,-200 = 0,-1,-200,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1238
+/error = -250,-50 = 0,-1,-50,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1239
+/error = -250,-50 = 0,-1,-50,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_40_1115, ,REM,1240
+/error = -250,150 = 0,-1,150,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1241
+/error = -250,150 = 0,-1,150,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1242
+/error = -200,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1243
+/error = -200,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1244
+/error = -50,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1245
+/error = -50,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1246
+/error = 100,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1247
+/error = 100,250 = 0,-1,250,Symbol7_42_1116,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1248
+/line = 250,250,250,-1,Gold, ,REM,1249
+/line = 250,-250,250,-1,GhostWhite, ,REM,1250
+/line = 250,-250,250,-1,Gainsboro, ,REM,1251
+/line = 250,250,250,-1,Fuchsia, ,REM,1252
+/line = -250,250,250,-1,ForestGreen, ,REM,1253
+/line = 250,250,250,-1,FloralWhite, ,REM,1254
+/point = 100 , 250 , both , -1 , {[(number)]}_27, ,REM,1255
+/point = -50 , 250 , both , -1 , {[(number)]}_25, ,REM,1256
+/point = -200 , 250 , both , -1 , {[(number)]}_23, ,REM,1257
+/point = -250 , 150 , both , -1 , {[(number)]}_21, ,REM,1258
+/point = -250 , -50 , both , -1 , {[(number)]}_19, ,REM,1259
+/point = -250 , -200 , both , -1 , {[(number)]}_17, ,REM,1260
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,1261
+/name=Symbol7_42_1116, ,REM,1262
+/Author = FlowChart Decompile, ,REM,1263
+/version = .01, ,REM,1264
+/filename = NumberComputerLanguageMultiLine_Special.symbol, ,REM,1265
+/stroke = , ,REM,1266
+/programtext = {[(number)]} :         '|~!@%^&*()_-+={[}]\:;'<,>.?/   'Available special characters for make symntax between two  rmstart & myuniverse.sysgen.rmEnd:GoTo {[(number)]} :{[(FloralWhite.pathname)]}:{[(FloralWhite.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_17.pathname)]}, ,REM,1267
+/Syntax = {[(Number)]},:,{[(Special)]},, ,REM,1268
+/notes = Made with DeCompile, ,REM,1269
+/opcode = nop, ,REM,1270
+/point = -150 , 250 , both , -1 , sysgen, ,REM,1271
+/point = 250 , -250 , both , -1 , rmstart, ,REM,1272
+/point = -250 , -250 , both , -1 , between, ,REM,1273
+/point = -250 , 100 , both , -1 , make, ,REM,1274
+/point = -250 , -100 , both , -1 , characters, ,REM,1275
+/point = -250 , 0 , both , -1 , Available, ,REM,1276
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1277
+/error = 0,0 = 0,-1,0,Symbol7_43_1117,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_42_1116, ,REM,1278
+/error = -250,0 = 0,-1,0,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1279
+/error = -250,0 = 0,-1,0,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1280
+/error = -250,-100 = 0,-1,-100,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1281
+/error = -250,-100 = 0,-1,-100,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1282
+/error = -250,100 = 0,-1,100,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1283
+/error = -250,100 = 0,-1,100,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1284
+/error = -250,-250 = 0,-1,-250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1285
+/error = -250,-250 = 0,-1,-250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_42_1116, ,REM,1286
+/error = 250,-250 = 0,-1,-250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1287
+/error = 250,-250 = 0,-1,-250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1288
+/error = -150,250 = 0,-1,250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1289
+/error = -150,250 = 0,-1,250,Symbol7_43_1117,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1290
+/line = 250,250,250,-1,LightYellow, ,REM,1291
+/line = 250,-250,250,-1,LightSteelBlue, ,REM,1292
+/line = 250,-250,250,-1,LightSlateGray, ,REM,1293
+/line = 250,250,250,-1,LightSkyBlue, ,REM,1294
+/line = -250,250,250,-1,LightSeaGreen, ,REM,1295
+/line = 250,250,250,-1,LightSalmon, ,REM,1296
+/point = -150 , 250 , both , -1 , {[(number)]}_13, ,REM,1297
+/point = 250 , -250 , both , -1 , {[(number)]}_11, ,REM,1298
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,1299
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,1300
+/point = -250 , -100 , both , -1 , can, ,REM,1301
+/point = -250 , 0 , both , -1 , That, ,REM,1302
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1303
+/name=Symbol7_43_1117, ,REM,1304
+/Author = FlowChart Decompile, ,REM,1305
+/version = .01, ,REM,1306
+/filename = NumberComputerLanguageMultiLine_AlphaAlphaAlphaAlphaAlphaGoToNumber.symbol, ,REM,1307
+/stroke = , ,REM,1308
+/programtext = {[(number)]} :         ' So That I can remember which is which constants:GoTo {[(number)]} :{[(LightSalmon.pathname)]}:{[(LightSalmon.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(can.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(That.pathname)]}, ,REM,1309
+/Syntax = {[(Number)]},:,',{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},GoTo,{[(Number)]},, ,REM,1310
+/notes = Made with DeCompile, ,REM,1311
+/opcode = nop, ,REM,1312
+/error = 0,0 = 0,-1,0,Symbol7_44_1118,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_43_1117, ,REM,1313
+/error = 0,-250 = 0,-1,-250,Symbol7_44_1118,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_43_1117, ,REM,1314
+/error = -250,0 = 0,-1,0,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1315
+/error = -250,0 = 0,-1,0,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1316
+/error = -250,-100 = 0,-1,-100,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1317
+/error = -250,-100 = 0,-1,-100,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1318
+/error = -250,100 = 0,-1,100,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1319
+/error = -250,100 = 0,-1,100,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_43_1117, ,REM,1320
+/error = -250,-250 = 0,-1,-250,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1321
+/error = -250,-250 = 0,-1,-250,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1322
+/error = 250,-250 = 0,-1,-250,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1323
+/error = 250,-250 = 0,-1,-250,Symbol7_44_1118,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1324
+/line = 250,250,250,-1,Orchid, ,REM,1325
+/line = 250,-250,250,-1,OrangeRed, ,REM,1326
+/line = 250,-250,250,-1,Orange, ,REM,1327
+/line = 250,250,250,-1,OliveDrab, ,REM,1328
+/line = -250,250,250,-1,Olive, ,REM,1329
+/line = 250,250,250,-1,OldLace, ,REM,1330
+/point = 250 , -250 , both , -1 , {[(number)]}_11, ,REM,1331
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,1332
+/point = -250 , 100 , both , -1 , 32_7, ,REM,1333
+/point = -250 , -100 , both , -1 , _FROM, ,REM,1334
+/point = -250 , 0 , both , -1 , constantCOME, ,REM,1335
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1336
+/name=Symbol7_44_1118, ,REM,1337
+/Author = FlowChart Decompile, ,REM,1338
+/version = .01, ,REM,1339
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaVariableAsIntNumberNumberComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1340
+/stroke = , ,REM,1341
+/programtext = {[(number)]} :         Public Const constantCOME_FROM As Int32 = 1:GoTo {[(number)]} :{[(OldLace.pathname)]}:{[(OldLace.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[(32_7.pathname)]}:{[(32_7.pathname)]}:{[(32_7.pathname)]}:{[(_FROM.pathname)]}:{[(_FROM.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(constantCOME.pathname)]}, ,REM,1342
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},{[(Variable)]},As,Int,{[(Number)]},=,{[(Number)]},:,GoTo,{[(Number)]},, ,REM,1343
+/notes = Made with DeCompile, ,REM,1344
+/opcode = nop, ,REM,1345
+/error = 0,-250 = 0,-1,-250,Symbol7_47_1119,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_44_1118, ,REM,1346
+/error = -250,0 = 0,-1,0,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1347
+/error = -250,0 = 0,-1,0,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1348
+/error = -250,-100 = 0,-1,-100,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1349
+/error = -250,-100 = 0,-1,-100,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1350
+/error = -250,100 = 0,-1,100,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_44_1118, ,REM,1351
+/error = -250,100 = 0,-1,100,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_47_1119, ,REM,1352
+/error = -250,-250 = 0,-1,-250,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_47_1119, ,REM,1353
+/error = -250,-250 = 0,-1,-250,Symbol7_47_1119,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_47_1119, ,REM,1354
+/line = 250,250,250,-1,SlateGray, ,REM,1355
+/line = 250,-250,250,-1,SlateBlue, ,REM,1356
+/line = 250,-250,250,-1,SkyBlue, ,REM,1357
+/line = 250,250,250,-1,Silver, ,REM,1358
+/line = -250,250,250,-1,Sienna, ,REM,1359
+/line = 250,250,250,-1,SeaShell, ,REM,1360
+/point = -250 , -250 , both , -1 , {[(number)]}_9, ,REM,1361
+/point = -250 , 100 , both , -1 , 1_7, ,REM,1362
+/point = -250 , -100 , both , -1 , 32_5, ,REM,1363
+/name=Symbol7_47_1119, ,REM,1364
+/Author = FlowChart Decompile, ,REM,1365
+/version = .01, ,REM,1366
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsIntNumberNumberComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1367
+/stroke = , ,REM,1368
+/programtext = {[(number)]} :         Public Const constantMyErrorCode As Int32 = -1:GoTo {[(number)]} :{[(SeaShell.pathname)]}:{[(SeaShell.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[(1_7.pathname)]}:{[(1_7.pathname)]}:{[(1_7.pathname)]}:{[(32_5.pathname)]}:{[(32_5.pathname)]}:{[(32_5.pathname)]}:{[(constantMyErrorCode.pathname)]}, ,REM,1369
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,Int,{[(Number)]},=,-,{[(Number)]},:,GoTo,{[(Number)]},, ,REM,1370
+/notes = Made with DeCompile, ,REM,1371
+/opcode = nop, ,REM,1372
+/point = -250 , 0 , both , -1 , constantMyErrorCode, ,REM,1373
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1374
+/error = 0,0 = 0,-1,0,Symbol7_48_1120,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_48_1120, ,REM,1375
+/error = -200,-200 = 0,-1,-200,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1376
+/error = -200,-200 = 0,-1,-200,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1377
+/error = -200,-100 = 0,-1,-100,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1378
+/error = -200,-100 = 0,-1,-100,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1379
+/error = -200,0 = 0,-1,0,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1380
+/error = -200,0 = 0,-1,0,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1381
+/error = -200,100 = 0,-1,100,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1382
+/error = -200,100 = 0,-1,100,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1383
+/error = -200,200 = 0,-1,200,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1384
+/error = -200,200 = 0,-1,200,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1385
+/error = -150,-150 = 0,-1,-150,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1386
+/error = -150,-150 = 0,-1,-150,Symbol7_48_1120,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1387
+/line = 250,250,250,-1,DarkKhaki, ,REM,1388
+/line = 250,-250,250,-1,DarkGreen, ,REM,1389
+/line = 250,-250,250,-1,DarkGray, ,REM,1390
+/line = 250,250,250,-1,DarkGoldenrod, ,REM,1391
+/line = -250,250,250,-1,DarkCyan, ,REM,1392
+/line = 250,250,250,-1,DarkBlue, ,REM,1393
+/point = -150 , -150 , both , -1 , {[(number)]}_51, ,REM,1394
+/point = -200 , 200 , both , -1 , {[(number)]}_49, ,REM,1395
+/point = -200 , 100 , both , -1 , {[(number)]}_47, ,REM,1396
+/point = -200 , 0 , both , -1 , {[(number)]}_45, ,REM,1397
+/point = -200 , -100 , both , -1 , {[(number)]}_43, ,REM,1398
+/point = -200 , -200 , both , -1 , {[(number)]}_41, ,REM,1399
+/point = -100 , -250 , both , -1 , {[(number)]}_39, ,REM,1400
+/name=Symbol7_48_1120, ,REM,1401
+/Author = FlowChart Decompile, ,REM,1402
+/version = .01, ,REM,1403
+/filename = NumberComputerLanguageMultiLine_spaceAlphaNumberSpeciallineAlphaAlphaNumberAlphaSpecialAlphareturnAlphaNumberAlphaSpecialAlphatabAlphaNumberSpecialAlphatabAlphaNumberAlphaSpecialAlphaAlphaAlphaNumberAlphaandnullAlphaNumberSpecialComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1404
+/stroke = , ,REM,1405
+/programtext = {[(number)]} :         'space (U+0020), line feed (U+000A), carriage return (U+000D), horizontal tab (U+0009), vertical tab (U+000B), form feed (U+000C) and null (U+0000).:GoTo {[(number)]} :{[(DarkBlue.pathname)]}:{[(DarkBlue.pathname)]}:{[({[(number)]}_51.pathname)]}:{[({[(number)]}_51.pathname)]}:{[({[(number)]}_51.pathname)]}:{[({[(number)]}_49.pathname)]}:{[({[(number)]}_49.pathname)]}:{[({[(number)]}_49.pathname)]}:{[({[(number)]}_47.pathname)]}:{[({[(number)]}_47.pathname)]}:{[({[(number)]}_47.pathname)]}:{[({[(number)]}_45.pathname)]}:{[({[(number)]}_45.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_43.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_41.pathname)]}, ,REM,1406
+/Syntax = {[(Number)]},:,',space,(,{[(Alpha)]},+,{[(Number)]},),{[(Special)]},line,{[(Alpha)]},(,{[(Alpha)]},+,{[(Number)]},{[(Alpha)]},),{[(Special)]},{[(Alpha)]},return,(,{[(Alpha)]},+,{[(Number)]},{[(Alpha)]},),{[(Special)]},{[(Alpha)]},tab,(,{[(Alpha)]},+,{[(Number)]},),{[(Special)]},{[(Alpha)]},tab,(,{[(Alpha)]},+,{[(Number)]},{[(Alpha)]},),{[(Special)]},{[(Alpha)]},{[(Alpha)]},(,{[(Alpha)]},+,{[(Number)]},{[(Alpha)]},),and,null,(,{[(Alpha)]},+,{[(Number)]},{[(Special)]},:,GoTo,{[(Number)]},, ,REM,1407
+/notes = Made with DeCompile, ,REM,1408
+/opcode = nop, ,REM,1409
+/point = 50 , -250 , both , -1 , {[(number)]}_37, ,REM,1410
+/point = 200 , -250 , both , -1 , {[(number)]}_35, ,REM,1411
+/point = 250 , -150 , both , -1 , {[(number)]}_33, ,REM,1412
+/point = 250 , 50 , both , -1 , {[(number)]}_31, ,REM,1413
+/point = 250 , 200 , both , -1 , {[(number)]}_29, ,REM,1414
+/point = 100 , 250 , both , -1 , U, ,REM,1415
+/point = -50 , 250 , both , -1 , C, ,REM,1416
+/point = -200 , 250 , both , -1 , U, ,REM,1417
+/point = -250 , 150 , both , -1 , form, ,REM,1418
+/point = -250 , -50 , both , -1 , 000_19, ,REM,1419
+/point = -250 , -200 , both , -1 , vertical, ,REM,1420
+/point = -150 , -250 , both , -1 , U, ,REM,1421
+/point = -150 , 250 , both , -1 , D, ,REM,1422
+/point = 250 , -250 , both , -1 , U, ,REM,1423
+/point = -250 , -250 , both , -1 , carriage, ,REM,1424
+/point = -250 , 100 , both , -1 , 000_7, ,REM,1425
+/point = -250 , -100 , both , -1 , feed, ,REM,1426
+/point = -250 , 0 , both , -1 , 0020_3, ,REM,1427
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1428
+/error = 0,0 = 0,-1,0,Symbol7_49_1121,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_48_1120, ,REM,1429
+/error = -250,-200 = 0,-1,-200,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1430
+/error = -250,-200 = 0,-1,-200,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1431
+/error = -250,-50 = 0,-1,-50,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1432
+/error = -250,-50 = 0,-1,-50,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_48_1120, ,REM,1433
+/error = -250,150 = 0,-1,150,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1434
+/error = -250,150 = 0,-1,150,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1435
+/error = -200,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1436
+/error = -200,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1437
+/error = -50,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1438
+/error = -50,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1439
+/error = 100,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1440
+/error = 100,250 = 0,-1,250,Symbol7_49_1121,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1441
+/line = 250,250,250,-1,Lavender, ,REM,1442
+/line = 250,-250,250,-1,Khaki, ,REM,1443
+/line = 250,-250,250,-1,Ivory, ,REM,1444
+/line = 250,250,250,-1,Indigo, ,REM,1445
+/line = -250,250,250,-1,IndianRed, ,REM,1446
+/line = 250,250,250,-1,HotPink, ,REM,1447
+/point = 100 , 250 , both , -1 , {[(number)]}_27, ,REM,1448
+/point = -50 , 250 , both , -1 , {[(number)]}_25, ,REM,1449
+/point = -200 , 250 , both , -1 , {[(number)]}_23, ,REM,1450
+/point = -250 , 150 , both , -1 , {[(number)]}_21, ,REM,1451
+/point = -250 , -50 , both , -1 , {[(number)]}_19, ,REM,1452
+/point = -250 , -200 , both , -1 , 0_17, ,REM,1453
+/point = -150 , -250 , both , -1 , 12_15, ,REM,1454
+/name=Symbol7_49_1121, ,REM,1455
+/Author = FlowChart Decompile, ,REM,1456
+/version = .01, ,REM,1457
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringQuoteAlphaAlphaAlphaSpecialChrNumberAlphaSpecialChrNumberAlphaSpecialChrNumberSpecialAlphaSpecialChrNumberSpecialNumber.symbol, ,REM,1458
+/stroke = , ,REM,1459
+/programtext = {[(number)]} :         'Public Const ConstantWhiteSpace As String = " " & vbLf & vbCr & Strings.Chr(9) & Strings.Chr(11) & Strings.Chr(12) '& Strings.Chr(0):GoTo {[(number)]} :{[(HotPink.pathname)]}:{[(HotPink.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(0_17.pathname)]}, ,REM,1460
+/Syntax = {[(Number)]},:,',Public,Const,{[(Alpha)]},As,String,=,{[("")]},&,{[(Alpha)]},&,{[(Alpha)]},&,{[(Alpha)]},{[(Special)]},Chr,(,{[(Number)]},),&,{[(Alpha)]},{[(Special)]},Chr,(,{[(Number)]},),&,{[(Alpha)]},{[(Special)]},Chr,(,{[(Number)]},),{[(Special)]},{[(Alpha)]},{[(Special)]},Chr,(,{[(Number)]},{[(Special)]},{[(Number)]},, ,REM,1461
+/notes = Made with DeCompile, ,REM,1462
+/opcode = nop, ,REM,1463
+/point = -150 , 250 , both , -1 , 11_13, ,REM,1464
+/point = 250 , -250 , both , -1 , 9_11, ,REM,1465
+/point = -250 , -250 , both , -1 , vbCr, ,REM,1466
+/point = -250 , 100 , both , -1 , Quote_49, ,REM,1467
+/point = -250 , -100 , both , -1 , Quote_49, ,REM,1468
+/point = -250 , 0 , both , -1 , ConstantWhiteSpace, ,REM,1469
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1470
+/error = 0,0 = 0,-1,0,Symbol7_50_1122,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_49_1121, ,REM,1471
+/error = 250,-250 = 0,-1,-250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1472
+/error = 250,-250 = 0,-1,-250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1473
+/error = -150,250 = 0,-1,250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1474
+/error = -150,250 = 0,-1,250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1475
+/error = -150,-250 = 0,-1,-250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1476
+/error = -150,-250 = 0,-1,-250,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_49_1121, ,REM,1477
+/error = -250,-200 = 0,-1,-200,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1478
+/error = -250,-200 = 0,-1,-200,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1479
+/error = -250,-50 = 0,-1,-50,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1480
+/error = -250,-50 = 0,-1,-50,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1481
+/error = -250,150 = 0,-1,150,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1482
+/error = -250,150 = 0,-1,150,Symbol7_50_1122,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1483
+/line = 250,250,250,-1,MidnightBlue, ,REM,1484
+/line = 250,-250,250,-1,MediumVioletRed, ,REM,1485
+/line = 250,-250,250,-1,MediumTurquoise, ,REM,1486
+/line = 250,250,250,-1,MediumSpringGreen, ,REM,1487
+/line = -250,250,250,-1,MediumSlateBlue, ,REM,1488
+/line = 250,250,250,-1,MediumSeaGreen, ,REM,1489
+/point = -250 , 150 , both , -1 , {[(number)]}_21, ,REM,1490
+/point = -250 , -50 , both , -1 , {[(number)]}_19, ,REM,1491
+/point = -250 , -200 , both , -1 , {[(number)]}_17, ,REM,1492
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,1493
+/point = -150 , 250 , both , -1 , vbFormFeed, ,REM,1494
+/point = 250 , -250 , both , -1 , 9_11, ,REM,1495
+/point = -250 , -250 , both , -1 , vbCr, ,REM,1496
+/name=Symbol7_50_1122, ,REM,1497
+/Author = FlowChart Decompile, ,REM,1498
+/version = .01, ,REM,1499
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringQuoteAlphaAlphaAlphaSpecialChrNumberAlphaAlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1500
+/stroke = , ,REM,1501
+/programtext = {[(number)]} :         Public Const ConstantWhiteSpace As String = " " & vbLf & vbCr & Strings.Chr(9) & vbVerticalTab & vbFormFeed & vbCrLf:GoTo {[(number)]} :{[(MediumSeaGreen.pathname)]}:{[(MediumSeaGreen.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(vbFormFeed.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(9_11.pathname)]}, ,REM,1502
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,String,=,{[("")]},&,{[(Alpha)]},&,{[(Alpha)]},&,{[(Alpha)]},{[(Special)]},Chr,(,{[(Number)]},),&,{[(Alpha)]},&,{[(Alpha)]},&,{[(Alpha)]},:,GoTo,{[(Number)]},, ,REM,1503
+/notes = Made with DeCompile, ,REM,1504
+/opcode = nop, ,REM,1505
+/point = -250 , 100 , both , -1 , Quote_50, ,REM,1506
+/point = -250 , -100 , both , -1 , Quote_50, ,REM,1507
+/point = -250 , 0 , both , -1 , ConstantWhiteSpace, ,REM,1508
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1509
+/error = 0,0 = 0,-1,0,Symbol7_51_1123,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_50_1122, ,REM,1510
+/error = 0,-250 = 0,-1,-250,Symbol7_51_1123,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_50_1122, ,REM,1511
+/error = -250,0 = 0,-1,0,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1512
+/error = -250,0 = 0,-1,0,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1513
+/error = -250,100 = 0,-1,100,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1514
+/error = -250,100 = 0,-1,100,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1515
+/error = -250,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1516
+/error = -250,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1517
+/error = 250,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_50_1122, ,REM,1518
+/error = 250,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1519
+/error = -150,250 = 0,-1,250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1520
+/error = -150,250 = 0,-1,250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1521
+/error = -150,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1522
+/error = -150,-250 = 0,-1,-250,Symbol7_51_1123,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1523
+/line = 250,250,250,-1,SandyBrown, ,REM,1524
+/line = 250,-250,250,-1,Salmon, ,REM,1525
+/line = 250,-250,250,-1,SaddleBrown, ,REM,1526
+/line = 250,250,250,-1,RoyalBlue, ,REM,1527
+/line = -250,250,250,-1,RosyBrown, ,REM,1528
+/line = 250,250,250,-1,Red, ,REM,1529
+/point = -150 , -250 , both , -1 , {[(number)]}_15, ,REM,1530
+/point = -150 , 250 , both , -1 , {[(number)]}_13, ,REM,1531
+/point = 250 , -250 , both , -1 , Space:GoTo, ,REM,1532
+/point = -250 , -250 , both , -1 , Quote_51, ,REM,1533
+/point = -250 , 100 , both , -1 , ConstantWhiteSpace, ,REM,1534
+/point = -250 , -100 , both , -1 , ConstantWhiteSpace, ,REM,1535
+/point = -250 , 0 , both , -1 , ConstantDelimeters, ,REM,1536
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1537
+/name=Symbol7_51_1123, ,REM,1538
+/Author = FlowChart Decompile, ,REM,1539
+/version = .01, ,REM,1540
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringAlphaAlphaQuoteAlphaAlphaNumber.symbol, ,REM,1541
+/stroke = , ,REM,1542
+/programtext = {[(number)]} :         Public Const ConstantDelimeters As String = ConstantWhiteSpace & FD & ",=" ' White Space:GoTo {[(number)]} :{[(Red.pathname)]}:{[(Red.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[(Space:GoTo.pathname)]}:{[(Space:GoTo.pathname)]}:{[(Space:GoTo.pathname)]}:{[(Quote_51.pathname)]}:{[(Quote_51.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(ConstantWhiteSpace.pathname)]}:{[(ConstantWhiteSpace.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(ConstantDelimeters.pathname)]}, ,REM,1543
+/Syntax = {[(Number)]},:,Public,Const,{[(Alpha)]},As,String,=,{[(Alpha)]},&,{[(Alpha)]},&,{[("")]},',{[(Alpha)]},{[(Alpha)]},{[(Number)]},, ,REM,1544
+/notes = Made with DeCompile, ,REM,1545
+/opcode = nop, ,REM,1546
+/error = 0,-250 = 0,-1,-250,Symbol7_52_1124,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_51_1123, ,REM,1547
+/error = -250,0 = 0,-1,0,Symbol7_52_1124,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_51_1123, ,REM,1548
+/error = -250,0 = 0,-1,0,Symbol7_52_1124,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1549
+/error = -250,100 = 0,-1,100,Symbol7_52_1124,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1550
+/error = -250,100 = 0,-1,100,Symbol7_52_1124,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1551
+/line = 250,250,250,-1,aqua, ,REM,1552
+/line = 250,-250,250,-1,AntiqueWhite, ,REM,1553
+/line = 250,-250,250,-1,AliceBlue, ,REM,1554
+/line = 250,250,250,-1,AliceBlue, ,REM,1555
+/line = -250,250,250,-1,Yellow, ,REM,1556
+/name=Symbol7_52_1124, ,REM,1557
+/Author = FlowChart Decompile, ,REM,1558
+/version = .01, ,REM,1559
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringQuoteSpecialNumber.symbol, ,REM,1560
+/stroke = , ,REM,1561
+/programtext = {[(number)]} :         'Public Const ConstantDirectionMap As String = " " &:GoTo {[(number)]} :{[(WhiteSmoke.pathname)]}:{[(WhiteSmoke.pathname)]}:{[(Quote_52.pathname)]}:{[(Quote_52.pathname)]}:{[(Quote_52.pathname)]}:{[(ConstantDirectionMap.pathname)]}, ,REM,1562
+/Syntax = {[(Number)]},:,',Public,Const,{[(Alpha)]},As,String,=,{[("")]},{[(Special)]},{[(Number)]},, ,REM,1563
+/notes = Made with DeCompile, ,REM,1564
+/opcode = nop, ,REM,1565
+/line = 250,250,250,-1,WhiteSmoke, ,REM,1566
+/point = -250 , 100 , both , -1 , Quote_52, ,REM,1567
+/point = -250 , -100 , both , -1 , Quote_52, ,REM,1568
+/point = -250 , 0 , both , -1 , ConstantDirectionMap, ,REM,1569
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1570
+/error = 0,-250 = 0,-1,-250,Symbol7_53_1125,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_52_1124, ,REM,1571
+/error = -250,0 = 0,-1,0,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1572
+/error = -250,0 = 0,-1,0,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1573
+/error = -250,-100 = 0,-1,-100,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_52_1124, ,REM,1574
+/error = -250,-100 = 0,-1,-100,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1575
+/error = -250,100 = 0,-1,100,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1576
+/error = -250,100 = 0,-1,100,Symbol7_53_1125,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1577
+/line = 250,250,250,-1,Cornsilk, ,REM,1578
+/line = 250,-250,250,-1,CornflowerBlue, ,REM,1579
+/line = 250,-250,250,-1,Coral, ,REM,1580
+/line = 250,250,250,-1,Chocolate, ,REM,1581
+/line = -250,250,250,-1,Chartreuse, ,REM,1582
+/line = 250,250,250,-1,CadetBlue, ,REM,1583
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,1584
+/name=Symbol7_53_1125, ,REM,1585
+/Author = FlowChart Decompile, ,REM,1586
+/version = .01, ,REM,1587
+/filename = NumberComputerLanguageMultiLine_AlphaQuoteSpecialNumber.symbol, ,REM,1588
+/stroke = , ,REM,1589
+/programtext = {[(number)]} :         'vbCrLf & "14_15__16__01_02" &:GoTo {[(number)]} :{[(CadetBlue.pathname)]}:{[(CadetBlue.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Quote_53.pathname)]}, ,REM,1590
+/Syntax = {[(Number)]},:,',{[(Alpha)]},&,{[("")]},{[(Special)]},{[(Number)]},, ,REM,1591
+/notes = Made with DeCompile, ,REM,1592
+/opcode = nop, ,REM,1593
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1594
+/point = -250 , 0 , both , -1 , Quote_53, ,REM,1595
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1596
+/error = 0,-250 = 0,-1,-250,Symbol7_57_1126,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_53_1125, ,REM,1597
+/error = -250,0 = 0,-1,0,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1598
+/error = -250,0 = 0,-1,0,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1599
+/error = -250,-100 = 0,-1,-100,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_53_1125, ,REM,1600
+/error = -250,-100 = 0,-1,-100,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1601
+/error = -250,100 = 0,-1,100,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1602
+/error = -250,100 = 0,-1,100,Symbol7_57_1126,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1603
+/line = 250,250,250,-1,DarkTurquoise, ,REM,1604
+/line = 250,-250,250,-1,DarkSlateGray, ,REM,1605
+/line = 250,-250,250,-1,DarkSlateBlue, ,REM,1606
+/line = 250,250,250,-1,DarkSeaGreen, ,REM,1607
+/line = -250,250,250,-1,DarkSalmon, ,REM,1608
+/line = 250,250,250,-1,DarkRed, ,REM,1609
+/point = -250 , 100 , both , -1 , {[(number)]}_7, ,REM,1610
+/name=Symbol7_57_1126, ,REM,1611
+/Author = FlowChart Decompile, ,REM,1612
+/version = .01, ,REM,1613
+/filename = NumberComputerLanguageMultiLine_AlphaQuoteComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1614
+/stroke = , ,REM,1615
+/programtext = {[(number)]} :         'vbCrLf & "10_09__08__07_06":GoTo {[(number)]} :{[(DarkRed.pathname)]}:{[(DarkRed.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Quote_57.pathname)]}, ,REM,1616
+/Syntax = {[(Number)]},:,',{[(Alpha)]},&,{[("")]},:,GoTo,{[(Number)]},, ,REM,1617
+/notes = Made with DeCompile, ,REM,1618
+/opcode = nop, ,REM,1619
+/point = -250 , -100 , both , -1 , {[(number)]}_5, ,REM,1620
+/point = -250 , 0 , both , -1 , Quote_57, ,REM,1621
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1622
+/error = 0,0 = 0,-1,0,Symbol7_58_1127,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_57_1126, ,REM,1623
+/error = -250,-50 = 0,-1,-50,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1624
+/error = -250,-50 = 0,-1,-50,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1625
+/error = -250,150 = 0,-1,150,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1626
+/error = -250,150 = 0,-1,150,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_57_1126, ,REM,1627
+/error = -200,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1628
+/error = -200,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1629
+/error = -50,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1630
+/error = -50,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1631
+/error = 100,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1632
+/error = 100,250 = 0,-1,250,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1633
+/error = 250,200 = 0,-1,200,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1634
+/error = 250,200 = 0,-1,200,Symbol7_58_1127,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_58_1127, ,REM,1635
+/line = 250,250,250,-1,LightCoral, ,REM,1636
+/line = 250,-250,250,-1,LightBlue, ,REM,1637
+/line = 250,-250,250,-1,LemonChiffon, ,REM,1638
+/line = 250,250,250,-1,LawnGreen, ,REM,1639
+/line = -250,250,250,-1,LavenderBlush, ,REM,1640
+/line = 250,250,250,-1,Lavender, ,REM,1641
+/point = 250 , 200 , both , -1 , {[(number)]}_29, ,REM,1642
+/point = 100 , 250 , both , -1 , {[(number)]}_27, ,REM,1643
+/point = -50 , 250 , both , -1 , {[(number)]}_25, ,REM,1644
+/point = -200 , 250 , both , -1 , {[(number)]}_23, ,REM,1645
+/point = -250 , 150 , both , -1 , {[(number)]}_21, ,REM,1646
+/point = -250 , -50 , both , -1 , {[(number)]}_19, ,REM,1647
+/point = -250 , -200 , both , -1 , vbCrLf, ,REM,1648
+/name=Symbol7_58_1127, ,REM,1649
+/Author = FlowChart Decompile, ,REM,1650
+/version = .01, ,REM,1651
+/filename = NumberComputerLanguageMultiLine_PublicConstAlphaAsStringAlphaQuoteAlphaQuoteAlphaQuoteAlphaQuoteAlphaQuoteAlphaQuoteComputerLanguageMultiLine_GoToNumber.symbol, ,REM,1652
+/stroke = , ,REM,1653
+/programtext = {[(number)]} :         '        Public Const ConstantExplainCompared As String = vbCrLf & "Compare Results " & vbCrLf & "  -2 Top of the list" & vbCrLf & "  -1 Less than" & vbCrLf & "   0 they match" & vbCrLf & "   1 greater than" & vbCrLf & "   2 bottom of the list":GoTo {[(number)]} :{[(Lavender.pathname)]}:{[(Lavender.pathname)]}:{[({[(number)]}_29.pathname)]}:{[({[(number)]}_29.pathname)]}:{[({[(number)]}_29.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_27.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_25.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_23.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_19.pathname)]}, ,REM,1654
+/Syntax = {[(Number)]},:,',Public,Const,{[(Alpha)]},As,String,=,{[(Alpha)]},&,{[("")]},&,{[(Alpha)]},&,{[("")]},&,{[(Alpha)]},&,{[("")]},&,{[(Alpha)]},&,{[("")]},&,{[(Alpha)]},&,{[("")]},&,{[(Alpha)]},&,{[("")]},:,GoTo,{[(Number)]},, ,REM,1655
+/notes = Made with DeCompile, ,REM,1656
+/opcode = nop, ,REM,1657
+/point = -150 , -250 , both , -1 , vbCrLf, ,REM,1658
+/point = -150 , 250 , both , -1 , vbCrLf, ,REM,1659
+/point = 250 , -250 , both , -1 , vbCrLf, ,REM,1660
+/point = -250 , -250 , both , -1 , vbCrLf, ,REM,1661
+/point = -250 , 100 , both , -1 , vbCrLf, ,REM,1662
+/point = -250 , -100 , both , -1 , vbCrLf, ,REM,1663
+/point = -250 , 0 , both , -1 , ConstantExplainCompared, ,REM,1664
+/point = 0 , -250 , both , -1 , {[(number)]}_1, ,REM,1665
+/path=_C,54750,4900,57500,4000,logic, ,REM,1666
+/path=_C,72500,5000,69750,5000,errored, ,REM,1667
+/path=_FROM,294750,4900,297500,4000,logic, ,REM,1668
+/path=_FROM,305000,7500,305000,5250,errored, ,REM,1669
+/path={[(number)]}_1,10000,4750,10000,7500,logic, ,REM,1670
+/path={[(number)]}_1,15000,7500,15000,4750,errored, ,REM,1671
+/path={[(number)]}_1,20000,4750,20000,7500,logic, ,REM,1672
+/path={[(number)]}_1,25000,7500,25000,4750,errored, ,REM,1673
+/path={[(number)]}_1,30000,7500,30000,4750,errored, ,REM,1674
+/path={[(number)]}_1,35000,7500,35000,4750,errored, ,REM,1675
+/path={[(number)]}_1,40000,7500,40000,4750,errored, ,REM,1676
+/path={[(number)]}_1,45000,4750,45000,7500,logic, ,REM,1677
+/path={[(number)]}_1,50000,7500,50000,4750,errored, ,REM,1678
+/path={[(number)]}_1,55000,4750,55000,7500,logic, ,REM,1679
+/path={[(number)]}_1,60000,7500,60000,4750,errored, ,REM,1680
+/path={[(number)]}_1,65000,4750,65000,7500,logic, ,REM,1681
+/path={[(number)]}_1,70000,7500,70000,4750,errored, ,REM,1682
+/path={[(number)]}_1,75000,7500,75000,4750,errored, ,REM,1683
+/path={[(number)]}_1,80000,4750,80000,7500,logic, ,REM,1684
+/path={[(number)]}_1,85000,7500,85000,4750,errored, ,REM,1685
+/path={[(number)]}_1,90000,4750,90000,7500,logic, ,REM,1686
+/path={[(number)]}_1,95000,7500,95000,4750,errored, ,REM,1687
+/path={[(number)]}_1,100000,4750,100000,7500,logic, ,REM,1688
+/path={[(number)]}_1,105000,7500,105000,4750,errored, ,REM,1689
+/path={[(number)]}_1,110000,7500,110000,4750,errored, ,REM,1690
+/path={[(number)]}_1,115000,7500,115000,4750,errored, ,REM,1691
+/path={[(number)]}_1,120000,7500,120000,4750,errored, ,REM,1692
+/path={[(number)]}_1,125000,4750,125000,7500,logic, ,REM,1693
+/path={[(number)]}_1,130000,7500,130000,4750,errored, ,REM,1694
+/path={[(number)]}_1,135000,4750,135000,7500,logic, ,REM,1695
+/path={[(number)]}_1,140000,7500,140000,4750,errored, ,REM,1696
+/path={[(number)]}_1,145000,4750,145000,7500,logic, ,REM,1697
+/path={[(number)]}_1,150000,7500,150000,4750,errored, ,REM,1698
+/path={[(number)]}_1,155000,7500,155000,4750,errored, ,REM,1699
+/path={[(number)]}_1,160000,7500,160000,4750,errored, ,REM,1700
+/path={[(number)]}_1,165000,7500,165000,4750,errored, ,REM,1701
+/path={[(number)]}_1,170000,7500,170000,4750,errored, ,REM,1702
+/path={[(number)]}_1,175000,7500,175000,4750,errored, ,REM,1703
+/path={[(number)]}_1,180000,7500,180000,4750,errored, ,REM,1704
+/path={[(number)]}_1,185000,7500,185000,4750,errored, ,REM,1705
+/path={[(number)]}_1,190000,7500,190000,4750,errored, ,REM,1706
+/path={[(number)]}_1,195000,7500,195000,4750,errored, ,REM,1707
+/path={[(number)]}_1,200000,7500,200000,4750,errored, ,REM,1708
+/path={[(number)]}_1,205000,7500,205000,4750,errored, ,REM,1709
+/path={[(number)]}_1,210000,7500,210000,4750,errored, ,REM,1710
+/path={[(number)]}_1,215000,7500,215000,4750,errored, ,REM,1711
+/path={[(number)]}_1,220000,4750,220000,7500,logic, ,REM,1712
+/path={[(number)]}_1,225000,7500,225000,4750,errored, ,REM,1713
+/path={[(number)]}_1,230000,4750,230000,7500,logic, ,REM,1714
+/path={[(number)]}_1,235000,7500,235000,4750,errored, ,REM,1715
+/path={[(number)]}_1,240000,4750,240000,7500,logic, ,REM,1716
+/path={[(number)]}_1,245000,7500,245000,4750,errored, ,REM,1717
+/path={[(number)]}_1,250000,7500,250000,4750,errored, ,REM,1718
+/path={[(number)]}_1,255000,7500,255000,4750,errored, ,REM,1719
+/path={[(number)]}_1,260000,4750,260000,7500,logic, ,REM,1720
+/path={[(number)]}_1,265000,7500,265000,4750,errored, ,REM,1721
+/path={[(number)]}_1,270000,7500,270000,4750,errored, ,REM,1722
+/path={[(number)]}_1,275000,4750,275000,7500,logic, ,REM,1723
+/path={[(number)]}_1,280000,7500,280000,4750,errored, ,REM,1724
+/path={[(number)]}_1,285000,4750,285000,7500,logic, ,REM,1725
+/path={[(number)]}_1,290000,7500,290000,4750,errored, ,REM,1726
+/path={[(number)]}_1,295000,4750,295000,7500,logic, ,REM,1727
+/path={[(number)]}_1,300000,7500,300000,4750,errored, ,REM,1728
+/path={[(number)]}_1,305000,7500,305000,4750,errored, ,REM,1729
+/path={[(number)]}_1,310000,7500,310000,4750,errored, ,REM,1730
+/path={[(number)]}_1,315000,4750,315000,7500,logic, ,REM,1731
+/path={[(number)]}_1,320000,7500,320000,4750,errored, ,REM,1732
+/path={[(number)]}_1,325000,4750,325000,7500,logic, ,REM,1733
+/path={[(number)]}_1,330000,7500,330000,4750,errored, ,REM,1734
+/path={[(number)]}_1,335000,4750,335000,7500,logic, ,REM,1735
+/path={[(number)]}_1,340000,7500,340000,4750,errored, ,REM,1736
+/path={[(number)]}_1,345000,4750,345000,7500,logic, ,REM,1737
+/path={[(number)]}_1,350000,7500,350000,4750,errored, ,REM,1738
+/path={[(number)]}_1,355000,4750,355000,7500,logic, ,REM,1739
+/path={[(number)]}_1,360000,7500,360000,4750,errored, ,REM,1740
+/path={[(number)]}_1,365000,4750,365000,7500,logic, ,REM,1741
+/path={[(number)]}_1,370000,7500,370000,4750,errored, ,REM,1742
+/path={[(number)]}_1,375000,4750,375000,7500,logic, ,REM,1743
+/path={[(number)]}_1,380000,7500,380000,4750,errored, ,REM,1744
+/path={[(number)]}_1,385000,7500,385000,4750,errored, ,REM,1745
+/path={[(number)]}_1,390000,7500,390000,4750,errored, ,REM,1746
+/path={[(number)]}_1,395000,7500,395000,4750,errored, ,REM,1747
+/path={[(number)]}_1,400000,4750,400000,7500,logic, ,REM,1748
+/path={[(number)]}_1,405000,7500,405000,4750,errored, ,REM,1749
+/path={[(number)]}_1,410000,4750,410000,7500,logic, ,REM,1750
+/path={[(number)]}_1,415000,7500,415000,4750,errored, ,REM,1751
+/path={[(number)]}_10,122500,4000,120250,4900,errored, ,REM,1752
+/path={[(number)]}_10,122500,5000,120250,5000,errored, ,REM,1753
+/path={[(number)]}_10,127500,5000,125250,5000,errored, ,REM,1754
+/path={[(number)]}_10,132500,5000,130250,5000,errored, ,REM,1755
+/path={[(number)]}_10,137500,5000,135250,5000,errored, ,REM,1756
+/path={[(number)]}_10,262500,5000,260250,5000,errored, ,REM,1757
+/path={[(number)]}_10,267500,5000,265250,5000,errored, ,REM,1758
+/path={[(number)]}_10,272500,5000,270250,5000,errored, ,REM,1759
+/path={[(number)]}_10,322500,6000,319750,5100,errored, ,REM,1760
+/path={[(number)]}_11,90250,4750,92500,7500,logic, ,REM,1761
+/path={[(number)]}_11,127500,6000,124750,5100,errored, ,REM,1762
+/path={[(number)]}_11,285250,4750,287500,7500,logic, ,REM,1763
+/path={[(number)]}_11,295250,4750,297500,7500,logic, ,REM,1764
+/path={[(number)]}_11,322500,4000,319750,4900,errored, ,REM,1765
+/path={[(number)]}_11,327500,4000,324750,4900,errored, ,REM,1766
+/path={[(number)]}_11,332500,4000,329750,4900,errored, ,REM,1767
+/path={[(number)]}_11,337500,5000,335250,5000,errored, ,REM,1768
+/path={[(number)]}_12,277500,5000,274750,5000,errored, ,REM,1769
+/path={[(number)]}_12,282500,5000,279750,5000,errored, ,REM,1770
+/path={[(number)]}_12,382500,5000,379750,5000,errored, ,REM,1771
+/path={[(number)]}_13,89850,5250,88500,7500,logic, ,REM,1772
+/path={[(number)]}_13,152500,5000,149750,5000,errored, ,REM,1773
+/path={[(number)]}_13,267500,4000,264750,4900,errored, ,REM,1774
+/path={[(number)]}_13,272500,4000,269750,4900,errored, ,REM,1775
+/path={[(number)]}_13,277500,4000,274750,4900,errored, ,REM,1776
+/path={[(number)]}_13,284850,5250,283500,7500,logic, ,REM,1777
+/path={[(number)]}_13,354850,5250,353500,7500,logic, ,REM,1778
+/path={[(number)]}_14,107500,4000,104750,4900,errored, ,REM,1779
+/path={[(number)]}_14,132500,6000,130250,5100,errored, ,REM,1780
+/path={[(number)]}_14,327500,4000,325250,4900,errored, ,REM,1781
+/path={[(number)]}_14,332500,4000,330250,4900,errored, ,REM,1782
+/path={[(number)]}_14,337500,4000,335250,4900,errored, ,REM,1783
+/path={[(number)]}_14,342500,4000,339750,4900,errored, ,REM,1784
+/path={[(number)]}_15,64850,4750,63500,7500,logic, ,REM,1785
+/path={[(number)]}_15,102500,6000,99750,5100,errored, ,REM,1786
+/path={[(number)]}_15,107500,6000,104750,5100,errored, ,REM,1787
+/path={[(number)]}_15,79850,4750,78500,7500,logic, ,REM,1788
+/path={[(number)]}_15,112500,4000,110250,4900,errored, ,REM,1789
+/path={[(number)]}_15,89850,4750,88500,7500,logic, ,REM,1790
+/path={[(number)]}_15,274850,4750,273500,7500,logic, ,REM,1791
+/path={[(number)]}_15,344850,4750,343500,7500,logic, ,REM,1792
+/path={[(number)]}_15,372500,4000,369750,4900,errored, ,REM,1793
+/path={[(number)]}_15,354850,4750,353500,7500,logic, ,REM,1794
+/path={[(number)]}_15,382500,4000,379750,4900,errored, ,REM,1795
+/path={[(number)]}_16,107500,6000,105250,5100,errored, ,REM,1796
+/path={[(number)]}_16,112500,6000,110250,5100,errored, ,REM,1797
+/path={[(number)]}_16,387500,4000,385250,4900,errored, ,REM,1798
+/path={[(number)]}_17,64750,4800,67500,3000,logic, ,REM,1799
+/path={[(number)]}_17,107500,7500,109750,4750,errored, ,REM,1800
+/path={[(number)]}_17,112500,7500,114750,4750,errored, ,REM,1801
+/path={[(number)]}_17,274750,4800,277500,3000,logic, ,REM,1802
+/path={[(number)]}_17,344750,4800,347500,3000,logic, ,REM,1803
+/path={[(number)]}_17,392500,6000,389750,5100,errored, ,REM,1804
+/path={[(number)]}_19,64750,4950,67500,4500,logic, ,REM,1805
+/path={[(number)]}_19,117500,6000,114750,5100,errored, ,REM,1806
+/path={[(number)]}_19,274750,4950,277500,4500,logic, ,REM,1807
+/path={[(number)]}_19,334750,4950,337500,4500,logic, ,REM,1808
+/path={[(number)]}_19,344750,4950,347500,4500,logic, ,REM,1809
+/path={[(number)]}_19,377500,4000,375250,4900,errored, ,REM,1810
+/path={[(number)]}_19,409750,4950,412500,4500,logic, ,REM,1811
+/path={[(number)]}_20,112500,7500,114750,5250,errored, ,REM,1812
+/path={[(number)]}_20,117500,7500,119750,5250,errored, ,REM,1813
+/path={[(number)]}_20,367500,4000,365250,4900,errored, ,REM,1814
+/path={[(number)]}_21,274750,5150,277500,6500,logic, ,REM,1815
+/path={[(number)]}_21,334750,5150,337500,6500,logic, ,REM,1816
+/path={[(number)]}_21,344750,5150,347500,6500,logic, ,REM,1817
+/path={[(number)]}_21,409750,5150,412500,6500,logic, ,REM,1818
+/path={[(number)]}_22,122500,6000,120250,5100,errored, ,REM,1819
+/path={[(number)]}_22,382500,6000,379750,5100,errored, ,REM,1820
+/path={[(number)]}_22,442500,4000,440250,4900,errored, ,REM,1821
+/path={[(number)]}_23,124800,5250,123000,7500,logic, ,REM,1822
+/path={[(number)]}_23,274800,5250,273000,7500,logic, ,REM,1823
+/path={[(number)]}_23,334800,5250,333000,7500,logic, ,REM,1824
+/path={[(number)]}_23,372500,6000,369750,5100,errored, ,REM,1825
+/path={[(number)]}_23,409800,5250,408000,7500,logic, ,REM,1826
+/path={[(number)]}_24,187500,7500,185250,5250,errored, ,REM,1827
+/path={[(number)]}_24,387500,6000,385250,5100,errored, ,REM,1828
+/path={[(number)]}_25,124950,5250,124500,7500,logic, ,REM,1829
+/path={[(number)]}_25,274950,5250,274500,7500,logic, ,REM,1830
+/path={[(number)]}_25,334950,5250,334500,7500,logic, ,REM,1831
+/path={[(number)]}_25,409950,5250,409500,7500,logic, ,REM,1832
+/path={[(number)]}_26,188500,7500,189850,5250,errored, ,REM,1833
+/path={[(number)]}_26,387500,7500,389750,4750,errored, ,REM,1834
+/path={[(number)]}_26,447500,6000,444750,5100,errored, ,REM,1835
+/path={[(number)]}_27,125100,5250,126000,7500,logic, ,REM,1836
+/path={[(number)]}_27,275100,5250,276000,7500,logic, ,REM,1837
+/path={[(number)]}_27,335100,5250,336000,7500,logic, ,REM,1838
+/path={[(number)]}_27,377500,6000,375250,5100,errored, ,REM,1839
+/path={[(number)]}_27,410100,5250,411000,7500,logic, ,REM,1840
+/path={[(number)]}_29,196500,7500,195150,5250,errored, ,REM,1841
+/path={[(number)]}_29,325250,5200,327500,7000,logic, ,REM,1842
+/path={[(number)]}_29,387500,7500,385250,5250,errored, ,REM,1843
+/path={[(number)]}_29,392500,7500,394750,5250,errored, ,REM,1844
+/path={[(number)]}_29,410250,5200,412500,7000,logic, ,REM,1845
+/path={[(number)]}_3,144750,5000,147500,5000,logic, ,REM,1846
+/path={[(number)]}_3,219750,5000,222500,5000,logic, ,REM,1847
+/path={[(number)]}_3,229750,5000,232500,5000,logic, ,REM,1848
+/path={[(number)]}_30,377500,7500,379750,4750,errored, ,REM,1849
+/path={[(number)]}_31,325250,5050,327500,5500,logic, ,REM,1850
+/path={[(number)]}_32,388500,7500,389850,5250,errored, ,REM,1851
+/path={[(number)]}_33,325250,4850,327500,3500,logic, ,REM,1852
+/path={[(number)]}_34,396500,7500,395150,5250,errored, ,REM,1853
+/path={[(number)]}_34,382500,7500,384750,5250,errored, ,REM,1854
+/path={[(number)]}_35,325200,4750,327000,7500,logic, ,REM,1855
+/path={[(number)]}_37,325050,4750,325500,7500,logic, ,REM,1856
+/path={[(number)]}_37,398500,7500,399850,4750,errored, ,REM,1857
+/path={[(number)]}_37,392500,7500,390250,4750,errored, ,REM,1858
+/path={[(number)]}_39,324900,4750,324000,7500,logic, ,REM,1859
+/path={[(number)]}_4,20000,7500,20000,5250,errored, ,REM,1860
+/path={[(number)]}_4,62500,5000,59750,5000,errored, ,REM,1861
+/path={[(number)]}_4,385000,7500,385000,5250,errored, ,REM,1862
+/path={[(number)]}_4,390000,7500,390000,5250,errored, ,REM,1863
+/path={[(number)]}_4,395000,7500,395000,5250,errored, ,REM,1864
+/path={[(number)]}_4,400000,7500,400000,5250,errored, ,REM,1865
+/path={[(number)]}_4,410000,7500,410000,5250,errored, ,REM,1866
+/path={[(number)]}_40,406500,7500,405150,4750,errored, ,REM,1867
+/path={[(number)]}_41,324800,4800,323000,7000,logic, ,REM,1868
+/path={[(number)]}_41,397500,7500,395250,5250,errored, ,REM,1869
+/path={[(number)]}_42,412500,3000,409750,4800,errored, ,REM,1870
+/path={[(number)]}_43,324800,4900,327000,4000,logic, ,REM,1871
+/path={[(number)]}_43,417500,3500,414750,4850,errored, ,REM,1872
+/path={[(number)]}_43,398500,7500,399850,5250,errored, ,REM,1873
+/path={[(number)]}_45,324800,5000,327000,5000,logic, ,REM,1874
+/path={[(number)]}_46,422500,4500,419750,4950,errored, ,REM,1875
+/path={[(number)]}_47,324800,5100,327000,6000,logic, ,REM,1876
+/path={[(number)]}_47,427500,5500,424750,5050,errored, ,REM,1877
+/path={[(number)]}_49,324800,5200,323000,7000,logic, ,REM,1878
+/path={[(number)]}_49,432500,6500,429750,5150,errored, ,REM,1879
+/path={[(number)]}_5,9750,4900,12500,4000,logic, ,REM,1880
+/path={[(number)]}_5,19750,4900,22500,4000,logic, ,REM,1881
+/path={[(number)]}_5,37500,5000,34750,5000,errored, ,REM,1882
+/path={[(number)]}_5,42500,5000,39750,5000,errored, ,REM,1883
+/path={[(number)]}_5,47500,5000,44750,5000,errored, ,REM,1884
+/path={[(number)]}_5,52500,5000,49750,5000,errored, ,REM,1885
+/path={[(number)]}_5,44750,4900,47500,4000,logic, ,REM,1886
+/path={[(number)]}_5,99750,4900,102500,4000,logic, ,REM,1887
+/path={[(number)]}_5,117500,5000,114750,5000,errored, ,REM,1888
+/path={[(number)]}_5,127500,5000,124750,5000,errored, ,REM,1889
+/path={[(number)]}_5,132500,5000,129750,5000,errored, ,REM,1890
+/path={[(number)]}_5,134750,4900,137500,4000,logic, ,REM,1891
+/path={[(number)]}_5,145000,7500,145000,5250,errored, ,REM,1892
+/path={[(number)]}_5,144750,4900,147500,4000,logic, ,REM,1893
+/path={[(number)]}_5,219750,4900,222500,4000,logic, ,REM,1894
+/path={[(number)]}_5,374750,4900,377500,4000,logic, ,REM,1895
+/path={[(number)]}_5,399750,4900,402500,4000,logic, ,REM,1896
+/path={[(number)]}_51,324850,4850,323500,6500,logic, ,REM,1897
+/path={[(number)]}_51,437500,7000,434750,5200,errored, ,REM,1898
+/path={[(number)]}_52,438000,7500,439800,5250,errored, ,REM,1899
+/path={[(number)]}_57,444000,7500,444900,5250,errored, ,REM,1900
+/path={[(number)]}_59,449500,7500,449950,5250,errored, ,REM,1901
+/path={[(number)]}_6,27500,5000,24750,5000,errored, ,REM,1902
+/path={[(number)]}_6,42500,5000,40250,5000,errored, ,REM,1903
+/path={[(number)]}_6,47500,5000,45250,5000,errored, ,REM,1904
+/path={[(number)]}_6,52500,5000,50250,5000,errored, ,REM,1905
+/path={[(number)]}_6,57500,5000,55250,5000,errored, ,REM,1906
+/path={[(number)]}_6,77500,5000,75250,5000,errored, ,REM,1907
+/path={[(number)]}_6,230000,7500,230000,5250,errored, ,REM,1908
+/path={[(number)]}_6,240000,7500,240000,5250,errored, ,REM,1909
+/path={[(number)]}_63,455500,7500,455050,5250,errored, ,REM,1910
+/path={[(number)]}_7,9750,5100,12500,6000,logic, ,REM,1911
+/path={[(number)]}_7,19750,5100,22500,6000,logic, ,REM,1912
+/path={[(number)]}_7,44750,5100,47500,6000,logic, ,REM,1913
+/path={[(number)]}_7,67500,5000,65250,5000,errored, ,REM,1914
+/path={[(number)]}_7,54750,5100,57500,6000,logic, ,REM,1915
+/path={[(number)]}_7,99750,5100,102500,6000,logic, ,REM,1916
+/path={[(number)]}_7,155000,7500,155000,5250,errored, ,REM,1917
+/path={[(number)]}_7,160000,7500,160000,5250,errored, ,REM,1918
+/path={[(number)]}_7,165000,7500,165000,5250,errored, ,REM,1919
+/path={[(number)]}_7,170000,7500,170000,5250,errored, ,REM,1920
+/path={[(number)]}_7,175000,7500,175000,5250,errored, ,REM,1921
+/path={[(number)]}_7,180000,7500,180000,5250,errored, ,REM,1922
+/path={[(number)]}_7,185000,7500,185000,5250,errored, ,REM,1923
+/path={[(number)]}_7,190000,7500,190000,5250,errored, ,REM,1924
+/path={[(number)]}_7,195000,7500,195000,5250,errored, ,REM,1925
+/path={[(number)]}_7,200000,7500,200000,5250,errored, ,REM,1926
+/path={[(number)]}_7,205000,7500,205000,5250,errored, ,REM,1927
+/path={[(number)]}_7,210000,7500,210000,5250,errored, ,REM,1928
+/path={[(number)]}_7,215000,7500,215000,5250,errored, ,REM,1929
+/path={[(number)]}_7,220000,7500,220000,5250,errored, ,REM,1930
+/path={[(number)]}_7,284750,5100,287500,6000,logic, ,REM,1931
+/path={[(number)]}_7,312500,4000,309750,4900,errored, ,REM,1932
+/path={[(number)]}_7,374750,5100,377500,6000,logic, ,REM,1933
+/path={[(number)]}_7,399750,5100,402500,6000,logic, ,REM,1934
+/path={[(number)]}_8,257500,5000,254750,5000,errored, ,REM,1935
+/path={[(number)]}_8,262500,5000,259750,5000,errored, ,REM,1936
+/path={[(number)]}_8,267500,5000,264750,5000,errored, ,REM,1937
+/path={[(number)]}_8,317500,4000,315250,4900,errored, ,REM,1938
+/path={[(number)]}_8,332500,5000,329750,5000,errored, ,REM,1939
+/path={[(number)]}_8,392500,5000,389750,5000,errored, ,REM,1940
+/path={[(number)]}_8,397500,5000,394750,5000,errored, ,REM,1941
+/path={[(number)]}_8,402500,5000,399750,5000,errored, ,REM,1942
+/path={[(number)]}_8,407500,5000,404750,5000,errored, ,REM,1943
+/path={[(number)]}_9,32500,5000,30250,5000,errored, ,REM,1944
+/path={[(number)]}_9,54750,4750,52500,7500,logic, ,REM,1945
+/path={[(number)]}_9,82500,4000,79750,4900,errored, ,REM,1946
+/path={[(number)]}_9,99750,4750,97500,7500,logic, ,REM,1947
+/path={[(number)]}_9,239750,4750,237500,7500,logic, ,REM,1948
+/path={[(number)]}_9,284750,4750,282500,7500,logic, ,REM,1949
+/path={[(number)]}_9,294750,4750,292500,7500,logic, ,REM,1950
+/path={[(number)]}_9,317500,5000,315250,5000,errored, ,REM,1951
+/path={[(number)]}_9,322500,5000,320250,5000,errored, ,REM,1952
+/path={[(number)]}_9,327500,5000,325250,5000,errored, ,REM,1953
+/path={[(number)]}_9,314750,4750,312500,7500,logic, ,REM,1954
+/path={[(number)]}_9,417500,5000,414750,5000,errored, ,REM,1955
+/path=0_17,334750,4800,337500,3000,logic, ,REM,1956
+/path=0_8,87500,5000,84750,5000,errored, ,REM,1957
+/path=000_12,347500,5000,345250,5000,errored, ,REM,1958
+/path=000_19,324750,4950,327500,4500,logic, ,REM,1959
+/path=000_7,324750,5100,327500,6000,logic, ,REM,1960
+/path=0009_16,357500,4000,355250,4900,errored, ,REM,1961
+/path=0020_3,324750,5000,327500,5000,logic, ,REM,1962
+/path=1_7,64750,5100,67500,6000,logic, ,REM,1963
+/path=1_7,79750,5100,82500,6000,logic, ,REM,1964
+/path=1_7,314750,5100,317500,6000,logic, ,REM,1965
+/path=1_8,82500,5000,79750,5000,errored, ,REM,1966
+/path=1_8,97500,5000,94750,5000,errored, ,REM,1967
+/path=11_13,334850,5250,333500,7500,logic, ,REM,1968
+/path=12_15,334850,4750,333500,7500,logic, ,REM,1969
+/path=256_7,239750,5100,242500,6000,logic, ,REM,1970
+/path=32_5,64750,4900,67500,4000,logic, ,REM,1971
+/path=32_5,75000,7500,75000,5250,errored, ,REM,1972
+/path=32_5,80000,7500,80000,5250,errored, ,REM,1973
+/path=32_5,79750,4900,82500,4000,logic, ,REM,1974
+/path=32_5,90000,7500,90000,5250,errored, ,REM,1975
+/path=32_5,124750,4900,127500,4000,logic, ,REM,1976
+/path=32_5,135000,7500,135000,5250,errored, ,REM,1977
+/path=32_5,239750,4900,242500,4000,logic, ,REM,1978
+/path=32_5,250000,7500,250000,5250,errored, ,REM,1979
+/path=32_5,255000,7500,255000,5250,errored, ,REM,1980
+/path=32_5,260000,7500,260000,5250,errored, ,REM,1981
+/path=32_5,310000,7500,310000,5250,errored, ,REM,1982
+/path=32_5,315000,7500,315000,5250,errored, ,REM,1983
+/path=32_5,314750,4900,317500,4000,logic, ,REM,1984
+/path=32_5,325000,7500,325000,5250,errored, ,REM,1985
+/path=32_6,312500,5000,309750,5000,errored, ,REM,1986
+/path=32_6,317500,5000,314750,5000,errored, ,REM,1987
+/path=32_6,322500,5000,319750,5000,errored, ,REM,1988
+/path=32_7,294750,5100,297500,6000,logic, ,REM,1989
+/path=9_11,335250,4750,337500,7500,logic, ,REM,1990
+/path=9_11,345250,4750,347500,7500,logic, ,REM,1991
+/path=9_11,362500,5000,359750,5000,errored, ,REM,1992
+/path=A,342500,5000,339750,5000,errored, ,REM,1993
+/path=anything,80250,4750,82500,7500,logic, ,REM,1994
+/path=anything,79850,5250,78500,7500,logic, ,REM,1995
+/path=anything,102500,5000,100250,5000,errored, ,REM,1996
+/path=Available,274750,5000,277500,5000,logic, ,REM,1997
+/path=B,367500,6000,365250,5100,errored, ,REM,1998
+/path=between,274750,4750,272500,7500,logic, ,REM,1999
+/path=C,324950,5250,324500,7500,logic, ,REM,2000
+/path=C,372500,7500,374750,5250,errored, ,REM,2001
+/path=can,284750,4900,287500,4000,logic, ,REM,2002
+/path=can,302500,5000,299750,5000,errored, ,REM,2003
+/path=carriage,324750,4750,322500,7500,logic, ,REM,2004
+/path=characters,274750,4900,277500,4000,logic, ,REM,2005
+/path=Class,54750,5000,57500,5000,logic, ,REM,2006
+/path=ComboBoxRotation,9750,5000,12500,5000,logic, ,REM,2007
+/path=constantALLFILES,239750,5000,242500,5000,logic, ,REM,2008
+/path=constantCOME,294750,5000,297500,5000,logic, ,REM,2009
+/path=ConstantDelimeters,354750,5000,357500,5000,logic, ,REM,2010
+/path=ConstantDirectionMap,364750,5000,367500,5000,logic, ,REM,2011
+/path=ConstantExplainCompared,409750,5000,412500,5000,logic, ,REM,2012
+/path=constantMyErrorCode,314750,5000,317500,5000,logic, ,REM,2013
+/path=ConstantWhiteSpace,334750,5000,337500,5000,logic, ,REM,2014
+/path=ConstantWhiteSpace,344750,5000,347500,5000,logic, ,REM,2015
+/path=ConstantWhiteSpace,354750,4900,357500,4000,logic, ,REM,2016
+/path=ConstantWhiteSpace,354750,5100,357500,6000,logic, ,REM,2017
+/path=ConstantWhiteSpace,365000,7500,365000,5250,errored, ,REM,2018
+/path=D,324850,5250,323500,7500,logic, ,REM,2019
+/path=F,65000,7500,65000,5250,errored, ,REM,2020
+/path=Faster,89750,5000,92500,5000,logic, ,REM,2021
+/path=faster,89750,4750,87500,7500,logic, ,REM,2022
+/path=faster,117500,4000,114750,4900,errored, ,REM,2023
+/path=Faster,99750,5000,102500,5000,logic, ,REM,2024
+/path=feed,324750,4900,327500,4000,logic, ,REM,2025
+/path=form,64850,5250,63500,7500,logic, ,REM,2026
+/path=form,97500,4000,95250,4900,errored, ,REM,2027
+/path=form,102500,4000,100250,4900,errored, ,REM,2028
+/path=form,324750,5150,327500,6500,logic, ,REM,2029
+/path=go,124750,4800,127500,3000,logic, ,REM,2030
+/path=go,167500,6000,165250,5100,errored, ,REM,2031
+/path=hide,92500,5000,90250,5000,errored, ,REM,2032
+/path=horizontal,352500,4000,349750,4900,errored, ,REM,2033
+/path=I,295000,7500,295000,5250,errored, ,REM,2034
+/path=know,124850,4750,123500,7500,logic, ,REM,2035
+/path=know,157500,4000,155250,4900,errored, ,REM,2036
+/path=know,162500,6000,159750,5100,errored, ,REM,2037
+/path=LeaveScreenAlone,79750,5000,82500,5000,logic, ,REM,2038
+/path=make,89750,5100,92500,6000,logic, ,REM,2039
+/path=make,112500,5000,110250,5000,errored, ,REM,2040
+/path=make,274750,5100,277500,6000,logic, ,REM,2041
+/path=means,64750,4750,62500,7500,logic, ,REM,2042
+/path=means,79750,4750,77500,7500,logic, ,REM,2043
+/path=MyConstantIgnoreFunctionOperatorsKeywords,259750,5000,262500,5000,logic, ,REM,2044
+/path=MyErrorList,134750,5000,137500,5000,logic, ,REM,2045
+/path=MyFlowChartNameSpace,44750,5000,47500,5000,logic, ,REM,2046
+/path=MyFlowChartNameSpace,55000,7500,55000,5250,errored, ,REM,2047
+/path=No,115000,7500,115000,5250,errored, ,REM,2048
+/path=No,122500,5000,119750,5000,errored, ,REM,2049
+/path=Off:GoTo,35000,7500,35000,5250,errored, ,REM,2050
+/path=On:GoTo,30000,7500,30000,5250,errored, ,REM,2051
+/path=On:GoTo,45000,7500,45000,5250,errored, ,REM,2052
+/path=only,124750,4750,122500,7500,logic, ,REM,2053
+/path=only,142500,5000,139750,5000,errored, ,REM,2054
+/error = /error,Origin,0,0,0,0,, ,REM,2055
+/path=path,182500,7500,180250,4750,errored, ,REM,2056
+/path=Quote_15,110000,7500,110000,5250,errored, ,REM,2057
+/path=Quote_17,120000,7500,120000,5250,errored, ,REM,2058
+/path=Quote_18,125000,7500,125000,5250,errored, ,REM,2059
+/path=Quote_40,259750,4900,262500,4000,logic, ,REM,2060
+/path=Quote_40,259750,5100,262500,6000,logic, ,REM,2061
+/path=Quote_40,270000,7500,270000,5250,errored, ,REM,2062
+/path=Quote_41,275000,7500,275000,5250,errored, ,REM,2063
+/path=Quote_49,334750,4900,337500,4000,logic, ,REM,2064
+/path=Quote_49,334750,5100,337500,6000,logic, ,REM,2065
+/path=Quote_49,345000,7500,345000,5250,errored, ,REM,2066
+/path=Quote_50,344750,4900,347500,4000,logic, ,REM,2067
+/path=Quote_50,344750,5100,347500,6000,logic, ,REM,2068
+/path=Quote_50,355000,7500,355000,5250,errored, ,REM,2069
+/path=Quote_51,354750,4750,352500,7500,logic, ,REM,2070
+/path=Quote_51,372500,5000,369750,5000,errored, ,REM,2071
+/path=Quote_52,364750,4900,367500,4000,logic, ,REM,2072
+/path=Quote_52,364750,5100,367500,6000,logic, ,REM,2073
+/path=Quote_52,375000,7500,375000,5250,errored, ,REM,2074
+/path=Quote_53,374750,5000,377500,5000,logic, ,REM,2075
+/path=Quote_57,399750,5000,402500,5000,logic, ,REM,2076
+/path=Quote_58,427500,5000,424750,5000,errored, ,REM,2077
+/path=Quote_58,432500,5000,430250,5000,errored, ,REM,2078
+/path=Quote_58,437500,4000,434750,4900,errored, ,REM,2079
+/path=r,307500,5000,305250,5000,errored, ,REM,2080
+/path=rmstart,275250,4750,277500,7500,logic, ,REM,2081
+/path=routines,124850,5250,123500,7500,logic, ,REM,2082
+/path=show,65250,4750,67500,7500,logic, ,REM,2083
+/path=show,87500,5000,85250,5000,errored, ,REM,2084
+/path=ShowScreen,64750,5000,67500,5000,logic, ,REM,2085
+/path=Space:GoTo,355250,4750,357500,7500,logic, ,REM,2086
+/path=Space:GoTo,377500,5000,375250,5000,errored, ,REM,2087
+/path=Strict,19750,5000,22500,5000,logic, ,REM,2088
+/path=Strings,352500,5000,349750,5000,errored, ,REM,2089
+/path=Strings,357500,5000,355250,5000,errored, ,REM,2090
+/path=Strings,362500,4000,359750,4900,errored, ,REM,2091
+/path=symbol,124750,5150,127500,6500,logic, ,REM,2092
+/path=symbol,172500,7500,174750,5250,errored, ,REM,2093
+/use=Symbol7_10_1104,55000,5000,Default,errored,0, ,REM,2094
+/use=Symbol7_10_1104,60000,5000,Default,_,0, ,REM,2095
+/use=Symbol7_11_1105,65000,5000,Default,errored,0, ,REM,2096
+/use=Symbol7_11_1105,70000,5000,Default,_,0, ,REM,2097
+/use=Symbol7_11_1105,75000,5000,Default,_,0, ,REM,2098
+/use=Symbol7_13_1106,80000,5000,Default,errored,0, ,REM,2099
+/use=Symbol7_13_1106,85000,5000,Default,_,0, ,REM,2100
+/use=Symbol7_14_1107,90000,5000,Default,errored,0, ,REM,2101
+/use=Symbol7_14_1107,95000,5000,Default,_,0, ,REM,2102
+/use=Symbol7_14_1107,110000,5000,Default,_,0, ,REM,2103
+/use=Symbol7_15_1108,100000,5000,Default,errored,0, ,REM,2104
+/use=Symbol7_15_1108,105000,5000,Default,_,0, ,REM,2105
+/use=Symbol7_15_1108,115000,5000,Default,_,0, ,REM,2106
+/use=Symbol7_15_1108,120000,5000,Default,_,0, ,REM,2107
+/use=Symbol7_19_1109,125000,5000,Default,errored,0, ,REM,2108
+/use=Symbol7_19_1109,130000,5000,Default,_,0, ,REM,2109
+/use=Symbol7_20_1110,135000,5000,Default,errored,0, ,REM,2110
+/use=Symbol7_20_1110,140000,5000,Default,_,0, ,REM,2111
+/use=Symbol7_21_1111,145000,5000,Default,errored,0, ,REM,2112
+/use=Symbol7_21_1111,150000,5000,Default,_,0, ,REM,2113
+/use=Symbol7_21_1111,155000,5000,Default,_,0, ,REM,2114
+/use=Symbol7_21_1111,160000,5000,Default,_,0, ,REM,2115
+/use=Symbol7_21_1111,165000,5000,Default,_,0, ,REM,2116
+/use=Symbol7_21_1111,170000,5000,Default,_,0, ,REM,2117
+/use=Symbol7_21_1111,175000,5000,Default,_,0, ,REM,2118
+/use=Symbol7_21_1111,180000,5000,Default,_,0, ,REM,2119
+/use=Symbol7_21_1111,185000,5000,Default,_,0, ,REM,2120
+/use=Symbol7_21_1111,190000,5000,Default,_,0, ,REM,2121
+/use=Symbol7_21_1111,195000,5000,Default,_,0, ,REM,2122
+/use=Symbol7_21_1111,200000,5000,Default,_,0, ,REM,2123
+/use=Symbol7_21_1111,205000,5000,Default,_,0, ,REM,2124
+/use=Symbol7_21_1111,210000,5000,Default,_,0, ,REM,2125
+/use=Symbol7_21_1111,215000,5000,Default,_,0, ,REM,2126
+/use=Symbol7_35_1112,220000,5000,Default,errored,0, ,REM,2127
+/use=Symbol7_35_1112,225000,5000,Default,_,0, ,REM,2128
+/use=Symbol7_36_1113,230000,5000,Default,errored,0, ,REM,2129
+/use=Symbol7_36_1113,235000,5000,Default,_,0, ,REM,2130
+/use=Symbol7_37_1114,240000,5000,Default,errored,0, ,REM,2131
+/use=Symbol7_37_1114,245000,5000,Default,_,0, ,REM,2132
+/use=Symbol7_37_1114,250000,5000,Default,_,0, ,REM,2133
+/use=Symbol7_37_1114,255000,5000,Default,_,0, ,REM,2134
+/use=Symbol7_37_1114,305000,5000,Default,_,0, ,REM,2135
+/use=Symbol7_37_1114,310000,5000,Default,_,0, ,REM,2136
+/use=Symbol7_4_1101,10000,5000,Default,errored,0, ,REM,2137
+/use=Symbol7_4_1101,15000,5000,Default,_,0, ,REM,2138
+/use=Symbol7_40_1115,260000,5000,Default,errored,0, ,REM,2139
+/use=Symbol7_40_1115,265000,5000,Default,_,0, ,REM,2140
+/use=Symbol7_40_1115,270000,5000,Default,_,0, ,REM,2141
+/use=Symbol7_42_1116,275000,5000,Default,errored,0, ,REM,2142
+/use=Symbol7_42_1116,280000,5000,Default,_,0, ,REM,2143
+/use=Symbol7_43_1117,285000,5000,Default,errored,0, ,REM,2144
+/use=Symbol7_43_1117,290000,5000,Default,_,0, ,REM,2145
+/use=Symbol7_44_1118,295000,5000,Default,errored,0, ,REM,2146
+/use=Symbol7_44_1118,300000,5000,Default,_,0, ,REM,2147
+/use=Symbol7_47_1119,315000,5000,Default,errored,0, ,REM,2148
+/use=Symbol7_47_1119,320000,5000,Default,_,0, ,REM,2149
+/use=Symbol7_48_1120,325000,5000,Default,errored,0, ,REM,2150
+/use=Symbol7_48_1120,330000,5000,Default,_,0, ,REM,2151
+/use=Symbol7_49_1121,335000,5000,Default,errored,0, ,REM,2152
+/use=Symbol7_49_1121,340000,5000,Default,_,0, ,REM,2153
+/use=Symbol7_5_1102,20000,5000,Default,errored,0, ,REM,2154
+/use=Symbol7_5_1102,25000,5000,Default,_,0, ,REM,2155
+/use=Symbol7_5_1102,30000,5000,Default,_,0, ,REM,2156
+/use=Symbol7_5_1102,35000,5000,Default,_,0, ,REM,2157
+/use=Symbol7_5_1102,40000,5000,Default,_,0, ,REM,2158
+/use=Symbol7_50_1122,345000,5000,Default,errored,0, ,REM,2159
+/use=Symbol7_50_1122,350000,5000,Default,_,0, ,REM,2160
+/use=Symbol7_51_1123,355000,5000,Default,errored,0, ,REM,2161
+/use=Symbol7_51_1123,360000,5000,Default,_,0, ,REM,2162
+/use=Symbol7_52_1124,365000,5000,Default,errored,0, ,REM,2163
+/use=Symbol7_52_1124,370000,5000,Default,_,0, ,REM,2164
+/use=Symbol7_53_1125,375000,5000,Default,errored,0, ,REM,2165
+/use=Symbol7_53_1125,380000,5000,Default,_,0, ,REM,2166
+/use=Symbol7_53_1125,385000,5000,Default,_,0, ,REM,2167
+/use=Symbol7_53_1125,390000,5000,Default,_,0, ,REM,2168
+/use=Symbol7_53_1125,395000,5000,Default,_,0, ,REM,2169
+/use=Symbol7_57_1126,400000,5000,Default,errored,0, ,REM,2170
+/use=Symbol7_57_1126,405000,5000,Default,_,0, ,REM,2171
+/use=Symbol7_58_1127,410000,5000,Default,errored,0, ,REM,2172
+/use=Symbol7_58_1127,415000,5000,Default,_,0, ,REM,2173
+/use=Symbol7_9_1103,45000,5000,Default,errored,0, ,REM,2174
+/use=Symbol7_9_1103,50000,5000,Default,_,0, ,REM,2175
+/path=sysgen,274850,5250,273500,7500,logic, ,REM,2176
+/path=Text:GoTo,40000,7500,40000,5250,errored, ,REM,2177
+/path=That,284750,5000,287500,5000,logic, ,REM,2178
+/path=the,125250,4750,127500,7500,logic, ,REM,2179
+/path=the,124750,4950,127500,4500,logic, ,REM,2180
+/path=the,147500,5000,145250,5000,errored, ,REM,2181
+/path=the,167500,7500,169750,4750,errored, ,REM,2182
+/path=this,92500,4000,89750,4900,errored, ,REM,2183
+/path=this,97500,4000,94750,4900,errored, ,REM,2184
+/path=This,124750,5100,127500,6000,logic, ,REM,2185
+/path=TimerCounter,124750,5000,127500,5000,logic, ,REM,2186
+/path=timers,152500,4000,149750,4900,errored, ,REM,2187
+/path=U,325250,4750,327500,7500,logic, ,REM,2188
+/path=U,324850,4750,323500,7500,logic, ,REM,2189
+/path=U,324800,5250,323000,7500,logic, ,REM,2190
+/path=U,325100,5250,326000,7500,logic, ,REM,2191
+/path=U,335000,7500,335000,5250,errored, ,REM,2192
+/path=U,367500,7500,369750,4750,errored, ,REM,2193
+/path=U,382500,7500,380250,4750,errored, ,REM,2194
+/path=vbCr,334750,4750,332500,7500,logic, ,REM,2195
+/path=vbCr,344750,4750,342500,7500,logic, ,REM,2196
+/path=vbCrLf,409750,4900,412500,4000,logic, ,REM,2197
+/path=vbCrLf,409750,5100,412500,6000,logic, ,REM,2198
+/path=vbCrLf,409750,4750,407500,7500,logic, ,REM,2199
+/path=vbCrLf,410250,4750,412500,7500,logic, ,REM,2200
+/path=vbCrLf,409850,5250,408500,7500,logic, ,REM,2201
+/path=vbCrLf,409850,4750,408500,7500,logic, ,REM,2202
+/path=vbCrLf,409750,4800,412500,3000,logic, ,REM,2203
+/path=vbCrLf,420000,7500,420000,5250,errored, ,REM,2204
+/path=vbFormFeed,344850,5250,343500,7500,logic, ,REM,2205
+/path=vbFormFeed,367500,5000,365250,5000,errored, ,REM,2206
+/path=vertical,324750,4800,327500,3000,logic, ,REM,2207
+/path=vertical,362500,6000,359750,5100,errored, ,REM,2208
+/path=Yes,89750,4900,92500,4000,logic, ,REM,2209
+/path=Yes,100000,7500,100000,5250,errored, ,REM,2210
+/path=Yes,107500,5000,104750,5000,errored, ,REM,2211

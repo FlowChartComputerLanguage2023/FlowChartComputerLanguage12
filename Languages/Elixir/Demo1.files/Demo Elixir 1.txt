@@ -1,0 +1,953 @@
+
+Elixir Examples
+All Examples
+
+nested = %{ one: %{ two: 3} }
+3 = get_in(nested, [:one, :two])
+# Returns nil for missing value
+nil = get_in(nested, [:one, :three])
+
+
+# Enum.sum/1 for numeric values
+ 6 == Enum.sum([1, 2, 3])
+ 6 == Enum.sum(1..3)
+ # reduce to extract/transform a value during sum
+ 6 = Enum.reduce(%{ a: 1, b: 2, c: 3 }, 0, fn({_k, v}, acc) -> v + acc end)
+
+# Define a struct for this example
+defmodule User do
+  defstruct email: nil
+end
+
+# dot syntax
+"c@c.com" = %User{email: "c@c.com"}.email
+
+# Underlying implementation is a map
+# So Map methods work
+"c@c.com" = Map.get(%User{email: "c@c.com"}, :email)
+
+# Pattern match to get a value
+%{ email: email }   = %User{email: "c@c.com"}
+%User{email: email} = %User{email: "c@c.com"}
+
+# Access protocol not available by default
+%User{email: "c@c.com"}[:email]
+#** (UndefinedFunctionError) undefined function User.fetch/2 (User does not implement the Access behaviour)
+#             User.fetch(%User{email: "c@c.com"}, :email)
+#    (elixir) lib/access.ex:118: Access.fetch/2
+#    (elixir) lib/access.ex:149: Access.get/3
+
+
+# Enumerable protocol not available by default
+Enum.filter( %User{email: "c@c.com"}, fn({key, _}) -> key == :email  end)
+#** (Protocol.UndefinedError) protocol Enumerable not implemented for %User{email: "c@c.com"}
+#    (elixir) lib/enum.ex:1: Enumerable.impl_for!/1
+#    (elixir) lib/enum.ex:116: Enumerable.reduce/3
+#    (elixir) lib/enum.ex:1477: Enum.reduce/3
+#    (elixir) lib/enum.ex:742: Enum.filter/2
+
+
+# Define a struct for this example
+defmodule User do
+  defstruct email: nil
+end
+
+%User{email: "c@c.com"} = struct(%User{}, email: "c@c.com")
+
+# Structs are based on maps
+# so map update methods and syntax are valid
+%User{email: "a@a.co"} = %{ %User{} | email: "a@a.co" }
+
+%User{email: "b@b.com"} = Map.put(%User{}, :email, "b@b.com")
+
+# [] can be used, first match returned
+1 = [a: 1, b: 2, a: 3][:a]
+
+# [] missing value is nil
+nil = [a: 1, b: 2, a: 3][:c]
+
+# Keyword get also works
+1 = Keyword.get([a: 1, b: 2, a: 3], :a)
+
+# missing value is nil
+nil = Keyword.get([a: 1, b: 2, a: 3], :c)
+
+# an optional default value can be specified
+# for missing keys
+"missing" = Keyword.get([a: 1, b: 2, a: 3], :c, "missing")
+
+# Keyword.take returns a list of matching pairs
+[a: 1, a: 3] = Keyword.take([a: 1, b: 2, a: 3], [:a])
+
+[] = Keyword.take([a: 1, b: 2, a: 3], [:c])
+
+# dot syntax does NOT work
+# results in compile error
+[a: 1, b: 2, a: 3].a
+
+
+Map.put(%{a: 1}, :b, 2)
+%{a: 1, b: 2}
+
+
+false = false and true
+true  = true  and true
+
+true  = true  or false
+false = false or false
+
+# A non boolean argument results in an ArgumentError
+"hello" and true
+
+# || can be used to assign fallback/default values
+"default" = nil || "default"
+
+# short-circuted || result since left side being
+# true makes it true
+"first" = "first" || "second"
+
+"second" = "first" && "second"
+# short-circuted && result, left-side false value returned
+false = false && "second"
+
+# The @callback annotations below define function specifications that a
+# module needs to implement the behaviour. The @callback parameter and
+# return types must be specified or a compile error will occur.
+defmodule Greeter do
+  @callback say_hello(String.t) :: any
+  @callback say_goodbye(String.t) :: any
+end
+
+# A module uses the @behaviour annotation to indicate
+# that it implements a behaviour
+defmodule NormalGreeter do
+  @behaviour Greeter
+  def say_hello(name), do: IO.puts "Hello, #{name}"
+  def say_goodbye(name), do: IO.puts "Goodbye, #{name}"
+end
+
+defmodule ExcitedGreeter do
+  @behaviour Greeter
+  def say_hello(name), do: IO.puts "Hello, #{name}!!"
+  def say_goodbye(name), do: IO.puts "Goodbye, #{name}!!"
+end
+
+# Since the following module does not implement say_goodbye/1
+# a compile time warning will occur:
+# "warning: undefined behaviour function say_goodbye/1 (for behaviour Greeter)"
+defmodule InvalidGreeter do
+  @behaviour Greeter
+  def say_hello(name), do: IO.puts "Hello, #{name}."
+end
+
+
+defmodule HelloWorld.Endpoint do
+  use Phoenix.Endpoint, otp_app: :hello_world
+
+  # Serve at "/" the static files from "priv/static" directory.
+  #
+  # You should set gzip to true if you are running phoenix.digest
+  # when deploying your static files in production.
+  plug Plug.Static,
+    at: "/", from: :hello_world, gzip: false,
+    only: ~w(css images js favicon.ico robots.txt)
+
+  # Code reloading can be explicitly enabled under the
+  # :code_reloader configuration of your endpoint.
+  if code_reloading? do
+    plug Phoenix.LiveReloader
+    plug Phoenix.CodeReloader
+  end
+
+  plug Plug.Logger
+
+  plug Plug.Parsers,
+    parsers: [:urlencoded, :multipart, :json],
+    pass: ["*/*"],
+    json_decoder: Poison
+
+  plug Plug.MethodOverride
+  plug Plug.Head
+
+  plug Plug.Session,
+    store: :cookie,
+    key: "_hello_world_key",
+    signing_salt: "0yg9mHDO"
+
+  plug :router, HelloWorld.Router
+end
+
+
+defmodule HelloWorld.Router do
+  use HelloWorld.Web, :router
+
+  pipeline :browser do
+    plug :accepts, ["html"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :protect_from_forgery
+  end
+
+  pipeline :api do
+    plug :accepts, ["json"]
+  end
+
+  scope "/", HelloWorld do
+    pipe_through :browser # Use the default browser stack
+
+    get "/", PageController, :index
+  end
+
+  # Other scopes may use custom stacks.
+  # scope "/api", HelloWorld do
+  #   pipe_through :api
+  # end
+end
+
+defmodule HelloWorld.PageController do
+  use HelloWorld.Web, :controller
+
+  plug :action
+
+  def index(conn, _params) do
+    render conn, "index.html"
+  end
+end
+
+defmodule HelloWorld.PageView do
+  use HelloWorld.Web, :view
+end
+
+
+<div>
+  <p><%= "This is Elixir code" %></p>
+</div>
+
+
+:ok = File.write("example.txt","Hello File!")
+
+# Error tuple for failure
+{:error, reason} = File.write("example.txt","Hello File!")
+
+# write!/3 Raises exception
+:ok = File.write!("example2.txt","Hello File!")
+
+[head|tail] = [1, 2, 3]
+head = 1
+tail = [2, 3]
+
+[head|tail] = [1]
+head = 1
+tail = []
+
+[] = []
+
+# This does not match, no value for head
+[head|tail] = []
+
+# match head value
+[1 | tail ]= [1, 2, 3]
+tail = [2, 3]
+
+# use underscore to ignore a variable
+[head | _ ]= [1, 2, 3]
+
+
+
+["A", "B", "C"] = "a,b,c"
+                   |> String.split(",") # split takes 2 arguments but here
+                                        # the first argument is omitted
+                                        # in the parentheses and
+                                        # the left side of the |> operator
+                                        # will be the first argument implicitly
+                   |> Enum.map( &String.upcase/1 )
+
+# This is equivalent to:
+Enum.map(String.split("a,b,c", ","), &String.upcase/1)
+
+
+# Fully qualified User struct
+%Application.User{}
+
+# alias is used to shorten the fully qualified name
+alias Application.User, as: User
+
+# After aliasing
+%User{}
+
+# alias without `:as` option will automatically use the last
+# part of the module name after the last period
+alias Application.User
+# is the same as
+alias Application.User, as: User
+
+defmodule Hello do
+  defmacro __using__(_opts) do
+    quote do
+      def say_hello do
+        IO.puts "Hello"
+      end
+    end
+  end
+end
+
+defmodule MyModule do
+  use Hello
+end
+
+# prints "Hello"
+MyModule.say_hello
+
+
+# Without import functions need to be called
+# by their full name including the module
+"ABC" = String.upcase("abc")
+
+# Import a single function with the form
+# import Module, only: [function_name: arity]
+import String, only: [upcase: 1]
+
+# upcase can now be used without the module name
+"ABC" = upcase("abc")
+
+# Imports all functions in the String module.
+# It is recommend to use only option above to
+# only import the functions you need.
+import String
+
+
+defmodule Hello do
+  # Example macro to add say_hello function to the module
+  defmacro hello_macro do
+    quote do
+      def say_hello do
+        IO.puts "Hello"
+      end
+    end
+  end
+
+end
+
+
+defmodule MyModule do
+  # Without require here results in the following error:
+  # (CompileError) iex:37: you must require Hello before invoking the macro Hello.hello_macro/0
+  require Hello
+  Hello.hello_macro
+
+end
+
+# Prints Hello
+MyModule.say_hello
+
+
+$ mix help
+mix                   # Runs the default task (current: "mix run")
+mix app.start         # Starts all registered apps
+mix archive           # Lists all archives
+mix archive.build     # Archives this project into a .ez file
+mix archive.install   # Installs an archive locally
+mix archive.uninstall # Uninstalls archives
+mix clean             # Deletes generated application files
+mix cmd               # Executes the given command
+mix compile           # Compiles source files
+mix deps              # Lists dependencies and their status
+mix deps.clean        # Deletes the given dependencies' files
+mix deps.compile      # Compiles dependencies
+mix deps.get          # Gets all out of date dependencies
+mix deps.unlock       # Unlocks the given dependencies
+mix deps.update       # Updates the given dependencies
+mix do                # Executes the tasks separated by comma
+mix escript.build     # Builds an escript for the project
+mix help              # Prints help information for tasks
+mix hex               # Prints Hex help information
+mix hex.build         # Builds a new package version locally
+mix hex.config        # Reads or updates Hex config
+mix hex.docs          # Publishes docs for package
+mix hex.info          # Prints Hex information
+mix hex.key           # Hex API key tasks
+mix hex.outdated      # Shows outdated Hex deps for the current project
+mix hex.owner         # Hex package ownership tasks
+mix hex.publish       # Publishes a new package version
+mix hex.registry      # Hex registry tasks
+mix hex.search        # Searches for package names
+mix hex.user          # Hex user tasks
+mix loadconfig        # Loads and persists the given configuration
+mix local             # Lists local tasks
+mix local.hex         # Installs Hex locally
+mix local.public_keys # Manages public keys
+mix local.rebar       # Installs rebar locally
+mix new               # Creates a new Elixir project
+mix phoenix.new       # Create a new Phoenix v0.13.1 application
+mix profile.fprof     # Profiles the given file or expression with fprof
+mix run               # Runs the given file or expression
+mix test              # Runs a project's tests
+iex -S mix            # Starts IEx and run the default task
+
+
+:c = List.last([:a, :b, :c])
+
+# nil is returned for an empty list
+nil = List.last([])
+
+a = 1
+
+# rebind a to 2, then 3
+a = 2
+a = 3
+
+# Match error because a is pinned to 3
+^a = 4
+
+
+fun_to_atom = &String.to_atom/1
+
+:a = fun_to_atom.("a")
+
+true = is_function(fun_to_atom)
+
+# Function capturing is often used to pass functions as parameters
+# to another function
+[:a] = Enum.map(["a"], &String.to_atom/1)
+
+
+defprotocol Double do
+
+  def double(input)
+
+end
+
+defimpl Double, for: Integer do
+
+  def double(int) do
+    int * 2
+  end
+
+end
+
+
+defimpl Double, for: List do
+
+  def double(list) do
+    list ++ list
+  end
+
+end
+
+4 = Double.double(2)
+[1, 2, 1, 2] = Double.double([1, 2])
+
+
+[2, 4, 6] = Enum.map([1, 2, 3], fn(i) -> i * 2 end)
+
+# map a map
+[:one, :two] = Enum.map(%{ one: 1, two: 2}, fn({k, v}) -> k end)
+
+# map a keyword list
+[1, 2] = Enum.map([c: 1, d: 2], fn({k, v}) -> v end)
+
+# map to a keyword list
+[a: 2, a: 4, a: 6] = Enum.map([1, 2, 3], fn(i) -> {:a , i * 2} end)
+
+
+6 = with { parsed, _ } <- Integer.parse("3.0"),
+         do: parsed * 2
+
+# if a clause doesn't match
+# it's result is immediately returned
+6 = with 2 <- 2,
+         1 <- 6,
+         do: 11       
+
+:error = with { parsed, _ } <- Integer.parse("WORD"),
+         do: parsed * 2
+
+
+["T", "e", "s", "t"] = String.graphemes("Test")
+
+# Contrast this with codepoints which may return
+# multiple codepoints for a single character
+["ö"]      = String.graphemes("ö")
+["o", "̈"] = String.codepoints("ö")
+
+"AAA" = String.duplicate("A", 3)
+
+"HELLO HELLO " = String.duplicate("HELLO ", 2)
+
+
+
+"  1\n  2\n  3\n" = """
+  1
+  2
+  3
+"""
+
+# Whitespace before trailing `"""` will remove
+# whitespace up to the same indentation
+# on each line
+  "1\n2\n3\n" = """
+                1
+                2
+                3
+                """  
+
+# Heredoc sigils can also be used
+# Interpolated
+~s"""
+\"#{1}\"
+\"#{2}\"
+"""
+# Not Interpolated
+~S"""
+"1"
+"2"
+"""
+
+
+"hello world!" = String.downcase("Hello World!")
+
+
+"H" = String.at("Hello",0)
+
+true = String.ends_with?("Period.", ".")
+
+# True if any of list values match:
+true  = String.ends_with?("Period.", [".","?"])
+false = String.ends_with?("      !", [".","?"])
+
+"HELLO WORLD!" = String.upcase("Hello World!")
+
+
+stream = File.stream!("scratch.txt")
+
+# The stream is read by each line when Enumerated
+Enum.each(stream, fn(x) -> IO.puts x end)
+
+["Line 1\n", "Line 2\n"] = Enum.into(stream, [])
+
+2 = Enum.reduce(stream, 0, fn(x, acc) -> acc + 1 end)
+
+
+{:ok, contents} = File.read("exists.txt")
+{:error, reason} = File.read("doesnt_exist.txt")
+
+contents = File.read!("exists.txt")
+
+# Raises a File.Error
+contents = File.read!("doesnt_exist.txt")
+
+
+
+true = "one" in ["one", "two"]
+
+# `in` is equivalent to calling Enum.member?/2
+Enum.member?(["one", "two"], "one")
+
+true = {:a, 1} in %{a: 1, b: 2}
+true = 1 in 1..4
+
+
+true  = File.exists?("exists.txt")
+false = File.exists?("doesnt_exist.txt")
+
+
+
+["one", "two", "three"] = ~w(one two three)
+
+
+
+is_atom(variable)
+is_binary(variable)
+is_bitstring(variable)
+is_boolean(variable)
+is_float(variable)
+is_function(variable)
+is_function(variable, arity)
+is_integer(variable)
+is_list(variable)
+is_map(variable)
+is_number(variable)
+is_pid(variable)
+is_port(variable)
+is_reference(variable)
+is_tuple(variable)
+
+
+# Only nil and false are falsey everything else is truthy
+nil
+false
+
+
+
+nil
+
+true = is_nil(nil)
+
+# nil is falsey
+"ok" = unless nil do
+         "ok"
+       end
+
+# dot syntax can be used if key is atom
+1 = %{c: 1}.c
+
+# Raises a key error for missing key
+%{c: 1}.a
+
+# [] works for non-atom values
+1 = %{"a" => 1}["a"]
+
+# [] returns nil for missing values
+nil = %{"a" => 1}["b"] 
+
+# Pattern matching can be used
+%{c: value} = %{c: 1}
+
+1   = Map.get(%{c: 1}, :c)
+nil = Map.get(%{c: 1}, :a)
+
+# Default value can be specified
+# for when the key is misssing
+"default" = Map.get(%{c: 1}, :a, "default")
+
+{:ok, value} = Map.fetch(%{c: 1}, :c)
+:error       = Map.fetch(%{c: 1}, :a)
+
+1 = Map.fetch!(%{c: 1}, :c)
+
+# Raises a key error
+Map.fetch!(%{c: 1}, :a)
+
+
+
+97..122 = ?a..?z
+
+
+# range is inclusive start to end
+1..4
+
+[1, 2, 3, 4] = Enum.to_list( 1..4 )
+
+# can be defined high to low
+4..1
+
+def hello(name \\ "Unknown" ) do
+  # name value is "Unknown" when name argument not provided
+  "Hello #{name}"
+end
+
+
+defmodule User do
+  use Ecto.Schema
+
+  schema "users" do
+    field :first_name, :string
+    field :last_name,  :string
+  end
+
+  # Example calculated field
+  def full_name(user) do
+      user.first_name <> " " <> user.last_name
+  end
+
+end
+
+
+def hello
+  "result"
+end
+
+	
+
+#
+a = "hello"
+
+[1, 2, 3, 4]
+
+[1, 2, 3, 4].map { |x| x * x }
+
+1..4
+
+
+"#{2 + 2}"
+
+
+"hello".reverse
+
+class Hello
+end
+
+square = lambda { |x| x * x }
+
+square.call(2)
+square.(2)
+
+module Example
+end
+
+#
+:one
+
+#
+5 / 2 == 2
+
+
+if true
+end
+
+
+result = if 0 > 1
+           "No"
+         elsif 0 > 2
+           "Nope"
+         else
+           "fallback"
+         end
+
+	
+puts "Hello World"
+
+
+[1, 2, 3, 4].each { |i| puts i }
+
+
+method_missing
+define_method
+# et al
+
+# A regex sigil to match 'foo'
+~r/foo/
+
+# Interpolation can be used
+~r/foo/ = ~r/#{"foo"}/
+
+# Test if a string matches
+true = Regex.match?( ~r/foo/ , "Hello foo")
+
+# Run returns first match
+["foo1", "1"] = Regex.run(~r/foo([0-9])/, "foo1 foo2")
+
+# Scan returns all matches
+[["foo1", "1"], ["foo2", "2"]] = Regex.scan(~r/foo([0-9])/, "foo1 foo2")
+
+# Replace matches in a string
+"one_two_three" = Regex.replace(~r/-/, "one-two-three", "_")
+
+"ok" = unless false do
+         "ok"
+       end
+
+[3, 4] = Enum.filter( [1, 2, 3, 4], fn(x) -> x > 2 end )
+
+
+# There currently is no ternary operator like  true ? "yes" : "no"
+# So the following is suggested
+"no" = if 1 == 0, do: "yes", else: "no"
+
+
+[{:one, 1}, {:two, 2}] = [one: 1, two: 2]
+
+[one: 1, two: 2] = Map.to_list(%{one: 1, two: 2})
+
+
+%User{username: "test" } = struct(User, %{username: "test", password: "secret"})
+
+# struct! raises KeyError if un-matching keys provided
+%User{username: "test" } = struct!(User, %{username: "test", password: "secret"})
+
+
+
+%{ b: value, d: value2 } = %{ a: 1, b: 2, d: 3 }
+
+# Matches keys on the left side
+# There may be more keys on the right side
+%{ a: value } = %{ a: 1, b: 2, d: 3 }
+
+# raises a match error if key is missing
+%{ c: value } = %{ a: 1, b: 2 }
+
+defmodule Example do
+end
+
+# periods are allowed in module names
+defmodule Example.Specific do
+end
+
+# pattern match
+{:ok, result} = {:ok, "good"}
+
+# this raises a match error
+{:ok, result} = {:ok, "good", "one more"}
+
+# empty tuple
+{}
+
+
+# functions are defined inside Modules
+defmodule Examples do
+
+  # basic defintion
+  def do_stuff( params ) do
+      "result"
+  end
+
+  #shorthand syntax
+  def shorthand(), do: "result"
+
+  # defp is for private functions
+  defp private_method, do: "private"
+
+  # params can pattern match
+  def match_this(%{:key => value}), do: value
+
+  # the first matching function is called (order matters)
+  def test(test), do: "matches any param"
+  def test([]), do: "never matched"
+
+end
+
+square = fn(x) -> x * x end
+
+# calling an anonymous function uses a period
+# before the parentheses
+4 = square.(2)
+
+
+# pattern matching the arguments can be used
+first = fn([head|rest]) -> head end
+1 = first.([1, 2])
+
+# anonymous functions are commonly used as arguments
+# to other functions
+[1, 4, 9] = Enum.map([1, 2, 3], square)
+[3, 4, 5] = Enum.map([1, 2, 3], fn(x) -> x + 2 end)
+
+
+square = &( &1 * &1 )
+4 = square.(2)
+
+# This results in a compile error with
+# the capture operator
+# because at least one argument must be used
+four = &(2 + 2)
+
+"true is always true" = cond do
+                           0 > 1 -> "No"
+                           0 > 2 -> "Nope"
+                           true  -> "true is always true"
+                        end
+
+
+[1, 2] = [1] ++ [2]
+
+
+# empty map
+%{}
+
+# map arrow syntax
+%{"one" => 1, "two" => 2}
+
+# shorthand when keys are atoms
+%{ one: 1, two: 2}
+
+
+"Hello World" = "Hello" <> " " <> "World"
+
+1 = rem(5, 2)
+
+# same sign as dividend
+-1 = rem(-5, 2)
+
+
+mix ecto.gen.migration add_author_to_post
+
+mix ecto.rollback
+
+mix ecto.migrate
+
+
+"good" = if true do
+ 			"good"
+   		 else
+ 			"This will"
+   		 end
+
+# nil is default when else is missing
+nil = if false do
+ 			"good"
+   		   end 		 
+
+# alternative, one line syntax  		 
+"good" = if true, do: "good"
+"else"  = if false, do: "good", else: "else"
+
+"Good" = case {:ok, :data} do
+              {:ok, result} -> "Good"
+           {:error, result} -> "Bad"
+                          _ -> "Nothing matched"
+         end
+
+3 = tuple_size({1, 2, 3})  
+
+1 = map_size(%{a: 1})
+
+3 = length([1, 2, 3])  
+
+%{a: 1, b: 2, c: 3} = Enum.into( [a: 1, b: 2, c: 3], %{} )
+
+[:a, :b, :c] = Tuple.to_list({:a, :b, :c})
+
+[1, 2, 3, 4] = Enum.to_list( 1..4 )
+
+[2, 4, 6] = for n <- [1, 2, 3], do: n + n
+
+%{key: 42} = IO.inspect(%{key: 42})
+# prints "%{key: 42}"
+
+[1, 2, 3] = IO.inspect([1, 2, 3])
+# prints "[1, 2, 3]"
+
+:ok = IO.puts("Hello World")
+
+"Hello 42" = "Hello #{21 + 21}"
+
+"hello" = Atom.to_string(:hello)
+
+ "1,2,3" = Enum.join(["1","2","3"], ",")
+
+8.0 = :math.pow(2, 3)
+
+"a" = String.trim("   a   ")
+
+"123" = String.replace("1.2.3", ".", "")  
+
+["1", "2", "3"] = String.split("1,2,3" , ",")
+
+# String.split/1 is useful to split on and strip whitespace
+["1", "2"] = String.split("   1  \n \t   2 \n")
+
+[1, 2, 3, 4] = [1 | [2, 3, 4]]
+
+{3.14, ""} = Float.parse("3.14")
+
+{4, ""} = Integer.parse("4")
+
+2 = div(11, 4)
+
+1 = hd([1, 2, 3, 4])
+# alternatively use pattern matching
+[head | tail] = [1, 2, 3, 4]
+# head contains 1
+
+%{a: "New Value"} = %{  %{ a: "Old Value" } | a: "New Value" }
+
+# Note that this does not work to add a new key
+%{ %{} | new_key: 1}
+# Raises (KeyError) key :new_key not found in: %{}
+
+# Map.put/3 will add a key if it does not exist
+%{new_key: 1} = Map.put(%{}, :new_key, 1)
+# or update the value if it does exist
+%{new_key: 2} = Map.put(%{new_key: 1}, :new_key, 2)
+
+"olleh" = String.reverse("hello")

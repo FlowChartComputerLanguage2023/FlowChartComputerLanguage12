@@ -1,0 +1,144 @@
+https://exercism.io/tracks/rust/exercises/poker/solutions/5e4a21979c4c43f9a72bf703b58531ba
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
+enum HandValue {
+    HighCard { ranks: [u8; 5] },
+    Pair { kind: u8, other: [u8; 3] },
+    TwoPair { high: u8, low: u8, other: u8 },
+    Three { kind: u8, other: [u8; 2] },
+    Straight { high: u8 },
+    Flush { ranks: [u8; 5] },
+    FullHouse { three: u8, two: u8 },
+    Four { kind: u8, other: u8 },
+    StraightFlush { high: u8 },
+}
+
+const SUITS: &[u8] = b"SHDC";
+const VALUES: &[&[u8]] = &[
+    b"2", b"3", b"4", b"5", b"6", b"7", b"8", b"9", b"10", b"J", b"Q", b"K", b"A",
+];
+const ACE_LOW_STRAIGHT: [u8; 13] = [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1];
+
+fn eq<'a, T: ?Sized + PartialEq + 'a>(this: &'a T) -> impl Fn(&T) -> bool + 'a {
+    move |other| other == this
+}
+
+/// `collect_exact` collects an array of indices based on the input occurence
+/// counts, possibly filtering just to where the count is 1. If the array isn't
+/// filled exactly, `None` is returned. Can use type inference to find the
+/// desired array size.
+fn collect_exact<A>(value_counts: &[u8; 13], just_singletons: bool) -> Option<A>
+where
+    A: Default,
+    A: std::borrow::BorrowMut<[u8]>,
+{
+    let mut into: A = Default::default();
+    let mut out = into.borrow_mut().iter_mut();
+    for (value, &count) in value_counts.iter().enumerate().rev() {
+        if !just_singletons || count == 1 {
+            for _ in 0..count {
+                *out.next()? = value as u8;
+            }
+        }
+    }
+    if out.next().is_none() {
+        Some(into)
+    } else {
+        None
+    }
+}
+
+fn collect_exact_one(value_counts: &[u8; 13], just_singletons: bool) -> Option<u8>
+{ Some(collect_exact::<[u8; 1]>(value_counts, just_singletons)?[0])
+}
+
+#[allow(unused)]
+fn parse_and_evaluate(hand: &str) -> Option<HandValue> {
+    let mut suits = [0u8; 4];
+    let mut value_counts = [0u8; 13];
+    for card in hand.as_bytes().split(|&c| c == b' ') {
+        let (&suit, value) = card.split_last()?;
+        let suit = SUITS.iter().position(|&s| s == suit)?;
+        let value = VALUES.iter().position(|&s| s == value)?;
+        suits[suit] += 1;
+        value_counts[value] += 1;
+    }
+
+    let is_flush = suits.contains(&5);
+    let four = value_counts.iter().rposition(eq(&4));
+    let three = value_counts.iter().rposition(eq(&3));
+    let two_high = value_counts.iter().rposition(eq(&2));
+    let two_low = two_high.and_then(|high| value_counts[..high].iter().rposition(eq(&2)));
+    let straight_high = if value_counts == ACE_LOW_STRAIGHT {
+        Some(3)
+    } else {
+        value_counts
+            .windows(5)
+            .rposition(eq::<[u8]>(&[1, 1, 1, 1, 1]))
+            .map(|low| low + 4)
+    };
+
+    Some(if let (true, Some(high)) = (is_flush, straight_high) {
+        HandValue::StraightFlush { high: high as u8 }
+    } else if let Some(kind) = four {
+        HandValue::Four {
+            kind: kind as u8,
+            other: collect_exact_one(&value_counts, true)?,
+        }
+    } else if let (Some(three), Some(two)) = (three, two_high) {
+        HandValue::FullHouse {
+            three: three as u8,
+            two: two as u8,
+        }
+    } else if is_flush {
+        HandValue::Flush {
+            ranks: collect_exact(&value_counts, false)?,
+        }
+    } else if let Some(high) = straight_high {
+        HandValue::Straight { high: high as u8 }
+    } else if let Some(kind) = three {
+        HandValue::Three {
+            kind: kind as u8,
+            other: collect_exact(&value_counts, true)?,
+        }
+    } else if let (Some(high), Some(low)) = (two_high, two_low) {
+        HandValue::TwoPair {
+            high: high as u8,
+            low: low as u8,
+            other: collect_exact_one(&value_counts, true)?,
+        }
+    } else if let Some(kind) = two_high {
+        HandValue::Pair {
+            kind: kind as u8,
+            other: collect_exact(&value_counts, true)?,
+        }
+    } else {
+        HandValue::HighCard {
+            ranks: collect_exact(&value_counts, true)?,
+        }
+    })
+}
+
+/// Given a list of poker hands, return a list of those hands which win.
+///
+/// Note the type signature: this function should return _the same_ reference to
+/// the winning hand(s) as were passed in, not reconstructed strings which happen to be equal.
+pub fn winning_hands<'a>(hands: &[&'a str]) -> Option<Vec<&'a str>> {
+    let mut pool = Vec::new();
+    let mut pool_rank = None;
+    for &hand in hands {
+        let rank = parse_and_evaluate(hand).expect("malformed hand");
+        match Some(rank).cmp(&pool_rank) {
+            std::cmp::Ordering::Greater => {
+                pool.clear();
+                pool.push(hand);
+                pool_rank = Some(rank);
+            }
+            std::cmp::Ordering::Equal => {
+                pool.push(hand);
+            }
+            std::cmp::Ordering::Less => (),
+        }
+    }
+    Some(pool)
+}

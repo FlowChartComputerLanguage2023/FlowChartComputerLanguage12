@@ -1,0 +1,96 @@
+/Language=Algo,Yes ,Comment ,ALGO ,~ , , , , , , , , 
+/ignore= Language Name, 
+/Ignore=Case Sensitive, 
+/Ignore=Comment Character
+/Ignore=File Extension
+/Ignore=Seperator between statements on the same line (ie colon for basic)
+/Ignore=End of line continuation character
+/Ignore=gotonext line
+/Ignore=come from last line
+/Ignore=Need the complete paramerers for Algo (Alll 10 or so of them)
+/operator=-
+/operator=-:=
+/operator=:/=:
+/operator=:=:
+/operator=:≠:
+/operator=*
+/operator=*:=
+/operator=**
+/operator=/
+/operator=/:=
+/operator=/=
+/operator=&
+/operator=%
+/operator=%:=
+/operator=%*
+/operator=%*:=
+/operator=%×
+/operator=%×:=
+/operator=↑
+/operator=↓
+/operator=+
+/operator=+:=
+/operator=+*
+/operator=+×
+/operator=+=:
+/operator=÷
+/operator=÷:=
+/operator=÷*
+/operator=÷*:=
+/operator=÷×
+/operator=÷×:=
+/operator=×
+/operator=×:=
+/operator=<
+/operator=<=
+/operator==
+/operator=≠
+/operator=>
+/operator=>=
+/operator=¬
+/operator=∧
+/operator=∨
+/operator=≤
+/operator=≥
+/operator=⊥
+/operator=⌈
+/operator=⌊
+/operator=□
+/keyword=abs 
+/keyword=and 
+/keyword=arg 
+/keyword=bin 
+/keyword=divab 
+/keyword=down 
+/keyword=elem 
+/keyword=entier 
+/keyword=eq 
+/keyword=ge 
+/keyword=gt 
+/keyword=i 
+/keyword=is 
+/keyword=isnt
+/keyword=le 
+/keyword=leng 
+/keyword=level 
+/keyword=lt 
+/keyword=lwb 
+/keyword=minusab 
+/keyword=mod 
+/keyword=modab 
+/keyword=ne 
+/keyword=not 
+/keyword=odd 
+/keyword=or 
+/keyword=over 
+/keyword=overab 
+/keyword=plusab 
+/keyword=plusto 
+/keyword=repr 
+/keyword=round 
+/keyword=shl 
+/keyword=shorten 
+/keyword=shr 
+/keyword=timesab 
+/keyword=up 
+/keyword=upb 

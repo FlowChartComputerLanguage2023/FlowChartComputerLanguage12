@@ -1,0 +1,343 @@
+package forth
+
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
+type lexer struct {
+	input []string
+}
+
+type lexemKind int
+
+const (
+	lexemNumber    lexemKind = iota // 0 1 -1 ...
+	lexemArithm                     // +-*/
+	lexemWord                       // drop, swap, dup, over and other custom words
+	lexemColon                      // :
+	lexemSemicolon                  // ;
+)
+
+var (
+	predefinedSymbols = symbolTable{
+		"+": evalArithm("+", func(a, b int) (int, error) { return a + b, nil }),
+		"-": evalArithm("-", func(a, b int) (int, error) { return a - b, nil }),
+		"*": evalArithm("*", func(a, b int) (int, error) { return a * b, nil }),
+		"/": evalArithm("/", func(a, b int) (int, error) {
+			if b == 0 {
+				return 0, fmt.Errorf("division by zero")
+			}
+			return a / b, nil
+		}),
+		// these need to be lowercase
+		"dup":  evalDup,
+		"drop": evalDrop,
+		"swap": evalSwap,
+		"over": evalOver,
+	}
+)
+
+type lexem struct {
+	kind lexemKind
+
+	intValue    int    // only valid if kind == lexemInt
+	stringValue string // only valid if kind in {lexemWord, lexemArithm}
+}
+
+func newLexer(input []string) *lexer {
+	return &lexer{
+		input: input,
+	}
+}
+
+func (l *lexer) Lexems() <-chan lexem {
+	ch := make(chan lexem)
+	go func() {
+		defer close(ch)
+
+		for _, line := range l.input {
+			lexems := l.line(line)
+			for _, le := range lexems {
+				ch <- le
+			}
+		}
+	}()
+
+	return ch
+}
+
+func (l *lexer) line(line string) []lexem {
+	var result []lexem
+	for _, term := range strings.Fields(line) {
+		lowercase := strings.ToLower(term)
+		result = append(result, l.term(lowercase))
+	}
+
+	return result
+}
+
+func (l *lexer) term(s string) lexem {
+	if num, err := strconv.Atoi(s); err == nil {
+		return lexem{kind: lexemNumber, intValue: num}
+	}
+
+	switch s {
+	case ":":
+		return lexem{kind: lexemColon, stringValue: ":"}
+	case ";":
+		return lexem{kind: lexemSemicolon, stringValue: ";"}
+	case "+", "-", "/", "*":
+		return lexem{kind: lexemArithm, stringValue: s}
+	default:
+		return lexem{kind: lexemWord, stringValue: s}
+	}
+}
+
+type evaluator struct {
+	lexer       *lexer
+	symbolTable symbolTable
+}
+
+type symbolTable map[string]operation
+
+func (t symbolTable) lookup(sym string) (operation, error) {
+	x, ok := t[sym]
+	if !ok {
+		return nil, fmt.Errorf("symbol '%s' not found", sym)
+	}
+	return x, nil
+}
+
+func evalOver(s state) (state, error) {
+	if s.Len() < 2 {
+		return nil, fmt.Errorf("over requires at least 1 operand")
+	}
+
+	s, a := s.Pop()
+	s, b := s.Pop()
+	s = s.Push(b)
+	s = s.Push(a)
+	s = s.Push(b)
+	return s, nil
+}
+
+func evalSwap(s state) (state, error) {
+	if s.Len() < 2 {
+		return nil, fmt.Errorf("dup requires at least 1 operand")
+	}
+
+	s, a := s.Pop()
+	s, b := s.Pop()
+	s = s.Push(a)
+	s = s.Push(b)
+	return s, nil
+}
+
+func evalDup(s state) (state, error) {
+	if s.Len() < 1 {
+		return nil, fmt.Errorf("dup requires at least 1 operand")
+	}
+
+	s, a := s.Pop()
+	s = s.Push(a)
+	s = s.Push(a)
+	return s, nil
+}
+
+func evalDrop(s state) (state, error) {
+	if s.Len() < 1 {
+		return nil, fmt.Errorf("dup requires at least 1 operand")
+	}
+
+	s, _ = s.Pop()
+	return s, nil
+}
+
+func evalPushNum(value int) operation {
+	return func(s state) (state, error) {
+		return s.Push(value), nil
+	}
+}
+
+func evalArithm(op string, f func(a, b int) (int, error)) operation {
+	return func(s state) (state, error) {
+		if len(s) < 2 {
+			return nil, fmt.Errorf("can't run binary operation '%v' with less than 2 operands", op)
+		}
+
+		s, b := s.Pop()
+		s, a := s.Pop()
+		res, err := f(a, b)
+		if err != nil {
+			return nil, err
+		}
+		return s.Push(res), nil
+	}
+}
+
+type state []int
+
+func (s state) Len() int {
+	return len(s)
+}
+
+func (s state) Push(x int) state {
+	var res state
+	res = append(res, s...)
+	res = append(res, x)
+	return res
+}
+
+func (s state) Pop() (state, int) {
+	if len(s) < 1 {
+		panic("pop requires at least 1 element present on the stack")
+	}
+
+	return s[:len(s)-1], s[len(s)-1]
+}
+
+func (s state) String() string {
+	sb := strings.Builder{}
+
+	sb.WriteString("[")
+	for i, v := range s {
+		if i != 0 {
+			sb.WriteString(", ")
+		}
+		sb.WriteString(strconv.Itoa(v))
+	}
+	sb.WriteString("]")
+
+	return sb.String()
+}
+
+type operation func(state) (state, error)
+
+func (p evaluator) Evaluate() ([]int, error) {
+	var (
+		s              state
+		inDefiningMode bool // whether we're in the : word op1 op2 op3 ; mode
+		customWord     string
+		ops            []lexem
+		err            error
+	)
+
+	for l := range p.lexer.Lexems() {
+		if inDefiningMode {
+			if l.kind == lexemColon {
+				return nil, fmt.Errorf("can't use ':' when in defining mode")
+			}
+
+			if l.kind == lexemSemicolon {
+				if err := p.define(customWord, ops); err != nil {
+					return nil, fmt.Errorf("defining custom word: %s = %v", customWord, ops)
+				}
+
+				customWord = ""
+				ops = nil
+				inDefiningMode = false
+				continue
+			}
+
+			if customWord == "" {
+				if l.kind == lexemNumber {
+					return nil, fmt.Errorf("can't redefine numbers")
+				}
+
+				if l.kind == lexemWord || l.kind == lexemArithm {
+					customWord = l.stringValue
+					continue
+				}
+			}
+
+			// : <word> op1 |op2| ... opN ;
+			ops = append(ops, l)
+			continue
+		}
+
+		if l.kind == lexemColon {
+			inDefiningMode = true
+			continue
+		}
+		if l.kind == lexemSemicolon {
+			return nil, fmt.Errorf("unexpected ';'")
+		}
+
+		s, err = p.evaluateLexem(l, s)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	return s, nil
+}
+
+func (p evaluator) evaluateLexem(l lexem, s state) (state, error) {
+	op, err := p.getOp(l)
+	if err != nil {
+		return nil, err
+	}
+
+	return op(s)
+}
+
+func (p evaluator) getOp(l lexem) (operation, error) {
+	switch l.kind {
+	case lexemNumber:
+		return evalPushNum(l.intValue), nil
+	case lexemArithm, lexemWord:
+		op, err := p.symbolTable.lookup(l.stringValue)
+		if err != nil {
+			return nil, err
+		}
+
+		return op, nil
+	}
+
+	return nil, fmt.Errorf("unknown lexem: %v", l)
+}
+
+func (p evaluator) define(sym string, lexems []lexem) error {
+	var ops []operation
+
+	for _, l := range lexems {
+		op, err := p.getOp(l)
+		if err != nil {
+			return err
+		}
+
+		ops = append(ops, op)
+	}
+
+	p.symbolTable[sym] = func(s state) (state, error) {
+		var err error
+
+		for _, op := range ops {
+			if s, err = op(s); err != nil {
+				return nil, err
+			}
+		}
+		return s, nil
+	}
+
+	return nil
+}
+
+func newEvaluator(input []string) *evaluator {
+	st := make(symbolTable)
+	for k, op := range predefinedSymbols {
+		st[k] = op
+	}
+
+	return &evaluator{
+		lexer:       newLexer(input),
+		symbolTable: st,
+	}
+}
+
+func Forth(input []string) ([]int, error) {
+	e := newEvaluator(input)
+	return e.Evaluate()
+}

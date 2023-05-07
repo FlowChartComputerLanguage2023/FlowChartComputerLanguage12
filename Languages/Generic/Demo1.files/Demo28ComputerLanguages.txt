@@ -1,0 +1,467 @@
+
+
+
+
+
+
+/Comment= Say ‘Hello World’ in 28 Different Programming Languages
+/Comment= https://excelwithbusiness.com/blog/say-hello-world-in-28-different-programming-languages/
+
+/Comment= ALGOL
+
+/Comment= A contemporary of the other early 1950’s programming languages FORTRAN, Lisp, and COBOL. It became the standard way of describing algorithms in academia for 30 years, meaning it influenced many other languages’ syntaxes, including C.
+
+BEGIN DISPLAY("HELLO WORLD!") END.
+
+/Comment= AspectJ
+
+/Comment= The de facto standard for the style of programming called Aspect Oriented Programming (AOP). AOP is not popular but loved by some and its concepts do find their way into other languages and libraries. AspectJ uses a Java-like syntax.
+
+// HelloWorld.java
+public class HelloWorld {
+    public static void say(String message) {
+        System.out.println(message);
+    }
+
+    public static void sayToPerson(String message, String name) {
+        System.out.println(name + ", " + message);
+    }
+}
+
+// MannersAspect.java
+public aspect MannersAspect {
+    pointcut callSayMessage() : call(public static void HelloWorld.say*(..));
+    before() : callSayMessage() {
+        System.out.println("Good day!");
+    }
+    after() : callSayMessage() {
+        System.out.println("Thank you!");
+    }
+}
+
+/Comment= AppleScript
+
+/Comment= If you’re on a Mac you can use this to automate and customise your applications.
+
+say "Hello, world!"
+
+/Comment= Assembly language
+
+/Comment= This is the language that will get you the highest performing and most efficient software that is still human-readable. It’s so hard to write in that it only makes sense to use it for small parts of a programme that are performance-sensitive. You will find it in operating systems and 3D game engines.
+
+    global  _main
+    extern  _printf
+
+    section .text
+_main:
+    push    message
+    call    _printf
+    add     esp, 4
+    ret
+message:
+    db  'Hello, World', 10, 0
+
+/Comment= Bash (Unix Shell)
+
+/Comment= Used to interact with and manage Linux and Unix system at the command line.
+
+#!/bin/bash
+STR="Hello World!"
+echo $STR
+
+BASIC
+
+/Comment= Basic was first released in 1964 and reached its heyday in the early 80s, when computers were starting to enter the small office and the home. You were expected to write your own software and the large majority of computers shipped with some version of BASIC. It hit the sweet spot of being easy to learn but lean enough to run on this underpowered hardware.
+
+/Comment= There are a huge number of BASIC variants, Visual Basic was a variation that was very popular on Windows in the 90s. This was replaced by Visual Basic .NET (now called just Visual Basic) but was quite different from the earlier versions. Visual Basic is still widely used.
+
+10 PRINT "Hello, World!"
+20 END
+
+/Comment= C
+
+/Comment= The most important language in the world. It’s what operating systems like Windows, MacOS, iOS, and Android are written in, as well as browsers and 3D games engines. Its syntax has influenced countless other programming languages.
+
+/Comment= C maps closely to Assembly Language but you can write more complex programmes with it. If you need the highest performance possible without losing your mind then C is for you.
+
+/Comment= C is also the language that made “Hello, World” examples popular.
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+
+/Comment= C++
+
+/Comment= Has performance close to C and is used in many important projects like the Chrome Browser. C++ was an effort to make a language that was easier to build large projects with while still being fast and efficient.
+
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, world!\n";
+    return 0;
+}
+
+/Comment= C#
+
+/Comment= Created when Microsoft built their .Net virtual machine. C# has become Microsoft premier programming language.
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, world!");
+    }
+}
+
+/Comment= Caml (Ocaml)
+
+/Comment= A functional programming focused language in the ML family of languages. It’s used for a number of smaller projects at Facebook. The compiler for Facebook’s Hack language was written in OCaml.
+
+print_endline "Hello, world!";;
+
+/Comment= Clojure (ClojureScript)
+
+/Comment= A functional programming language intended to be a modern take on Lisp. It runs on the Java virtual machine or complies down to JavaScript.
+
+(println "Hello world!")
+
+/Comment= COBOL
+
+/Comment= Once very popular in the era of mainframe computing. It’s now in decline and many COBOL programs are being ported to other languages.
+
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. hello-world.
+       PROCEDURE DIVISION.
+           DISPLAY "Hello, world!"
+           .
+
+/Comment= CoffeeScript
+
+/Comment= An effort to make JavaScript better to work with.
+
+console.log "Hello, World!"
+
+/Comment= Dart
+
+/Comment= A language for building client-side software that can run on phones and browsers. Google is using Dart in some of its most important projects.
+
+main() {
+  print('Hello World!');
+}
+
+/Comment= dBase (FoxPro)
+
+/Comment= dBase is a collection of tools: a programming language, a database, forms. In its time it was very popular but now has fallen out of use. A popular clone was FoxPro.
+
+ ? "Hello World"
+
+/Comment= Delphi (Object Pascal)
+
+/Comment= Delphi was really a rapid application development (RAD) tool that used the Object Pascal language. In the mid- to late 90s, it was beloved by many programmers for writing Windows programmes. It’s no longer used, but still loved.
+
+procedure TForm1.ShowAMessage;
+begin
+  ShowMessage('Hello World!');
+end;
+
+/Comment= Eiffel
+
+/Comment= The language goes hand-in-hand with a way of writing software called the Eiffel Method. Eiffel introduced the concept of “design by contract” which is now used in many other languages.
+
+class
+    HELLO_WORLD
+create
+    make
+feature
+    make
+        do
+            print ("Hello, world!%N")
+        end
+end
+
+/Comment= Erlang
+
+/Comment= Designed to work in a distributed way to provide real-time processing and high availability. Popular for phone systems but not well-know until it was used for CouchDB, the project that was the catalyst for the NoSQL movement.
+
+ -module(hello).
+ -export([hello_world/0]).
+
+ hello_world() -> io:fwrite("hello, world\n").
+
+/Comment= Elixir
+
+/Comment= While Erlang is great at a technical level, programmers find it hard to work with. Elixir uses Erlang’s technology while providing an easier experience for programmers.
+
+IO.puts "Hello World!"
+
+/Comment= F#
+
+/Comment= A functional focused programming language that runs on the .NET framework.
+
+open System
+Console.WriteLine("Hello World!")
+
+/Comment= Fortran
+
+/Comment= Created in the 1950s to run on mainframe computers, it’s well suited for numerical and scientific work. It became standard in the scientific world where it’s still used today.
+
+program helloworld
+     print *, "Hello world!"
+end program helloworld
+
+/Comment= Go
+
+/Comment= Go was created and used at Google. It’s a practical language that focuses on programmer productivity with a community focused on performance and low latency.
+
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World")
+}
+
+/Comment= Groovy (Ruby)
+
+/Comment= A dynamically typed scripting language that runs in the Java runtime. Most Java code would also run as Groovy code but Groovy code can be more compact as it doesn’t require everything that Java does.
+
+println "Hello World"
+
+/Comment= Haskell
+
+/Comment= A strongly-typed, purely functional programming language.
+
+module Main where
+
+main :: IO ()
+main = putStrLn "Hello, World!"
+
+/Comment= IBM RPG
+
+/Comment= First seen in 1959, created by IBM to run on its hardware. It’s one of the few languages originally designed for punch cards that are still in use today.
+
+dcl-s wait char(1);
+
+dsply ( 'Hello World!') ' ' wait;
+
+*inlr = *on;
+
+/Comment= Java
+
+/Comment= Something that made Java special is that it was designed so you could write code once and then allow it to run on any operation system. Java is the most popular programming language in the world. It’s used to teach students and in large companies. All Android apps are written in Java.
+
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Prints the string to the console.
+    }
+}
+
+/Comment= JavaScript (ECMAScript)
+
+/Comment= JavaScript is the most commonly found programming language in the world. Mainly because it is required to be in every web browser. JavaScript is what makes the web dynamic and interactive. It was standardised under the name ECMAScript.
+
+console.log("Hello World!");
+
+/Comment= Lisp
+
+/Comment= Designed a year after Fortran, Lisp is the second-oldest high-level programming language that’s still in common use. Lisp can lay claim to many programming language firsts, and can now be considered a family of languages as well as a language itself. It was popular in the 70s era of AI research. It seemed to be fading in popularity in the 90s but is now gaining popularity through several new dialects.
+
+(print "Hello world")
+
+/Comment= Logo
+
+/Comment= Intended for education use, Logo has a close association with teaching graphical concepts. Popular in the 80s, a student would direct an on-screen “turtle” to draw lines. Some lucky students would also have a real robotic turtle to draw the same lines on actual paper.
+
+TO HELLO
+        PRINT [Hello world]
+        END
+
+/Comment= Lua
+
+/Comment= What makes Lua great is how easy it is to embed into software.
+
+print("Hello World!")
+
+/Comment= Machine code
+
+/Comment= Machine code is the lowest level of instruction you can send to a CPU. Machine code is not really readable by humans and humans can only do trivial things in it but all software is eventually turned into Machine code before it’s sent to the CPU.
+
+b8    21 0a 00 00   #moving "!\n" into eax
+a3    0c 10 00 06   #moving eax into first memory location
+b8    6f 72 6c 64   #moving "orld" into eax
+a3    08 10 00 06   #moving eax into next memory location
+b8    6f 2c 20 57   #moving "o, W" into eax
+a3    04 10 00 06   #moving eax into next memory location
+b8    48 65 6c 6c   #moving "Hell" into eax
+a3    00 10 00 06   #moving eax into next memory location
+b9    00 10 00 06   #moving pointer to start of memory location into ecx
+ba    10 00 00 00   #moving string size into edx
+bb    01 00 00 00   #moving "stdout" number to ebx
+b8    04 00 00 00   #moving "print out" syscall number to eax
+cd    80            #calling the linux kernel to execute our print to stdout
+b8    01 00 00 00   #moving "sys_exit" call number to eax
+cd    80            #executing it via linux sys_call
+
+/Comment= Mathematica (Wolfram Language)
+
+/Comment= A programme with a dedicated programming language, popular in science and maths for doing complex calculations.
+
+CloudDeploy["Hello, World"]
+
+/Comment= MATLAB
+
+/Comment= A combination of a programme and a language. Used to analyse data and develop algorithms. It’s used in education to teach linear algebra and numerical analysis. It’s also popular with scientists doing work with image manipulation.
+
+classdef hello
+    methods
+        function greet(this)
+            disp('Hello, World')
+        end
+    end
+end
+
+/Comment= ML
+
+/Comment= A functional language that is derived from Lisp but with a strong type system.
+
+print "Hello world!\n";
+
+/Comment= Node.js
+
+/Comment= Not so much a language (the language used is JavaScript) but a runtime environment to run JavaScript on servers as opposed to browsers. The goal was to demonstrate that asynchronous programming was better for modern multi-core CPUs. It now gets used a great deal for tooling of large front-end projects.
+
+console.log("Hello World!");
+
+/Comment= Objective-C
+
+/Comment= An extension of C that adds Smalltalk like messaging. Used by Apple in writing macOS and iOS.
+
+main()
+{
+  puts("Hello World!");
+  return 0;
+}
+
+/Comment= Pascal
+
+/Comment= A popular language in the 80s and 90s especially for teaching programming. It evolved a great deal and was also the language used in the Delphi RAD toolset.
+
+program HelloWorld(output);
+begin
+  Write('Hello, world!')
+end.
+
+/Comment= Perl
+
+/Comment= Perl is very powerful for text processing. A popular option for creating websites in the early days of dynamic websites.
+
+print "Hello, World!\n";
+
+/Comment= PHP
+
+/Comment= PHP is the most popular language for building the backend of websites. It’s what Facebook and WordPress are written in. Facebook decided to create their own dialect of PHP called Hack.
+
+<?php echo "Hello, World";
+
+/Comment= PowerShell
+
+/Comment= Used to interact with and manage Windows systems at the command line level.
+
+Write-Host "Hello, World!"
+
+/Comment= Python
+
+/Comment= Has a compact syntax needing far fewer lines of code than languages like Java or C++. It’s very popular and is used for websites and artificial intelligence (AI) tasks.
+
+print("Hello World")
+
+/Comment= R
+
+/Comment= A great language for doing statistics, and a popular choice in the scientific world.
+
+cat("Hello world\n")
+
+/Comment= RPG
+
+/Comment= An old programing language that has been able to stay around by continually evolving. With origins in the punch card era, it is now found mostly on IBM hardware.
+
+dcl-s wait char(1);
+
+dsply ( 'Hello World!') ' ' wait;
+
+*inlr = *on;
+
+/Comment= Ruby
+
+/Comment= Designed to be a productive and fun language to use, stressing human needs over computer needs. The Rails web framework was written for Ruby, and had a huge impact on web framework design. Ruby is still a popular language for creating websites.
+
+puts 'Hello World!'
+
+/Comment= Rust
+
+/Comment= A new language that is intended to replace languages like C for doing systems-level work. Parts of Firefox are being replaced with Rust.
+
+fn main() {
+    println!("Hello, world!");
+}
+
+/Comment= Scala
+
+/Comment= Designed to address some of the criticisms of Java. A function-focused language that runs on the Java virtual machine.
+
+ object HelloWorld extends App {
+   println("Hello, World!")
+ }
+
+/Comment= Scheme
+
+/Comment= One of the two main dialects of Lisp, the other being Common List. It tried to be minimalistic in design and allow powerful extension of the language.
+
+(let ((hello0 (lambda() (display "Hello world") (newline))))
+  (hello0))
+
+/Comment= Scratch
+
+/Comment= A visual programming language designed to let kids learn skills by programming. There is also Scratch Jr. which is intended for use by 5-7 year olds. Both languages are used by millions in and out of schools all over the world.
+
+say Hello, World!
+
+/Comment= Self
+
+/Comment= A dialect of Smalltalk, it was the first language to use prototype-based programming, something that JavaScript uses.
+
+'Hello, World!' print.
+
+/Comment= Smalltalk
+
+/Comment= A very important language that has had a massive influence on many programming languages. It was also popular with people who would popularise programming best practices. Many things that are now common in programming were first done in Smalltalk.
+
+Transcript show: 'Hello World!'.
+
+/Comment= Swift
+
+/Comment= A newer language created at Apple that is being promoted to replace Objective-C for use on its platforms. It’s designed to be an easier language to learn and use without losing the performance of Objective-C.
+
+println("Hello, world!")
+
+/Comment= Tcl
+
+/Comment= Used in combination with the Tk extension, Tcl/Tk is popular for creating graphical user interfaces.
+
+puts "Hello World!"
+
+/Comment= TypeScript
+
+/Comment= Designed in Microsoft, it’s a dialect of JavaScript that adds strict rules to help with large projects while remaining compatible with JavaScript.
+
+console.log("Hello World!");
+
+Tags: CCloud ComputingCodingHTMLJavaLanguagesLearn HTMLLearn programmingProgrammingWeb Design
+
+

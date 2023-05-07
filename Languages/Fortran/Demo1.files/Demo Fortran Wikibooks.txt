@@ -1,0 +1,732 @@
+/comment= https://en.wikibooks.org/wiki/Fortran/Fortran_examples
+
+/comment= Part of the Fortran WikiBook
+
+/comment= The following Fortran code examples or sample programs show different situations depending on the compiler. The first set of examples are for the Fortran II, IV, and 77 compilers. The remaining examples can be compiled and run with any newer standard Fortran compiler (see the end of the main Fortran article for lists of compilers). By convention most contemporary Fortran compilers select the language standard to use during compilation based on source code file name suffix: FORTRAN 77 for .f (or the less common .for), Fortran 90 for .f90, Fortran 95 for .f95. Other standards, if supported, may be selected manually with a command line option.
+
+C AREA OF A TRIANGLE - HERON'S FORMULA
+C INPUT - CARD READER UNIT 5, INTEGER INPUT
+C OUTPUT -
+C INTEGER VARIABLES START WITH I,J,K,L,M OR N
+      READ(5,501) IA,IB,IC
+  501 FORMAT(3I5)
+      IF(IA.EQ.0 .OR. IB.EQ.0 .OR. IC.EQ.0) STOP 1
+      S = (IA + IB + IC) / 2.0
+      AREA = SQRT( S * (S - IA) * (S - IB) * (S - IC) )
+      WRITE(6,601) IA,IB,IC,AREA
+  601 FORMAT(4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+     $13H SQUARE UNITS)
+      STOP
+      END
+
+/comment= Simple Fortran IV program
+
+C AREA OF A TRIANGLE - HERON'S FORMULA
+C INPUT - CARD READER UNIT 5, INTEGER INPUT, ONE BLANK CARD FOR END-OF-DATA
+C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+C INPUT ERROR DISPAY ERROR MESSAGE ON OUTPUT
+  501 FORMAT(3I5)
+  601 FORMAT(4H A= ,I5,5H  B= ,I5,5H  C= ,I5,8H  AREA= ,F10.2,
+     $13H SQUARE UNITS)
+  602 FORMAT(10HNORMAL END)
+  603 FORMAT(23HINPUT ERROR, ZERO VALUE)
+      INTEGER A,B,C
+   10 READ(5,501) A,B,C
+      IF(A.EQ.0 .AND. B.EQ.0 .AND. C.EQ.0) GO TO 50
+      IF(A.EQ.0 .OR.  B.EQ.0 .OR.  C.EQ.0) GO TO 90
+      S = (A + B + C) / 2.0
+      AREA = SQRT( S * (S - A) * (S - B) * (S - C) )
+      WRITE(6,601) A,B,C,AREA
+      GO TO 10
+   50 WRITE(6,602)
+      STOP
+   90 WRITE(6,603)
+      STOP
+      END
+
+/comment= Simple Fortran 77 program
+/comment= This program has two input checks in the READ statement with the END and ERR parameters, one for a blank card to indicate end-of-data; and the other for zero value along with valid data. In either condition, a message will be printed.
+
+C AREA OF A TRIANGLE - HERON'S FORMULA
+C INPUT - CARD READER UNIT 5, INTEGER INPUT, NO BLANK CARD FOR END OF DATA
+C OUTPUT - LINE PRINTER UNIT 6, REAL OUTPUT
+C INPUT ERROR DISPAYS ERROR MESSAGE ON OUTPUT
+  501 FORMAT(3I5)
+  601 FORMAT(" A= ",I5,"  B= ",I5,"  C= ",I5,"  AREA= ",F10.2,
+     $"SQUARE UNITS")
+  602 FORMAT("NORMAL END")
+  603 FORMAT("INPUT ERROR OR ZERO VALUE ERROR")
+      INTEGER A,B,C
+   10 READ(5,501,END=50,ERR=90) A,B,C
+      IF(A=0 .OR. B=0 .OR. C=0) GO TO 90
+      S = (A + B + C) / 2.0
+      AREA = SQRT( S * (S - A) * (S - B) * (S - C) )  
+      WRITE(6,601) A,B,C,AREA
+      GO TO 10
+   50 WRITE(6,602)
+      STOP
+   90 WRITE(6,603)
+      STOP
+      END
+
+/comment= "Retro" FORTRAN IV
+/comment= A retro example of a FORTRAN IV (later evolved into FORTRAN 66) program deck is available on the IBM 1130 page, including the IBM 1130 DM2 JCL required for compilation and execution. An IBM 1130 emulator is available at IBM 1130.org that will allow the FORTRAN IV program to be compiled and run on a PC.
+/comment= Hello, World program
+/comment= In keeping with computing tradition, the first example presented is a simple program to display the words "Hello, world" on the screen (or printer).
+/comment= FORTRAN 66 (also FORTRAN IV)
+
+ C     FORTRAN IV WAS ONE OF THE FIRST PROGRAMMING
+ C     LANGUAGES TO SUPPORT SOURCE COMMENTS
+       WRITE (6,7)
+     7 FORMAT(13H HELLO, WORLD)
+       STOP
+       END
+
+This program prints "HELLO, WORLD" to Fortran unit number 6, which on most machines was the line printer or terminal. (The card reader or keyboard was usually connected as unit 5). The number 7 in the WRITE statement refers to the statement number of the corresponding FORMAT statement. FORMAT statements may be placed anywhere in the same program or function/subroutine block as the WRITE statements which reference them. Typically a FORMAT statement is placed immediately following the WRITE statement which invokes it; alternatively, FORMAT statements are grouped together at the end of the program or subprogram block. If execution flows into a FORMAT statement, it is a no-op; thus, the example above has only two executable statements, WRITE and STOP.
+
+The initial 13H in the FORMAT statement in the above example defines a Hollerith constant, here meaning that the 13 characters immediately following are to be taken as a character constant (note that the Hollerith constant is not surrounded by delimiters). (Some compilers also supported character literals enclosed in single quotes, a practice that came to be standard with FORTRAN 77.)
+
+The space immediately following the 13H is a carriage control character, telling the I/O system to advance to a new line on the output. A zero in this position advances two lines (double space), a 1 advances to the top of a new page and + character will not advance to a new line, allowing overprinting.
+FORTRAN 77
+
+As of FORTRAN 77, single quotes are used to delimit character literals, and inline character strings may be used instead of references to FORMAT statements. Comment lines may be indicated with either a C or an asterisk (*) in column 1.
+
+      PROGRAM HELLO
+*     The PRINT statement is like WRITE,
+*     but prints to the standard output unit
+        PRINT '(A)', 'Hello, world'
+        STOP
+      END
+
+/comment= Fortran 90
+
+/comment= As of Fortran 90, double quotes are allowed in addition to single quotes. An updated version of the Hello, world example (which here makes use of list-directed I/O, supported as of FORTRAN 77) could be written in Fortran 90 as follows:
+
+ program HelloWorld
+   write (*,*) 'Hello, world!'   ! This is an inline comment
+ end program HelloWorld
+
+/comment= Fortran 77 examples
+/comment= Greatest common divisor
+
+/comment= The following introductory example in FORTRAN 77 finds the greatest common divisor for two numbers A {\displaystyle A} A and B {\displaystyle B} B using a verbatim implementation of Euclid's algorithm.
+
+*     euclid.f (FORTRAN 77)
+*     Find greatest common divisor using the Euclidean algorithm
+
+      PROGRAM EUCLID
+        PRINT *, 'A?'
+        READ *, NA
+        IF (NA.LE.0) THEN
+          PRINT *, 'A must be a positive integer.'
+          STOP
+        END IF
+        PRINT *, 'B?'
+        READ *, NB
+        IF (NB.LE.0) THEN
+          PRINT *, 'B must be a positive integer.'
+          STOP
+        END IF
+        PRINT *, 'The GCD of', NA, ' and', NB, ' is', NGCD(NA, NB), '.'
+        STOP
+      END
+
+      FUNCTION NGCD(NA, NB)
+        IA = NA
+        IB = NB
+    1   IF (IB.NE.0) THEN
+          ITEMP = IA
+          IA = IB
+          IB = MOD(ITEMP, IB)
+          GOTO 1
+        END IF
+        NGCD = IA
+        RETURN
+      END
+
+/comment= The above example is intended to illustrate the following:
+
+/comment=     The PRINT and READ statements in the above use '*' as a format, specifying list-directed formatting. List-directed formatting instructs the compiler to make an educated guess about the required input or output format based on the following arguments.
+/comment=     As the earliest machines running Fortran had restricted character sets, FORTRAN 77 uses abbreviations such as .EQ., .NE., .LT., .GT., .LE., and .GE. to represent the relational operators =, ≠, <, >, ≤, and ≥, respectively.
+/comment=     This example relies on the implicit typing mechanism to specify the INTEGER types of NA, NB, IA, IB, and ITEMP.
+/comment=     In the function NGCD(NA, NB), the values of the function arguments NA and NB are copied into the local variables IA and IB respectively. This is necessary as the values of IA and IB are altered within the function. Because argument passing in Fortran functions and subroutines utilize call by reference by default (rather than call by value, as is the default in languages such as C), modifying NA and NB from within the function would effectively have modified the corresponding actual arguments in the main PROGRAM unit which called the function.
+
+
+/comment= The following FORTRAN 77 example prints out the values of e j i π / 4 {\displaystyle e^{ji\pi /4}} e^{{ji\pi /4}} (where j = − 1 {\displaystyle j={\sqrt {-1}}} j={\sqrt {-1}}) for values of i = 0 , 1 , … , 7 {\displaystyle i=0,1,\ldots ,7} i=0,1,\ldots ,7.
+
+*     cmplxd.f (FORTRAN 77)
+*     Demonstration of COMPLEX numbers
+*
+*     Prints the values of e ** (j * i * pi / 4) for i = 0, 1, 2, ..., 7
+*         where j is the imaginary number sqrt(-1)
+
+      PROGRAM CMPLXD
+        IMPLICIT COMPLEX(X)
+        PARAMETER (PI = 3.141592653589793, XJ = (0, 1))
+        DO 1, I = 0, 7
+          X = EXP(XJ * I * PI / 4)
+          IF (AIMAG(X).LT.0) THEN
+            PRINT 2, 'e**(j*', I, '*pi/4) = ', REAL(X), ' - j',-AIMAG(X)
+          ELSE
+            PRINT 2, 'e**(j*', I, '*pi/4) = ', REAL(X), ' + j', AIMAG(X)
+          END IF
+    2     FORMAT (A, I1, A, F10.7, A, F9.7)
+    1     CONTINUE
+        STOP
+      END
+
+/comment= The above example is intended to illustrate the following:
+
+/comment=     The IMPLICIT statement can be used to specify the implicit type of variables based on their initial letter if different from the default implicit typing scheme described above. In this example, this statement specifies that the implicit type of variables beginning with the letter X shall be COMPLEX.
+/comment=     The PARAMETER statement may be used to specify constants. The second constant in this example (XJ) is given the complex-valued value 0 + j 1 {\displaystyle 0+j1} 0+j1, where j {\displaystyle j} j is the imaginary unit − 1 {\displaystyle {\sqrt {-1}}} {\sqrt {-1}}.
+/comment=     The first number in the DO statement specifies the number of the last statement considered to be within the body of the DO loop. In this example, as neither the END IF nor the FORMAT is a single executable statement, the CONTINUE statement (which does nothing) is used simply in order for there to be some statement to denote as the final statement of the loop.
+/comment=     EXP() corresponds to the exponential function e x {\displaystyle e^{x}} e^{x}. In FORTRAN 77, this is a generic function, meaning that it accepts arguments of multiple types (such as REAL and, in this example, COMPLEX). In FORTRAN 66, a specific function would have to be called by name depending on the type of the function arguments (for this example, CEXP() for a COMPLEX-valued argument).
+/comment=     When applied to a COMPLEX-valued argument, REAL() and AIMAG() return the values of the argument's real and imaginary components, respectively.
+
+/comment= Incidentally, the output of the above program is as follows (see the article on Euler's formula for the geometric interpretation of these values as eight points spaced evenly about a unit circle in the complex plane).
+
+$ cmplxd
+e**(j*0*pi/4) =  1.0000000 + j0.0000000
+e**(j*1*pi/4) =  0.7071068 + j0.7071068
+e**(j*2*pi/4) =  0.0000000 + j1.0000000
+e**(j*3*pi/4) = -0.7071068 + j0.7071068
+e**(j*4*pi/4) = -1.0000000 - j0.0000001
+e**(j*5*pi/4) = -0.7071066 - j0.7071069
+e**(j*6*pi/4) =  0.0000000 - j1.0000000
+e**(j*7*pi/4) =  0.7071070 - j0.7071065
+
+Error can be seen occurring in the last decimal place in some of the numbers above, a result of the COMPLEX data type representing its real and imaginary components in single precision. Incidentally, Fortran 90 also made standard a double-precision complex-number data type (although several compilers provided such a type even earlier).
+
+
+/comment= FORTRAN program to find the area of a triangle
+
+C     AREA OF A TRIANGLE
+      READ*,A,B,C
+      S=(A+B+C)/2
+      A=SQRT(S*(S-A)*(S-B)*(S-C))
+      PRINT*,"AREA=",A
+      STOP
+      END
+
+/comment= Fortran 90/95 examples
+/comment= Summations with a DO loop
+
+/comment= In this example of Fortran 90 code, the programmer has written the bulk of the code inside of a DO loop. Upon execution, instructions are printed to the screen and a SUM variable is initialized to zero outside the loop. Once the loop begins, it asks the user to input any number. This number is added to the variable SUM every time the loop repeats. If the user inputs 0, the EXIT statement terminates the loop, and the value of SUM is displayed on screen.
+
+/comment= Also apparent in this program is a data file. Before the loop begins, the program creates (or opens, if it has already been run before) a text file called "SumData.DAT". During the loop, the WRITE statement stores any user-inputted number in this file, and upon termination of the loop, also saves the answer.
+
+! sum.f90
+! Performs summations using in a loop using EXIT statement
+! Saves input information and the summation in a data file
+
+program summation
+implicit none
+integer :: sum, a
+
+print*, "This program performs summations. Enter 0 to stop."
+open(unit=10, file="SumData.DAT")
+
+sum = 0
+
+do
+ print*, "Add:"
+ read*, a
+ if (a == 0) then
+  exit
+ else
+  sum = sum + a
+ end if
+ write(10,*) a
+end do
+
+print*, "Summation =", sum
+write(10,*) "Summation =", sum
+close(10)
+
+end
+
+/comment= Calculating cylinder area
+
+/comment= The following program, which calculates the surface area of a cylinder, illustrates free-form source input and other features introduced by Fortran 90.
+
+program cylinder
+
+! Calculate the surface area of a cylinder.
+!
+! Declare variables and constants.
+! constants=pi
+! variables=radius squared and height
+
+  implicit none    ! Require all variables to be explicitly declared
+
+  integer :: ierr
+  character(1) :: yn
+  real :: radius, height, area
+  real, parameter :: pi = 3.141592653589793
+
+  interactive_loop: do
+
+!   Prompt the user for radius and height
+!   and read them.
+
+    write (*,*) 'Enter radius and height.'
+    read (*,*,iostat=ierr) radius,height
+
+!   If radius and height could not be read from input,
+!   then cycle through the loop.
+
+    if (ierr /= 0) then
+      write(*,*) 'Error, invalid input.'
+      cycle interactive_loop
+    end if
+
+!   Compute area.  The ** means "raise to a power."
+
+    area = 2*pi * (radius**2 + radius*height)
+
+!   Write the input variables (radius, height)
+!   and output (area) to the screen.
+
+    write (*,'(1x,a7,f6.2,5x,a7,f6.2,5x,a5,f6.2)') &
+      'radius=',radius,'height=',height,'area=',area
+
+    yn = ' '
+    yn_loop: do
+      write(*,*) 'Perform another calculation? y[n]'
+      read(*,'(a1)') yn
+      if (yn=='y' .or. yn=='Y') exit yn_loop
+      if (yn=='n' .or. yn=='N' .or. yn==' ') exit interactive_loop
+    end do yn_loop
+
+  end do interactive_loop
+
+end program cylinder
+
+/comment= Dynamic memory allocation and arrays
+
+/comment= The following program illustrates dynamic memory allocation and array-based operations, two features introduced with Fortran 90. Particularly noteworthy is the absence of DO loops and IF/THEN statements in manipulating the array; mathematical operations are applied to the array as a whole. Also apparent is the use of descriptive variable names and general code formatting that comport with contemporary programming style. This example computes an average over data entered interactively.
+
+/comment= program average
+
+! Read in some numbers and take the average
+! As written, if there are no data points, an average of zero is returned
+! While this may not be desired behavior, it keeps this example simple
+
+  implicit none
+  integer :: number_of_points
+  real, dimension(:), allocatable :: points
+  real :: average_points=0., positive_average=0., negative_average=0.
+
+  write (*,*) "Input number of points to average:"
+  read (*,*) number_of_points
+
+  allocate (points(number_of_points))
+
+  write (*,*) "Enter the points to average:"
+  read (*,*) points
+
+! Take the average by summing points and dividing by number_of_points
+  if (number_of_points > 0) average_points = sum(points)/number_of_points
+
+! Now form average over positive and negative points only
+  if (count(points > 0.) > 0) positive_average = sum(points, points > 0.) &
+        /count(points > 0.)
+  if (count(points < 0.) > 0) negative_average = sum(points, points < 0.) &
+        /count(points < 0.)
+
+  deallocate (points)
+
+! Print result to terminal
+  write (*,'(''Average = '', 1g12.4)') average_points
+  write (*,'(''Average of positive points = '', 1g12.4)') positive_average
+  write (*,'(''Average of negative points = '', 1g12.4)') negative_average
+
+/comment= end program average
+
+/comment= Writing functions
+
+/comment= Modern Fortran features available for use with procedures, including deferred-shape, protected, and optional arguments, are illustrated in the following example, a function to solve a system of linear equations.
+
+function gauss_sparse(num_iter, tol, b, A, x, actual_iter) result(tol_max)
+
+!  This function solves a system of equations (Ax = b) by using the Gauss-Seidel Method
+
+   implicit none
+
+   real ::  tol_max
+
+!  Input: its value cannot be modified from within the function
+   integer, intent(in) :: num_iter
+   real, intent(in) :: tol
+   real, intent(in), dimension(:) :: b, A(:,:)
+
+!  Input/Output: its input value is used within the function, and can be modified
+   real, intent(inout) :: x(:)
+
+!  Output: its value is modified from within the function, only if the argument is required
+   integer, optional, intent(out) :: actual_iter
+
+!  Locals
+   integer :: i, n, iter
+   real :: xk
+
+!  Initialize values
+   n = size(b)  ! Size of array, obtained using size intrinsic function
+   tol_max = 2. * tol
+   iter = 0
+
+!  Compute solution until convergence
+   convergence_loop: do while (tol_max >= tol .and. iter < num_iter); iter = iter + 1
+
+      tol_max = -1.  ! Reset the tolerance value
+
+!     Compute solution for the k-th iteration
+      iteration_loop: do i = 1, n
+
+!        Compute the current x-value
+         xk = (b(i) - dot_product(A(i,:i-1),x(:i-1)) - dot_product(A(i,i+1:n),x(i+1:n))) / A(i, i)
+
+!        Compute the error of the solution
+!        dot_product(a,v)=a'b
+         tol_max = max((abs(x(i) - xk)/(1. + abs(xk))) ** 2, abs(A(i, i) * (x(i) - xk)), tol_max)
+         x(i) = xk
+      enddo iteration_loop
+   enddo convergence_loop
+
+   if (present(actual_iter)) actual_iter = iter
+
+end function gauss_sparse
+
+/comment= Note that an explicit interface to this routine must be available to its caller so that the type signature is known. This is preferably done by placing the function in a MODULE and then USEing the module in the calling routine. An alternative is to use an INTERFACE block, as shown by the following example:
+
+program test_gauss_sparse
+    implicit none
+
+!   explicit interface to the gauss_sparse function
+    interface
+        function gauss_sparse(num_iter, tol, b, A, x, actual_iter) result(tol_max)
+           real ::  tol_max
+           integer, intent(in) :: num_iter
+           real, intent(in) :: tol
+           real, intent(in), dimension(:) :: b, A(:,:)
+           real, intent(inout) :: x(:)
+           integer, optional, intent(out) :: actual_iter
+        end function
+    end interface
+
+!   declare variables
+    integer :: i, N = 3, actual_iter
+    real :: residue
+    real, allocatable :: A(:,:), x(:), b(:)
+
+!   allocate arrays
+    allocate (A(N, N), b(N), x(N))
+
+!   Initialize matrix
+    A = reshape([(real(i), i = 1, size(A))], shape(A))
+
+!   Make matrix diagonally dominant
+    do i = 1, size(A, 1)
+        A(i,i) = sum(A(i,:)) + 1
+    enddo
+
+!   Initialize b
+    b = [(i, i = 1, size(b))]
+
+!   Initial (guess) solution
+    x = b
+
+!   invoke the gauss_sparse function 
+    residue = gauss_sparse(num_iter = 100, &
+                           tol = 1E-5, &
+                           b = b, &
+                           A = a, &
+                           x = x, &
+                           actual_iter = actual_iter)
+
+!   Output
+    print '(/ "A = ")'
+    do i = 1, size(A, 1)
+        print '(100f6.1)', A(i,:)
+    enddo
+
+    print '(/ "b = " / (f6.1))', b
+
+    print '(/ "residue = ", g10.3 / "iterations = ", i0 / "solution = "/ (11x, g10.3))', &
+        residue, actual_iter, x
+
+end program test_gauss_sparse
+
+/comment= Writing subroutines
+
+/comment= In those cases where it is desired to return values via a procedure's arguments, a subroutine is preferred over a function; this is illustrated by the following subroutine to swap the contents of two arrays:
+
+subroutine swap_real(a1, a2)
+
+   implicit none
+
+!  Input/Output
+   real, intent(inout) :: a1(:), a2(:)
+
+!  Locals
+   integer :: i
+   real :: a
+
+!  Swap
+   do i = 1, min(size(a1), size(a2))
+      a = a1(i)
+      a1(i) = a2(i)
+      a2(i) = a
+   enddo
+
+end subroutine swap_real
+
+/comment= As in the previous example, an explicit interface to this routine must be available to its caller so that the type signature is known. As before, this is preferably done by placing the function in a MODULE and then USEing the module in the calling routine. An alternative is to use a INTERFACE block.
+/comment= Internal and Elemental Procedures
+
+/comment= An alternative way to write the swap_real subroutine from the previous example, is:
+
+subroutine swap_real(a1, a2)
+
+   implicit none
+
+!  Input/Output
+   real, intent(inout) :: a1(:), a2(:)
+
+!  Locals
+   integer :: N
+
+!  Swap, using the internal subroutine
+   N = min(size(a1), size(a2))
+   call swap_e(a1(:N), a2(:N))
+
+ contains
+   elemental subroutine swap_e(a1, a2)
+      real, intent(inout) :: a1, a2
+      real :: a
+      a = a1
+      a1 = a2
+      a2 = a
+   end subroutine swap_e
+end subroutine swap_real
+
+/comment= In the example, the swap_e subroutine is elemental, i.e., it acts upon its array arguments, on an element-by-element basis. Elemental procedures must be pure (i.e., they must have no side effects and can invoke only pure procedures), and all the arguments must be scalar. Since swap_e is internal to the swap_real subroutine, no other program unit can invoke it.
+
+/comment= The following program serves as a test for any of the two swap_real subroutines presented:
+
+program test_swap_real
+    implicit none
+
+!   explicit interface to the swap_real subroutine
+    interface
+        subroutine swap_real(a1, a2)
+            real, intent(inout) :: a1(:), a2(:)
+        end subroutine swap_real
+    end interface
+
+!   Declare variables
+    integer :: i
+    real :: a(10), b(10)
+
+!   Initialize a, b
+    a = [(real(i), i = 1, 20, 2)]
+    b = a + 1
+
+!   Output before swap
+    print '(/"before swap:")'
+    print '("a = [", 10f6.1, "]")', a
+    print '("b = [", 10f6.1, "]")', b
+
+!   Call the swap_real subroutine
+    call swap_real(a, b)
+
+!   Output after swap
+    print '(// "after swap:")'
+    print '("a = [", 10f6.1, "]")', a
+    print '("b = [", 10f6.1, "]")', b
+
+end program test_swap_real
+
+/comment= Pointers and targets methods
+
+/comment= In Fortran, the concept of pointers differs from that in C-like languages. A Fortran 90 pointer does not merely store the memory address of a target variable; it also contains additional descriptive information such as the target's rank, the upper and lower bounds of each dimension, and even strides through memory. This allows a Fortran 90 pointer to point at submatrices.
+
+/comment= Fortran 90 pointers are "associated" with well-defined "target" variables, via either the pointer assignment operator (=>) or an ALLOCATE statement. When appearing in expressions, pointers are always dereferenced; no "pointer arithmetic" is possible.
+
+/comment= The following example illustrates the concept:
+
+module SomeModule
+   implicit none
+ contains
+    elemental function A(x) result(res)
+        integer :: res
+        integer, intent(IN) :: x
+        res = x + 1
+    end function
+end module SomeModule
+
+program Test
+   use SomeModule, DoSomething => A
+   implicit none
+
+   !Declare variables
+   integer, parameter :: m = 3, n = 3
+   integer, pointer :: p(:)=>null(), q(:,:)=>null()
+   integer, allocatable, target :: A(:,:)
+   integer :: istat = 0, i, j
+   character(80) :: fmt
+
+!  Write format string for matrices
+!  (/ A / A, " = [", 3( "[",3(i2, 1x), "]" / 5x), "]" )
+   write (fmt, '("(/ A / A, "" = ["", ", i0, "( ""["",", i0, "(i2, 1x), ""]"" / 5x), ""]"" )")') m, n
+ 
+   allocate(A(m, n), q(m, n), stat = istat)
+   if (istat /= 0) stop 'Error during allocation of A and q'
+ 
+!  Matrix A is:
+!  A = [[ 1  4  7 ]
+!       [ 2  5  8 ]
+!       [ 3  6  9 ]
+!       ]
+   A = reshape([(i, i = 1, size(A))], shape(A))
+   q = A
+
+   write(*, fmt) "Matrix A is:", "A", ((A(i, j), j = 1, size(A, 2)), i = 1, size(A, 1))
+ 
+!  p will be associated with the first column of A
+   p => A(:, 1)
+ 
+!  This operation on p has a direct effect on matrix A
+   p = p ** 2
+ 
+!  This will end the association between p and the first column of A
+   nullify(p)
+
+!  Matrix A becomes:
+!  A = [[ 1  4  7 ]
+!       [ 4  5  8 ]
+!       [ 9  6  9 ]
+!       ]
+   write(*, fmt) "Matrix A becomes:", "A", ((A(i, j), j = 1, size(A, 2)), i = 1, size(A, 1))
+ 
+!  Perform some array operation
+   q = q + A
+ 
+!  Matrix q becomes:
+!  q = [[ 2  8 14 ]
+!       [ 6 10 16 ]
+!       [12 12 18 ]
+!       ]
+   write(*, fmt) "Matrix q becomes:", "q", ((q(i, j), j = 1, size(A, 2)), i = 1, size(A, 1))
+ 
+!  Use p as an ordinary array
+   allocate (p(1:m*n), stat = istat)
+   if (istat /= 0) stop 'Error during allocation of p'
+ 
+!  Perform some array operation
+   p = reshape(DoSomething(A + A ** 2), shape(p))
+ 
+!  Array operation:
+!      p(1) = 3
+!      p(2) = 21
+!      p(3) = 91
+!      p(4) = 21
+!      p(5) = 31
+!      p(6) = 43
+!      p(7) = 57
+!      p(8) = 73
+!      p(9) = 91
+   write(*, '("Array operation:" / (4x,"p(",i0,") = ",i0))') (i, p(i), i = 1, size(p))
+ 
+   deallocate(A, p, q, stat = istat)
+   if (istat /= 0) stop 'Error during deallocation'
+
+end program Test
+
+/comment= Module programming
+
+/comment= A module is a program unit which contains data definitions, global data, and CONTAINed procedures. Unlike a simple INCLUDE file, a module is an independent program unit that can be compiled separately and linked in its binary form. Once compiled, a module's public contents can be made visible to a calling routine via the USE statement.
+
+/comment= The module mechanism makes the explicit interface of procedures easily available to calling routines. In fact, modern Fortran encourages every SUBROUTINE and FUNCTION to be CONTAINed in a MODULE. This allows the programmer to use the newer argument passing options and allows the compiler to perform full type checking on the interface.
+
+/comment= The following example also illustrates derived types, overloading of operators and generic procedures.
+
+module GlobalModule
+
+!  Reference to a pair of procedures included in a previously compiled
+!  module named PortabilityLibrary
+   use PortabilityLibrary, only: GetLastError, &  ! Generic procedure
+                                 Date             ! Specific procedure
+!  Constants
+   integer, parameter :: dp_k = kind (1.0d0)      ! Double precision kind
+   real, parameter :: zero = (0.)
+   real(dp_k), parameter :: pi = 3.141592653589793_dp_k
+
+!  Variables
+   integer :: n, m, retint
+   logical :: status, retlog
+   character(50) :: AppName
+
+!  Arrays
+   real, allocatable, dimension(:,:,:) :: a, b, c, d
+   complex(dp_k), allocatable, dimension(:) :: z
+
+!  Derived type definitions
+   type ijk
+      integer :: i
+      integer :: j
+      integer :: k
+   end type ijk
+
+   type matrix
+     integer m, n
+     real, allocatable :: a(:,:)  ! Fortran 2003 feature. For Fortran 95, use the pointer attribute instead
+   end type matrix
+
+!  All the variables and procedures from this module can be accessed
+!  by other program units, except for AppName
+   public
+   private :: AppName
+
+!  Generic procedure swap
+   interface swap
+      module procedure swap_integer, swap_real
+   end interface swap
+
+   interface GetLastError  ! This adds a new, additional procedure to the
+                           ! generic procedure GetLastError
+      module procedure GetLastError_GlobalModule
+   end interface GetLastError
+
+!  Operator overloading
+   interface operator(+)
+      module procedure add_ijk
+   end interface
+
+!  Prototype for external procedure
+   interface
+      function gauss_sparse(num_iter, tol, b, A, x, actual_iter) result(tol_max)
+         real ::  tol_max
+         integer, intent(in) :: num_iter
+         real, intent(in) :: tol
+         real, intent(in), dimension(:) :: b, A(:,:)
+         real, intent(inout) :: x(:)
+         integer, optional, intent(out) :: actual_iter
+      end function gauss_sparse
+   end interface
+
+!  Procedures included in the module
+   contains
+
+!  Internal function
+   function add_ijk(ijk_1, ijk_2)
+     type(ijk) add_ijk, ijk_1, ijk_2
+     intent(in) :: ijk_1, ijk_2
+     add_ijk = ijk(ijk_1%i + ijk_2%i, ijk_1%j + ijk_2%j, ijk_1%k + ijk_2%k)
+   end function add_ijk
+
+!  Include external files
+   include 'swap_integer.f90' ! Comments SHOULDN'T be added on include lines
+   include 'swap_real.f90'
+end module GlobalModule
+

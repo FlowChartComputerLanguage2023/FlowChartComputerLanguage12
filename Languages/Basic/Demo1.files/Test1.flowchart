@@ -1,0 +1,184 @@
+/Ignore= /Color=Color Name, Alpha, Red, Green, Blue, Style, StartCap, EndCap
+/Ignore= /datatype=datatypename, Number Of Bytes, Color Name, Color Width, Describtion
+/Ignore= /Name=Symbol Name, options
+/Ignore= /Point = X, Y, {Input/Output...}, Data Type, Name
+/Ignore= /Line=x1, y1, x2, y2, Color
+/Ignore= /FileName=Device:/Path/FileName.Extension
+/Ignore= /language=(Language Name),{case Sensitive Yes,No},{inline comment},{.Extension},{between Statements on one line},{Last character to continue next line},{Characters in variable names besides a-z,A-Z},{[(GoToNextLine)]},{[(CameFromLast)]},{reserved},{reserved}
+/Ignore= /Stroke={}
+/Ignore= /Notes={}
+/Ignore= /Version={}
+/Ignore= /Author={}
+/Ignore= /OpCode={}
+/Ignore= /Path=Name, x1, y1, x2, y2, Data type
+/Ignore= /Use=Name, X, Y, rotation, future dynamic options
+/Ignore= /Constant=name , X, Y, Value
+/Ignore= /programtext= Text {[( replacements)]} text ...
+/Ignore= /Option=number,{on or off}
+/Ignore= /error = Code, name, x1, y1, Name , {other things maybe}
+/Ignore= /Delete ...
+/Ignore= /ThisCode added to /path or /constant 
+/Ignore= /Keyword=ReservedWord  {,only one word, no spaces allowed currently}
+/Ignore= /Operator=Operator  {,only one operator ie: +, no space allowed currently}
+/Ignore= /Function=FunctionWord  ,only one function name no (), {}, [] etc ,
+/Ignore= /programtext= Text {[( replacements)]} text ...
+/Ignore= /Syntax={keyword,special characters,{[(variables)]} for variables ,quote marks , between each one   ect...
+/keyword=And
+/keyword=As
+/keyword=Base
+/keyword=Basic
+/keyword=Boolean
+/keyword=Byte
+/keyword=Call
+/keyword=Case
+/keyword=Currency
+/keyword=Declare
+/keyword=Dim
+/keyword=Do
+/keyword=Double
+/keyword=Each
+/keyword=Else
+/keyword=ElseIf
+/keyword=End
+/keyword=Enum
+/keyword=Erase
+/keyword=Error
+/keyword=Exit
+/keyword=False
+/keyword=For
+/keyword=Function
+/keyword=Get
+/keyword=Global
+/keyword=GoTo
+/keyword=If
+/keyword=Integer
+/keyword=Is
+/keyword=LBound
+/keyword=Let
+/keyword=Lib
+/keyword=Like
+/keyword=Long
+/keyword=Loop
+/keyword=LSet
+/keyword=Mod
+/keyword=Next
+/keyword=Not
+/keyword=Nothing
+/keyword=Null
+/keyword=On
+/keyword=Or
+/keyword=Property
+/keyword=Public
+/keyword=ReDim
+/keyword=Rem
+/keyword=REMARK
+/keyword=Resume
+/keyword=Return
+/keyword=RSet
+/keyword=Select
+/keyword=Set
+/keyword=Single
+/keyword=Static
+/keyword=Step
+/keyword=Stop
+/keyword=String
+/keyword=Sub
+/keyword=Then
+/keyword=To
+/keyword=True
+/keyword=Type
+/keyword=UBound
+/keyword=Until
+/keyword=Wend
+/keyword=While
+/keyword=With
+/keyword=xor
+/keyword=zzzKeywords
+/operator=-
+/operator=!
+/operator=&
+/operator=(
+/operator=)
+/operator=*
+/operator=,
+/operator=/
+/operator=[
+/operator=]
+/operator=^
+/operator=+
+/operator=<
+/operator=<=
+/operator=<>
+/operator==
+/operator=>
+/operator=>=
+/operator=zzzOperators
+/Function=abs
+/Function=Acos
+/Function=Acosh
+/Function=Asc
+/Function=AscW
+/Function=Asin
+/Function=Asinh
+/Function=Atan
+/Function=Atan2
+/Function=Atanh
+/Function=atn
+/Function=BigMul
+/Function=BitDecrement
+/Function=BitIncrement
+/Function=CBool
+/Function=Cbrt
+/Function=CByte
+/Function=CChar
+/Function=CDate
+/Function=CDbl
+/Function=CDec
+/Function=Ceiling
+/Function=Chr
+/Function=ChrW
+/Function=CInt
+/Function=Clamp
+/Function=CLng
+/Function=CObj
+/Function=CopySign
+/Function=cos
+/Function=Cosh
+/Function=CSByte
+/Function=CShort
+/Function=CSng
+/Function=CStr
+/Function=CType
+/Function=CUInt
+/Function=CULng
+/Function=CUShort
+/Function=DivRem
+/Function=exp
+/Function=Filter
+/Function=Floor
+/Function=Format
+/Function=FormatCurrency
+/Function=FormatDateTime
+/Function=FormatNumber
+/Function=FormatPercent
+/Function=FusedMultiplyAdd
+/Function=Hex
+/Function=IEEERemainder
+/Function=ILogB
+/Function=InStr
+/Function=InStrRev
+/Function=int
+/Function=Join
+/Function=LCase
+/Function=Left
+/Function=Len
+/Function=log
+/Function=Log10
+/Function=Log2
+/Function=lower
+/Function=LTrim
+/Function=Max
+/Function=MaxMagnitude
+/Function=Mid
+/Function=Min
+/Functi

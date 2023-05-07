@@ -1,0 +1,38 @@
+https://exercism.io/tracks/r/exercises/tournament/solutions/517bfe01c1314ecd910859199c6ca614
+
+
+
+library(dplyr)
+library(tidyr)
+library(purrr)
+
+
+# Happy flow (without data cleaning)
+tournament <- function(input) {
+  lines <- strsplit(input, ";")
+
+  input_df <- map_df(lines, function(line) {
+    tibble(team1 = line[1], team2 = line[2], result1 = line[3])
+  })
+
+  long_df <- bind_rows(
+    select(input_df, team = team1, result = result1),
+    transmute(
+      input_df,
+      team = team2,
+      result = recode(result1, win = "loss", draw = "draw", loss = "win"))
+  )
+
+  long_df %>%
+    count(team, result) %>%
+    spread(result, n, fill = 0) %>%
+    transmute(
+      Team = team,
+      MP = draw + loss + win,
+      W = win,
+      D = draw,
+      L = loss,
+      P = 3 * win + draw
+    ) %>%
+    arrange(desc(P), Team)
+}

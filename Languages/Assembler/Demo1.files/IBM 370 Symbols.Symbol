@@ -1,0 +1,1120 @@
+/name=A
+/Code= A Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=A.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=AH
+/Code= AH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=AH.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=AL
+/Code= AL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=AL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=AL
+/Code= ALR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=AL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=AP
+/Code= AP Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=AP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=AR
+/Code= AR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=AR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=B
+/Code= B *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=B.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=B
+/Code= B Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=B.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BA
+/Code= BAL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BA
+/Code= BALR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BA
+/Code= BAS Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BA
+/Code= BASR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BC
+/Code= BC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BC
+/Code= BCR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BC
+/Code= BCT Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BC
+/Code= BCTR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BC
+/Code= BCTR Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BE
+/Code= BE Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BE.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BN
+/Code= BNE Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BN
+/Code= BNH Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BN
+/Code= BNL Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BR
+/Code= BR Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BX
+/Code= BXH Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BX.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=BX
+/Code= BXLE Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=BX.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=C
+/Code= C Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=C.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CD
+/Code= CDS Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CD.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CH
+/Code= CH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CH.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CLC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CLCL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CLI Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CLM Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CL
+/Code= CLR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CP
+/Code= CP Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CR
+/Code= CR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CS
+/Code= CS Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CS.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CV
+/Code= CVB Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=CV
+/Code= CVD Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=CV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=D
+/Code= D Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=D.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ED
+/Code= ED Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ED.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ED
+/Code= EDMK Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ED.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=EN
+/Code= END *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=EN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=EX
+/Code= EX Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=EX.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=IC
+/Code= IC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=IC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=IC
+/Code= ICM Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=IC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=L
+/Code= L Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=L.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LA
+/Code= LA Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LA
+/Code= LA Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LC
+/Code= LCR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LH
+/Code= LH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LH.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LM
+/Code= LM Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LM.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LN
+/Code= LNR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LP
+/Code= LPR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LR
+/Code= LR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LT
+/Code= LTORG *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LT.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=LT
+/Code= LTR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=LT.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=M
+/Code= M Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=M.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MH
+/Code= MH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MH.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MP
+/Code= MP Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MR
+/Code= MR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVCIN Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVCL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVI Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVN Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVO Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=MV
+/Code= MVZ Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=MV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=N
+/Code= N Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=N.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=NC
+/Code= NC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=NC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=NI
+/Code= NI Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=NI.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=NO
+/Code= NOP *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=NO.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=NO
+/Code= NOP Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=NO.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=NR
+/Code= NR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=NR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=O
+/Code= O Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=O.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=OC
+/Code= OC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=OC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=OI
+/Code= OI Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=OI.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=OR
+/Code= OR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=OR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=PA
+/Code= PACK Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=PA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=S
+/Code= S Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=S.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SH
+/Code= SH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SH.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SLA Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SLDA Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SLDL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SLL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SL
+/Code= SLR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SL.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SP
+/Code= SP Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SP
+/Code= SPM Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SP.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SRA Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SRDA Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SRDL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SRL Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SR
+/Code= SRP Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= ST Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= STC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= STCK Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= STCM Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= STH Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ST
+/Code= STM Variable , Variable, Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ST.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=SV
+/Code= SVC Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=SV.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=TM
+/Code= TM Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=TM.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=TR
+/Code= TR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=TR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=TR
+/Code= TRT Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=TR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=UN
+/Code= UNPK Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=UN.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=US
+/Code= USING Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=US.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=WT
+/Code= WTO Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=WT.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=X
+/Code= X Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=X.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=XC
+/Code= XC Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=XC.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=XI
+/Code= XI Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=XI.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=XR
+/Code= XR Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=XR.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+
+/name=ZA
+/Code= ZAP Variable , Variable *Comment
+/point = 0 , -250 , Input , Logic ,CameFrom
+/point = 0 , 250 , Input , Logic ,Goto
+/filename=ZA.symbol
+/point=-250,0,Input,Reg_Memory,Input1
+/point=250,0,Output,Reg_Memory,Input2
+/point=250,250,both,Reg_Memory,Input3
+
+

@@ -1,0 +1,164 @@
+https://exercism.io/tracks/scheme/exercises/forth/solutions/ef60e31a698142d3b9c1969132b7df6d
+
+
+(define stack '())
+(define break)
+
+(define push (lambda (n) (set! stack (cons n stack))))
+(define pop
+  (lambda ()
+    (let ((v (car stack)))
+      (set! stack (cdr stack)) v)))
+
+(define stack->string
+  (lambda ()
+    (string-append "[ "
+                   (let loop ((s stack))
+                     (if (null? s)
+                         ""
+                         (string-append (number->string (car s))
+                                        " "
+                                        (loop (cdr s)))))
+                   "]")))
+
+(define stack-size>? (lambda (n) (< (length stack) n)))
+
+(define error-stack-underflow
+  (lambda (op)
+    (string-append "Uh, I cannot " (symbol->string op)
+                   " on " (stack->string) "...")))
+
+(define rithmatic
+  (lambda (op)
+    (if (stack-size>? 2)
+        (break (error-stack-underflow op))
+        (let ((n2 (pop)) (n1 (pop)))
+          (if (and (eq? op '/)
+                   (zero? n2))
+              (break
+                (begin (push n1) (push n2)
+                       "Trust me, you really do not want to divide by zero."))
+              (push (truncate ((eval op) n1 n2))))))))
+
+(define add (lambda () (rithmatic '+)))
+(define sub (lambda () (rithmatic '-)))
+(define mul (lambda () (rithmatic '*)))
+(define div (lambda () (rithmatic '/)))
+
+(define stack-op
+  (lambda (op fn args)
+    (if (stack-size>? args)
+        (break (string-append "If you think I will "
+                              op " on " (stack->string)
+                              ", you are nuts."))
+        (fn))))
+
+(define dup
+  (lambda ()
+    (stack-op "dup"
+             (lambda ()
+               (set! stack (cons (car stack) stack)))
+             1)))
+
+(define drop
+  (lambda ()
+    (stack-op "drop"
+              (lambda ()
+                (set! stack (cdr stack)))
+              1)))
+
+(define swap
+  (lambda ()
+    (stack-op "swap"
+              (lambda ()
+                (let ((n1 (pop)) (n2 (pop))) (push n1) (push n2)))
+              2)))
+
+(define over
+  (lambda ()
+    (stack-op "over"
+              (lambda ()
+                (push (cadr stack)))
+              2)))
+
+(define compile
+  (lambda (los dictionary)
+    (cond
+      ((null? los)
+       (break "Define word is missing."))
+      ((string->number (car los))
+       (break "You would dare to use a number as a word?"))
+      ((string=? (car los) ";")
+       (break "Use a semi-colon as a word? Yeah, I don't think so."))
+      (else
+        (let ((word (car los)))
+          (let loop ((cs (cdr los)) (cmds '()))
+            (cond
+              ((null? cs)
+               (break "Need a semi-colon over here, stat!"))
+              ((string=? (car cs) ":")
+               (break "Slow down! Finish the other word before defining a new one."))
+              ((string=? (car cs) ";")
+               (if (null? cmds)
+                   (break "You defined a word. What do you want it to mean?")
+                   (execution (cdr cs)
+                              (cons (cons word (reverse cmds)) dictionary))))
+              (else
+                (loop (cdr cs) (cons (car cs) cmds))))))))))
+
+(define base-dictionary
+  `(("+" . (,add))
+    ("-" . (,sub))
+    ("*" . (,mul))
+    ("/" . (,div))
+    ("dup" . (,dup))
+    ("drop" . (,drop))
+    ("swap" . (,swap))
+    ("over" . (,over))))
+
+(define tokenize
+  (lambda (loc)
+    (let loop ((cs loc) (acc '()))
+      (cond
+        ((null? cs)
+         (if (null? acc)
+             '()
+             (list (list->string (reverse acc)))))
+        ((not (char-whitespace? (car cs)))
+         (loop (cdr cs) (cons (char-downcase (car cs)) acc)))
+        (else
+          (if (null? acc)
+              (loop (cdr cs) '())
+              (cons (list->string (reverse acc))
+                    (loop (cdr cs) '()))))))))
+
+(define execution
+  (lambda (los dictionary)
+    (cond
+      ((null? los) stack)
+      ((procedure? (car los))
+       ((car los))
+       (execution (cdr los) dictionary))
+      ((integer? (string->number (car los)))
+       (push (string->number (car los)))
+       (execution (cdr los) dictionary))
+      ((assoc (car los) dictionary)
+       (execution (cdr (assoc (car los) dictionary))
+                  (cdr (member (assoc (car los) dictionary) dictionary)))
+       (execution (cdr los) dictionary))
+      ((string=? (car los) ":")
+       (compile (cdr los) dictionary))
+      (else
+        (break (string-append (car los)
+                              "? What am I supposed to do with that?"))))))
+
+(define forth
+  (lambda (program)
+    (call/cc
+      (lambda (cont)
+        (set! break cont)
+        (execution
+          (apply append
+                 (map tokenize
+                      (map string->list program)))
+                  base-dictionary)))))

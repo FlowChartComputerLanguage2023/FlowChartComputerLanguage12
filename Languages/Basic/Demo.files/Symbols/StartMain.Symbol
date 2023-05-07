@@ -1,0 +1,16 @@
+/name=Start
+/Author=SEH
+/version=1
+/filename = StartMain.symbol
+/stroke=ABCDEFGHIJKLMNOP
+/programtext= Goto [GotoNextLine.Pathname]
+/syntax= GoTo,{[(number)]},
+/notes=none
+/opcode=
+/line = -250,250,250,250,Cyan
+/line = -250,-250,-250,250,Crimson
+/line = 250,-250,-250,-250,Cornsilk
+/line = 250,250,250,-250,CornflowerBlue
+/line = -250,250,250,-250,Coral
+/line = 250,250,-250,-250,Chocolate
+/point = -50 , 250 , Output , Logic , GotoNextLine

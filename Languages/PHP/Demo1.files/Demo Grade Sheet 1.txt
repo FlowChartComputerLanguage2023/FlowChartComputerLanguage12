@@ -1,0 +1,32 @@
+<?php
+class School
+{
+    public function __construct()
+    {
+        $this->grades = array();
+    }
+
+    public function add(String $name, int $grade)
+    {
+        if (isset($this->grades[$grade]))
+            array_push($this->grades[$grade], $name);
+        else
+            $this->grades[$grade] = array($name);
+    }
+
+    public function grade(int $grade)
+    {
+        if (isset($this->grades[$grade]))
+            return $this->grades[$grade];
+        else
+            return array();
+    }
+
+    public function studentsByGradeAlphabetical()
+    {
+        asort($this->grades);
+        foreach (array_keys($this->grades) as $key)
+            sort($this->grades[$key]);
+        return $this->grades;
+    }
+}

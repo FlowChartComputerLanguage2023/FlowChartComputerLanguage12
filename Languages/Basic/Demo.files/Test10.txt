@@ -1,0 +1,293 @@
+/Ignore= /Color=Color Name, Alpha, Red, Green, Blue, Style, StartCap, EndCap, ,;'Comment,1
+/Ignore= /datatype=datatypename, Number Of Bytes, Color Name, Color Width, Describtion, ,;'Comment,2
+/Ignore= /Name=Symbol Name, options, ,;'Comment,3
+/Ignore= /Point = X, Y, {Input/Output...}, Data Type, Name, ,;'Comment,4
+/Ignore= /Line=x1, y1, x2, y2, Color, ,;'Comment,5
+/Ignore= /FileName=Device:/Path/FileName.Extension, ,;'Comment,6
+/Ignore= /language=(Language Name),{case Sensitive Yes,No},{inline comment},{.Extension},{between Statements on one line},{Last character to continue next line},{Characters in variable names besides a-z,A-Z},{[(GoToNextLine)]},{[(CameFromLast)]},{reserved},{reserved}, ,;'Comment,7
+/Ignore= /Stroke={}, ,;'Comment,8
+/Ignore= /Notes={}, ,;'Comment,9
+/Ignore= /Version={}, ,;'Comment,10
+/Ignore= /Author={}, ,;'Comment,11
+/Ignore= /OpCode={}, ,;'Comment,12
+/Ignore= /Path=Name, x1, y1, x2, y2, Data type, ,;'Comment,13
+/Ignore= /Use=Name, X, Y, rotation, future dynamic options, ,;'Comment,14
+/Ignore= /Constant=name , X, Y, Value, ,;'Comment,15
+/Ignore= /programtext= Text {[( replacements)]} text ..., ,;'Comment,16
+/Ignore= /Option=number,{on or off}, ,;'Comment,17
+/Ignore= /error = Code, name, x1, y1, Name , {other things maybe}, ,;'Comment,18
+/Ignore= /Delete ..., ,;'Comment,19
+/Ignore= /ThisCode added to /path or /constant , ,;'Comment,20
+/Ignore= /Keyword=ReservedWord  {,only one word, no spaces allowed currently}, ,;'Comment,21
+/Ignore= /Operator=Operator  {,only one operator ie: +, no space allowed currently}, ,;'Comment,22
+/Ignore= /Function=FunctionWord  ,only one function name no (), {}, [] etc ,, ,;'Comment,23
+/Ignore= /programtext= Text {[( replacements)]} text ..., ,;'Comment,24
+/Ignore= /Syntax={keyword,special characters,{[(variables)]} for variables ,quote marks , between each one   ect..., ,;'Comment,25
+/Option=1008,off, ,;'Comment,26
+/Option=1009,off, ,;'Comment,27
+/Option=1010,off, ,;'Comment,28
+/Option=1011,off, ,;'Comment,29
+/Option=1012,off, ,;'Comment,30
+/Option=1013,off, ,;'Comment,31
+/Option=1014,off, ,;'Comment,32
+/Option=1015,off, ,;'Comment,33
+/Option=1032,off, ,;'Comment,34
+/Option=1033,off, ,;'Comment,35
+/Option=1034,off, ,;'Comment,36
+/Option=1035,off, ,;'Comment,37
+/Option=1036,off, ,;'Comment,38
+/Option=1037,off, ,;'Comment,39
+/Option=1038,off, ,;'Comment,40
+/Option=1039,off, ,;'Comment,41
+/Option=1136,off, ,;'Comment,42
+/Option=1137,off, ,;'Comment,43
+/Option=1138,off, ,;'Comment,44
+/Option=1139,off, ,;'Comment,45
+/Option=1140,off, ,;'Comment,46
+/Option=1141,off, ,;'Comment,47
+/Option=1142,off, ,;'Comment,48
+/Option=1143,off, ,;'Comment,49
+/Option=1248,off, ,;'Comment,50
+/Option=1249,off, ,;'Comment,51
+/Option=1250,off, ,;'Comment,52
+/Option=1251,off, ,;'Comment,53
+/Option=1252,off, ,;'Comment,54
+/Option=1253,off, ,;'Comment,55
+/Option=1254,off, ,;'Comment,56
+/Option=1255,off, ,;'Comment,57
+/Option=1288,off, ,;'Comment,58
+/Option=1289,off, ,;'Comment,59
+/Option=1290,off, ,;'Comment,60
+/Option=1291,off, ,;'Comment,61
+/Option=1292,off, ,;'Comment,62
+/Option=1293,off, ,;'Comment,63
+/Option=1294,off, ,;'Comment,64
+/Option=1295,off, ,;'Comment,65
+/keyword=zzzzzzzzzKeywords, ,;'Comment,66
+/operator=zzzzzzzzzOperators, ,;'Comment,67
+/Function=zzzzzzzzzFunctions, ,;'Comment,68
+/color = AliceBlue,255,240,248,255,2,Triangle,RoundAnchor, ,;'Comment,69
+/color = AntiqueWhite,255,250,235,215,4,RoundAnchor,ArrowAnchor, ,;'Comment,70
+/color = aqua,255,1,255,255,0,Round,Round, ,;'Comment,71
+/color = aquamarine,255,127,255,212,2,Round,NoAnchor, ,;'Comment,72
+/color = Azure,255,240,255,255,4,Flat,NoAnchor, ,;'Comment,73
+/color = beige,255,245,245,220,3,Flat,Square, ,;'Comment,74
+/color = bisque,255,255,228,196,2,DiamondAnchor,SquareAnchor, ,;'Comment,75
+/color = Black,255,1,1,1,0,Round,Round, ,;'Comment,76
+/color = BlanchedAlmond,255,255,235,205,1,DiamondAnchor,Triangle, ,;'Comment,77
+/color = Blue,255,1,1,255,0,Round,Round, ,;'Comment,78
+/color = BlueViolet,255,138,43,226,2,Triangle,SquareAnchor, ,;'Comment,79
+/color = Brown,255,165,42,42,1,NoAnchor,Flat, ,;'Comment,80
+/color = BurlyWood,255,222,184,135,2,NoAnchor,NoAnchor, ,;'Comment,81
+/color = CadetBlue,255,95,158,160,4,NoAnchor,Flat, ,;'Comment,82
+/color = Chartreuse,255,127,255,1,1,DiamondAnchor,Round, ,;'Comment,83
+/color = Chocolate,255,210,105,30,2,NoAnchor,Square, ,;'Comment,84
+/color = Coral,255,255,127,80,4,NoAnchor,Flat, ,;'Comment,85
+/color = CornflowerBlue,255,100,149,237,3,RoundAnchor,SquareAnchor, ,;'Comment,86
+/color = Cornsilk,255,255,248,220,2,RoundAnchor,NoAnchor, ,;'Comment,87
+/color = Crimson,255,220,20,60,4,Round,NoAnchor, ,;'Comment,88
+/color = Cyan,255,1,255,255,0,Round,Round, ,;'Comment,89
+/color = DarkBlue,255,1,1,139,3,Flat,SquareAnchor, ,;'Comment,90
+/color = DarkCyan,255,1,139,139,2,Round,Flat, ,;'Comment,91
+/color = DarkGoldenrod,255,184,134,11,4,Square,NoAnchor, ,;'Comment,92
+/color = DarkGray,255,169,169,169,1,Square,Flat, ,;'Comment,93
+/color = DarkGreen,255,1,100,1,3,Triangle,NoAnchor, ,;'Comment,94
+/color = DarkKhaki,255,189,183,107,2,NoAnchor,SquareAnchor, ,;'Comment,95
+/color = DarkMagenta,255,139,1,139,4,RoundAnchor,DiamondAnchor, ,;'Comment,96
+/color = DarkOliveGreen,255,85,107,47,1,DiamondAnchor,RoundAnchor, ,;'Comment,97
+/color = DarkOrange,255,255,140,1,3,Triangle,RoundAnchor, ,;'Comment,98
+/color = DarkOrchid,255,153,50,204,2,NoAnchor,Round, ,;'Comment,99
+/color = DarkRed,255,139,1,1,4,DiamondAnchor,Round, ,;'Comment,100
+/color = DarkSalmon,255,233,150,122,3,Square,Square, ,;'Comment,101
+/color = DarkSeaGreen,255,143,188,139,2,Flat,SquareAnchor, ,;'Comment,102
+/color = DarkSlateBlue,255,72,61,139,4,NoAnchor,DiamondAnchor, ,;'Comment,103
+/color = DarkSlateGray,255,47,79,79,1,Square,Triangle, ,;'Comment,104
+/color = DarkTurquoise,255,1,206,209,3,Square,Square, ,;'Comment,105
+/color = DarkViolet,255,148,1,211,2,Triangle,DiamondAnchor, ,;'Comment,106
+/color = DataTypeError,255,255,1,1,2,Triangle,DiamondAnchor, ,;'Comment,107
+/color = DeepPink,255,255,20,147,4,Square,Flat, ,;'Comment,108
+/color = DeepSkyBlue,255,1,191,255,1,NoAnchor,Flat, ,;'Comment,109
+/color = DimGray,255,105,105,105,3,NoAnchor,Square, ,;'Comment,110
+/color = DodgerBlue,255,30,144,255,2,Triangle,ArrowAnchor, ,;'Comment,111
+/color = Firebrick,255,178,34,34,4,Round,Triangle, ,;'Comment,112
+/color = FloralWhite,255,255,250,240,1,Triangle,Flat, ,;'Comment,113
+/color = ForestGreen,255,34,139,34,3,NoAnchor,Triangle, ,;'Comment,114
+/color = Fuchsia,255,255,1,255,2,SquareAnchor,Round, ,;'Comment,115
+/color = Gainsboro,255,220,220,220,1,Round,ArrowAnchor, ,;'Comment,116
+/color = GhostWhite,255,248,248,255,3,NoAnchor,SquareAnchor, ,;'Comment,117
+/color = Gold,255,255,215,1,0,Round,Round, ,;'Comment,118
+/color = Goldenrod,255,218,165,32,4,NoAnchor,SquareAnchor, ,;'Comment,119
+/color = Gray,255,128,128,128,0,Round,Round, ,;'Comment,120
+/color = Green,255,1,128,1,0,Round,Round, ,;'Comment,121
+/color = GreenYellow,255,173,255,47,4,NoAnchor,NoAnchor, ,;'Comment,122
+/color = Honeydew,255,240,255,240,1,ArrowAnchor,NoAnchor, ,;'Comment,123
+/color = HotPink,255,255,105,180,3,SquareAnchor,NoAnchor, ,;'Comment,124
+/color = IndianRed,255,205,92,92,4,Triangle,NoAnchor, ,;'Comment,125
+/color = Indigo,255,75,1,130,1,ArrowAnchor,NoAnchor, ,;'Comment,126
+/color = Ivory,255,255,255,240,0,Round,Round, ,;'Comment,127
+/color = Khaki,255,240,230,140,2,Flat,Round, ,;'Comment,128
+/color = Lavender,255,230,230,250,4,RoundAnchor,SquareAnchor, ,;'Comment,129
+/color = LavenderBlush,255,255,240,245,1,RoundAnchor,ArrowAnchor, ,;'Comment,130
+/color = LawnGreen,255,124,252,1,3,SquareAnchor,ArrowAnchor, ,;'Comment,131
+/color = LemonChiffon,255,255,250,205,4,Triangle,RoundAnchor, ,;'Comment,132
+/color = LightBlue,255,173,216,230,2,NoAnchor,Flat, ,;'Comment,133
+/color = LightCoral,255,240,128,128,4,Flat,NoAnchor, ,;'Comment,134
+/color = LightCyan,255,224,255,255,1,Flat,Round, ,;'Comment,135
+/color = LightGoldenrodYellow,255,250,250,210,3,Triangle,Square, ,;'Comment,136
+/color = LightGray,255,211,211,211,2,RoundAnchor,Square, ,;'Comment,137
+/color = LightGreen,255,144,238,144,4,Triangle,Round, ,;'Comment,138
+/color = LightPink,255,255,182,193,1,SquareAnchor,NoAnchor, ,;'Comment,139
+/color = LightSalmon,255,255,160,122,3,Triangle,SquareAnchor, ,;'Comment,140
+/color = LightSeaGreen,255,32,178,170,2,ArrowAnchor,Flat, ,;'Comment,141
+/color = LightSkyBlue,255,135,206,250,4,Triangle,NoAnchor, ,;'Comment,142
+/color = LightSlateGray,255,119,136,153,3,DiamondAnchor,RoundAnchor, ,;'Comment,143
+/color = LightSteelBlue,255,176,196,222,2,RoundAnchor,SquareAnchor, ,;'Comment,144
+/color = LightYellow,255,255,255,224,4,ArrowAnchor,NoAnchor, ,;'Comment,145
+/color = Lime,255,1,255,1,1,ArrowAnchor,Round, ,;'Comment,146
+/color = LimeGreen,255,50,205,50,3,Flat,Round, ,;'Comment,147
+/color = Linen,255,250,240,230,2,Round,Triangle, ,;'Comment,148
+/color = Magenta,255,255,1,255,4,NoAnchor,Triangle, ,;'Comment,149
+/color = Maroon,255,128,1,1,3,Triangle,ArrowAnchor, ,;'Comment,150
+/color = MediumAquamarine,255,102,205,170,1,SquareAnchor,Square, ,;'Comment,151
+/color = MediumBlue,255,1,1,205,3,NoAnchor,Round, ,;'Comment,152
+/color = MediumOrchid,255,186,85,211,2,ArrowAnchor,Round, ,;'Comment,153
+/color = MediumPurple,255,147,112,219,4,Square,RoundAnchor, ,;'Comment,154
+/color = MediumSeaGreen,255,60,179,113,1,Triangle,NoAnchor, ,;'Comment,155
+/color = MediumSlateBlue,255,123,104,238,3,SquareAnchor,Flat, ,;'Comment,156
+/color = MediumSpringGreen,255,1,250,154,4,Triangle,Triangle, ,;'Comment,157
+/color = MediumTurquoise,255,72,209,204,1,Flat,Triangle, ,;'Comment,158
+/color = MediumVioletRed,255,199,21,133,3,NoAnchor,Round, ,;'Comment,159
+/color = MidnightBlue,255,25,25,112,2,RoundAnchor,Square, ,;'Comment,160
+/color = MintCream,255,245,255,250,4,RoundAnchor,DiamondAnchor, ,;'Comment,161
+/color = MistyRose,255,255,228,225,1,ArrowAnchor,NoAnchor, ,;'Comment,162
+/color = Moccasin,255,255,228,181,3,Square,DiamondAnchor, ,;'Comment,163
+/color = NavajoWhite,255,255,222,173,2,SquareAnchor,NoAnchor, ,;'Comment,164
+/color = Navy,255,1,1,128,0,Round,Round, ,;'Comment,165
+/color = OldLace,255,253,245,230,1,NoAnchor,SquareAnchor, ,;'Comment,166
+/color = Olive,255,128,128,1,3,Round,DiamondAnchor, ,;'Comment,167
+/color = OliveDrab,255,107,142,35,4,NoAnchor,Square, ,;'Comment,168
+/color = Orange,255,255,165,1,0,Round,Round, ,;'Comment,169
+/color = OrangeRed,255,255,69,1,3,SquareAnchor,NoAnchor, ,;'Comment,170
+/color = Orchid,255,218,112,214,2,Round,RoundAnchor, ,;'Comment,171
+/color = PaleGoldenrod,255,238,232,170,1,SquareAnchor,SquareAnchor, ,;'Comment,172
+/color = PaleGreen,255,152,251,152,3,RoundAnchor,DiamondAnchor, ,;'Comment,173
+/color = PaleTurquoise,255,175,238,238,2,SquareAnchor,Triangle, ,;'Comment,174
+/color = PaleVioletRed,255,219,112,147,4,ArrowAnchor,Square, ,;'Comment,175
+/color = PapayaWhip,255,255,239,213,1,ArrowAnchor,Flat, ,;'Comment,176
+/color = PeachPuff,255,255,218,185,3,Triangle,Round, ,;'Comment,177
+/color = Peru,255,205,133,63,2,Triangle,Round, ,;'Comment,178
+/color = Pink,255,255,192,203,0,Round,Round, ,;'Comment,179
+/color = Plum,255,221,160,221,1,DiamondAnchor,Round, ,;'Comment,180
+/color = PowderBlue,255,176,224,230,2,Round,Square, ,;'Comment,181
+/color = Purple,255,128,1,128,0,Round,Round, ,;'Comment,182
+/color = Red,255,255,1,1,0,Round,Round, ,;'Comment,183
+/color = RosyBrown,255,188,143,143,4,SquareAnchor,NoAnchor, ,;'Comment,184
+/color = RoyalBlue,255,65,105,225,1,SquareAnchor,DiamondAnchor, ,;'Comment,185
+/color = SaddleBrown,255,139,69,19,2,RoundAnchor,Triangle, ,;'Comment,186
+/color = Salmon,255,250,128,114,4,RoundAnchor,ArrowAnchor, ,;'Comment,187
+/color = SandyBrown,255,244,164,96,1,RoundAnchor,Round, ,;'Comment,188
+/color = SeaGreen,255,46,139,87,0,Round,Round, ,;'Comment,189
+/color = SeaShell,255,255,245,238,2,Round,SquareAnchor, ,;'Comment,190
+/color = Sienna,255,160,82,45,4,DiamondAnchor,SquareAnchor, ,;'Comment,191
+/color = Silver,255,192,192,192,1,DiamondAnchor,NoAnchor, ,;'Comment,192
+/color = SkyBlue,255,135,206,235,3,Square,NoAnchor, ,;'Comment,193
+/color = SlateBlue,255,106,90,205,4,ArrowAnchor,RoundAnchor, ,;'Comment,194
+/color = SlateGray,255,112,128,144,1,Triangle,Square, ,;'Comment,195
+/color = Snow,255,255,250,250,3,Flat,ArrowAnchor, ,;'Comment,196
+/color = SpringGreen,255,1,255,127,2,NoAnchor,Triangle, ,;'Comment,197
+/color = SteelBlue,255,70,130,180,4,NoAnchor,Triangle, ,;'Comment,198
+/color = Tan,255,210,180,140,0,Round,Round, ,;'Comment,199
+/color = Teal,255,1,128,128,0,Round,Round, ,;'Comment,200
+/color = Thistle,255,216,191,216,2,NoAnchor,RoundAnchor, ,;'Comment,201
+/color = Tomato,255,255,99,71,4,Round,DiamondAnchor, ,;'Comment,202
+/color = Transparent,1,1,1,1,0,NoAnchor,NoAnchor, ,;'Comment,203
+/color = Turquoise,255,64,224,208,1,ArrowAnchor,SquareAnchor, ,;'Comment,204
+/color = Violet,255,238,130,238,0,Round,Round, ,;'Comment,205
+/color = Wheat,255,245,222,179,2,SquareAnchor,DiamondAnchor, ,;'Comment,206
+/color = White,255,255,255,255,0,Round,Round, ,;'Comment,207
+/color = WhiteSmoke,255,245,245,245,1,NoAnchor,SquareAnchor, ,;'Comment,208
+/color = Yellow,255,255,255,1,0,Round,Round, ,;'Comment,209
+/datatype = Bit,1,Blue,3,A Single On/off, ,;'Comment,210
+/datatype = Byte,8,MistyRose,4,A Byte (8 bits), ,;'Comment,211
+/datatype = erase,1,Orange,1,Logic Path For Errors, ,;'Comment,212
+/datatype = errored,1,Red,1,Logic Path For Errors, ,;'Comment,213
+/datatype = Floating,8,DodgerBlue,8,A floating-point variable WinDef, ,;'Comment,214
+/datatype = Int16,2,aquamarine,2,A 16-bit Or 2 bytes signed Integer BaseTsd, ,;'Comment,215
+/datatype = Int32,4,aqua,4,A 32-bit Or 4 bytes signed Integer -2147483648 through 2147483647 BaseTsd, ,;'Comment,216
+/datatype = Int64,8,Red,8,A 64-bit Or 8 bytes signed Integer ?+/- 9223372036854775807, ,;'Comment,217
+/datatype = INT8,1,Orange,2,An 8-bit Or 1 Byte signed Integer BaseTsd, ,;'Comment,218
+/datatype = Integer,2,Orange,2,An 16-bit Or 2 Byte signed Integer, ,;'Comment,219
+/datatype = logic,1,Black,3,Logic Path, ,;'Comment,220
+/datatype = Long,4,CadetBlue,4,4 bytes – 32 bits, ,;'Comment,221
+/datatype = Word,2,BlueViolet,2,2 bytes - 16 Bits, ,;'Comment,222
+/name=Start, ,;'Comment,223
+/Author = FlowChart Program, ,;'Comment,224
+/version = 0.1, ,;'Comment,225
+/filename = Internal, ,;'Comment,226
+/stroke = ABCDEFGHIJKLMNOP, ,;'Comment,227
+/programtext = GoToNextLine Start, ,;'Comment,228
+/Syntax = 	jmp ,{[(GoToNextLine.PathName)]},	;ReplaceStart, ,;'Comment,229
+/notes = Start of the Program, ,;'Comment,230
+/opcode = jmp main, ,;'Comment,231
+/point = 0 , 250 , both , -1 , GotoNextLine, ,;'Comment,232
+/point = 0 , -225 , both , -1 , CommandLine, ,;'Comment,233
+/error = 0,0 = 0,-1,0,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10001 Symbol does not have a /point CameFrom  Symbol Start, ,;'Comment,234
+/error = -250,0 = 0,-1,0,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,235
+/error = -250,0 = 0,-1,0,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,236
+/error = -250,-100 = 0,-1,-100,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,237
+/error = -250,-100 = 0,-1,-100,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,238
+/error = -250,100 = 0,-1,100,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,239
+/error = -250,100 = 0,-1,100,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,240
+/error = -250,-250 = 0,-1,-250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,241
+/error = -250,-250 = 0,-1,-250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Start, ,;'Comment,242
+/error = 250,-250 = 0,-1,-250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Symbol701101,{e3value} (fehvalue} (653value}-[l34value}, ,;'Comment,243
+/error = 250,-250 = 0,-1,-250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Symbol701101,{e3value} (fehvalue} (653value}-[l34value}, ,;'Comment,244
+/error = -150,250 = 0,-1,250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Symbol701101,{e3value} (fehvalue} (653value}-[l34value}, ,;'Comment,245
+/error = -150,250 = 0,-1,250,Symbol701101,{e3value} (fehvalue} (653value}-[l34value},10013 All /point names are in either the ProgramText or the Syntax  Symbol Program Text Symbol701101,{e3value} (fehvalue} (653value}-[l34value}, ,;'Comment,246
+/line = 250,250,250,-1,Chocolate, ,;'Comment,247
+/line = 250,-250,250,-1,Chartreuse, ,;'Comment,248
+/line = 250,-250,250,-1,CadetBlue, ,;'Comment,249
+/line = 250,250,250,-1,BurlyWood, ,;'Comment,250
+/line = -250,250,250,-1,Brown, ,;'Comment,251
+/line = 250,250,250,-1,BlueViolet, ,;'Comment,252
+/point = -150 , 250 , both , -1 , ComputerLanguageGoToNextLine, ,;'Comment,253
+/point = 250 , -250 , both , -1 , ComputerLanguageGoToNextLine, ,;'Comment,254
+/point = -250 , -250 , both , -1 , ComputerLanguageGoToNextLine, ,;'Comment,255
+/point = -250 , 100 , both , -1 , ComputerLanguageGoToNextLine, ,;'Comment,256
+/point = -250 , -100 , both , -1 , L34_5, ,;'Comment,257
+/point = -250 , 0 , both , -1 , FEH, ,;'Comment,258
+/point = 0 , -250 , both , -1 , ComputerLanguageCameFromLastLine, ,;'Comment,259
+/name=Symbol701101,{e3value} (fehvalue} (653value}-[l34value}, ,;'Comment,260
+/Author = FlowChart Decompile, ,;'Comment,261
+/version = .01, ,;'Comment,262
+/filename = SpecialAlphaSpecialAlphaNumbericSpecialAlphaSpecialNumberSpecialAlphaNumbericSpecialAlphaSpecialAlphaSpecial.symbol, ,;'Comment,263
+/stroke = , ,;'Comment,264
+/programtext = {[(ComputerLanguageCameFromLastLine)]}, ,;'Comment,265
+/programtext = , ,;'Comment,266
+/programtext = , ,;'Comment,267
+/programtext = , ,;'Comment,268
+/programtext = E3 == FEH + 653 - L34, ,;'Comment,269
+/programtext = , ,;'Comment,270
+/programtext = /Finish, ,;'Comment,271
+/programtext = , ,;'Comment,272
+/programtext = {[(ComputerLanguageGoToNextLine)]}`{[(BlueViolet.pathname)]}`{[(BlueViolet.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageGoToNextLine.pathname)]}`{[(ComputerLanguageCameFromLastLine.pathname)]}`{[(L34_5.pathname)]}`{[(ComputerLanguageCameFromLastLine.pathname)]}`{[(FEH.pathname)]}, ,;'Comment,273
+/Syntax = {[(Special)]},{[(Alpha)]},{[(Special)]},{[(AlphaNumberic)]},{[(Special)]},{[(Alpha)]},{[(Special)]},{[(Number)]},{[(Special)]},{[(AlphaNumberic)]},{[(Special)]},{[(Alpha)]},{[(Special)]},{[(Alpha)]},{[(Special)]},, ,;'Comment,274
+/notes = Made with DeCompile, ,;'Comment,275
+/opcode = nop, ,;'Comment,276
+/path=653_4,0,2750,0,500,errored, ,;'Comment,277
+/path=ComputerLanguageCameFromLastLine,0,-250,0,2500,logic, ,;'Comment,278
+/path=ComputerLanguageGoToNextLine,-250,100,2500,1000,logic, ,;'Comment,279
+/path=ComputerLanguageGoToNextLine,-250,-250,-2500,2500,logic, ,;'Comment,280
+/path=ComputerLanguageGoToNextLine,250,-250,2500,2500,logic, ,;'Comment,281
+/path=ComputerLanguageGoToNextLine,-150,250,-1500,2500,logic, ,;'Comment,282
+/path=ComputerLanguageGoToNextLine,2500,750,250,750,errored, ,;'Comment,283
+/path=ComputerLanguageGoToNextLine,2500,0,-250,900,errored, ,;'Comment,284
+/path=ComputerLanguageGoToNextLine,2500,250,250,1150,errored, ,;'Comment,285
+/path=ComputerLanguageGoToNextLine,2500,2500,-250,1600,errored, ,;'Comment,286
+/path=E3_2,0,2500,0,-250,errored, ,;'Comment,287
+/path=FEH,-250,0,2500,0,logic, ,;'Comment,288
+/path=Finish,2500,500,-250,500,errored, ,;'Comment,289
+/path=L34_5,-250,-100,2500,-1000,logic, ,;'Comment,290
+/error = /error,Origin,0,0,0,0,, ,;'Comment,291
+/use=Symbol701101,{e3value} (fehvalue} (653value}-[l34value},0,0,Default,errored,0, ,;'Comment,292
+/use=Symbol701101,{e3value} (fehvalue} (653value}-[l34value},0,0,Default,,0, ,;'Comment,293

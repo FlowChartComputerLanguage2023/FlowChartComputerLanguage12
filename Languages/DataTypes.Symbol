@@ -1,0 +1,13 @@
+/datatype = Bit|1|Blue|3|A Single On/off
+/datatype = Byte|8|MistyRose|4|A Byte (8 bits)
+/datatype = erase|1|Orange|1|Logic Path For Errors
+/datatype = errored|1|Red|1|Logic Path For Errors
+/datatype = Floating|8|DodgerBlue|8|A floating-point variable WinDef
+/datatype = Int16|2|aquamarine|2|A 16-bit Or 2 bytes signed Integer BaseTsd
+/datatype = Int32|4|aqua|4|A 32-bit Or 4 bytes signed Integer -2147483648 through 2147483647 BaseTsd
+/datatype = Int64|8|Red|8|A 64-bit Or 8 bytes signed Integer ?+/- 9223372036854775807
+/datatype = INT8|1|Orange|2|An 8-bit Or 1 Byte signed Integer BaseTsd
+/datatype = Integer|2|Orange|2|An 16-bit Or 2 Byte signed Integer
+/datatype = logic|1|Black|3|Logic Path
+/datatype = Long|4|CadetBlue|4|4 bytes – 32 bits
+/datatype = Word|2|BlueViolet|2|2 bytes - 16 Bits

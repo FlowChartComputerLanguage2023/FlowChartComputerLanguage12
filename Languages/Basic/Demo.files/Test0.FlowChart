@@ -1,0 +1,2536 @@
+/Ignore= /Color=Color Name, Alpha, Red, Green, Blue, Style, StartCap, EndCap
+/Ignore= /datatype=datatypename, Number Of Bytes, Color Name, Color Width, Describtion
+/Ignore= /Name=Symbol Name, options
+/Ignore= /Point = X, Y, {Input/Output...}, Data Type, Name
+/Ignore= /Line=x1, y1, x2, y2, Color
+/Ignore= /FileName=Device:/Path/FileName.Extension
+/Ignore= /language=(Language Name),{case Sensitive Yes,No},{inline comment},{.Extension},{between Statements on one line},{Last character to continue next line},{Characters in variable names besides a-z,A-Z},{[(GoToNextLine)]},{[(CameFromLast)]},{reserved},{reserved}
+/Ignore= /Stroke={}
+/Ignore= /Notes={}
+/Ignore= /Version={}
+/Ignore= /Author={}
+/Ignore= /OpCode={}
+/Ignore= /Path=Name, x1, y1, x2, y2, Data type
+/Ignore= /Use=Name, X, Y, rotation, future dynamic options
+/Ignore= /Constant=name , X, Y, Value
+/Ignore= /programtext= Text {[( replacements)]} text ...
+/Ignore= /Option=number,{on or off}
+/Ignore= /error = Code, name, x1, y1, Name , {other things maybe}
+/Ignore= /Delete ...
+/Ignore= /ThisCode added to /path or /constant 
+/Ignore= /Keyword=ReservedWord  {,only one word, no spaces allowed currently}
+/Ignore= /Operator=Operator  {,only one operator ie: +, no space allowed currently}
+/Ignore= /Function=FunctionWord  ,only one function name no (), {}, [] etc ,
+/Ignore= /programtext= Text {[( replacements)]} text ...
+/Ignore= /Syntax={keyword,special characters,{[(variables)]} for variables ,quote marks , between each one   ect...
+/Option=1010,off
+/Option=1026,off
+/Option=1036,off
+/Option=1037,off
+/Option=1149,off
+/Option=1246,off
+/Option=1248,off
+/Option=1286,off
+/Option=1293,off
+/Option=1294,off
+/Option=1295,off
+/Option=1433,off
+/keyword=$dynamic
+/keyword=$static
+/keyword=,
+/keyword=;
+/keyword=?
+/keyword=_DEFINE
+/keyword=_PRESERVE
+/keyword=ABSOLUTE
+/keyword=ACCESS
+/keyword=Alert
+/keyword=ALIAS
+/keyword=And
+/keyword=andalso
+/keyword=APPEND
+/keyword=Arc
+/keyword=ArrayBase
+/keyword=ArrayLength
+/keyword=As
+/keyword=ASC
+/keyword=Assigned
+/keyword=Base
+/keyword=basic
+/keyword=BEEP
+/keyword=Begin Case
+/keyword=BINARY
+/keyword=BLOAD
+/keyword=Boolean
+/keyword=BSAVE
+/keyword=BYE
+/keyword=Byte
+/keyword=BYVAL
+/keyword=Call
+/keyword=CALLS
+/keyword=Case
+/keyword=CAT
+/keyword=Catch
+/keyword=cbool
+/keyword=cbyte
+/keyword=cdbl
+/keyword=CDECL
+/keyword=CHAIN
+/keyword=Changedir
+/keyword=CHDIR
+/keyword=Chord
+/keyword=Chr
+/keyword=cint
+/keyword=Circle
+/keyword=CLEAR
+/keyword=Clg
+/keyword=Clickb
+/keyword=Clickclear
+/keyword=Clickx
+/keyword=Clicky
+/keyword=clngint
+/keyword=Close
+/keyword=Cls
+/keyword=Color
+/keyword=COM
+/keyword=COM(n)
+/keyword=COMMON
+/keyword=Confirm
+/keyword=CONST
+/keyword=continue
+/keyword=Continue Do
+/keyword=Continue For
+/keyword=Continue While
+/keyword=Count
+/keyword=Countx
+/keyword=cshort
+/keyword=csng
+/keyword=cubyte
+/keyword=cuint
+/keyword=culngint
+/keyword=Currency
+/keyword=Currentdir
+/keyword=cushort
+/keyword=DATA
+/keyword=Day
+/keyword=DBClose
+/keyword=DBCloseSet
+/keyword=DBExecute
+/keyword=DBFloat
+/keyword=DBInt
+/keyword=DBNull
+/keyword=DBOpen
+/keyword=DBOpenSet
+/keyword=DBRow
+/keyword=DBString
+/keyword=Declare
+/keyword=DEF
+/keyword=DEFDBL
+/keyword=DEFINT
+/keyword=DEFLNG
+/keyword=DEFSNG
+/keyword=DEFSTR
+/keyword=Dim
+/keyword=Dir
+/keyword=Do
+/keyword=DO...LOOP
+/keyword=Double
+/keyword=DRAW
+/keyword=Each
+/keyword=EditVisible
+/keyword=Else
+/keyword=ElseIf
+/keyword=End
+/keyword=End Case
+/keyword=End Try
+/keyword=End While
+/keyword=EndFunction
+/keyword=EndIf
+/keyword=EndSubroutine
+/keyword=EndWhile
+/keyword=Enum
+/keyword=Eof
+/keyword=EQV
+/keyword=Erase
+/keyword=ERL
+/keyword=Error
+/keyword=Exists
+/keyword=Exit
+/keyword=Exit Do
+/keyword=Exit For
+/keyword=Exit While
+/keyword=Explode
+/keyword=Explodex
+/keyword=False
+/keyword=FastGraphics
+/keyword=FIELD
+/keyword=FILES
+/keyword=Fill
+/keyword=Font
+/keyword=For
+/keyword=For Each
+/keyword=FOR...NEXT
+/keyword=FREE
+/keyword=Freedb
+/keyword=Freedbset
+/keyword=Freefile
+/keyword=Freenet
+/keyword=FromBinary
+/keyword=FromHex
+/keyword=FromOctal
+/keyword=FromRadix
+/keyword=Function
+/keyword=Get
+/keyword=GetBrushColor
+/keyword=GetClipboardImage
+/keyword=GetClipboardString
+/keyword=GetColor
+/keyword=GetPenWidth
+/keyword=GetSetting
+/keyword=GetSlice
+/keyword=Global
+/keyword=GOOODBYE
+/keyword=Gosub
+/keyword=Goto
+/keyword=Graphheight
+/keyword=Graphsize
+/keyword=GraphToolBarVisible
+/keyword=GraphVisible
+/keyword=Graphwidth
+/keyword=HELLO
+/keyword=Hour
+/keyword=If
+/keyword=If Then
+/keyword=IF...THEN
+/keyword=ImageAutoCrop
+/keyword=ImageCentered
+/keyword=ImageCopy
+/keyword=ImageCrop
+/keyword=ImageDraw
+/keyword=ImageFlip
+/keyword=ImageHeight
+/keyword=ImageLoad
+/keyword=ImageNew
+/keyword=ImagePixel
+/keyword=ImageResize
+/keyword=ImageRotate
+/keyword=imageSetPixel
+/keyword=ImageSmooth
+/keyword=ImageTransformed
+/keyword=ImageWidth
+/keyword=Imgload
+/keyword=Imgsave
+/keyword=IMP
+/keyword=Implode
+/keyword=Include
+/keyword=Input
+/keyword=Input Float
+/keyword=Input Integer
+/keyword=Input String
+/keyword=Instr
+/keyword=Instrx
+/keyword=Integer
+/keyword=INTERRUPT
+/keyword=INTERRUPTX
+/keyword=IOCTL
+/keyword=Is
+/keyword=Key
+/keyword=Keypressed
+/keyword=Kill
+/keyword=Lasterror
+/keyword=Lasterrorextra
+/keyword=Lasterrorline
+/keyword=Lasterrormessage
+/keyword=LBound
+/keyword=Left
+/keyword=Length
+/keyword=Let
+/keyword=Lib
+/keyword=LIBRARY
+/keyword=Like
+/keyword=Line
+/keyword=LIST
+/keyword=Ljust
+/keyword=LOCATE
+/keyword=LOCK
+/keyword=Long
+/keyword=longint
+/keyword=Loop
+/keyword=Lower
+/keyword=LPRINT
+/keyword=LSet
+/keyword=LTrim
+/keyword=MainToolBarVisible
+/keyword=Map
+/keyword=MD5
+/keyword=Mid
+/keyword=MID$
+/keyword=Midx
+/keyword=Minute
+/keyword=mkdir
+/keyword=Mod
+/keyword=Month
+/keyword=Mouseb
+/keyword=Mousex
+/keyword=Mousey
+/keyword=Msec
+/keyword=NAME
+/keyword=NetAddress
+/keyword=NetClose
+/keyword=NetConnect
+/keyword=NetData
+/keyword=NetListen
+/keyword=NetRead
+/keyword=NetWrite
+/keyword=NEW
+/keyword=Next
+/keyword=Not
+/keyword=Nothing
+/keyword=Null
+/keyword=OFF
+/keyword=Offerror
+/keyword=OLD
+/keyword=On
+/keyword=Onerror
+/keyword=OnStop
+/keyword=Open
+/keyword=Openb
+/keyword=OpenFileDialog
+/keyword=OpenSerial
+/keyword=OPTION
+/keyword=Or
+/keyword=orelse
+/keyword=Ostype
+/keyword=OUT
+/keyword=OUTPUT
+/keyword=OutputToolBarVisible
+/keyword=OutputVisible
+/keyword=PAINT
+/keyword=PALETTE
+/keyword=Pause
+/keyword=PCOPY
+/keyword=PEN
+/keyword=PenWidth
+/keyword=Pie
+/keyword=Pixel
+/keyword=PLAY
+/keyword=PLAY(n)
+/keyword=Plot
+/keyword=POKE
+/keyword=Poly
+/keyword=PortIn
+/keyword=PortOut
+/keyword=PRESET
+/keyword=Print
+/keyword=Printercancel
+/keyword=Printeroff
+/keyword=Printeron
+/keyword=Printerpage
+/keyword=Prompt
+/keyword=Property
+/keyword=PSET
+/keyword=Public
+/keyword=PUT
+/keyword=PutSlice
+/keyword=RANDOM
+/keyword=RANDOMIZE
+/keyword=Read
+/keyword=Readbyte
+/keyword=Readline
+/keyword=Rect
+/keyword=Redim
+/keyword=Ref
+/keyword=Refresh
+/keyword=RegexMinimal
+/keyword=REMARK
+/keyword=RENAME
+/keyword=Replace
+/keyword=Replacex
+/keyword=Reset
+/keyword=RESTORE
+/keyword=Resume
+/keyword=Return
+/keyword=Rgb
+/keyword=Right
+/keyword=Rjust
+/keyword=rmdir
+/keyword=RSet
+/keyword=RTrim
+/keyword=RUN
+/keyword=SAVE
+/keyword=SaveFileDialog
+/keyword=Say
+/keyword=SCREEN
+/keyword=Second
+/keyword=Seek
+/keyword=SEG
+/keyword=Select
+/keyword=Serialize
+/keyword=Set
+/keyword=SetClipboardImage
+/keyword=SetClipboardString
+/keyword=SetSetting
+/keyword=SHARED
+/keyword=SHELL
+/keyword=shl
+/keyword=short
+/keyword=shr
+/keyword=SIGNAL
+/keyword=Single
+/keyword=Size
+/keyword=SLEEP
+/keyword=Sound
+/keyword=SoundLength
+/keyword=SoundLoad
+/keyword=SoundPause
+/keyword=SoundPlay
+/keyword=SoundPosition
+/keyword=SoundResume
+/keyword=SoundSeek
+/keyword=SoundState
+/keyword=SoundStop
+/keyword=SoundVolume
+/keyword=SoundWait
+/keyword=Spritecollide
+/keyword=Spritedim
+/keyword=Spriteh
+/keyword=Spritehide
+/keyword=Spriteload
+/keyword=Spritemove
+/keyword=Spriteo
+/keyword=Spriteplace
+/keyword=Spritepoly
+/keyword=Spriter
+/keyword=Sprites
+/keyword=Spriteshow
+/keyword=Spriteslice
+/keyword=Spritetext
+/keyword=Spritev
+/keyword=Spritew
+/keyword=Spritex
+/keyword=Spritey
+/keyword=Stamp
+/keyword=Static
+/keyword=Step
+/keyword=Stop
+/keyword=STRIG(n)
+/keyword=String
+/keyword=Sub
+/keyword=Subroutine
+/keyword=SWAP
+/keyword=System
+/keyword=Text
+/keyword=TextHeight
+/keyword=TextWidth
+/keyword=Then
+/keyword=ThrowError
+/keyword=TIMER
+/keyword=TIMER(n)
+/keyword=To
+/keyword=ToBinary
+/keyword=ToHex
+/keyword=ToOctal
+/keyword=ToRadix
+/keyword=Trim
+/keyword=True
+/keyword=Try
+/keyword=Type
+/keyword=TypeOf
+/keyword=UBound
+/keyword=ubyte
+/keyword=UEVENT
+/keyword=uinteger
+/keyword=ulongint
+/keyword=Unassign
+/keyword=Unload
+/keyword=UNLOCK
+/keyword=UNSAVE
+/keyword=Unserialize
+/keyword=Until
+/keyword=Upper
+/keyword=ushort
+/keyword=USING
+/keyword=VariableWatch
+/keyword=Version
+/keyword=VIEW
+/keyword=Volume
+/keyword=WAIT
+/keyword=WAVlength
+/keyword=WAVpause
+/keyword=WAVplay
+/keyword=WAVpos
+/keyword=WAVseek
+/keyword=WAVstate
+/keyword=WAVstop
+/keyword=WAVwait
+/keyword=Wend
+/keyword=While
+/keyword=WIDTH
+/keyword=WINDOW
+/keyword=With
+/keyword=Write
+/keyword=Writebyte
+/keyword=Writeline
+/keyword=xor
+/keyword=Year
+/keyword=Zfill
+/keyword=zzzzzzzzzKeywords
+/operator='
+/operator=-
+/operator=!
+/operator=%
+/operator=&
+/operator=(
+/operator=)
+/operator=*
+/operator=*=
+/operator=,
+/operator=/
+/operator=/=
+/operator=;
+/operator=[
+/operator=\
+/operator=]
+/operator=^
+/operator=|
+/operator=~
+/operator=+
+/operator=++
+/operator=+=
+/operator=<
+/operator=<=
+/operator=<>
+/operator==
+/operator=-=
+/operator=>
+/operator=>=
+/operator=AND
+/operator=fill
+/operator=mod
+/operator=NOT
+/operator=OR
+/operator=XOR
+/operator=zzzzzzzzzOperators
+/Function=Abs
+/Function=Acos
+/Function=Acosh
+/Function=Asc
+/Function=AscW
+/Function=Asin
+/Function=Asinh
+/Function=Atan
+/Function=Atan2
+/Function=Atanh
+/Function=atn
+/Function=BigMul
+/Function=BitDecrement
+/Function=BitIncrement
+/Function=CBool
+/Function=Cbrt
+/Function=CByte
+/Function=CChar
+/Function=CDate
+/Function=CDbl
+/Function=CDec
+/Function=Ceil
+/Function=Ceiling
+/Function=Chr
+/Function=CHR$
+/Function=ChrW
+/Function=CInt
+/Function=Clamp
+/Function=CLng
+/Function=CObj
+/Function=COMMAND$
+/Function=CopySign
+/Function=Cos
+/Function=Cosh
+/Function=CSByte
+/Function=CShort
+/Function=CSng
+/Function=CSRLIN
+/Function=CStr
+/Function=CType
+/Function=CUInt
+/Function=CULng
+/Function=CUShort
+/Function=CVD
+/Function=CVDMBF
+/Function=CVI
+/Function=CVL
+/Function=CVS
+/Function=CVSMBF
+/Function=DATE
+/Function=DATE$
+/Function=Degrees
+/Function=DivRem
+/Function=ENVIRON$
+/Function=ERDEV
+/Function=ERDEV$
+/Function=ERR
+/Function=Exp
+/Function=FILEATTR
+/Function=Filter
+/Function=FIX
+/Function=Float
+/Function=Floor
+/Function=Format
+/Function=FormatCurrency
+/Function=FormatDateTime
+/Function=FormatNumber
+/Function=FormatPercent
+/Function=FRE
+/Function=FusedMultiplyAdd
+/Function=Hex
+/Function=HEX$
+/Function=IEEERemainder
+/Function=ILogB
+/Function=INKEY$
+/Function=INP
+/Function=INPUT$
+/Function=InStr
+/Function=InStrRev
+/Function=Int
+/Function=IOCTL$
+/Function=IsNumeric
+/Function=Join
+/Function=LBOUND
+/Function=LCase
+/Function=LCASE$
+/Function=Left
+/Function=LEFT$
+/Function=Len
+/Function=LOC
+/Function=LOF
+/Function=Log
+/Function=Log10
+/Function=Log2
+/Function=lower
+/Function=LPOS
+/Function=LSet
+/Function=LTrim
+/Function=LTRIM$
+/Function=Max
+/Function=MaxMagnitude
+/Function=Mid
+/Function=MID$
+/Function=Min
+/Function=MinMagnitude
+/Function=MKD$
+/Function=MKDMBF$
+/Function=MKI$
+/Function=MKL$
+/Function=MKS$
+/Function=MKSMBF$
+/Function=Oct
+/Function=OCT$
+/Function=PEEK
+/Function=PEN
+/Function=PLAY(n)
+/Function=PMAP
+/Function=POINT
+/Function=POS
+/Function=Pow
+/Function=Radians
+/Function=Rand
+/Function=Replace
+/Function=Right
+/Function=RIGHT$
+/Function=rnd
+/Function=Round
+/Function=RSet
+/Function=RTrim
+/Function=RTRIM$
+/Function=SADD
+/Function=ScaleB
+/Function=SCREEN
+/Function=Seed
+/Function=SEEK
+/Function=SETMEM
+/Function=SGN
+/Function=Sign
+/Function=Sin
+/Function=Sinh
+/Function=Space
+/Function=SPACE$
+/Function=SPC
+/Function=Split
+/Function=Sqr
+/Function=Sqrt
+/Function=STICK
+/Function=Str
+/Function=STR$
+/Function=StrComp
+/Function=StrConv
+/Function=StrDup
+/Function=STRIG
+/Function=STRING$
+/Function=StrReverse
+/Function=TAB
+/Function=Tan
+/Function=Tanh
+/Function=TIME$
+/Function=TIMER
+/Function=Trim
+/Function=Truncate
+/Function=UBOUND
+/Function=UCase
+/Function=UCASE$
+/Function=upper
+/Function=Val
+/Function=VARPTR
+/Function=VARPTR$
+/Function=VARSEG
+/Function=zzzzzzzzzFunctions
+/color = AliceBlue,255,240,248,255,2,Triangle,RoundAnchor
+/color = AntiqueWhite,255,250,235,215,4,RoundAnchor,ArrowAnchor
+/color = aqua,255,1,255,255,0,Round,Round
+/color = aquamarine,255,127,255,212,2,Round,NoAnchor
+/color = Azure,255,240,255,255,4,Flat,NoAnchor
+/color = beige,255,245,245,220,3,Flat,Square
+/color = bisque,255,255,228,196,2,DiamondAnchor,SquareAnchor
+/color = Black,255,1,1,1,0,Round,Round
+/color = BlanchedAlmond,255,255,235,205,1,DiamondAnchor,Triangle
+/color = Blue,255,1,1,255,0,Round,Round
+/color = BlueViolet,255,138,43,226,2,Triangle,SquareAnchor
+/color = Brown,255,165,42,42,1,NoAnchor,Flat
+/color = BurlyWood,255,222,184,135,2,NoAnchor,NoAnchor
+/color = CadetBlue,255,95,158,160,4,NoAnchor,Flat
+/color = Chartreuse,255,127,255,1,1,DiamondAnchor,Round
+/color = Chocolate,255,210,105,30,2,NoAnchor,Square
+/color = Coral,255,255,127,80,4,NoAnchor,Flat
+/color = CornflowerBlue,255,100,149,237,3,RoundAnchor,SquareAnchor
+/color = Cornsilk,255,255,248,220,2,RoundAnchor,NoAnchor
+/color = Crimson,255,220,20,60,4,Round,NoAnchor
+/color = Cyan,255,1,255,255,0,Round,Round
+/color = DarkBlue,255,1,1,139,3,Flat,SquareAnchor
+/color = DarkCyan,255,1,139,139,2,Round,Flat
+/color = DarkGoldenrod,255,184,134,11,4,Square,NoAnchor
+/color = DarkGray,255,169,169,169,1,Square,Flat
+/color = DarkGreen,255,1,100,1,3,Triangle,NoAnchor
+/color = DarkKhaki,255,189,183,107,2,NoAnchor,SquareAnchor
+/color = DarkMagenta,255,139,1,139,4,RoundAnchor,DiamondAnchor
+/color = DarkOliveGreen,255,85,107,47,1,DiamondAnchor,RoundAnchor
+/color = DarkOrange,255,255,140,1,3,Triangle,RoundAnchor
+/color = DarkOrchid,255,153,50,204,2,NoAnchor,Round
+/color = DarkRed,255,139,1,1,4,DiamondAnchor,Round
+/color = DarkSalmon,255,233,150,122,3,Square,Square
+/color = DarkSeaGreen,255,143,188,139,2,Flat,SquareAnchor
+/color = DarkSlateBlue,255,72,61,139,4,NoAnchor,DiamondAnchor
+/color = DarkSlateGray,255,47,79,79,1,Square,Triangle
+/color = DarkTurquoise,255,1,206,209,3,Square,Square
+/color = DarkViolet,255,148,1,211,2,Triangle,DiamondAnchor
+/color = DataTypeError,255,255,1,1,2,Triangle,DiamondAnchor
+/color = DeepPink,255,255,20,147,4,Square,Flat
+/color = DeepSkyBlue,255,1,191,255,1,NoAnchor,Flat
+/color = DimGray,255,105,105,105,3,NoAnchor,Square
+/color = DodgerBlue,255,30,144,255,2,Triangle,ArrowAnchor
+/color = Firebrick,255,178,34,34,4,Round,Triangle
+/color = FloralWhite,255,255,250,240,1,Triangle,Flat
+/color = ForestGreen,255,34,139,34,3,NoAnchor,Triangle
+/color = Fuchsia,255,255,1,255,2,SquareAnchor,Round
+/color = Gainsboro,255,220,220,220,1,Round,ArrowAnchor
+/color = GhostWhite,255,248,248,255,3,NoAnchor,SquareAnchor
+/color = Gold,255,255,215,1,0,Round,Round
+/color = Goldenrod,255,218,165,32,4,NoAnchor,SquareAnchor
+/color = Gray,255,128,128,128,0,Round,Round
+/color = Green,255,1,128,1,0,Round,Round
+/color = GreenYellow,255,173,255,47,4,NoAnchor,NoAnchor
+/color = Honeydew,255,240,255,240,1,ArrowAnchor,NoAnchor
+/color = HotPink,255,255,105,180,3,SquareAnchor,NoAnchor
+/color = IndianRed,255,205,92,92,4,Triangle,NoAnchor
+/color = Indigo,255,75,1,130,1,ArrowAnchor,NoAnchor
+/color = Ivory,255,255,255,240,0,Round,Round
+/color = Khaki,255,240,230,140,2,Flat,Round
+/color = Lavender,255,230,230,250,4,RoundAnchor,SquareAnchor
+/color = LavenderBlush,255,255,240,245,1,RoundAnchor,ArrowAnchor
+/color = LawnGreen,255,124,252,1,3,SquareAnchor,ArrowAnchor
+/color = LemonChiffon,255,255,250,205,4,Triangle,RoundAnchor
+/color = LightBlue,255,173,216,230,2,NoAnchor,Flat
+/color = LightCoral,255,240,128,128,4,Flat,NoAnchor
+/color = LightCyan,255,224,255,255,1,Flat,Round
+/color = LightGoldenrodYellow,255,250,250,210,3,Triangle,Square
+/color = LightGray,255,211,211,211,2,RoundAnchor,Square
+/color = LightGreen,255,144,238,144,4,Triangle,Round
+/color = LightPink,255,255,182,193,1,SquareAnchor,NoAnchor
+/color = LightSalmon,255,255,160,122,3,Triangle,SquareAnchor
+/color = LightSeaGreen,255,32,178,170,2,ArrowAnchor,Flat
+/color = LightSkyBlue,255,135,206,250,4,Triangle,NoAnchor
+/color = LightSlateGray,255,119,136,153,3,DiamondAnchor,RoundAnchor
+/color = LightSteelBlue,255,176,196,222,2,RoundAnchor,SquareAnchor
+/color = LightYellow,255,255,255,224,4,ArrowAnchor,NoAnchor
+/color = Lime,255,1,255,1,1,ArrowAnchor,Round
+/color = LimeGreen,255,50,205,50,3,Flat,Round
+/color = Linen,255,250,240,230,2,Round,Triangle
+/color = Magenta,255,255,1,255,4,NoAnchor,Triangle
+/color = Maroon,255,128,1,1,3,Triangle,ArrowAnchor
+/color = MediumAquamarine,255,102,205,170,1,SquareAnchor,Square
+/color = MediumBlue,255,1,1,205,3,NoAnchor,Round
+/color = MediumOrchid,255,186,85,211,2,ArrowAnchor,Round
+/color = MediumPurple,255,147,112,219,4,Square,RoundAnchor
+/color = MediumSeaGreen,255,60,179,113,1,Triangle,NoAnchor
+/color = MediumSlateBlue,255,123,104,238,3,SquareAnchor,Flat
+/color = MediumSpringGreen,255,1,250,154,4,Triangle,Triangle
+/color = MediumTurquoise,255,72,209,204,1,Flat,Triangle
+/color = MediumVioletRed,255,199,21,133,3,NoAnchor,Round
+/color = MidnightBlue,255,25,25,112,2,RoundAnchor,Square
+/color = MintCream,255,245,255,250,4,RoundAnchor,DiamondAnchor
+/color = MistyRose,255,255,228,225,1,ArrowAnchor,NoAnchor
+/color = Moccasin,255,255,228,181,3,Square,DiamondAnchor
+/color = NavajoWhite,255,255,222,173,2,SquareAnchor,NoAnchor
+/color = Navy,255,1,1,128,0,Round,Round
+/color = OldLace,255,253,245,230,1,NoAnchor,SquareAnchor
+/color = Olive,255,128,128,1,3,Round,DiamondAnchor
+/color = OliveDrab,255,107,142,35,4,NoAnchor,Square
+/color = Orange,255,255,165,1,0,Round,Round
+/color = OrangeRed,255,255,69,1,3,SquareAnchor,NoAnchor
+/color = Orchid,255,218,112,214,2,Round,RoundAnchor
+/color = PaleGoldenrod,255,238,232,170,1,SquareAnchor,SquareAnchor
+/color = PaleGreen,255,152,251,152,3,RoundAnchor,DiamondAnchor
+/color = PaleTurquoise,255,175,238,238,2,SquareAnchor,Triangle
+/color = PaleVioletRed,255,219,112,147,4,ArrowAnchor,Square
+/color = PapayaWhip,255,255,239,213,1,ArrowAnchor,Flat
+/color = PeachPuff,255,255,218,185,3,Triangle,Round
+/color = Peru,255,205,133,63,2,Triangle,Round
+/color = Pink,255,255,192,203,0,Round,Round
+/color = Plum,255,221,160,221,1,DiamondAnchor,Round
+/color = PowderBlue,255,176,224,230,2,Round,Square
+/color = Purple,255,128,1,128,0,Round,Round
+/color = Red,255,255,1,1,0,Round,Round
+/color = RosyBrown,255,188,143,143,4,SquareAnchor,NoAnchor
+/color = RoyalBlue,255,65,105,225,1,SquareAnchor,DiamondAnchor
+/color = SaddleBrown,255,139,69,19,2,RoundAnchor,Triangle
+/color = Salmon,255,250,128,114,4,RoundAnchor,ArrowAnchor
+/color = SandyBrown,255,244,164,96,1,RoundAnchor,Round
+/color = SeaGreen,255,46,139,87,0,Round,Round
+/color = SeaShell,255,255,245,238,2,Round,SquareAnchor
+/color = Sienna,255,160,82,45,4,DiamondAnchor,SquareAnchor
+/color = Silver,255,192,192,192,1,DiamondAnchor,NoAnchor
+/color = SkyBlue,255,135,206,235,3,Square,NoAnchor
+/color = SlateBlue,255,106,90,205,4,ArrowAnchor,RoundAnchor
+/color = SlateGray,255,112,128,144,1,Triangle,Square
+/color = Snow,255,255,250,250,3,Flat,ArrowAnchor
+/color = SpringGreen,255,1,255,127,2,NoAnchor,Triangle
+/color = SteelBlue,255,70,130,180,4,NoAnchor,Triangle
+/color = Tan,255,210,180,140,0,Round,Round
+/color = Teal,255,1,128,128,0,Round,Round
+/color = Thistle,255,216,191,216,2,NoAnchor,RoundAnchor
+/color = Tomato,255,255,99,71,4,Round,DiamondAnchor
+/color = Transparent,1,1,1,1,0,NoAnchor,NoAnchor
+/color = Turquoise,255,64,224,208,1,ArrowAnchor,SquareAnchor
+/color = Violet,255,238,130,238,0,Round,Round
+/color = Wheat,255,245,222,179,2,SquareAnchor,DiamondAnchor
+/color = White,255,255,255,255,0,Round,Round
+/color = WhiteSmoke,255,245,245,245,1,NoAnchor,SquareAnchor
+/color = Yellow,255,255,255,1,0,Round,Round
+/datatype = Bit,1,Blue,3,A Single On/off
+/datatype = Byte,8,MistyRose,4,A Byte (8 bits)
+/datatype = erase,1,Orange,1,Logic Path For Errors
+/datatype = errored,1,Red,1,Logic Path For Errors
+/datatype = Floating,8,DodgerBlue,8,A floating-point variable WinDef
+/datatype = Int16,2,aquamarine,2,A 16-bit Or 2 bytes signed Integer BaseTsd
+/datatype = Int32,4,aqua,4,A 32-bit Or 4 bytes signed Integer -2147483648 through 2147483647 BaseTsd
+/datatype = Int64,8,Red,8,A 64-bit Or 8 bytes signed Integer ?+/- 9223372036854775807
+/datatype = INT8,1,Orange,2,An 8-bit Or 1 Byte signed Integer BaseTsd
+/datatype = Integer,2,Orange,2,An 16-bit Or 2 Byte signed Integer
+/datatype = logic,1,Black,3,Logic Path
+/datatype = Long,4,CadetBlue,4,4 bytes – 32 bits
+/datatype = Word,2,BlueViolet,2,2 bytes - 16 Bits
+/name=Start
+/Author = FlowChart Program
+/version = 0.1
+/filename = Internal
+/stroke = ABCDEFGHIJKLMNOP
+/programtext = GoToNextLine Start
+/syntax = 	jmp ,{[(GoToNextLine.PathName)]},	;ReplaceStart
+/notes = Start of the Program
+/opcode = jmp main
+/point = 0 , 250 , both , -1 , GotoNextLine
+/point = 250 , 250 , both , -1 , CommandLine
+/error = 0,-250 = 0,-1,-250,Symbol7_1_1101,1001 Symbol does not have a /point CameFrom  Symbol Start
+/error = -250,0 = 0,-1,0,Symbol7_1_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Start
+/error = -250,0 = 0,-1,0,Symbol7_1_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Start
+/error = -250,-100 = 0,-1,-100,Symbol7_1_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,-100 = 0,-1,-100,Symbol7_1_1101,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/line = 250,250,250,-1,Brown
+/line = 250,-250,250,-1,BlueViolet
+/line = 250,-250,250,-1,Blue
+/line = 250,250,250,-1,BlanchedAlmond
+/line = -250,250,250,-1,Black
+/name=Symbol7_1_1101
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberREMGoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 10 REM INSTRUCTIONS FOR "SUPER STARTREK"  MAR 5, 1978:GoTo {[(number)]} :{[(bisque.pathname)]}:{[(bisque.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_3.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},REM,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/line = 250,250,250,-1,bisque
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/point = -250 , 0 , both , -1 , {[(number)]}_3
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,0 = 0,-1,0,Symbol7_2_1102,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_1_1101
+/error = -250,-100 = 0,-1,-100,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,-100 = 0,-1,-100,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,100 = 0,-1,100,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,100 = 0,-1,100,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = -250,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = 250,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_1_1101
+/error = 250,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -150,250 = 0,-1,250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -150,250 = 0,-1,250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -150,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -150,-250 = 0,-1,-250,Symbol7_2_1102,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/line = 250,250,250,-1,DarkRed
+/line = 250,-250,250,-1,DarkOrchid
+/line = 250,-250,250,-1,DarkOrange
+/line = 250,250,250,-1,DarkOliveGreen
+/line = -250,250,250,-1,DarkMagenta
+/line = 250,250,250,-1,DarkKhaki
+/point = -150 , -250 , both , -1 , {[(number)]}_15
+/point = -150 , 250 , both , -1 , {[(number)]}_13
+/point = 250 , -250 , both , -1 , {[(number)]}_11
+/point = -250 , -250 , both , -1 , {[(number)]}_9
+/point = -250 , 100 , both , -1 , I
+/point = -250 , -100 , both , -1 , 12_5
+/point = -250 , 0 , both , -1 , I
+/name=Symbol7_2_1102
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberFORAlphaNumberTONumberComputerLanguageMultiLine_AlphaAlphaComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 20 FOR I=1 TO 12:PRINT:NEXT I:GoTo {[(number)]} :{[(DarkKhaki.pathname)]}:{[(DarkKhaki.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(I.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(12_5.pathname)]}:{[($.pathname)]}:{[({[(number)]}_7.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},FOR,{[(Alpha)]},=,{[(Number)]},TO,{[(Number)]},:,{[(Alpha)]},{[(Alpha)]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,-250 = 0,-1,-250,Symbol7_3_1103,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_2_1102
+/error = -250,0 = 0,-1,0,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -250,0 = 0,-1,0,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -250,-100 = 0,-1,-100,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -250,-100 = 0,-1,-100,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -250,100 = 0,-1,100,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_2_1102
+/error = -250,100 = 0,-1,100,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/error = -250,-250 = 0,-1,-250,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/error = -250,-250 = 0,-1,-250,Symbol7_3_1103,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/line = 250,250,250,-1,IndianRed
+/line = 250,-250,250,-1,HotPink
+/line = 250,-250,250,-1,Honeydew
+/line = 250,250,250,-1,GreenYellow
+/line = -250,250,250,-1,Green
+/line = 250,250,250,-1,Gray
+/point = -250 , -250 , both , -1 , {[(number)]}_9
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/name=Symbol7_3_1103
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberPRINTCHRVariableNumberSpecialNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 25 PRINT CHR$(26):GoTo {[(number)]} :{[(Gray.pathname)]}:{[(Gray.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[($.pathname)]}:{[(10_3.pathname)]}:{[({[(number)]}_1.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},PRINT,CHR,{[(Variable)]},(,{[(Number)]},{[(Special)]},{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -250 , 0 , both , -1 , $
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,-250 = 0,-1,-250,Symbol7_4_1104,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_3_1103
+/error = -250,0 = 0,-1,0,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/error = -250,0 = 0,-1,0,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/error = -250,-100 = 0,-1,-100,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_3_1103
+/error = -250,-100 = 0,-1,-100,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/error = -250,100 = 0,-1,100,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/error = -250,100 = 0,-1,100,Symbol7_4_1104,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/line = 250,250,250,-1,LightYellow
+/line = 250,-250,250,-1,LightSteelBlue
+/line = 250,-250,250,-1,LightSlateGray
+/line = 250,250,250,-1,LightSkyBlue
+/line = -250,250,250,-1,LightSeaGreen
+/line = 250,250,250,-1,LightSalmon
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/name=Symbol7_4_1104
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberPRINTTABNumberSpecialComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 30 PRINT TAB(10);"*************************************":GoTo {[(number)]} :{[(LightSalmon.pathname)]}:{[(LightSalmon.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(10_3.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[(STAR.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},PRINT,TAB,(,{[(Number)]},{[(Special)]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/point = -250 , 0 , both , -1 , 10_3
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,-250 = 0,-1,-250,Symbol7_5_1105,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_4_1104
+/error = -250,0 = 0,-1,0,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/error = -250,0 = 0,-1,0,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/error = -250,-100 = 0,-1,-100,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_4_1104
+/error = -250,-100 = 0,-1,-100,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,100 = 0,-1,100,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,100 = 0,-1,100,Symbol7_5_1105,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/line = 250,250,250,-1,Moccasin
+/line = 250,-250,250,-1,MistyRose
+/line = 250,-250,250,-1,MintCream
+/line = 250,250,250,-1,MidnightBlue
+/line = -250,250,250,-1,MediumVioletRed
+/line = 250,250,250,-1,MediumTurquoise
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/name=Symbol7_5_1105
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberPRINTTABNumberSpecialSpecialComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 40 PRINT TAB(10);"*                                   *":GoTo {[(number)]} :{[(MediumTurquoise.pathname)]}:{[(MediumTurquoise.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(10_3.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[(1210_9.pathname)]}:{[($.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},PRINT,TAB,(,{[(Number)]},{[(Special)]},{[(Special)]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/point = -250 , 0 , both , -1 , 10_3
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,0 = 0,-1,0,Symbol7_7_1106,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_5_1105
+/error = -250,0 = 0,-1,0,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,0 = 0,-1,0,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,-100 = 0,-1,-100,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,-100 = 0,-1,-100,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,100 = 0,-1,100,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,100 = 0,-1,100,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,-250 = 0,-1,-250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,-250 = 0,-1,-250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = 250,-250 = 0,-1,-250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = 250,-250 = 0,-1,-250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -150,250 = 0,-1,250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -150,250 = 0,-1,250,Symbol7_7_1106,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/line = 250,250,250,-1,RosyBrown
+/line = 250,-250,250,-1,Red
+/line = 250,-250,250,-1,Purple
+/line = 250,250,250,-1,PowderBlue
+/line = -250,250,250,-1,Plum
+/line = 250,250,250,-1,Pink
+/point = -150 , 250 , both , -1 , {[(number)]}_13
+/point = 250 , -250 , both , -1 , {[(number)]}_11
+/point = -250 , -250 , both , -1 , {[(number)]}_9
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/point = -250 , -100 , both , -1 , STAR
+/point = -250 , 0 , both , -1 , 10_3
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/name=Symbol7_7_1106
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberPRINTTABNumberSpecialAlphaAlphaAlphaSpecialComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 60 PRINT TAB(10);"*      * * SUPER STAR TREK * *      *":GoTo {[(number)]} :{[(Pink.pathname)]}:{[(Pink.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(STAR.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(10_3.pathname)]}:{[($.pathname)]}:{[(Quote_12.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},PRINT,TAB,(,{[(Number)]},{[(Special)]},*,*,{[(Alpha)]},{[(Alpha)]},{[(Alpha)]},*,*,{[(Special)]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/error = 0,0 = 0,-1,0,Symbol7_12_1107,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_7_1106
+/error = -250,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -250,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = 250,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = 250,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -150,250 = 0,-1,250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -150,250 = 0,-1,250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -150,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -150,-250 = 0,-1,-250,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-200 = 0,-1,-200,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-200 = 0,-1,-200,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-50 = 0,-1,-50,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-50 = 0,-1,-50,Symbol7_12_1107,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/line = 250,250,250,-1,aquamarine
+/line = 250,-250,250,-1,aqua
+/line = 250,-250,250,-1,AntiqueWhite
+/line = 250,250,250,-1,AliceBlue
+/line = -250,250,250,-1,AliceBlue
+/line = 250,250,250,-1,Yellow
+/point = -250 , -50 , both , -1 , {[(number)]}_19
+/point = -250 , -200 , both , -1 , {[(number)]}_17
+/point = -150 , -250 , both , -1 , {[(number)]}_15
+/point = -150 , 250 , both , -1 , {[(number)]}_13
+/point = 250 , -250 , both , -1 , {[(number)]}_11
+/point = -250 , -250 , both , -1 , 1210_9
+/point = -250 , 100 , both , -1 , $
+/name=Symbol7_12_1107
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberINPUTQuoteAlphaVariableComputerLanguageMultiLine_IFAlphaVariableQuoteTHENNumberComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 110 INPUT "DO YOU NEED INSTRUCTIONS (Y/N)";K$:IF K$="N" THEN 1210:GoTo {[(number)]} :{[(Yellow.pathname)]}:{[(Yellow.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_1.pathname)]}:{[(1210_9.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Quote_14.pathname)]}:{[({[(number)]}_7.pathname)]}:{[(PRINT:GoTo.pathname)]}:{[({[(number)]}_21.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},INPUT,{[("")]},;,{[(Alpha)]},{[(Variable)]},:,IF,{[(Alpha)]},{[(Variable)]},=,{[("")]},THEN,{[(Number)]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -250 , -100 , both , -1 , $
+/point = -250 , 0 , both , -1 , Quote_12
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,-250 = 0,-1,-250,Symbol7_14_1108,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_12_1107
+/error = -250,0 = 0,-1,0,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,0 = 0,-1,0,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-100 = 0,-1,-100,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_12_1107
+/error = -250,-100 = 0,-1,-100,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,100 = 0,-1,100,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,100 = 0,-1,100,Symbol7_14_1108,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/line = 250,250,250,-1,DarkMagenta
+/line = 250,-250,250,-1,DarkKhaki
+/line = 250,-250,250,-1,DarkGreen
+/line = 250,250,250,-1,DarkGray
+/line = -250,250,250,-1,DarkGoldenrod
+/line = 250,250,250,-1,DarkCyan
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/name=Symbol7_14_1108
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberPRINTQuoteComputerLanguageMultiLine_GoToNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 130 PRINT "NOTE:  YOU MUST BE RUNNING 40K CP/M TO RUN STARTREK.":GoTo {[(number)]} :{[(DarkCyan.pathname)]}:{[(DarkCyan.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(Quote_14.pathname)]}:{[(LightCoral.pathname)]}:{[(LightCoral.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_11.pathname)]}:{[($.pathname)]}:{[($.pathname)]}:{[($.pathname)]}:{[(Quote_37.pathname)]}:{[(Quote_37.pathname)]}:{[({[(number)]}_1.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},PRINT,{[("")]},:,GoTo,{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/point = -250 , 0 , both , -1 , Quote_14
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_14_1108
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/line = 250,250,250,-1,ForestGreen
+/line = 250,-250,250,-1,FloralWhite
+/line = 250,-250,250,-1,Firebrick
+/line = 250,250,250,-1,DodgerBlue
+/line = -250,250,250,-1,DimGray
+/line = 250,250,250,-1,DeepSkyBlue
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/error = -150,250 = 0,-1,250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -150,250 = 0,-1,250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -150,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -150,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-200 = 0,-1,-200,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-200 = 0,-1,-200,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-50 = 0,-1,-50,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-50 = 0,-1,-50,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,150 = 0,-1,150,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,150 = 0,-1,150,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/point = -250 , -100 , both , -1 , {[(number)]}_5
+/point = -250 , 0 , both , -1 , PRINT:GoTo
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,0 = 0,-1,0,Symbol7_37_1110,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = 250,-250 = 0,-1,-250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = 250,-250 = 0,-1,-250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -150,250 = 0,-1,250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -150,250 = 0,-1,250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -150,-250 = 0,-1,-250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -150,-250 = 0,-1,-250,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_16_1109
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,-200 = 0,-1,-200,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,-200 = 0,-1,-200,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,-50 = 0,-1,-50,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,-50 = 0,-1,-50,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,150 = 0,-1,150,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,150 = 0,-1,150,Symbol7_37_1110,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = 250,250,250,-1,LightPink
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = 250,-250,250,-1,LightGreen
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = 250,-250,250,-1,LightGray
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = 250,250,250,-1,LightGoldenrodYellow
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = -250,250,250,-1,LightCyan
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/line = 250,250,250,-1,LightCoral
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/point = -250 , 150 , both , -1 , {[(number)]}_21
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/point = -250 , -50 , both , -1 , {[(number)]}_19
+/error = -150,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -250,-200 = 0,-1,-200,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -250,-50 = 0,-1,-50,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_7_1106
+/error = -250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = 250,-250 = 0,-1,-250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -150,250 = 0,-1,250,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_5_1105
+/error = -250,150 = 0,-1,150,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,100 = 0,-1,100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = -250,-100 = 0,-1,-100,Symbol7_16_1109,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_14_1108
+/error = 0,0 = 0,-1,0,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_16_1109
+/error = -250,0 = 0,-1,0,Symbol7_16_1109,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_16_1109
+/error = 0,-250 = 0,-1,-250,Symbol7_16_1109,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/point = -250 , -200 , both , -1 , {[(number)]}_17
+/name=Symbol7_16_1109
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberAlphaNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 150 PRINT:GoTo {[(number)]} :{[(DeepSkyBlue.pathname)]}:{[(DeepSkyBlue.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[({[(number)]}_5.pathname)]}:{[(PRINT:GoTo.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_1.pathname)]}:{[($.pathname)]}:{[($.pathname)]}:{[($.pathname)]}:{[(Quote_37.pathname)]}:{[(MidnightBlue.pathname)]}:{[(MidnightBlue.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[(R.pathname)]}:{[(LOAD.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},{[(Alpha)]},{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/point = -150 , -250 , both , -1 , {[(number)]}_15
+/point = -150 , 250 , both , -1 , {[(number)]}_13
+/point = 250 , -250 , both , -1 , {[(number)]}_11
+/point = -250 , -250 , both , -1 , $
+/point = -250 , 100 , both , -1 , $
+/point = -250 , -100 , both , -1 , $
+/point = -250 , 0 , both , -1 , Quote_37
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/error = 0,0 = 0,-1,0,Symbol7_132_1111,1002 Symbol does not have a /point GotoNextLine  Symbol Symbol7_37_1110
+/name=Symbol7_37_1110
+/Author = FlowChart Decompile
+/version = .01
+/filename = NumberComputerLanguageMultiLine_NumberLINEINPUTQuoteAlphaVariableComputerLanguageMultiLine_IFAlphaVariableQuoteTHENPRINTCHRVariableNumberSpecialNumber.symbol
+/stroke = 
+/programtext = {[(number)]} : 352 LINE INPUT "ENTER [CR] TO CONTINUE";A$:IF A$="" THEN PRINT CHR$(26):GoTo {[(number)]} :{[(LightCoral.pathname)]}:{[(LightCoral.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_21.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_19.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_17.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_15.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_13.pathname)]}:{[({[(number)]}_1.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_11.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_9.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[({[(number)]}_7.pathname)]}:{[(R.pathname)]}:{[(R.pathname)]}:{[(R.pathname)]}:{[(LOAD.pathname)]}
+/syntax = {[(Number)]},:,{[(Number)]},LINE,INPUT,{[("")]},;,{[(Alpha)]},{[(Variable)]},:,IF,{[(Alpha)]},{[(Variable)]},=,{[("")]},THEN,PRINT,CHR,{[(Variable)]},(,{[(Number)]},{[(Special)]},{[(Number)]},
+/notes = Made with DeCompile
+/opcode = nop
+/error = 0,-250 = 0,-1,-250,Symbol7_132_1111,1001 Symbol does not have a /point CameFrom  Symbol Symbol7_37_1110
+/error = -250,0 = 0,-1,0,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,0 = 0,-1,0,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-100 = 0,-1,-100,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-100 = 0,-1,-100,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,100 = 0,-1,100,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,100 = 0,-1,100,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_37_1110
+/error = -250,-250 = 0,-1,-250,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_132_1111
+/error = -250,-250 = 0,-1,-250,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_132_1111
+/error = 250,-250 = 0,-1,-250,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_132_1111
+/error = 250,-250 = 0,-1,-250,Symbol7_132_1111,1013 All /point names are in either the ProgramText or the Syntax  Symbol Symbol7_132_1111
+/line = 250,250,250,-1,Navy
+/line = 250,-250,250,-1,NavajoWhite
+/line = 250,-250,250,-1,Moccasin
+/line = 250,250,250,-1,MistyRose
+/line = -250,250,250,-1,MintCream
+/line = 250,250,250,-1,MidnightBlue
+/point = 250 , -250 , both , -1 , {[(number)]}_11
+/point = -250 , -250 , both , -1 , {[(number)]}_9
+/point = -250 , 100 , both , -1 , {[(number)]}_7
+/point = -250 , -100 , both , -1 , R
+/point = -250 , 0 , both , -1 , LOAD
+/point = 0 , -250 , both , -1 , {[(number)]}_1
+/path=$,29750,5000,32500,5000,logic
+/path=$,40000,7500,40000,5250,errored
+/path=$,94750,4900,97500,4000,logic
+/path=$,94750,5100,97500,6000,logic
+/path=$,112500,5000,109750,5000,errored
+/path=$,110000,7500,110000,5250,errored
+/path=$,234750,4900,237500,4000,logic
+/path=$,234750,5100,237500,6000,logic
+/path=$,234750,4750,232500,7500,logic
+/path=$,257500,5000,255250,5000,errored
+/path=$,352500,5000,350250,5000,errored
+/path=$,462500,5000,460250,5000,errored
+/path=$,572500,5000,570250,5000,errored
+/path=$,662500,5000,660250,5000,errored
+/path={[(number)]}_1,10000,4750,10000,7500,logic
+/path={[(number)]}_1,15000,7500,15000,4750,errored
+/path={[(number)]}_1,20000,4750,20000,7500,logic
+/path={[(number)]}_1,25000,7500,25000,4750,errored
+/path={[(number)]}_1,30000,4750,30000,7500,logic
+/path={[(number)]}_1,35000,7500,35000,4750,errored
+/path={[(number)]}_1,40000,4750,40000,7500,logic
+/path={[(number)]}_1,45000,7500,45000,4750,errored
+/path={[(number)]}_1,50000,4750,50000,7500,logic
+/path={[(number)]}_1,55000,7500,55000,4750,errored
+/path={[(number)]}_1,60000,7500,60000,4750,errored
+/path={[(number)]}_1,65000,4750,65000,7500,logic
+/path={[(number)]}_1,70000,7500,70000,4750,errored
+/path={[(number)]}_1,75000,7500,75000,4750,errored
+/path={[(number)]}_1,80000,7500,80000,4750,errored
+/path={[(number)]}_1,85000,7500,85000,4750,errored
+/path={[(number)]}_1,90000,7500,90000,4750,errored
+/path={[(number)]}_1,95000,4750,95000,7500,logic
+/path={[(number)]}_1,100000,7500,100000,4750,errored
+/path={[(number)]}_1,105000,7500,105000,4750,errored
+/path={[(number)]}_1,110000,4750,110000,7500,logic
+/path={[(number)]}_1,115000,7500,115000,4750,errored
+/path={[(number)]}_1,120000,7500,120000,4750,errored
+/path={[(number)]}_1,125000,4750,125000,7500,logic
+/path={[(number)]}_1,130000,7500,130000,4750,errored
+/path={[(number)]}_1,135000,7500,135000,4750,errored
+/path={[(number)]}_1,140000,7500,140000,4750,errored
+/path={[(number)]}_1,145000,7500,145000,4750,errored
+/path={[(number)]}_1,150000,7500,150000,4750,errored
+/path={[(number)]}_1,155000,7500,155000,4750,errored
+/path={[(number)]}_1,160000,7500,160000,4750,errored
+/path={[(number)]}_1,165000,7500,165000,4750,errored
+/path={[(number)]}_1,170000,7500,170000,4750,errored
+/path={[(number)]}_1,175000,7500,175000,4750,errored
+/path={[(number)]}_1,180000,7500,180000,4750,errored
+/path={[(number)]}_1,185000,7500,185000,4750,errored
+/path={[(number)]}_1,190000,7500,190000,4750,errored
+/path={[(number)]}_1,195000,7500,195000,4750,errored
+/path={[(number)]}_1,200000,7500,200000,4750,errored
+/path={[(number)]}_1,205000,7500,205000,4750,errored
+/path={[(number)]}_1,210000,7500,210000,4750,errored
+/path={[(number)]}_1,215000,7500,215000,4750,errored
+/path={[(number)]}_1,220000,7500,220000,4750,errored
+/path={[(number)]}_1,225000,7500,225000,4750,errored
+/path={[(number)]}_1,230000,7500,230000,4750,errored
+/path={[(number)]}_1,235000,4750,235000,7500,logic
+/path={[(number)]}_1,240000,7500,240000,4750,errored
+/path={[(number)]}_1,245000,7500,245000,4750,errored
+/path={[(number)]}_1,250000,7500,250000,4750,errored
+/path={[(number)]}_1,255000,7500,255000,4750,errored
+/path={[(number)]}_1,260000,7500,260000,4750,errored
+/path={[(number)]}_1,265000,7500,265000,4750,errored
+/path={[(number)]}_1,270000,7500,270000,4750,errored
+/path={[(number)]}_1,275000,7500,275000,4750,errored
+/path={[(number)]}_1,280000,7500,280000,4750,errored
+/path={[(number)]}_1,285000,7500,285000,4750,errored
+/path={[(number)]}_1,290000,7500,290000,4750,errored
+/path={[(number)]}_1,295000,7500,295000,4750,errored
+/path={[(number)]}_1,300000,7500,300000,4750,errored
+/path={[(number)]}_1,305000,7500,305000,4750,errored
+/path={[(number)]}_1,310000,7500,310000,4750,errored
+/path={[(number)]}_1,315000,7500,315000,4750,errored
+/path={[(number)]}_1,320000,7500,320000,4750,errored
+/path={[(number)]}_1,325000,7500,325000,4750,errored
+/path={[(number)]}_1,330000,7500,330000,4750,errored
+/path={[(number)]}_1,335000,7500,335000,4750,errored
+/path={[(number)]}_1,340000,7500,340000,4750,errored
+/path={[(number)]}_1,345000,7500,345000,4750,errored
+/path={[(number)]}_1,350000,7500,350000,4750,errored
+/path={[(number)]}_1,355000,7500,355000,4750,errored
+/path={[(number)]}_1,360000,7500,360000,4750,errored
+/path={[(number)]}_1,365000,7500,365000,4750,errored
+/path={[(number)]}_1,370000,7500,370000,4750,errored
+/path={[(number)]}_1,375000,7500,375000,4750,errored
+/path={[(number)]}_1,380000,7500,380000,4750,errored
+/path={[(number)]}_1,385000,7500,385000,4750,errored
+/path={[(number)]}_1,390000,7500,390000,4750,errored
+/path={[(number)]}_1,395000,7500,395000,4750,errored
+/path={[(number)]}_1,400000,7500,400000,4750,errored
+/path={[(number)]}_1,405000,7500,405000,4750,errored
+/path={[(number)]}_1,410000,7500,410000,4750,errored
+/path={[(number)]}_1,415000,7500,415000,4750,errored
+/path={[(number)]}_1,420000,7500,420000,4750,errored
+/path={[(number)]}_1,425000,7500,425000,4750,errored
+/path={[(number)]}_1,430000,7500,430000,4750,errored
+/path={[(number)]}_1,435000,7500,435000,4750,errored
+/path={[(number)]}_1,440000,7500,440000,4750,errored
+/path={[(number)]}_1,445000,7500,445000,4750,errored
+/path={[(number)]}_1,450000,7500,450000,4750,errored
+/path={[(number)]}_1,455000,7500,455000,4750,errored
+/path={[(number)]}_1,460000,7500,460000,4750,errored
+/path={[(number)]}_1,465000,7500,465000,4750,errored
+/path={[(number)]}_1,470000,7500,470000,4750,errored
+/path={[(number)]}_1,475000,7500,475000,4750,errored
+/path={[(number)]}_1,480000,7500,480000,4750,errored
+/path={[(number)]}_1,485000,7500,485000,4750,errored
+/path={[(number)]}_1,490000,7500,490000,4750,errored
+/path={[(number)]}_1,495000,7500,495000,4750,errored
+/path={[(number)]}_1,500000,7500,500000,4750,errored
+/path={[(number)]}_1,505000,7500,505000,4750,errored
+/path={[(number)]}_1,510000,7500,510000,4750,errored
+/path={[(number)]}_1,515000,7500,515000,4750,errored
+/path={[(number)]}_1,520000,7500,520000,4750,errored
+/path={[(number)]}_1,525000,7500,525000,4750,errored
+/path={[(number)]}_1,530000,7500,530000,4750,errored
+/path={[(number)]}_1,535000,7500,535000,4750,errored
+/path={[(number)]}_1,540000,7500,540000,4750,errored
+/path={[(number)]}_1,545000,7500,545000,4750,errored
+/path={[(number)]}_1,550000,7500,550000,4750,errored
+/path={[(number)]}_1,555000,7500,555000,4750,errored
+/path={[(number)]}_1,560000,7500,560000,4750,errored
+/path={[(number)]}_1,565000,7500,565000,4750,errored
+/path={[(number)]}_1,570000,7500,570000,4750,errored
+/path={[(number)]}_1,575000,7500,575000,4750,errored
+/path={[(number)]}_1,580000,7500,580000,4750,errored
+/path={[(number)]}_1,585000,7500,585000,4750,errored
+/path={[(number)]}_1,590000,7500,590000,4750,errored
+/path={[(number)]}_1,595000,7500,595000,4750,errored
+/path={[(number)]}_1,600000,7500,600000,4750,errored
+/path={[(number)]}_1,605000,7500,605000,4750,errored
+/path={[(number)]}_1,610000,7500,610000,4750,errored
+/path={[(number)]}_1,615000,7500,615000,4750,errored
+/path={[(number)]}_1,620000,7500,620000,4750,errored
+/path={[(number)]}_1,625000,7500,625000,4750,errored
+/path={[(number)]}_1,630000,7500,630000,4750,errored
+/path={[(number)]}_1,635000,7500,635000,4750,errored
+/path={[(number)]}_1,640000,7500,640000,4750,errored
+/path={[(number)]}_1,645000,7500,645000,4750,errored
+/path={[(number)]}_1,650000,7500,650000,4750,errored
+/path={[(number)]}_1,655000,7500,655000,4750,errored
+/path={[(number)]}_1,660000,7500,660000,4750,errored
+/path={[(number)]}_1,665000,7500,665000,4750,errored
+/path={[(number)]}_1,670000,7500,670000,4750,errored
+/path={[(number)]}_1,675000,7500,675000,4750,errored
+/path={[(number)]}_1,680000,7500,680000,4750,errored
+/path={[(number)]}_1,685000,7500,685000,4750,errored
+/path={[(number)]}_1,690000,7500,690000,4750,errored
+/path={[(number)]}_1,695000,7500,695000,4750,errored
+/path={[(number)]}_1,700000,7500,700000,4750,errored
+/path={[(number)]}_1,705000,7500,705000,4750,errored
+/path={[(number)]}_1,710000,7500,710000,4750,errored
+/path={[(number)]}_1,715000,4750,715000,7500,logic
+/path={[(number)]}_1,720000,7500,720000,4750,errored
+/path={[(number)]}_1,725000,7500,725000,4750,errored
+/path={[(number)]}_10,57500,4000,54750,4900,errored
+/path={[(number)]}_10,742500,4000,739750,4900,errored
+/path={[(number)]}_10,747500,4000,744750,4900,errored
+/path={[(number)]}_11,20250,4750,22500,7500,logic
+/path={[(number)]}_11,52500,4000,50250,4900,errored
+/path={[(number)]}_11,62500,5000,60250,5000,errored
+/path={[(number)]}_11,65250,4750,67500,7500,logic
+/path={[(number)]}_11,87500,5000,85250,5000,errored
+/path={[(number)]}_11,92500,5000,90250,5000,errored
+/path={[(number)]}_11,97500,5000,95250,5000,errored
+/path={[(number)]}_11,102500,5000,100250,5000,errored
+/path={[(number)]}_11,107500,5000,105250,5000,errored
+/path={[(number)]}_11,95250,4750,97500,7500,logic
+/path={[(number)]}_11,122500,4000,119750,4900,errored
+/path={[(number)]}_11,127500,4000,124750,4900,errored
+/path={[(number)]}_11,235250,4750,237500,7500,logic
+/path={[(number)]}_11,715250,4750,717500,7500,logic
+/path={[(number)]}_12,57500,6000,54750,5100,errored
+/path={[(number)]}_12,72500,5000,70250,5000,errored
+/path={[(number)]}_12,77500,5000,75250,5000,errored
+/path={[(number)]}_12,92500,4000,89750,4900,errored
+/path={[(number)]}_12,97500,4000,94750,4900,errored
+/path={[(number)]}_12,102500,4000,99750,4900,errored
+/path={[(number)]}_12,107500,4000,104750,4900,errored
+/path={[(number)]}_12,112500,4000,109750,4900,errored
+/path={[(number)]}_12,127500,4000,125250,4900,errored
+/path={[(number)]}_12,132500,4000,130250,4900,errored
+/path={[(number)]}_12,262500,4000,259750,4900,errored
+/path={[(number)]}_12,267500,4000,264750,4900,errored
+/path={[(number)]}_12,272500,4000,269750,4900,errored
+/path={[(number)]}_12,277500,4000,274750,4900,errored
+/path={[(number)]}_12,282500,4000,279750,4900,errored
+/path={[(number)]}_12,287500,4000,284750,4900,errored
+/path={[(number)]}_12,292500,4000,289750,4900,errored
+/path={[(number)]}_12,297500,4000,294750,4900,errored
+/path={[(number)]}_12,302500,4000,299750,4900,errored
+/path={[(number)]}_12,307500,4000,304750,4900,errored
+/path={[(number)]}_12,312500,4000,309750,4900,errored
+/path={[(number)]}_12,317500,4000,314750,4900,errored
+/path={[(number)]}_12,322500,4000,319750,4900,errored
+/path={[(number)]}_12,327500,4000,324750,4900,errored
+/path={[(number)]}_12,332500,4000,329750,4900,errored
+/path={[(number)]}_12,337500,4000,334750,4900,errored
+/path={[(number)]}_12,342500,4000,339750,4900,errored
+/path={[(number)]}_12,347500,4000,344750,4900,errored
+/path={[(number)]}_12,352500,4000,349750,4900,errored
+/path={[(number)]}_12,357500,4000,354750,4900,errored
+/path={[(number)]}_12,362500,4000,359750,4900,errored
+/path={[(number)]}_12,367500,4000,364750,4900,errored
+/path={[(number)]}_12,372500,4000,369750,4900,errored
+/path={[(number)]}_12,377500,4000,374750,4900,errored
+/path={[(number)]}_12,382500,4000,379750,4900,errored
+/path={[(number)]}_12,387500,4000,384750,4900,errored
+/path={[(number)]}_12,392500,4000,389750,4900,errored
+/path={[(number)]}_12,397500,4000,394750,4900,errored
+/path={[(number)]}_12,402500,4000,399750,4900,errored
+/path={[(number)]}_12,407500,4000,404750,4900,errored
+/path={[(number)]}_12,412500,4000,409750,4900,errored
+/path={[(number)]}_12,417500,4000,414750,4900,errored
+/path={[(number)]}_12,422500,4000,419750,4900,errored
+/path={[(number)]}_12,427500,4000,424750,4900,errored
+/path={[(number)]}_12,432500,4000,429750,4900,errored
+/path={[(number)]}_12,437500,4000,434750,4900,errored
+/path={[(number)]}_12,442500,4000,439750,4900,errored
+/path={[(number)]}_12,447500,4000,444750,4900,errored
+/path={[(number)]}_12,452500,4000,449750,4900,errored
+/path={[(number)]}_12,457500,4000,454750,4900,errored
+/path={[(number)]}_12,462500,4000,459750,4900,errored
+/path={[(number)]}_12,467500,4000,464750,4900,errored
+/path={[(number)]}_12,472500,4000,469750,4900,errored
+/path={[(number)]}_12,477500,4000,474750,4900,errored
+/path={[(number)]}_12,482500,4000,479750,4900,errored
+/path={[(number)]}_12,487500,4000,484750,4900,errored
+/path={[(number)]}_12,492500,4000,489750,4900,errored
+/path={[(number)]}_12,497500,4000,494750,4900,errored
+/path={[(number)]}_12,502500,4000,499750,4900,errored
+/path={[(number)]}_12,507500,4000,504750,4900,errored
+/path={[(number)]}_12,512500,4000,509750,4900,errored
+/path={[(number)]}_12,517500,4000,514750,4900,errored
+/path={[(number)]}_12,522500,4000,519750,4900,errored
+/path={[(number)]}_12,527500,4000,524750,4900,errored
+/path={[(number)]}_12,532500,4000,529750,4900,errored
+/path={[(number)]}_12,537500,4000,534750,4900,errored
+/path={[(number)]}_12,542500,4000,539750,4900,errored
+/path={[(number)]}_12,547500,4000,544750,4900,errored
+/path={[(number)]}_12,552500,4000,549750,4900,errored
+/path={[(number)]}_12,557500,4000,554750,4900,errored
+/path={[(number)]}_12,562500,4000,559750,4900,errored
+/path={[(number)]}_12,567500,4000,564750,4900,errored
+/path={[(number)]}_12,572500,4000,569750,4900,errored
+/path={[(number)]}_12,577500,4000,574750,4900,errored
+/path={[(number)]}_12,582500,4000,579750,4900,errored
+/path={[(number)]}_12,587500,4000,584750,4900,errored
+/path={[(number)]}_12,592500,4000,589750,4900,errored
+/path={[(number)]}_12,597500,4000,594750,4900,errored
+/path={[(number)]}_12,602500,4000,599750,4900,errored
+/path={[(number)]}_12,607500,4000,604750,4900,errored
+/path={[(number)]}_12,612500,4000,609750,4900,errored
+/path={[(number)]}_12,617500,4000,614750,4900,errored
+/path={[(number)]}_12,622500,4000,619750,4900,errored
+/path={[(number)]}_12,627500,4000,624750,4900,errored
+/path={[(number)]}_12,632500,4000,629750,4900,errored
+/path={[(number)]}_12,637500,4000,634750,4900,errored
+/path={[(number)]}_12,642500,4000,639750,4900,errored
+/path={[(number)]}_12,647500,4000,644750,4900,errored
+/path={[(number)]}_12,652500,4000,649750,4900,errored
+/path={[(number)]}_12,657500,4000,654750,4900,errored
+/path={[(number)]}_12,662500,4000,659750,4900,errored
+/path={[(number)]}_12,667500,4000,664750,4900,errored
+/path={[(number)]}_12,672500,4000,669750,4900,errored
+/path={[(number)]}_12,677500,4000,674750,4900,errored
+/path={[(number)]}_12,682500,4000,679750,4900,errored
+/path={[(number)]}_12,687500,4000,684750,4900,errored
+/path={[(number)]}_12,692500,4000,689750,4900,errored
+/path={[(number)]}_12,697500,4000,694750,4900,errored
+/path={[(number)]}_12,702500,4000,699750,4900,errored
+/path={[(number)]}_12,707500,4000,704750,4900,errored
+/path={[(number)]}_12,712500,4000,709750,4900,errored
+/path={[(number)]}_12,717500,4000,714750,4900,errored
+/path={[(number)]}_12,722500,4000,719750,4900,errored
+/path={[(number)]}_12,727500,4000,724750,4900,errored
+/path={[(number)]}_12,732500,4000,729750,4900,errored
+/path={[(number)]}_13,19850,5250,18500,7500,logic
+/path={[(number)]}_13,64850,5250,63500,7500,logic
+/path={[(number)]}_13,97500,4000,95250,4900,errored
+/path={[(number)]}_13,102500,4000,100250,4900,errored
+/path={[(number)]}_13,107500,4000,105250,4900,errored
+/path={[(number)]}_13,112500,4000,110250,4900,errored
+/path={[(number)]}_13,117500,4000,115250,4900,errored
+/path={[(number)]}_13,94850,5250,93500,7500,logic
+/path={[(number)]}_13,234850,5250,233500,7500,logic
+/path={[(number)]}_13,267500,4000,265250,4900,errored
+/path={[(number)]}_13,272500,4000,270250,4900,errored
+/path={[(number)]}_13,277500,4000,275250,4900,errored
+/path={[(number)]}_13,282500,4000,280250,4900,errored
+/path={[(number)]}_13,287500,4000,285250,4900,errored
+/path={[(number)]}_13,292500,4000,290250,4900,errored
+/path={[(number)]}_13,297500,4000,295250,4900,errored
+/path={[(number)]}_13,302500,4000,300250,4900,errored
+/path={[(number)]}_13,307500,4000,305250,4900,errored
+/path={[(number)]}_13,312500,4000,310250,4900,errored
+/path={[(number)]}_13,317500,4000,315250,4900,errored
+/path={[(number)]}_13,322500,4000,320250,4900,errored
+/path={[(number)]}_13,327500,4000,325250,4900,errored
+/path={[(number)]}_13,332500,4000,330250,4900,errored
+/path={[(number)]}_13,337500,4000,335250,4900,errored
+/path={[(number)]}_13,342500,4000,340250,4900,errored
+/path={[(number)]}_13,347500,4000,345250,4900,errored
+/path={[(number)]}_13,352500,4000,350250,4900,errored
+/path={[(number)]}_13,357500,4000,355250,4900,errored
+/path={[(number)]}_13,362500,4000,360250,4900,errored
+/path={[(number)]}_13,367500,4000,365250,4900,errored
+/path={[(number)]}_13,372500,4000,370250,4900,errored
+/path={[(number)]}_13,377500,4000,375250,4900,errored
+/path={[(number)]}_13,382500,4000,380250,4900,errored
+/path={[(number)]}_13,387500,4000,385250,4900,errored
+/path={[(number)]}_13,392500,4000,390250,4900,errored
+/path={[(number)]}_13,397500,4000,395250,4900,errored
+/path={[(number)]}_13,402500,4000,400250,4900,errored
+/path={[(number)]}_13,407500,4000,405250,4900,errored
+/path={[(number)]}_13,412500,4000,410250,4900,errored
+/path={[(number)]}_13,417500,4000,415250,4900,errored
+/path={[(number)]}_13,422500,4000,420250,4900,errored
+/path={[(number)]}_13,427500,4000,425250,4900,errored
+/path={[(number)]}_13,432500,4000,430250,4900,errored
+/path={[(number)]}_13,437500,4000,435250,4900,errored
+/path={[(number)]}_13,442500,4000,440250,4900,errored
+/path={[(number)]}_13,447500,4000,445250,4900,errored
+/path={[(number)]}_13,452500,4000,450250,4900,errored
+/path={[(number)]}_13,457500,4000,455250,4900,errored
+/path={[(number)]}_13,462500,4000,460250,4900,errored
+/path={[(number)]}_13,467500,4000,465250,4900,errored
+/path={[(number)]}_13,472500,4000,470250,4900,errored
+/path={[(number)]}_13,477500,4000,475250,4900,errored
+/path={[(number)]}_13,482500,4000,480250,4900,errored
+/path={[(number)]}_13,487500,4000,485250,4900,errored
+/path={[(number)]}_13,492500,4000,490250,4900,errored
+/path={[(number)]}_13,497500,4000,495250,4900,errored
+/path={[(number)]}_13,502500,4000,500250,4900,errored
+/path={[(number)]}_13,507500,4000,505250,4900,errored
+/path={[(number)]}_13,512500,4000,510250,4900,errored
+/path={[(number)]}_13,517500,4000,515250,4900,errored
+/path={[(number)]}_13,522500,4000,520250,4900,errored
+/path={[(number)]}_13,527500,4000,525250,4900,errored
+/path={[(number)]}_13,532500,4000,530250,4900,errored
+/path={[(number)]}_13,537500,4000,535250,4900,errored
+/path={[(number)]}_13,542500,4000,540250,4900,errored
+/path={[(number)]}_13,547500,4000,545250,4900,errored
+/path={[(number)]}_13,552500,4000,550250,4900,errored
+/path={[(number)]}_13,557500,4000,555250,4900,errored
+/path={[(number)]}_13,562500,4000,560250,4900,errored
+/path={[(number)]}_13,567500,4000,565250,4900,errored
+/path={[(number)]}_13,572500,4000,570250,4900,errored
+/path={[(number)]}_13,577500,4000,575250,4900,errored
+/path={[(number)]}_13,582500,4000,580250,4900,errored
+/path={[(number)]}_13,587500,4000,585250,4900,errored
+/path={[(number)]}_13,592500,4000,590250,4900,errored
+/path={[(number)]}_13,597500,4000,595250,4900,errored
+/path={[(number)]}_13,602500,4000,600250,4900,errored
+/path={[(number)]}_13,607500,4000,605250,4900,errored
+/path={[(number)]}_13,612500,4000,610250,4900,errored
+/path={[(number)]}_13,617500,4000,615250,4900,errored
+/path={[(number)]}_13,622500,4000,620250,4900,errored
+/path={[(number)]}_13,627500,4000,625250,4900,errored
+/path={[(number)]}_13,632500,4000,630250,4900,errored
+/path={[(number)]}_13,637500,4000,635250,4900,errored
+/path={[(number)]}_13,642500,4000,640250,4900,errored
+/path={[(number)]}_13,647500,4000,645250,4900,errored
+/path={[(number)]}_13,652500,4000,650250,4900,errored
+/path={[(number)]}_13,657500,4000,655250,4900,errored
+/path={[(number)]}_13,662500,4000,660250,4900,errored
+/path={[(number)]}_13,667500,4000,665250,4900,errored
+/path={[(number)]}_13,672500,4000,670250,4900,errored
+/path={[(number)]}_13,677500,4000,675250,4900,errored
+/path={[(number)]}_13,682500,4000,680250,4900,errored
+/path={[(number)]}_13,687500,4000,685250,4900,errored
+/path={[(number)]}_13,692500,4000,690250,4900,errored
+/path={[(number)]}_13,697500,4000,695250,4900,errored
+/path={[(number)]}_13,702500,4000,700250,4900,errored
+/path={[(number)]}_13,707500,4000,705250,4900,errored
+/path={[(number)]}_13,712500,4000,710250,4900,errored
+/path={[(number)]}_13,717500,4000,715250,4900,errored
+/path={[(number)]}_13,722500,4000,720250,4900,errored
+/path={[(number)]}_13,727500,4000,725250,4900,errored
+/path={[(number)]}_13,732500,4000,730250,4900,errored
+/path={[(number)]}_13,737500,4000,735250,4900,errored
+/path={[(number)]}_15,19850,4750,18500,7500,logic
+/path={[(number)]}_15,62500,6000,60250,5100,errored
+/path={[(number)]}_15,94850,4750,93500,7500,logic
+/path={[(number)]}_15,234850,4750,233500,7500,logic
+/path={[(number)]}_16,132500,6000,129750,5100,errored
+/path={[(number)]}_16,137500,6000,134750,5100,errored
+/path={[(number)]}_17,94750,4800,97500,3000,logic
+/path={[(number)]}_17,234750,4800,237500,3000,logic
+/path={[(number)]}_19,102500,6000,99750,5100,errored
+/path={[(number)]}_19,107500,6000,104750,5100,errored
+/path={[(number)]}_19,112500,6000,109750,5100,errored
+/path={[(number)]}_19,117500,6000,114750,5100,errored
+/path={[(number)]}_19,122500,6000,119750,5100,errored
+/path={[(number)]}_19,94750,4950,97500,4500,logic
+/path={[(number)]}_19,137500,6000,135250,5100,errored
+/path={[(number)]}_19,142500,6000,140250,5100,errored
+/path={[(number)]}_19,234750,4950,237500,4500,logic
+/path={[(number)]}_19,272500,6000,269750,5100,errored
+/path={[(number)]}_19,277500,6000,274750,5100,errored
+/path={[(number)]}_19,282500,6000,279750,5100,errored
+/path={[(number)]}_19,287500,6000,284750,5100,errored
+/path={[(number)]}_19,292500,6000,289750,5100,errored
+/path={[(number)]}_19,297500,6000,294750,5100,errored
+/path={[(number)]}_19,302500,6000,299750,5100,errored
+/path={[(number)]}_19,307500,6000,304750,5100,errored
+/path={[(number)]}_19,312500,6000,309750,5100,errored
+/path={[(number)]}_19,317500,6000,314750,5100,errored
+/path={[(number)]}_19,322500,6000,319750,5100,errored
+/path={[(number)]}_19,327500,6000,324750,5100,errored
+/path={[(number)]}_19,332500,6000,329750,5100,errored
+/path={[(number)]}_19,337500,6000,334750,5100,errored
+/path={[(number)]}_19,342500,6000,339750,5100,errored
+/path={[(number)]}_19,347500,6000,344750,5100,errored
+/path={[(number)]}_19,352500,6000,349750,5100,errored
+/path={[(number)]}_19,357500,6000,354750,5100,errored
+/path={[(number)]}_19,362500,6000,359750,5100,errored
+/path={[(number)]}_19,367500,6000,364750,5100,errored
+/path={[(number)]}_19,372500,6000,369750,5100,errored
+/path={[(number)]}_19,377500,6000,374750,5100,errored
+/path={[(number)]}_19,382500,6000,379750,5100,errored
+/path={[(number)]}_19,387500,6000,384750,5100,errored
+/path={[(number)]}_19,392500,6000,389750,5100,errored
+/path={[(number)]}_19,397500,6000,394750,5100,errored
+/path={[(number)]}_19,402500,6000,399750,5100,errored
+/path={[(number)]}_19,407500,6000,404750,5100,errored
+/path={[(number)]}_19,412500,6000,409750,5100,errored
+/path={[(number)]}_19,417500,6000,414750,5100,errored
+/path={[(number)]}_19,422500,6000,419750,5100,errored
+/path={[(number)]}_19,427500,6000,424750,5100,errored
+/path={[(number)]}_19,432500,6000,429750,5100,errored
+/path={[(number)]}_19,437500,6000,434750,5100,errored
+/path={[(number)]}_19,442500,6000,439750,5100,errored
+/path={[(number)]}_19,447500,6000,444750,5100,errored
+/path={[(number)]}_19,452500,6000,449750,5100,errored
+/path={[(number)]}_19,457500,6000,454750,5100,errored
+/path={[(number)]}_19,462500,6000,459750,5100,errored
+/path={[(number)]}_19,467500,6000,464750,5100,errored
+/path={[(number)]}_19,472500,6000,469750,5100,errored
+/path={[(number)]}_19,477500,6000,474750,5100,errored
+/path={[(number)]}_19,482500,6000,479750,5100,errored
+/path={[(number)]}_19,487500,6000,484750,5100,errored
+/path={[(number)]}_19,492500,6000,489750,5100,errored
+/path={[(number)]}_19,497500,6000,494750,5100,errored
+/path={[(number)]}_19,502500,6000,499750,5100,errored
+/path={[(number)]}_19,507500,6000,504750,5100,errored
+/path={[(number)]}_19,512500,6000,509750,5100,errored
+/path={[(number)]}_19,517500,6000,514750,5100,errored
+/path={[(number)]}_19,522500,6000,519750,5100,errored
+/path={[(number)]}_19,527500,6000,524750,5100,errored
+/path={[(number)]}_19,532500,6000,529750,5100,errored
+/path={[(number)]}_19,537500,6000,534750,5100,errored
+/path={[(number)]}_19,542500,6000,539750,5100,errored
+/path={[(number)]}_19,547500,6000,544750,5100,errored
+/path={[(number)]}_19,552500,6000,549750,5100,errored
+/path={[(number)]}_19,557500,6000,554750,5100,errored
+/path={[(number)]}_19,562500,6000,559750,5100,errored
+/path={[(number)]}_19,567500,6000,564750,5100,errored
+/path={[(number)]}_19,572500,6000,569750,5100,errored
+/path={[(number)]}_19,577500,6000,574750,5100,errored
+/path={[(number)]}_19,582500,6000,579750,5100,errored
+/path={[(number)]}_19,587500,6000,584750,5100,errored
+/path={[(number)]}_19,592500,6000,589750,5100,errored
+/path={[(number)]}_19,597500,6000,594750,5100,errored
+/path={[(number)]}_19,602500,6000,599750,5100,errored
+/path={[(number)]}_19,607500,6000,604750,5100,errored
+/path={[(number)]}_19,612500,6000,609750,5100,errored
+/path={[(number)]}_19,617500,6000,614750,5100,errored
+/path={[(number)]}_19,622500,6000,619750,5100,errored
+/path={[(number)]}_19,627500,6000,624750,5100,errored
+/path={[(number)]}_19,632500,6000,629750,5100,errored
+/path={[(number)]}_19,637500,6000,634750,5100,errored
+/path={[(number)]}_19,642500,6000,639750,5100,errored
+/path={[(number)]}_19,647500,6000,644750,5100,errored
+/path={[(number)]}_19,652500,6000,649750,5100,errored
+/path={[(number)]}_19,657500,6000,654750,5100,errored
+/path={[(number)]}_19,662500,6000,659750,5100,errored
+/path={[(number)]}_19,667500,6000,664750,5100,errored
+/path={[(number)]}_19,672500,6000,669750,5100,errored
+/path={[(number)]}_19,677500,6000,674750,5100,errored
+/path={[(number)]}_19,682500,6000,679750,5100,errored
+/path={[(number)]}_19,687500,6000,684750,5100,errored
+/path={[(number)]}_19,692500,6000,689750,5100,errored
+/path={[(number)]}_19,697500,6000,694750,5100,errored
+/path={[(number)]}_19,702500,6000,699750,5100,errored
+/path={[(number)]}_19,707500,6000,704750,5100,errored
+/path={[(number)]}_19,712500,6000,709750,5100,errored
+/path={[(number)]}_19,717500,6000,714750,5100,errored
+/path={[(number)]}_19,722500,6000,719750,5100,errored
+/path={[(number)]}_19,727500,6000,724750,5100,errored
+/path={[(number)]}_19,732500,6000,729750,5100,errored
+/path={[(number)]}_19,737500,6000,734750,5100,errored
+/path={[(number)]}_19,742500,6000,739750,5100,errored
+/path={[(number)]}_21,234750,5150,237500,6500,logic
+/path={[(number)]}_21,277500,6000,275250,5100,errored
+/path={[(number)]}_21,282500,6000,280250,5100,errored
+/path={[(number)]}_21,287500,6000,285250,5100,errored
+/path={[(number)]}_21,292500,6000,290250,5100,errored
+/path={[(number)]}_21,297500,6000,295250,5100,errored
+/path={[(number)]}_21,302500,6000,300250,5100,errored
+/path={[(number)]}_21,307500,6000,305250,5100,errored
+/path={[(number)]}_21,312500,6000,310250,5100,errored
+/path={[(number)]}_21,317500,6000,315250,5100,errored
+/path={[(number)]}_21,322500,6000,320250,5100,errored
+/path={[(number)]}_21,327500,6000,325250,5100,errored
+/path={[(number)]}_21,332500,6000,330250,5100,errored
+/path={[(number)]}_21,337500,6000,335250,5100,errored
+/path={[(number)]}_21,342500,6000,340250,5100,errored
+/path={[(number)]}_21,347500,6000,345250,5100,errored
+/path={[(number)]}_21,352500,6000,350250,5100,errored
+/path={[(number)]}_21,357500,6000,355250,5100,errored
+/path={[(number)]}_21,362500,6000,360250,5100,errored
+/path={[(number)]}_21,367500,6000,365250,5100,errored
+/path={[(number)]}_21,372500,6000,370250,5100,errored
+/path={[(number)]}_21,377500,6000,375250,5100,errored
+/path={[(number)]}_21,382500,6000,380250,5100,errored
+/path={[(number)]}_21,387500,6000,385250,5100,errored
+/path={[(number)]}_21,392500,6000,390250,5100,errored
+/path={[(number)]}_21,397500,6000,395250,5100,errored
+/path={[(number)]}_21,402500,6000,400250,5100,errored
+/path={[(number)]}_21,407500,6000,405250,5100,errored
+/path={[(number)]}_21,412500,6000,410250,5100,errored
+/path={[(number)]}_21,417500,6000,415250,5100,errored
+/path={[(number)]}_21,422500,6000,420250,5100,errored
+/path={[(number)]}_21,427500,6000,425250,5100,errored
+/path={[(number)]}_21,432500,6000,430250,5100,errored
+/path={[(number)]}_21,437500,6000,435250,5100,errored
+/path={[(number)]}_21,442500,6000,440250,5100,errored
+/path={[(number)]}_21,447500,6000,445250,5100,errored
+/path={[(number)]}_21,452500,6000,450250,5100,errored
+/path={[(number)]}_21,457500,6000,455250,5100,errored
+/path={[(number)]}_21,462500,6000,460250,5100,errored
+/path={[(number)]}_21,467500,6000,465250,5100,errored
+/path={[(number)]}_21,472500,6000,470250,5100,errored
+/path={[(number)]}_21,477500,6000,475250,5100,errored
+/path={[(number)]}_21,482500,6000,480250,5100,errored
+/path={[(number)]}_21,487500,6000,485250,5100,errored
+/path={[(number)]}_21,492500,6000,490250,5100,errored
+/path={[(number)]}_21,497500,6000,495250,5100,errored
+/path={[(number)]}_21,502500,6000,500250,5100,errored
+/path={[(number)]}_21,507500,6000,505250,5100,errored
+/path={[(number)]}_21,512500,6000,510250,5100,errored
+/path={[(number)]}_21,517500,6000,515250,5100,errored
+/path={[(number)]}_21,522500,6000,520250,5100,errored
+/path={[(number)]}_21,527500,6000,525250,5100,errored
+/path={[(number)]}_21,532500,6000,530250,5100,errored
+/path={[(number)]}_21,537500,6000,535250,5100,errored
+/path={[(number)]}_21,542500,6000,540250,5100,errored
+/path={[(number)]}_21,547500,6000,545250,5100,errored
+/path={[(number)]}_21,552500,6000,550250,5100,errored
+/path={[(number)]}_21,557500,6000,555250,5100,errored
+/path={[(number)]}_21,562500,6000,560250,5100,errored
+/path={[(number)]}_21,567500,6000,565250,5100,errored
+/path={[(number)]}_21,572500,6000,570250,5100,errored
+/path={[(number)]}_21,577500,6000,575250,5100,errored
+/path={[(number)]}_21,582500,6000,580250,5100,errored
+/path={[(number)]}_21,587500,6000,585250,5100,errored
+/path={[(number)]}_21,592500,6000,590250,5100,errored
+/path={[(number)]}_21,597500,6000,595250,5100,errored
+/path={[(number)]}_21,602500,6000,600250,5100,errored
+/path={[(number)]}_21,607500,6000,605250,5100,errored
+/path={[(number)]}_21,612500,6000,610250,5100,errored
+/path={[(number)]}_21,617500,6000,615250,5100,errored
+/path={[(number)]}_21,622500,6000,620250,5100,errored
+/path={[(number)]}_21,627500,6000,625250,5100,errored
+/path={[(number)]}_21,632500,6000,630250,5100,errored
+/path={[(number)]}_21,637500,6000,635250,5100,errored
+/path={[(number)]}_21,642500,6000,640250,5100,errored
+/path={[(number)]}_21,647500,6000,645250,5100,errored
+/path={[(number)]}_21,652500,6000,650250,5100,errored
+/path={[(number)]}_21,657500,6000,655250,5100,errored
+/path={[(number)]}_21,662500,6000,660250,5100,errored
+/path={[(number)]}_21,667500,6000,665250,5100,errored
+/path={[(number)]}_21,672500,6000,670250,5100,errored
+/path={[(number)]}_21,677500,6000,675250,5100,errored
+/path={[(number)]}_21,682500,6000,680250,5100,errored
+/path={[(number)]}_21,687500,6000,685250,5100,errored
+/path={[(number)]}_21,692500,6000,690250,5100,errored
+/path={[(number)]}_21,697500,6000,695250,5100,errored
+/path={[(number)]}_21,702500,6000,700250,5100,errored
+/path={[(number)]}_21,707500,6000,705250,5100,errored
+/path={[(number)]}_21,712500,6000,710250,5100,errored
+/path={[(number)]}_21,717500,6000,715250,5100,errored
+/path={[(number)]}_21,722500,6000,720250,5100,errored
+/path={[(number)]}_21,727500,6000,725250,5100,errored
+/path={[(number)]}_21,732500,6000,730250,5100,errored
+/path={[(number)]}_21,737500,6000,735250,5100,errored
+/path={[(number)]}_21,742500,6000,740250,5100,errored
+/path={[(number)]}_21,747500,6000,745250,5100,errored
+/path={[(number)]}_23,277500,7500,279750,4750,errored
+/path={[(number)]}_23,282500,7500,284750,4750,errored
+/path={[(number)]}_23,287500,7500,289750,4750,errored
+/path={[(number)]}_23,292500,7500,294750,4750,errored
+/path={[(number)]}_23,297500,7500,299750,4750,errored
+/path={[(number)]}_23,302500,7500,304750,4750,errored
+/path={[(number)]}_23,307500,7500,309750,4750,errored
+/path={[(number)]}_23,312500,7500,314750,4750,errored
+/path={[(number)]}_23,317500,7500,319750,4750,errored
+/path={[(number)]}_23,322500,7500,324750,4750,errored
+/path={[(number)]}_23,327500,7500,329750,4750,errored
+/path={[(number)]}_23,332500,7500,334750,4750,errored
+/path={[(number)]}_23,337500,7500,339750,4750,errored
+/path={[(number)]}_23,342500,7500,344750,4750,errored
+/path={[(number)]}_23,347500,7500,349750,4750,errored
+/path={[(number)]}_23,352500,7500,354750,4750,errored
+/path={[(number)]}_23,357500,7500,359750,4750,errored
+/path={[(number)]}_23,362500,7500,364750,4750,errored
+/path={[(number)]}_23,367500,7500,369750,4750,errored
+/path={[(number)]}_23,372500,7500,374750,4750,errored
+/path={[(number)]}_23,377500,7500,379750,4750,errored
+/path={[(number)]}_23,382500,7500,384750,4750,errored
+/path={[(number)]}_23,387500,7500,389750,4750,errored
+/path={[(number)]}_23,392500,7500,394750,4750,errored
+/path={[(number)]}_23,397500,7500,399750,4750,errored
+/path={[(number)]}_23,402500,7500,404750,4750,errored
+/path={[(number)]}_23,407500,7500,409750,4750,errored
+/path={[(number)]}_23,412500,7500,414750,4750,errored
+/path={[(number)]}_23,417500,7500,419750,4750,errored
+/path={[(number)]}_23,422500,7500,424750,4750,errored
+/path={[(number)]}_23,427500,7500,429750,4750,errored
+/path={[(number)]}_23,432500,7500,434750,4750,errored
+/path={[(number)]}_23,437500,7500,439750,4750,errored
+/path={[(number)]}_23,442500,7500,444750,4750,errored
+/path={[(number)]}_23,447500,7500,449750,4750,errored
+/path={[(number)]}_23,452500,7500,454750,4750,errored
+/path={[(number)]}_23,457500,7500,459750,4750,errored
+/path={[(number)]}_23,462500,7500,464750,4750,errored
+/path={[(number)]}_23,467500,7500,469750,4750,errored
+/path={[(number)]}_23,472500,7500,474750,4750,errored
+/path={[(number)]}_23,477500,7500,479750,4750,errored
+/path={[(number)]}_23,482500,7500,484750,4750,errored
+/path={[(number)]}_23,487500,7500,489750,4750,errored
+/path={[(number)]}_23,492500,7500,494750,4750,errored
+/path={[(number)]}_23,497500,7500,499750,4750,errored
+/path={[(number)]}_23,502500,7500,504750,4750,errored
+/path={[(number)]}_23,507500,7500,509750,4750,errored
+/path={[(number)]}_23,512500,7500,514750,4750,errored
+/path={[(number)]}_23,517500,7500,519750,4750,errored
+/path={[(number)]}_23,522500,7500,524750,4750,errored
+/path={[(number)]}_23,527500,7500,529750,4750,errored
+/path={[(number)]}_23,532500,7500,534750,4750,errored
+/path={[(number)]}_23,537500,7500,539750,4750,errored
+/path={[(number)]}_23,542500,7500,544750,4750,errored
+/path={[(number)]}_23,547500,7500,549750,4750,errored
+/path={[(number)]}_23,552500,7500,554750,4750,errored
+/path={[(number)]}_23,557500,7500,559750,4750,errored
+/path={[(number)]}_23,562500,7500,564750,4750,errored
+/path={[(number)]}_23,567500,7500,569750,4750,errored
+/path={[(number)]}_23,572500,7500,574750,4750,errored
+/path={[(number)]}_23,577500,7500,579750,4750,errored
+/path={[(number)]}_23,582500,7500,584750,4750,errored
+/path={[(number)]}_23,587500,7500,589750,4750,errored
+/path={[(number)]}_23,592500,7500,594750,4750,errored
+/path={[(number)]}_23,597500,7500,599750,4750,errored
+/path={[(number)]}_23,602500,7500,604750,4750,errored
+/path={[(number)]}_23,607500,7500,609750,4750,errored
+/path={[(number)]}_23,612500,7500,614750,4750,errored
+/path={[(number)]}_23,617500,7500,619750,4750,errored
+/path={[(number)]}_23,622500,7500,624750,4750,errored
+/path={[(number)]}_23,627500,7500,629750,4750,errored
+/path={[(number)]}_23,632500,7500,634750,4750,errored
+/path={[(number)]}_23,637500,7500,639750,4750,errored
+/path={[(number)]}_23,642500,7500,644750,4750,errored
+/path={[(number)]}_23,647500,7500,649750,4750,errored
+/path={[(number)]}_23,652500,7500,654750,4750,errored
+/path={[(number)]}_23,657500,7500,659750,4750,errored
+/path={[(number)]}_23,662500,7500,664750,4750,errored
+/path={[(number)]}_23,667500,7500,669750,4750,errored
+/path={[(number)]}_23,672500,7500,674750,4750,errored
+/path={[(number)]}_23,677500,7500,679750,4750,errored
+/path={[(number)]}_23,682500,7500,684750,4750,errored
+/path={[(number)]}_23,687500,7500,689750,4750,errored
+/path={[(number)]}_23,692500,7500,694750,4750,errored
+/path={[(number)]}_23,697500,7500,699750,4750,errored
+/path={[(number)]}_23,702500,7500,704750,4750,errored
+/path={[(number)]}_23,707500,7500,709750,4750,errored
+/path={[(number)]}_23,712500,7500,714750,4750,errored
+/path={[(number)]}_23,717500,7500,719750,4750,errored
+/path={[(number)]}_23,722500,7500,724750,4750,errored
+/path={[(number)]}_23,727500,7500,729750,4750,errored
+/path={[(number)]}_23,732500,7500,734750,4750,errored
+/path={[(number)]}_23,737500,7500,739750,4750,errored
+/path={[(number)]}_23,742500,7500,744750,4750,errored
+/path={[(number)]}_23,747500,7500,749750,4750,errored
+/path={[(number)]}_3,9750,5000,12500,5000,logic
+/path={[(number)]}_3,20000,7500,20000,5250,errored
+/path={[(number)]}_4,142500,5000,139750,5000,errored
+/path={[(number)]}_4,147500,5000,144750,5000,errored
+/path={[(number)]}_4,152500,5000,149750,5000,errored
+/path={[(number)]}_4,157500,5000,154750,5000,errored
+/path={[(number)]}_4,162500,5000,159750,5000,errored
+/path={[(number)]}_4,167500,5000,164750,5000,errored
+/path={[(number)]}_4,172500,5000,169750,5000,errored
+/path={[(number)]}_4,177500,5000,174750,5000,errored
+/path={[(number)]}_4,182500,5000,179750,5000,errored
+/path={[(number)]}_4,187500,5000,184750,5000,errored
+/path={[(number)]}_4,192500,5000,189750,5000,errored
+/path={[(number)]}_4,197500,5000,194750,5000,errored
+/path={[(number)]}_4,202500,5000,199750,5000,errored
+/path={[(number)]}_4,207500,5000,204750,5000,errored
+/path={[(number)]}_4,212500,5000,209750,5000,errored
+/path={[(number)]}_4,217500,5000,214750,5000,errored
+/path={[(number)]}_4,222500,5000,219750,5000,errored
+/path={[(number)]}_4,227500,5000,224750,5000,errored
+/path={[(number)]}_4,232500,5000,229750,5000,errored
+/path={[(number)]}_4,237500,5000,234750,5000,errored
+/path={[(number)]}_4,242500,5000,239750,5000,errored
+/path={[(number)]}_4,737500,5000,734750,5000,errored
+/path={[(number)]}_5,9750,4900,12500,4000,logic
+/path={[(number)]}_5,29750,4900,32500,4000,logic
+/path={[(number)]}_5,39750,4900,42500,4000,logic
+/path={[(number)]}_5,49750,4900,52500,4000,logic
+/path={[(number)]}_5,109750,4900,112500,4000,logic
+/path={[(number)]}_5,124750,4900,127500,4000,logic
+/path={[(number)]}_5,147500,5000,145250,5000,errored
+/path={[(number)]}_5,152500,5000,150250,5000,errored
+/path={[(number)]}_5,157500,5000,155250,5000,errored
+/path={[(number)]}_5,162500,5000,160250,5000,errored
+/path={[(number)]}_5,167500,5000,165250,5000,errored
+/path={[(number)]}_5,172500,5000,170250,5000,errored
+/path={[(number)]}_5,177500,5000,175250,5000,errored
+/path={[(number)]}_5,182500,5000,180250,5000,errored
+/path={[(number)]}_5,187500,5000,185250,5000,errored
+/path={[(number)]}_5,192500,5000,190250,5000,errored
+/path={[(number)]}_5,197500,5000,195250,5000,errored
+/path={[(number)]}_5,202500,5000,200250,5000,errored
+/path={[(number)]}_5,207500,5000,205250,5000,errored
+/path={[(number)]}_5,212500,5000,210250,5000,errored
+/path={[(number)]}_5,217500,5000,215250,5000,errored
+/path={[(number)]}_5,222500,5000,220250,5000,errored
+/path={[(number)]}_5,227500,5000,225250,5000,errored
+/path={[(number)]}_5,232500,5000,230250,5000,errored
+/path={[(number)]}_5,237500,5000,235250,5000,errored
+/path={[(number)]}_5,242500,5000,240250,5000,errored
+/path={[(number)]}_5,247500,5000,245250,5000,errored
+/path={[(number)]}_6,27500,5000,24750,5000,errored
+/path={[(number)]}_6,47500,5000,44750,5000,errored
+/path={[(number)]}_7,29750,5100,32500,6000,logic
+/path={[(number)]}_7,39750,5100,42500,6000,logic
+/path={[(number)]}_7,57500,5000,54750,5000,errored
+/path={[(number)]}_7,49750,5100,52500,6000,logic
+/path={[(number)]}_7,67500,5000,64750,5000,errored
+/path={[(number)]}_7,72500,5000,69750,5000,errored
+/path={[(number)]}_7,64750,5100,67500,6000,logic
+/path={[(number)]}_7,82500,5000,79750,5000,errored
+/path={[(number)]}_7,87500,5000,84750,5000,errored
+/path={[(number)]}_7,92500,5000,89750,5000,errored
+/path={[(number)]}_7,97500,5000,94750,5000,errored
+/path={[(number)]}_7,117500,5000,114750,5000,errored
+/path={[(number)]}_7,109750,5100,112500,6000,logic
+/path={[(number)]}_7,124750,5100,127500,6000,logic
+/path={[(number)]}_7,714750,5100,717500,6000,logic
+/path={[(number)]}_7,737500,5000,735250,5000,errored
+/path={[(number)]}_7,742500,5000,740250,5000,errored
+/path={[(number)]}_8,52500,5000,50250,5000,errored
+/path={[(number)]}_8,122500,5000,120250,5000,errored
+/path={[(number)]}_8,127500,5000,124750,5000,errored
+/path={[(number)]}_8,132500,5000,129750,5000,errored
+/path={[(number)]}_8,257500,5000,254750,5000,errored
+/path={[(number)]}_8,262500,5000,259750,5000,errored
+/path={[(number)]}_8,267500,5000,264750,5000,errored
+/path={[(number)]}_8,272500,5000,269750,5000,errored
+/path={[(number)]}_8,277500,5000,274750,5000,errored
+/path={[(number)]}_8,282500,5000,279750,5000,errored
+/path={[(number)]}_8,287500,5000,284750,5000,errored
+/path={[(number)]}_8,292500,5000,289750,5000,errored
+/path={[(number)]}_8,297500,5000,294750,5000,errored
+/path={[(number)]}_8,302500,5000,299750,5000,errored
+/path={[(number)]}_8,307500,5000,304750,5000,errored
+/path={[(number)]}_8,312500,5000,309750,5000,errored
+/path={[(number)]}_8,317500,5000,314750,5000,errored
+/path={[(number)]}_8,322500,5000,319750,5000,errored
+/path={[(number)]}_8,327500,5000,324750,5000,errored
+/path={[(number)]}_8,332500,5000,329750,5000,errored
+/path={[(number)]}_8,337500,5000,334750,5000,errored
+/path={[(number)]}_8,342500,5000,339750,5000,errored
+/path={[(number)]}_8,352500,5000,349750,5000,errored
+/path={[(number)]}_8,357500,5000,354750,5000,errored
+/path={[(number)]}_8,362500,5000,359750,5000,errored
+/path={[(number)]}_8,367500,5000,364750,5000,errored
+/path={[(number)]}_8,372500,5000,369750,5000,errored
+/path={[(number)]}_8,377500,5000,374750,5000,errored
+/path={[(number)]}_8,382500,5000,379750,5000,errored
+/path={[(number)]}_8,387500,5000,384750,5000,errored
+/path={[(number)]}_8,392500,5000,389750,5000,errored
+/path={[(number)]}_8,397500,5000,394750,5000,errored
+/path={[(number)]}_8,402500,5000,399750,5000,errored
+/path={[(number)]}_8,407500,5000,404750,5000,errored
+/path={[(number)]}_8,412500,5000,409750,5000,errored
+/path={[(number)]}_8,417500,5000,414750,5000,errored
+/path={[(number)]}_8,422500,5000,419750,5000,errored
+/path={[(number)]}_8,427500,5000,424750,5000,errored
+/path={[(number)]}_8,432500,5000,429750,5000,errored
+/path={[(number)]}_8,437500,5000,434750,5000,errored
+/path={[(number)]}_8,442500,5000,439750,5000,errored
+/path={[(number)]}_8,447500,5000,444750,5000,errored
+/path={[(number)]}_8,452500,5000,449750,5000,errored
+/path={[(number)]}_8,462500,5000,459750,5000,errored
+/path={[(number)]}_8,467500,5000,464750,5000,errored
+/path={[(number)]}_8,472500,5000,469750,5000,errored
+/path={[(number)]}_8,477500,5000,474750,5000,errored
+/path={[(number)]}_8,482500,5000,479750,5000,errored
+/path={[(number)]}_8,487500,5000,484750,5000,errored
+/path={[(number)]}_8,492500,5000,489750,5000,errored
+/path={[(number)]}_8,497500,5000,494750,5000,errored
+/path={[(number)]}_8,502500,5000,499750,5000,errored
+/path={[(number)]}_8,507500,5000,504750,5000,errored
+/path={[(number)]}_8,512500,5000,509750,5000,errored
+/path={[(number)]}_8,517500,5000,514750,5000,errored
+/path={[(number)]}_8,522500,5000,519750,5000,errored
+/path={[(number)]}_8,527500,5000,524750,5000,errored
+/path={[(number)]}_8,532500,5000,529750,5000,errored
+/path={[(number)]}_8,537500,5000,534750,5000,errored
+/path={[(number)]}_8,542500,5000,539750,5000,errored
+/path={[(number)]}_8,547500,5000,544750,5000,errored
+/path={[(number)]}_8,552500,5000,549750,5000,errored
+/path={[(number)]}_8,557500,5000,554750,5000,errored
+/path={[(number)]}_8,562500,5000,559750,5000,errored
+/path={[(number)]}_8,572500,5000,569750,5000,errored
+/path={[(number)]}_8,577500,5000,574750,5000,errored
+/path={[(number)]}_8,582500,5000,579750,5000,errored
+/path={[(number)]}_8,587500,5000,584750,5000,errored
+/path={[(number)]}_8,592500,5000,589750,5000,errored
+/path={[(number)]}_8,597500,5000,594750,5000,errored
+/path={[(number)]}_8,602500,5000,599750,5000,errored
+/path={[(number)]}_8,607500,5000,604750,5000,errored
+/path={[(number)]}_8,612500,5000,609750,5000,errored
+/path={[(number)]}_8,617500,5000,614750,5000,errored
+/path={[(number)]}_8,622500,5000,619750,5000,errored
+/path={[(number)]}_8,627500,5000,624750,5000,errored
+/path={[(number)]}_8,632500,5000,629750,5000,errored
+/path={[(number)]}_8,637500,5000,634750,5000,errored
+/path={[(number)]}_8,642500,5000,639750,5000,errored
+/path={[(number)]}_8,647500,5000,644750,5000,errored
+/path={[(number)]}_8,652500,5000,649750,5000,errored
+/path={[(number)]}_8,662500,5000,659750,5000,errored
+/path={[(number)]}_8,667500,5000,664750,5000,errored
+/path={[(number)]}_8,672500,5000,669750,5000,errored
+/path={[(number)]}_8,677500,5000,674750,5000,errored
+/path={[(number)]}_8,682500,5000,679750,5000,errored
+/path={[(number)]}_8,687500,5000,684750,5000,errored
+/path={[(number)]}_8,692500,5000,689750,5000,errored
+/path={[(number)]}_8,697500,5000,694750,5000,errored
+/path={[(number)]}_8,702500,5000,699750,5000,errored
+/path={[(number)]}_8,707500,5000,704750,5000,errored
+/path={[(number)]}_8,712500,5000,709750,5000,errored
+/path={[(number)]}_8,717500,5000,714750,5000,errored
+/path={[(number)]}_8,722500,5000,719750,5000,errored
+/path={[(number)]}_9,19750,4750,17500,7500,logic
+/path={[(number)]}_9,47500,4000,44750,4900,errored
+/path={[(number)]}_9,29750,4750,27500,7500,logic
+/path={[(number)]}_9,64750,4750,62500,7500,logic
+/path={[(number)]}_9,262500,5000,260250,5000,errored
+/path={[(number)]}_9,267500,5000,265250,5000,errored
+/path={[(number)]}_9,272500,5000,270250,5000,errored
+/path={[(number)]}_9,277500,5000,275250,5000,errored
+/path={[(number)]}_9,282500,5000,280250,5000,errored
+/path={[(number)]}_9,287500,5000,285250,5000,errored
+/path={[(number)]}_9,292500,5000,290250,5000,errored
+/path={[(number)]}_9,297500,5000,295250,5000,errored
+/path={[(number)]}_9,302500,5000,300250,5000,errored
+/path={[(number)]}_9,307500,5000,305250,5000,errored
+/path={[(number)]}_9,312500,5000,310250,5000,errored
+/path={[(number)]}_9,317500,5000,315250,5000,errored
+/path={[(number)]}_9,322500,5000,320250,5000,errored
+/path={[(number)]}_9,327500,5000,325250,5000,errored
+/path={[(number)]}_9,332500,5000,330250,5000,errored
+/path={[(number)]}_9,337500,5000,335250,5000,errored
+/path={[(number)]}_9,342500,5000,340250,5000,errored
+/path={[(number)]}_9,347500,5000,345250,5000,errored
+/path={[(number)]}_9,357500,5000,355250,5000,errored
+/path={[(number)]}_9,362500,5000,360250,5000,errored
+/path={[(number)]}_9,367500,5000,365250,5000,errored
+/path={[(number)]}_9,372500,5000,370250,5000,errored
+/path={[(number)]}_9,377500,5000,375250,5000,errored
+/path={[(number)]}_9,382500,5000,380250,5000,errored
+/path={[(number)]}_9,387500,5000,385250,5000,errored
+/path={[(number)]}_9,392500,5000,390250,5000,errored
+/path={[(number)]}_9,397500,5000,395250,5000,errored
+/path={[(number)]}_9,402500,5000,400250,5000,errored
+/path={[(number)]}_9,407500,5000,405250,5000,errored
+/path={[(number)]}_9,412500,5000,410250,5000,errored
+/path={[(number)]}_9,417500,5000,415250,5000,errored
+/path={[(number)]}_9,422500,5000,420250,5000,errored
+/path={[(number)]}_9,427500,5000,425250,5000,errored
+/path={[(number)]}_9,432500,5000,430250,5000,errored
+/path={[(number)]}_9,437500,5000,435250,5000,errored
+/path={[(number)]}_9,442500,5000,440250,5000,errored
+/path={[(number)]}_9,447500,5000,445250,5000,errored
+/path={[(number)]}_9,452500,5000,450250,5000,errored
+/path={[(number)]}_9,457500,5000,455250,5000,errored
+/path={[(number)]}_9,467500,5000,465250,5000,errored
+/path={[(number)]}_9,472500,5000,470250,5000,errored
+/path={[(number)]}_9,477500,5000,475250,5000,errored
+/path={[(number)]}_9,482500,5000,480250,5000,errored
+/path={[(number)]}_9,487500,5000,485250,5000,errored
+/path={[(number)]}_9,492500,5000,490250,5000,errored
+/path={[(number)]}_9,497500,5000,495250,5000,errored
+/path={[(number)]}_9,502500,5000,500250,5000,errored
+/path={[(number)]}_9,507500,5000,505250,5000,errored
+/path={[(number)]}_9,512500,5000,510250,5000,errored
+/path={[(number)]}_9,517500,5000,515250,5000,errored
+/path={[(number)]}_9,522500,5000,520250,5000,errored
+/path={[(number)]}_9,527500,5000,525250,5000,errored
+/path={[(number)]}_9,532500,5000,530250,5000,errored
+/path={[(number)]}_9,537500,5000,535250,5000,errored
+/path={[(number)]}_9,542500,5000,540250,5000,errored
+/path={[(number)]}_9,547500,5000,545250,5000,errored
+/path={[(number)]}_9,552500,5000,550250,5000,errored
+/path={[(number)]}_9,557500,5000,555250,5000,errored
+/path={[(number)]}_9,562500,5000,560250,5000,errored
+/path={[(number)]}_9,567500,5000,565250,5000,errored
+/path={[(number)]}_9,577500,5000,575250,5000,errored
+/path={[(number)]}_9,582500,5000,580250,5000,errored
+/path={[(number)]}_9,587500,5000,585250,5000,errored
+/path={[(number)]}_9,592500,5000,590250,5000,errored
+/path={[(number)]}_9,597500,5000,595250,5000,errored
+/path={[(number)]}_9,602500,5000,600250,5000,errored
+/path={[(number)]}_9,607500,5000,605250,5000,errored
+/path={[(number)]}_9,612500,5000,610250,5000,errored
+/path={[(number)]}_9,617500,5000,615250,5000,errored
+/path={[(number)]}_9,622500,5000,620250,5000,errored
+/path={[(number)]}_9,627500,5000,625250,5000,errored
+/path={[(number)]}_9,632500,5000,630250,5000,errored
+/path={[(number)]}_9,637500,5000,635250,5000,errored
+/path={[(number)]}_9,642500,5000,640250,5000,errored
+/path={[(number)]}_9,647500,5000,645250,5000,errored
+/path={[(number)]}_9,652500,5000,650250,5000,errored
+/path={[(number)]}_9,657500,5000,655250,5000,errored
+/path={[(number)]}_9,667500,5000,665250,5000,errored
+/path={[(number)]}_9,672500,5000,670250,5000,errored
+/path={[(number)]}_9,677500,5000,675250,5000,errored
+/path={[(number)]}_9,682500,5000,680250,5000,errored
+/path={[(number)]}_9,687500,5000,685250,5000,errored
+/path={[(number)]}_9,692500,5000,690250,5000,errored
+/path={[(number)]}_9,697500,5000,695250,5000,errored
+/path={[(number)]}_9,702500,5000,700250,5000,errored
+/path={[(number)]}_9,707500,5000,705250,5000,errored
+/path={[(number)]}_9,712500,5000,710250,5000,errored
+/path={[(number)]}_9,717500,5000,715250,5000,errored
+/path={[(number)]}_9,722500,5000,720250,5000,errored
+/path={[(number)]}_9,727500,5000,725250,5000,errored
+/path={[(number)]}_9,714750,4750,712500,7500,logic
+/path=10_3,39750,5000,42500,5000,logic
+/path=10_3,50000,7500,50000,5250,errored
+/path=10_3,49750,5000,52500,5000,logic
+/path=10_3,60000,7500,60000,5250,errored
+/path=10_3,65000,7500,65000,5250,errored
+/path=10_3,64750,5000,67500,5000,logic
+/path=10_3,75000,7500,75000,5250,errored
+/path=10_3,80000,7500,80000,5250,errored
+/path=10_3,85000,7500,85000,5250,errored
+/path=10_3,90000,7500,90000,5250,errored
+/path=12_5,19750,4900,22500,4000,logic
+/path=12_5,37500,5000,34750,5000,errored
+/path=1210_9,94750,4750,92500,7500,logic
+/path=END:GoTo,730000,7500,730000,5250,errored
+/path=I,19750,5000,22500,5000,logic
+/path=I,19750,5100,22500,6000,logic
+/path=I,30000,7500,30000,5250,errored
+/path=I,42500,5000,40250,5000,errored
+/path=I,95000,7500,95000,5250,errored
+/path=I,102500,5000,99750,5000,errored
+/path=LOAD,714750,5000,717500,5000,logic
+/path=LOAD,725000,7500,725000,5250,errored
+/error = /error,Origin,0,0,0,0,
+/path=PRINT:GoTo,124750,5000,127500,5000,logic
+/path=PRINT:GoTo,135000,7500,135000,5250,errored
+/path=PRINT:GoTo,145000,7500,145000,5250,errored
+/path=PRINT:GoTo,190000,7500,190000,5250,errored
+/path=PRINT:GoTo,205000,7500,205000,5250,errored
+/path=PRINT:GoTo,235000,7500,235000,5250,errored
+/path=PRINT:GoTo,260000,7500,260000,5250,errored
+/path=PRINT:GoTo,355000,7500,355000,5250,errored
+/path=PRINT:GoTo,385000,7500,385000,5250,errored
+/path=PRINT:GoTo,395000,7500,395000,5250,errored
+/path=PRINT:GoTo,435000,7500,435000,5250,errored
+/path=PRINT:GoTo,480000,7500,480000,5250,errored
+/path=PRINT:GoTo,515000,7500,515000,5250,errored
+/path=PRINT:GoTo,530000,7500,530000,5250,errored
+/path=PRINT:GoTo,555000,7500,555000,5250,errored
+/path=PRINT:GoTo,585000,7500,585000,5250,errored
+/path=PRINT:GoTo,660000,7500,660000,5250,errored
+/path=PRINT:PRINT:GoTo,335000,7500,335000,5250,errored
+/path=PRINT:PRINT:GoTo,445000,7500,445000,5250,errored
+/path=PRINT:PRINT:GoTo,645000,7500,645000,5250,errored
+/path=PRINT:PRINT:PRINT:GoTo,710000,7500,710000,5250,errored
+/path=Quote_100,560000,7500,560000,5250,errored
+/path=Quote_100,567500,5000,564750,5000,errored
+/path=Quote_101,565000,7500,565000,5250,errored
+/path=Quote_102,570000,7500,570000,5250,errored
+/path=Quote_103,575000,7500,575000,5250,errored
+/path=Quote_104,580000,7500,580000,5250,errored
+/path=Quote_106,590000,7500,590000,5250,errored
+/path=Quote_107,595000,7500,595000,5250,errored
+/path=Quote_108,600000,7500,600000,5250,errored
+/path=Quote_109,605000,7500,605000,5250,errored
+/path=Quote_110,610000,7500,610000,5250,errored
+/path=Quote_111,615000,7500,615000,5250,errored
+/path=Quote_112,620000,7500,620000,5250,errored
+/path=Quote_113,625000,7500,625000,5250,errored
+/path=Quote_114,630000,7500,630000,5250,errored
+/path=Quote_115,635000,7500,635000,5250,errored
+/path=Quote_116,640000,7500,640000,5250,errored
+/path=Quote_118,650000,7500,650000,5250,errored
+/path=Quote_118,657500,5000,654750,5000,errored
+/path=Quote_119,655000,7500,655000,5250,errored
+/path=Quote_12,94750,5000,97500,5000,logic
+/path=Quote_12,105000,7500,105000,5250,errored
+/path=Quote_12,117500,5000,115250,5000,errored
+/path=Quote_121,665000,7500,665000,5250,errored
+/path=Quote_122,670000,7500,670000,5250,errored
+/path=Quote_123,675000,7500,675000,5250,errored
+/path=Quote_124,680000,7500,680000,5250,errored
+/path=Quote_125,685000,7500,685000,5250,errored
+/path=Quote_126,690000,7500,690000,5250,errored
+/path=Quote_127,695000,7500,695000,5250,errored
+/path=Quote_128,700000,7500,700000,5250,errored
+/path=Quote_129,705000,7500,705000,5250,errored
+/path=Quote_131,715000,7500,715000,5250,errored
+/path=Quote_132,732500,5000,729750,5000,errored
+/path=Quote_14,109750,5000,112500,5000,logic
+/path=Quote_14,120000,7500,120000,5250,errored
+/path=Quote_15,125000,7500,125000,5250,errored
+/path=Quote_17,140000,7500,140000,5250,errored
+/path=Quote_19,150000,7500,150000,5250,errored
+/path=Quote_20,155000,7500,155000,5250,errored
+/path=Quote_21,160000,7500,160000,5250,errored
+/path=Quote_22,165000,7500,165000,5250,errored
+/path=Quote_23,170000,7500,170000,5250,errored
+/path=Quote_24,175000,7500,175000,5250,errored
+/path=Quote_25,180000,7500,180000,5250,errored
+/path=Quote_26,185000,7500,185000,5250,errored
+/path=Quote_28,195000,7500,195000,5250,errored
+/path=Quote_29,200000,7500,200000,5250,errored
+/path=Quote_31,210000,7500,210000,5250,errored
+/path=Quote_32,215000,7500,215000,5250,errored
+/path=Quote_33,220000,7500,220000,5250,errored
+/path=Quote_34,225000,7500,225000,5250,errored
+/path=Quote_35,230000,7500,230000,5250,errored
+/path=Quote_37,234750,5000,237500,5000,logic
+/path=Quote_37,245000,7500,245000,5250,errored
+/path=Quote_37,252500,5000,249750,5000,errored
+/path=Quote_38,250000,7500,250000,5250,errored
+/path=Quote_39,255000,7500,255000,5250,errored
+/path=Quote_41,265000,7500,265000,5250,errored
+/path=Quote_42,270000,7500,270000,5250,errored
+/path=Quote_43,275000,7500,275000,5250,errored
+/path=Quote_44,280000,7500,280000,5250,errored
+/path=Quote_45,285000,7500,285000,5250,errored
+/path=Quote_46,290000,7500,290000,5250,errored
+/path=Quote_47,295000,7500,295000,5250,errored
+/path=Quote_48,300000,7500,300000,5250,errored
+/path=Quote_49,305000,7500,305000,5250,errored
+/path=Quote_50,310000,7500,310000,5250,errored
+/path=Quote_51,315000,7500,315000,5250,errored
+/path=Quote_52,320000,7500,320000,5250,errored
+/path=Quote_53,325000,7500,325000,5250,errored
+/path=Quote_54,330000,7500,330000,5250,errored
+/path=Quote_56,340000,7500,340000,5250,errored
+/path=Quote_56,347500,5000,344750,5000,errored
+/path=Quote_57,345000,7500,345000,5250,errored
+/path=Quote_58,350000,7500,350000,5250,errored
+/path=Quote_60,360000,7500,360000,5250,errored
+/path=Quote_61,365000,7500,365000,5250,errored
+/path=Quote_62,370000,7500,370000,5250,errored
+/path=Quote_63,375000,7500,375000,5250,errored
+/path=Quote_64,380000,7500,380000,5250,errored
+/path=Quote_66,390000,7500,390000,5250,errored
+/path=Quote_68,400000,7500,400000,5250,errored
+/path=Quote_69,405000,7500,405000,5250,errored
+/path=Quote_70,410000,7500,410000,5250,errored
+/path=Quote_71,415000,7500,415000,5250,errored
+/path=Quote_72,420000,7500,420000,5250,errored
+/path=Quote_73,425000,7500,425000,5250,errored
+/path=Quote_74,430000,7500,430000,5250,errored
+/path=Quote_76,440000,7500,440000,5250,errored
+/path=Quote_78,450000,7500,450000,5250,errored
+/path=Quote_78,457500,5000,454750,5000,errored
+/path=Quote_79,455000,7500,455000,5250,errored
+/path=Quote_80,460000,7500,460000,5250,errored
+/path=Quote_81,465000,7500,465000,5250,errored
+/path=Quote_82,470000,7500,470000,5250,errored
+/path=Quote_83,475000,7500,475000,5250,errored
+/path=Quote_85,485000,7500,485000,5250,errored
+/path=Quote_86,490000,7500,490000,5250,errored
+/path=Quote_87,495000,7500,495000,5250,errored
+/path=Quote_88,500000,7500,500000,5250,errored
+/path=Quote_89,505000,7500,505000,5250,errored
+/path=Quote_90,510000,7500,510000,5250,errored
+/path=Quote_92,520000,7500,520000,5250,errored
+/path=Quote_93,525000,7500,525000,5250,errored
+/path=Quote_95,535000,7500,535000,5250,errored
+/path=Quote_96,540000,7500,540000,5250,errored
+/path=Quote_97,545000,7500,545000,5250,errored
+/path=Quote_98,550000,7500,550000,5250,errored
+/path=R,714750,4900,717500,4000,logic
+/path=STAR,64750,4900,67500,4000,logic
+/use=Symbol7_1_1101,10000,5000,Default,errored,0
+/use=Symbol7_1_1101,15000,5000,Default,_,0
+/use=Symbol7_12_1107,95000,5000,Default,errored,0
+/use=Symbol7_12_1107,100000,5000,Default,_,0
+/use=Symbol7_132_1111,715000,5000,Default,errored,0
+/use=Symbol7_132_1111,720000,5000,Default,_,0
+/use=Symbol7_14_1108,110000,5000,Default,errored,0
+/use=Symbol7_14_1108,115000,5000,Default,_,0
+/use=Symbol7_14_1108,120000,5000,Default,_,0
+/use=Symbol7_14_1108,135000,5000,Default,_,0
+/use=Symbol7_14_1108,145000,5000,Default,_,0
+/use=Symbol7_14_1108,150000,5000,Default,_,0
+/use=Symbol7_14_1108,155000,5000,Default,_,0
+/use=Symbol7_14_1108,160000,5000,Default,_,0
+/use=Symbol7_14_1108,165000,5000,Default,_,0
+/use=Symbol7_14_1108,170000,5000,Default,_,0
+/use=Symbol7_14_1108,175000,5000,Default,_,0
+/use=Symbol7_14_1108,180000,5000,Default,_,0
+/use=Symbol7_14_1108,190000,5000,Default,_,0
+/use=Symbol7_14_1108,195000,5000,Default,_,0
+/use=Symbol7_14_1108,205000,5000,Default,_,0
+/use=Symbol7_14_1108,210000,5000,Default,_,0
+/use=Symbol7_14_1108,215000,5000,Default,_,0
+/use=Symbol7_14_1108,220000,5000,Default,_,0
+/use=Symbol7_14_1108,225000,5000,Default,_,0
+/use=Symbol7_14_1108,245000,5000,Default,_,0
+/use=Symbol7_14_1108,250000,5000,Default,_,0
+/use=Symbol7_14_1108,260000,5000,Default,_,0
+/use=Symbol7_14_1108,265000,5000,Default,_,0
+/use=Symbol7_14_1108,270000,5000,Default,_,0
+/use=Symbol7_14_1108,275000,5000,Default,_,0
+/use=Symbol7_14_1108,280000,5000,Default,_,0
+/use=Symbol7_14_1108,285000,5000,Default,_,0
+/use=Symbol7_14_1108,290000,5000,Default,_,0
+/use=Symbol7_14_1108,295000,5000,Default,_,0
+/use=Symbol7_14_1108,300000,5000,Default,_,0
+/use=Symbol7_14_1108,305000,5000,Default,_,0
+/use=Symbol7_14_1108,310000,5000,Default,_,0
+/use=Symbol7_14_1108,315000,5000,Default,_,0
+/use=Symbol7_14_1108,320000,5000,Default,_,0
+/use=Symbol7_14_1108,325000,5000,Default,_,0
+/use=Symbol7_14_1108,340000,5000,Default,_,0
+/use=Symbol7_14_1108,345000,5000,Default,_,0
+/use=Symbol7_14_1108,355000,5000,Default,_,0
+/use=Symbol7_14_1108,360000,5000,Default,_,0
+/use=Symbol7_14_1108,365000,5000,Default,_,0
+/use=Symbol7_14_1108,370000,5000,Default,_,0
+/use=Symbol7_14_1108,375000,5000,Default,_,0
+/use=Symbol7_14_1108,385000,5000,Default,_,0
+/use=Symbol7_14_1108,395000,5000,Default,_,0
+/use=Symbol7_14_1108,400000,5000,Default,_,0
+/use=Symbol7_14_1108,405000,5000,Default,_,0
+/use=Symbol7_14_1108,410000,5000,Default,_,0
+/use=Symbol7_14_1108,415000,5000,Default,_,0
+/use=Symbol7_14_1108,420000,5000,Default,_,0
+/use=Symbol7_14_1108,425000,5000,Default,_,0
+/use=Symbol7_14_1108,435000,5000,Default,_,0
+/use=Symbol7_14_1108,450000,5000,Default,_,0
+/use=Symbol7_14_1108,455000,5000,Default,_,0
+/use=Symbol7_14_1108,460000,5000,Default,_,0
+/use=Symbol7_14_1108,465000,5000,Default,_,0
+/use=Symbol7_14_1108,470000,5000,Default,_,0
+/use=Symbol7_14_1108,480000,5000,Default,_,0
+/use=Symbol7_14_1108,485000,5000,Default,_,0
+/use=Symbol7_14_1108,490000,5000,Default,_,0
+/use=Symbol7_14_1108,495000,5000,Default,_,0
+/use=Symbol7_14_1108,500000,5000,Default,_,0
+/use=Symbol7_14_1108,505000,5000,Default,_,0
+/use=Symbol7_14_1108,515000,5000,Default,_,0
+/use=Symbol7_14_1108,520000,5000,Default,_,0
+/use=Symbol7_14_1108,530000,5000,Default,_,0
+/use=Symbol7_14_1108,535000,5000,Default,_,0
+/use=Symbol7_14_1108,540000,5000,Default,_,0
+/use=Symbol7_14_1108,545000,5000,Default,_,0
+/use=Symbol7_14_1108,560000,5000,Default,_,0
+/use=Symbol7_14_1108,565000,5000,Default,_,0
+/use=Symbol7_14_1108,570000,5000,Default,_,0
+/use=Symbol7_14_1108,575000,5000,Default,_,0
+/use=Symbol7_14_1108,585000,5000,Default,_,0
+/use=Symbol7_14_1108,590000,5000,Default,_,0
+/use=Symbol7_14_1108,595000,5000,Default,_,0
+/use=Symbol7_14_1108,600000,5000,Default,_,0
+/use=Symbol7_14_1108,605000,5000,Default,_,0
+/use=Symbol7_14_1108,610000,5000,Default,_,0
+/use=Symbol7_14_1108,615000,5000,Default,_,0
+/use=Symbol7_14_1108,620000,5000,Default,_,0
+/use=Symbol7_14_1108,625000,5000,Default,_,0
+/use=Symbol7_14_1108,630000,5000,Default,_,0
+/use=Symbol7_14_1108,635000,5000,Default,_,0
+/use=Symbol7_14_1108,650000,5000,Default,_,0
+/use=Symbol7_14_1108,660000,5000,Default,_,0
+/use=Symbol7_14_1108,665000,5000,Default,_,0
+/use=Symbol7_14_1108,670000,5000,Default,_,0
+/use=Symbol7_14_1108,675000,5000,Default,_,0
+/use=Symbol7_14_1108,680000,5000,Default,_,0
+/use=Symbol7_14_1108,685000,5000,Default,_,0
+/use=Symbol7_14_1108,690000,5000,Default,_,0
+/use=Symbol7_14_1108,695000,5000,Default,_,0
+/use=Symbol7_14_1108,700000,5000,Default,_,0
+/use=Symbol7_14_1108,710000,5000,Default,_,0
+/use=Symbol7_16_1109,125000,5000,Default,errored,0
+/use=Symbol7_16_1109,130000,5000,Default,_,0
+/use=Symbol7_16_1109,140000,5000,Default,_,0
+/use=Symbol7_16_1109,185000,5000,Default,_,0
+/use=Symbol7_16_1109,200000,5000,Default,_,0
+/use=Symbol7_16_1109,230000,5000,Default,_,0
+/use=Symbol7_16_1109,255000,5000,Default,_,0
+/use=Symbol7_16_1109,330000,5000,Default,_,0
+/use=Symbol7_16_1109,350000,5000,Default,_,0
+/use=Symbol7_16_1109,380000,5000,Default,_,0
+/use=Symbol7_16_1109,390000,5000,Default,_,0
+/use=Symbol7_16_1109,430000,5000,Default,_,0
+/use=Symbol7_16_1109,440000,5000,Default,_,0
+/use=Symbol7_16_1109,475000,5000,Default,_,0
+/use=Symbol7_16_1109,510000,5000,Default,_,0
+/use=Symbol7_16_1109,525000,5000,Default,_,0
+/use=Symbol7_16_1109,550000,5000,Default,_,0
+/use=Symbol7_16_1109,580000,5000,Default,_,0
+/use=Symbol7_16_1109,640000,5000,Default,_,0
+/use=Symbol7_16_1109,655000,5000,Default,_,0
+/use=Symbol7_16_1109,705000,5000,Default,_,0
+/use=Symbol7_16_1109,725000,5000,Default,_,0
+/use=Symbol7_2_1102,20000,5000,Default,errored,0
+/use=Symbol7_2_1102,25000,5000,Default,_,0
+/use=Symbol7_2_1102,90000,5000,Default,_,0
+/use=Symbol7_3_1103,30000,5000,Default,errored,0
+/use=Symbol7_3_1103,35000,5000,Default,_,0
+/use=Symbol7_3_1103,105000,5000,Default,_,0
+/use=Symbol7_37_1110,235000,5000,Default,errored,0
+/use=Symbol7_37_1110,240000,5000,Default,_,0
+/use=Symbol7_37_1110,335000,5000,Default,_,0
+/use=Symbol7_37_1110,445000,5000,Default,_,0
+/use=Symbol7_37_1110,555000,5000,Default,_,0
+/use=Symbol7_37_1110,645000,5000,Default,_,0
+/use=Symbol7_4_1104,40000,5000,Default,errored,0
+/use=Symbol7_4_1104,45000,5000,Default,_,0
+/use=Symbol7_4_1104,85000,5000,Default,_,0
+/use=Symbol7_5_1105,50000,5000,Default,errored,0
+/use=Symbol7_5_1105,55000,5000,Default,_,0
+/use=Symbol7_5_1105,60000,5000,Default,_,0
+/use=Symbol7_5_1105,75000,5000,Default,_,0
+/use=Symbol7_5_1105,80000,5000,Default,_,0
+/use=Symbol7_7_1106,65000,5000,Default,errored,0
+/use=Symbol7_7_1106,70000,5000,Default,_,0

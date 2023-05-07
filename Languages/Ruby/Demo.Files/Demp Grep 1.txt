@@ -1,0 +1,101 @@
+https://exercism.io/tracks/ruby/exercises/grep/solutions/f1e0c2de48a3497ead9243f2eea29d86
+
+
+
+class Grep
+  def self.grep(pattern, flags, files)
+    grep = new(pattern, flags, files)
+    grep.search_files
+
+    grep.matches
+  end
+
+  def initialize(pattern, flags, files)
+    @pattern = pattern
+    @flags = flags
+    @files = files
+
+    @matches = []
+    @matching_files = []
+  end
+
+  def search_files
+    @files.each do |file|
+      has_match = false
+
+      File.new(file).each_with_index do |line, index|
+        if match?(line, pattern)
+          has_match = true
+          add_line(line, index + 1, file)
+        end
+      end
+
+      if has_match
+        @matching_files << file
+      end
+    end
+  end
+
+  def add_line(line, line_number, filename)
+    line_output = ""
+
+    if prefix_with_filename?
+      line_output += "#{filename}:"
+    end
+
+    if print_line_number?
+      line_output += "#{line_number}:"
+    end
+
+    line_output += line.strip
+    @matches << line_output
+  end
+
+  def matches
+    if just_print_filenames?
+      @matching_files.join("\n").strip
+    else
+      @matches.join("\n").strip
+    end
+  end
+
+  private
+
+  def print_line_number?
+    @flags.include?("-n")
+  end
+
+  def case_insensitive?
+    @flags.include?("-i")
+  end
+
+  def just_print_filenames?
+    @flags.include?("-l")
+  end
+
+  def only_exact_match?
+    @flags.include?("-x")
+  end
+
+  def invert_matches?
+    @flags.include?("-v")
+  end
+
+  def prefix_with_filename?
+    @files.count > 1
+  end
+
+  def pattern
+    Regexp.new @pattern, (Regexp::IGNORECASE if case_insensitive?)
+  end
+
+  def match?(line, pattern)
+    if only_exact_match?
+      match = (line.strip.downcase == @pattern.downcase) && line.match?(pattern)
+    else
+      match = line.match?(pattern)
+    end
+
+    invert_matches? ? !match : match
+  end
+end

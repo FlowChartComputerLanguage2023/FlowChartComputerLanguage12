@@ -1,0 +1,10 @@
+
+Known Bugs:
+
+Bug 20200812A
+It does not take care of multi line comments ie:
+/*
+C = B + A
+*/
+will show on the flow chart as three symbols. 
+

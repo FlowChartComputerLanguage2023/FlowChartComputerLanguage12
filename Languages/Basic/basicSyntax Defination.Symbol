@@ -1,0 +1,257 @@
+/Grammer=accessmodifier,constant,[ Ansi, Assembly, Async, Auto, ByRef, ByVal, Default, Friend, In, Iterator,  Key, Module <keyword>, MustInherit, MustOverride, Narrowing,  NotInheritable, NotOverridable, Optional, Out, Overloads, Overridable,  Overrides, ParamArray, Partial, Private, Private Protected, Protected,  Protected Friend, Public, ReadOnly, Shadows, Shared, Static, Unicode,  Widening, WithEvents, WriteOnly ]
+/Grammer=Async,constant,Async
+/Grammer=Auto,constant,[ Ansi, Unicode, Auto ]
+/Grammer=Binary,constant,Binary
+/Grammer=False,constant,false
+/Grammer=MustInherit,constant,MustInherit
+/Grammer=MustOverride,constant,MustOverride
+/Grammer=MyBase,constant,MyBase
+/Grammer=MyClass,constant,MyClass
+/Grammer=Narrowing,constant,Narrowing
+/Grammer=Nothing,constant,Nothing
+/Grammer=NotInheritable,constant,NotInheritable
+/Grammer=NotOverridable,constant,NotOverridable
+/Grammer=Off,constant,Off
+/Grammer=Overloads,constant,Overloads
+/Grammer=Overridable,constant,Overridable
+/Grammer=Overrides,constant,Overrides
+/Grammer=ReadOnly,constant,ReadOnly
+/Grammer=Shadows,constant,Shadows
+/Grammer=Shared,constant,Shared
+/Grammer=True,Constant,True
+/Grammer=Unicode,Constant,Unicode
+/Grammer=WriteOnly,constant,WriteOnly
+/Grammer=Boolean,datatype,Dim Variable As Boolean
+/Grammer=Byte,datatype,variable As Byte [ = constant ]
+/Grammer=Char,datatype,variable As char {=constant }
+/Grammer=Decimal,datatype,Dim variable As Datatype
+/Grammer=Double,datatype,{ variable As Double {=constant } } | { Variable# As Double }
+/Grammer=Object,datatype,Dim variable As Object
+/Grammer=SByte,datatype,Sbyte
+/Grammer=Short,datatype,Short
+/Grammer=Single,datatype,Single
+/Grammer=String,datatype,String
+/Grammer=UInteger,datatype,UInteger
+/Grammer=ULong,datatype,ULong
+/Grammer=UShort,datatype,UShort
+/Grammer=Variant,datatype,Variant
+/Grammer=CSByte,Function,CSByte ( expression )
+/Grammer=CShort,Function,CShort ( expression )
+/Grammer=CSng,Function,CSng ( expression )
+/Grammer=CStr,Function,CStr ( expression )
+/Grammer=Aggregate,keyword,Aggregate element [ As type ] In collection [ , element2 [ As type2 ] In collection2, [ ... ] ]   [ clause ]   Into expressions
+/Grammer=Distinct,keyword,Distinct
+/Grammer=Else,keyword,Else
+/Grammer=EndIf,Keyword,endif
+/Grammer=Friend,keyword,friend
+/Grammer=Of,keyword,Of
+/Grammer=On,keyword,On
+/Grammer=Out,keyword,Out
+/Grammer=Private,keyword,Private
+/Grammer=Property,keyword,Property
+/Grammer=Protected,keyword,Protected
+/Grammer=Public,keyword,Public
+/Grammer=RaiseEvent,keyword,RaiseEvent
+/Grammer=Static,keyword,Static
+/Grammer=Step,keyword,Step
+/Grammer=Then,Keyword,Then
+/Grammer=To,keyword,To
+/Grammer=Wend,keyword,End While
+/Grammer=Widening,keyword,Widening
+/Grammer=AssemblyCompanyAttribute,Keyword-attribute,AssemblyCompanyAttribute
+/Grammer=AssemblyConfigurationAttribute,Keyword-attribute,AssemblyConfigurationAttribute
+/Grammer=AssemblyCopyrightAttribute,Keyword-attribute,AssemblyCopyrightAttribute
+/Grammer=AssemblyCultureAttribute,Keyword-attribute,AssemblyCultureAttribute
+/Grammer=AssemblyDefaultAliasAttribute,Keyword-attribute,AssemblyDefaultAliasAttribute
+/Grammer=AssemblyDescriptionAttribute,Keyword-attribute,AssemblyDescriptionAttribute
+/Grammer=AssemblyFileVersionAttribute,Keyword-attribute,AssemblyFileVersionAttribute
+/Grammer=AssemblyFlagsAttribute,Keyword-attribute,AssemblyFlagsAttribute
+/Grammer=AssemblyInformationalVersionAttribute,Keyword-attribute,AssemblyInformationalVersionAttribute
+/Grammer=AssemblyName,Keyword-attribute,AssemblyName
+/Grammer=AssemblyProductAttribute,Keyword-attribute,AssemblyProductAttribute
+/Grammer=AssemblyTitleAttribute,Keyword-attribute,AssemblyTitleAttribute
+/Grammer=AssemblyTrademarkAttribute,Keyword-attribute,AssemblyTrademarkAttribute
+/Grammer=AssemblyVersionAttribute,Keyword-attribute,AssemblyVersionAttribute
+/Grammer=CallerArgumentExpressionAttribute,Keyword-attribute,CallerArgumentExpressionAttribute
+/Grammer=CallerFilePathAttribute,Keyword-attribute,CallerFilePathAttribute
+/Grammer=CallerLineNumberAttribute,Keyword-attribute,CallerLineNumberAttribute
+/Grammer=CallerMemberNameAttribute,Keyword-attribute,CallerMemberNameAttribute
+/Grammer=CLSCompliantAttribute,Keyword-attribute,CLSCompliantAttribute
+/Grammer=ComClassAttribute,Keyword-attribute,ComClassAttribute
+/Grammer=HideModuleNameAttribute,Keyword-attribute,HideModuleNameAttribute
+/Grammer=VBFixedArrayAttribute,Keyword-attribute,VBFixedArrayAttribute
+/Grammer=VBFixedStringAttribute,Keyword-attribute,VBFixedStringAttribute
+/Grammer=-,operator,-
+/Grammer=-=,operator,-=
+/Grammer=*,operator,*
+/Grammer=*=,operator,*=
+/Grammer=/,operator,/
+/Grammer=/=,operator,/=
+/Grammer=\,operator,\
+/Grammer=\=,operator,\=
+/Grammer=&,operator,&
+/Grammer=&=,operator,&=
+/Grammer=^,operator,^
+/Grammer=^=,operator,^=
+/Grammer=+,operator,+
+/Grammer=+=,operator,+=
+/Grammer=<<,operator,<<
+/Grammer=<<=,operator,<<=
+/Grammer==,operator,=
+/Grammer=>>,operator,>>
+/Grammer=>>=,operator,>>=
+/Grammer=And,operator,result=expression1 And expression2
+/Grammer=AndAlso,operator,result=expression1 AndAlso expression2
+/Grammer=Is,operator,result=object1 Is object2
+/Grammer=Like,operator,result= variable-String  Like pattern
+/Grammer=Mod,operator,variable1=variable2 Mod variable3
+/Grammer=Xor,operator,Xor
+/Grammer=#Const,syntax,#Const variable=expression
+/Grammer=#Else,syntax,#else
+/Grammer=#ElseIf,syntax,#elseif condition
+/Grammer=#End,syntax,{ #End | #end if | #End ExternalSource | #End Region }
+/Grammer=#ExternalSource,Syntax,#ExternalSource( Path , variable-integer)   [ variable-Integer ]  #End
+/Grammer=#If,syntax,#If expression Then  statements  [ #ElseIf   [ statements ] ]  #End
+/Grammer=#Region,syntax,#Region  variable-String   [ statements ]  #End Region
+/Grammer=accessmodifier,syntax,[ Public, Protected, Friend,  Private, Protected Friend, Private Protected ]
+/Grammer=AddHandler,syntax,AddHandler event { AddressOf eventhandler | expression }
+/Grammer=AddressOf,syntax,AddressOf procedurename
+/Grammer=Alias,syntax,Alias Routine ( ByVal lpBuffer As String, ByRef nSize As Integer)
+/Grammer=As,syntax,As DataType
+/Grammer=Assembly,syntax,Assembly < variable-string >
+/Grammer=AssemblyVersion,syntax, < Assembly: AssemblyVersion (  variable-String  ) >
+/Grammer=attributelist,syntax,[ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]
+/Grammer=attributemodifier,syntax,[ attributemodifier ] attributename [ ( attributearguments | attributeinitializer ) ]
+/Grammer=ByRef,syntax,ByRef variable As Datatype
+/Grammer=ByVal,syntax,ByVal variable As datatype
+/Grammer=Call,syntax,[ Call ] procedureName [ ( List ) ]
+/Grammer=Case,syntax,Select [ Case ] expression   [ Case list  [ statements ] ]   [ Case Else   [ statements ] ]  End Select
+/Grammer=CBool,syntax,CBool ( expression )
+/Grammer=CByte,syntax,CByte ( expression )
+/Grammer=CChar,syntax,CChar ( expression )
+/Grammer=CDate,syntax,CDate ( expression )
+/Grammer=CDbl,syntax,CDbl ( expression )
+/Grammer=CDec,syntax,CDec ( expression )
+/Grammer=CInt,syntax,CInt ( expression )
+/Grammer=ClassConstraint,syntax,[ genericmodifier ] Datatype [ As constraint ]
+/Grammer=ClassStatement,syntax,  [ attributes ] [ accessmodifier ] [ Shadows ] [ MustInherit | NotInheritable ] [ Partial ]  Class name [ ( Of datatypes ) ]   [ Inherits classname ]   [ Implements interfacenames ]   [ statements ]  End Class
+/Grammer=CLng,syntax,CLng ( expression )
+/Grammer=CObj,syntax,CObj ( expression )
+/Grammer=Const,syntax,[ attributes ] [ accessmodifier ] [ Shadows ]  Const constants
+/Grammer=Continue,syntax,Continue { Do | For | While }
+/Grammer=CType,syntax,CType(expression, Datatype)
+/Grammer=CUInt,syntax,CUInt ( expression )
+/Grammer=CULng,syntax,CULng ( expression )
+/Grammer=CUShort,syntax,CUShort ( expression )
+/Grammer=Date,syntax,Dim variable As Date [=#mm/dd/yyyy hh:MM PM# ]
+/Grammer=Declare,syntax,{ [ attributes ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Sub ] variable Lib  variable-String  [ Alias "aliasname" ] [ ( [ parameters ] ) ]  |  [ attributes ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Function ] name Lib "libname" [ Alias "aliasname" ] [ ( [ parameters ] ) ] [ As returnDataDataDatatype ] }
+/Grammer=Default,syntax,Default Property Routine(ByVal variable As Datatype) As Datatype
+/Grammer=Delegate,syntax,[ Attribute ] [ accessmodifier ] [ Shadows ] Delegate [ Sub | Function ] name [ ( Of typeparams ) ] [ ( [ parameters ] ) ] [ As Datatype ]
+/Grammer=Dim,syntax,[ attributes ] [ accessmodifier ] [ [ Shared ] [ Shadows ] | [ Static ] ] [ ReadOnly ] Dim [ WithEvents ] variables
+/Grammer=DirectCast,syntax,Dim variable As datatype=DirectCast( { variable, datatype)
+/Grammer=Do,syntax,{ Do [ { While | Until } condition ]   [ statements ]   [ Continue Do ]   [ statements ]   [ Exit Do ]   [ statements ]  Loop  } | {  Do  [ statements ]   [ Continue Do ]   [ statements ]   [ Exit Do ]   [ statements ]  Loop [ { While | Until } condition ]   }
+/Grammer=Each,syntax,For Each variable1 [ As datatype ] In Array  [ statements ]   [ Continue For ]   [ statements ]   [ Exit For ]   [ statements ]  Next [ variable1 ]
+/Grammer=ElseIf,syntax,ElseIf
+/Grammer=EndStatement,syntax,{ [ End ] | [ End AddHandler ] | [ End Class ] | [ End Enum ] | [ End Event ] | [ End Function ] | [ EndGet ] | [ End If ] | [ End Interface ] | [ End Module ] | [ End Namespace ] | [ End Operator ] |[ End Property ] | [ End RaiseEvent ] | [ End RemoveHandler ] | [ End Select ] | [ End Set ] | [ End Structure ] | [ End Sub ] | [ End SyncLock ] | [ End Try ] | [ End While ] | [ End With] }
+/Grammer=Enum,syntax,[ attributes ] [ accessmodifier ] [ Shadows ] Enum variable [ As dataDatatype ] members End Enum
+/Grammer=Equals,syntax,variable Equals variable
+/Grammer=Erase,syntax,Erase arrays
+/Grammer=Error,syntax,On Error { GoTo [ address | 0 | -1 ] | Resume Next }
+/Grammer=Exit,syntax,Exit { Do | For | Function | Property | Select | Sub | Try | While }
+/Grammer=Finally,syntax,Try  [ Statements ]   [ Exit Try ]   [ Catch [ exception [ As Datatype ] ] [ When expression ]   [ Statements ]   [ Exit Try ] ]   [ Finally  [ Statements ] ]  End Try
+/Grammer=For Each…Next,syntax,For Each variable [ As datatype ] In Array  [ statements ]   [ Continue For ]   [ statements ]   [ Exit For ]   [ statements ]  Next [ element ]
+/Grammer=For(in For…Next),syntax,For variable [ As datatype ]=expression To expression [ Step expression ]   [ statements ]   [ Continue For ]   [ statements ]   [ Exit For ]   [ statements ]  Next [ variable ]
+/Grammer=From,syntax,From element [ As datatype ] In collection [ , collections ]
+/Grammer=Function,syntax,[ attributes ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]  Function Routine [ (Of typeparams) ] [ (parameters) ] [ As Datatype ] [ Implements implementss | Handles events ]   [ statements ]   [ Exit Function ]   [ statements ]  End Function
+/Grammer=genericmodifier,syntax,{ ? | # |who knows? Whould this be public private ans so forth }
+/Grammer=Get,syntax,[ attributes ] [ accessmodifier ] Get()   [ statements ]  End Get
+/Grammer=GetType,syntax,GetType(Datatype)
+/Grammer=GetXMLNamespace,syntax,GetXmlNamespace(xmlNamespacePrefix)
+/Grammer=Global,syntax,Dim variable As object ‘System.Windows.Forms.sBox
+/Grammer=GoSub,syntax,GoSub address
+/Grammer=GoTo,syntax,GoTo address
+/Grammer=Group By,syntax,Group { lists } By keyExp1 [ , keyExp2 [ ... ] ]   Into aggregateList
+/Grammer=Group Join,syntax,Group Join element [ As Datatype ] In collection On key1 Equals key2 [ And GroupJoin1 ]   Into expressions
+/Grammer=Handles,syntax,proceduredeclaration Handles events
+/Grammer=Handles,syntax,proceduredeclaration Handles events
+/Grammer=If,syntax,{  If condition [ Then ]   [ statements ]   [ ElseIf condition [ Then ]   [ statements ] ]   [ Else  [ statements ] ]  End If  } | {  If condition Then [ statements ] [ Else [ statements ] ]   }
+/Grammer=If(),syntax,If(condition, expression, expression))
+/Grammer=implementedprocedures,syntax,Routine [ , Routines ]
+/Grammer=Implements,syntax,{  Implements Routine expressions  } | { Implements Routine.Routine  }
+/Grammer=Implements,syntax,{ Implements interfacename [ , Routines ] } | { Implements interfacename.interfacemember [ , Routines ] }
+/Grammer=Imports(.NET Namespace and Type),syntax,{  Imports [ aliasname=] namespace  } | {  Imports [ aliasname=] namespace.element  }
+/Grammer=Imports(XML Namespace),syntax,Imports <xmlns:xmlNamespacePrefix="xmlNamespaceName">
+/Grammer=In,syntax,{  For Each element [ As datatype ] In group  [ statements ]   [ Continue For ]   [ statements ]   [ Exit For ]   [ statements ]  Next [ element ]   } | {  From element [ As Datatype ] In collection [ , element2 [ As Datatype2 ] In collection2 ]   } | {  Join element In collection [ joinClause ] [ groupJoinClause ] On key1 Equals key2 [ And key3 Equals key4   } | {  Group Join element [ As Datatype ] In collection On key1 Equals key2 [ And key3 Equals key4 ] Into expressions  }  
+/Grammer=Inherits,syntax,Inherits Classname
+/Grammer=Integer,syntax,Dim variable As Integer [=constant ]
+/Grammer=Interface,syntax,[ attributes ] [ accessmodifier ] [ Shadows ] Interface name [ ( Of Datatypes ) ]   [ Inherits interfacenames ]   [ [ modifiers ] Property membername ]   [ [ modifiers ] Function membername ]   [ [ modifiers ] Sub membername ]   [ [ modifiers ] Event membername ]   [ [ modifiers ] Interface membername ]   [ [ modifiers ] Class membername ]   [ [ modifiers ] Structure membername ]  End Interface
+/Grammer=Iterator,syntax,Iterator
+/Grammer=Join,syntax,Join variable In collection [ joinClause ] [ groupJoinClause ]  On Equals [ Equals ]
+/Grammer=Key,syntax,{ Key .variable={ variable | constant |  variable-String  } [ , Key ]  
+/Grammer=Let,syntax,Let variable=expression
+/Grammer=Lib,syntax,{   [ attributelist ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Sub ] name Lib "libname" [ Alias "aliasname" ] [ ( [ parameterlist ] ) ]   } | {   [ attributelist ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Function ] name Lib "libname" [ Alias "aliasname" ] [ ( [ parameterlist ] ) ] [ As returntype ]   }
+/Grammer=Long,syntax,Dim variable As Long [=constant ]
+/Grammer=Me,syntax,datatype
+/Grammer=Mid,syntax,{  Mid( variable-string, variable, Optional variable-number )=variable-string  } - {  Variable-string=Mid (variable-String, variable-Integer, [ variable-Integer )=variable-String  }
+/Grammer=Module,syntax,Module variable Statements End module
+/Grammer=ModuleStatement,syntax,[ attributelist ] [ accessmodifier ] Module name   [ statements ]  End Module
+/Grammer=My,syntax,my.variable
+/Grammer=name,syntax,variable
+/Grammer=NameOf,syntax,NameOf ( variable)
+/Grammer=Namespace,syntax,Namespace [ Global. ] { variable1 | variable1.variable2 }   statements End Namespace
+/Grammer=NewConstraint,syntax,[ genericmodifier ] name [ As constraintlist ]
+/Grammer=NewOperator,syntax,Dim variable1 as New [ variable | Routine ]
+/Grammer=Next,syntax,For variable1 [ As datatype ]=expression To expression [ Step expression ]   [ statements ]   [ Continue For ]   [ statements ]   [ Exit For ]   [ statements ]  Next [ variable1 ]
+/Grammer=Next(in Resume),syntax,Resume [ Next | line ]
+/Grammer=Not,syntax,variable=Not expression
+/Grammer=Operator,syntax,[ attributelist ] Scope [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]  Operator { [ (operator) ] } ( operand1 [ , operand2 ] ) [ As [ <attribute> ] type ]   [ statements ]   Return expression  [ statements ]  End Operator
+/Grammer=Option,syntax,{ Option1 | Option2 | Option3 | Option4 }
+/Grammer=Option1,syntax,Option Compare { Binary | Text }
+/Grammer=Option2,syntax,Option Explicit { On | Off }
+/Grammer=Option3,syntax,Option Strict { On | Off }
+/Grammer=Option4,syntax,Option Infer { On | Off }
+/Grammer=Optional,syntax,[ Optional1 | Optional2 | Optional3 | Optional4 ]
+/Grammer=Optional1,syntax,{   [ attributelist ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Sub ] name Lib "libname" [ Alias "aliasname" ] [ ( [ parameterlist ] ) ]   } | {   [ attributelist ] [ accessmodifier ] [ Shadows ] [ Overloads ] Declare [ charsetmodifier ] [ Function ] name Lib "libname" [ Alias "aliasname" ] [ ( [ parameterlist ] ) ] [ As returntype ]   }
+/Grammer=Optional2,syntax,[ attributelist ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async | Iterator ]  Function name [ (Of typeparamlist) ] [ (parameterlist) ] [ As returntype ] [ Implements implementslist | Handles eventlist ]   [ statements ]   [ Exit Function ]   [ statements ]  End Function
+/Grammer=Optional3,syntax,[ attributelist ] [ Default ] [ accessmodifier ]   [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]   [ attributelist ] [ accessmodifier ] Get  [ statements ]   End Get  [ attributelist ] [ accessmodifier ] Set ( ByVal value As returntype [ , parameterlist ] )  [ statements ]   End Set End Property  } | {   [ attributelist ] [ Default ] [ accessmodifier ]   [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ]  Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]   }
+/Grammer=Optional4,syntax,[ attributelist ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ]  Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]   [ statements ]   [ Exit Sub ]   [ statements ]  End Sub
+/Grammer=Or,syntax,variable=expression1 Or expression2
+/Grammer=Order By,syntax,Order By variables [ Ascending | Descending ] select variables
+/Grammer=OrElse,syntax,variable=expression1 OrElse expression2
+/Grammer=ParamArray,syntax,Variable-Array
+/Grammer=parameterlist,syntax,[ <attributelist> ] [ Optional ] [ { ByVal | ByRef } ] [ ParamArray ] parametername [ ( ) ] [ As parametertype ] [=defaultvalue ]
+/Grammer=Partial,syntax,Partial { Class | Structure | Interface | Module }
+/Grammer=proceduremodifiers,syntax,[ Overloads, Overrides, Overridable, NotOverridable, MustOverride, MustOverride, Overrides, NotOverridable Overrides ]
+/Grammer=ReDim,syntax,ReDim [ Preserve ] ReDimX
+/Grammer=ReDimX,syntax,Array ( expression ) [ , redimX ]
+/Grammer=REM,syntax,REM comment  ' comment
+/Grammer=RemoveHandler,syntax,RemoveHandler Routine1, AddressOf Routine2
+/Grammer=Resume,syntax,Resume [ Next | line ]
+/Grammer=Return,syntax,{  Return  } | {  Return expression  }
+/Grammer=Routines,syntax,Routine [ , Routines ]
+/Grammer=Routines,syntax,variable
+/Grammer=scope,syntax,[ public, private ] [ Modifier ]
+/Grammer=Select,syntax,Select [ Case ] testexpression   [ Case expressionlist   [ statements ] ]   [ Case Else   [ elsestatements ] ]  End Select
+/Grammer=Set,syntax,[ <attributelist> ] [ accessmodifier ] Set [ ( [ ByVal value [ As datatype ] ] ) ]   [ statements ]  End Set
+/Grammer=Shadows,syntax,Shadows
+/Grammer=Shared,syntax,shared
+/Grammer=Skip,syntax,Skip variable-integer
+/Grammer=Skip While,syntax,Skip While expression
+/Grammer=Stop,syntax,Stop
+/Grammer=StructureConstraint,syntax,[ genericmodifier ] variable [ As constraints ]
+/Grammer=StructureStatement,syntax,[ <attributes> ] [ accessmodifier ] [ Shadows ] [ Partial ] Structure name [ ( Of typelist ) ] [ Implements interfacenames ] [ datamemberdeclarations ] [ methodmemberdeclarations ]  End Structure
+/Grammer=Sub,syntax,[ attributelist ] [ Partial ] [ accessmodifier ] [ proceduremodifiers ] [ Shared ] [ Shadows ] [ Async ] Sub name [ (Of typeparamlist) ] [ (parameterlist) ] [ Implements implementslist | Handles eventlist ]   [ statements ]   [ Exit Sub ]   [ statements ]  End Sub
+/Grammer=SyncLock,syntax,SyncLock lockobject   [ statements ]  End SyncLock
+/Grammer=Take,syntax,Take expression
+/Grammer=Take While,syntax,Take While expression
+/Grammer=Throw,syntax,Throw [ expression ]
+/Grammer=Try,syntax,Try  [ Statements ]   [ Exit Try ]   [ Catch [ exception [ As Datatype ] ] [ When expression ]   [ Statements ]   [ Exit Try ] ]   [ Finally  [ Statements ] ]  End Try
+/Grammer=TryCast,syntax,Dim variable1 As IConvertible=TryCast(variable2, IConvertible) 
+/Grammer=TypeOf…Is,syntax,result=TypeOf expression { Is | IsNot } datatype
+/Grammer=typeparamlist,syntax,[ genericmodifier ] Datatype [ As constraintlist ]
+/Grammer=Using,syntax,Using { resources | resourceexpressions }   [ statements ]  End Using
+/Grammer=Where,syntax,Where condition
+/Grammer=While,syntax,While condition  Statements  [ Continue While ]   [ statements ]   [ Exit While ]   [ statements ]  End While
+/Grammer=With,syntax,With expression  [ statements ]  End With
+/Grammer=WithEvents,syntax,Dim WithEvents routine As Application
+/Grammer=Yield,syntax,Yield expression

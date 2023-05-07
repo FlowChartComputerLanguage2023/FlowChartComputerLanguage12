@@ -1,0 +1,196 @@
+brightness_4
+// Scala program to demonstrate  
+// the Airthmetic Operators 
+  
+object Arithop  
+{ 
+  
+def main(args: Array[String])  
+{ 
+    // variables 
+    var a = 50; 
+    var b = 30; 
+      
+    // Addition 
+    println("Addition of a + b = " + (a + b)); 
+      
+    // Subtraction 
+    println("Subtraction of a - b = " + (a - b)); 
+      
+    // Multiplication 
+    println("Multiplication of a * b = " + (a * b)); 
+      
+    // Division 
+    println("Division of a / b = " + (a / b)); 
+      
+    // Modulus 
+    println("Modulus of a % b = " + (a % b)); 
+  
+} 
+} 
+// Scala program to demonstrate  
+// the Relational Operators 
+object Relop  
+{ 
+  
+def main(args: Array[String])  
+{ 
+    // variables 
+    var a = 50; 
+    var b = 30; 
+      
+    // Equal to operator 
+    println("Equality of a == b is : " + (a == b)); 
+      
+    // Not equal to operator 
+    println("Not Equals of a != b is : " + (a != b)); 
+      
+    // Greater than operator 
+    println("Greater than of a > b is : " + (a > b)); 
+      
+    // Lesser than operator 
+    println("Lesser than of a < b is : " + (a < b)); 
+  
+    // Greater than equal to operator 
+    println("Greater than or Equal to of a >= b is : " + (a >= b)); 
+      
+    // Lesser than equal to operator 
+    println("Lesser than or Equal to of a <= b is : " + (a <= b)); 
+  
+} 
+} 
+
+
+
+// Scala program to demonstrate  
+// the Logical Operators 
+object Logop  
+{ 
+  
+def main(args: Array[String])  
+{ 
+      
+    // variables 
+    var a = false
+    var b = true
+      
+    // logical NOT operator 
+    println("Logical Not of !(a && b) = " + !(a && b)); 
+      
+    // logical OR operator 
+    println("Logical Or of a || b = " + (a || b)); 
+      
+    // logical AND operator 
+    println("Logical And of a && b = " + (a && b)); 
+  
+} 
+} 
+
+
+
+
+
+// Scala program to demonstrate  
+// the Assignments Operators 
+object Assignop  
+{ 
+  
+def main(args: Array[String]) 
+{ 
+      
+    // variables 
+    var a = 50; 
+    var b = 40; 
+    var c = 0; 
+      
+    // simple addition 
+    c = a + b; 
+    println("simple addition: c= a + b = " + c); 
+      
+    // Add AND assignment 
+    c += a; 
+    println("Add and assignment of c += a = " + c); 
+      
+    // Subtract AND assignment 
+    c -= a; 
+    println("Subtract and assignment of c -= a = " + c); 
+      
+    // Multiply AND assignment 
+    c *= a; 
+    println("Multiplication and assignment of c *= a = " + c); 
+      
+    // Divide AND assignment 
+    c /= a; 
+    println("Division and assignment of c /= a = " + c); 
+      
+    // Moduls AND assignment 
+    c %= a; 
+    println("Modulus and assignment of c %= a = " + c); 
+      
+    // Left shift AND assignment 
+    c <<= 3; 
+    println("Left shift and assignment of c <<= 3 = " + c); 
+      
+    // Right shift AND assignment 
+    c >>= 3; 
+    println("Right shift and assignment of c >>= 3 = " + c); 
+      
+    // Bitwise AND assignment 
+    c &= a; 
+    println("Bitwise And assignment of c &= 3 = " + c); 
+      
+    // Bitwise exclusive OR and assignment 
+    c ^= a; 
+    println("Bitwise Xor and assignment of c ^= a = " + c); 
+      
+    // Bitwise inclusive OR and assignment 
+    c |= a; 
+    println("Bitwise Or and assignment of c |= a = " + c); 
+} 
+} 
+
+
+
+
+
+// Scala program to demonstrate  
+// the Bitwise Operators 
+object Bitop 
+{ 
+def main(args: Array[String])  
+{ 
+    // variables 
+    var a = 20; 
+    var b = 18; 
+    var c = 0; 
+      
+    // Bitwise AND operator 
+    c = a & b; 
+    println("Bitwise And of a & b = " + c); 
+      
+    // Bitwise OR operator 
+    c = a | b; 
+    println("Bitwise Or of a | b = " + c); 
+      
+    // Bitwise XOR operator 
+    c = a ^ b; 
+    println("Bitwise Xor of a ^ b = " + c); 
+      
+    // Bitwise once complement operator 
+    c = ~a; 
+    println("Bitwise Ones Complement of ~a = " + c); 
+      
+    // Bitwise left shift operator 
+    c = a << 3; 
+    println("Bitwise Left Shift of a << 3 = " + c); 
+      
+    // Bitwise right shift operator 
+    c = a >> 3; 
+    println("Bitwise Right Shift of a >> 3 = " + c); 
+      
+    // Bitwise shif right zero fill operator 
+    c = a >>> 4; 
+    println("Bitwise Shift Right a >>> 4 = " + c); 
+} 
+} 
+

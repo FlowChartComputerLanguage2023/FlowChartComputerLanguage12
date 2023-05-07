@@ -1,0 +1,2184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>FlowChart011 A strongly-typed re</title>
+<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+h1 {
+}
+.auto-style22 {
+	text-align: left;
+}
+.auto-style26 {
+	word-spacing: 1px;
+	text-indent: 1px;
+	margin-bottom: 0in;
+}
+.auto-style28 {
+	margin-left: 120px;
+}
+.auto-style33 {
+	word-spacing: 1px;
+	text-indent: 1px;
+	margin-left: 80px;
+	margin-right: 0.4in;
+	margin-top: 0.04in;
+	margin-bottom: 0in;
+}
+.auto-style36 {
+	margin-left: 240px;
+}
+.auto-style37 {
+	margin-left: 480px;
+}
+.auto-style38 {
+	margin-left: 80px;
+}
+.auto-style39 {
+	list-style-type: circle;
+}
+.auto-style40 {
+	font-size: large;
+}
+.auto-style41 {
+	text-decoration: underline;
+}
+.auto-style42 {
+	font-size: large;
+	text-decoration: underline;
+}
+.auto-style43 {
+	margin-left: 40px;
+}
+.auto-style44 {
+	border-width: 0;
+}
+.auto-style45 {
+	font-size: x-large;
+}
+.auto-style46 {
+	margin-left: 200px;
+}
+.auto-style48 {
+	text-indent: -0.4in;
+	line-height: 100%;
+	font-size: small;
+	margin-left: 0.5in;
+	margin-right: 0.4in;
+	margin-top: 0.02in;
+	margin-bottom: 0.02in;
+}
+.auto-style49 {
+	text-indent: -0.4in;
+	line-height: 100%;
+	font-size: large;
+	margin-left: 0.5in;
+	margin-right: 0.4in;
+	margin-top: 0.02in;
+	margin-bottom: 0.02in;
+}
+</style>
+</head>
+
+<body>
+
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+<font SIZE="6" STYLE="font-size: 22pt">Flow Chart / Software Schematic 
+Programmer Manual</font></p>
+<doc>
+<assembly>
+<name>
+<br />
+<br />
+Flowchart</name></assembly><members><member name="T:FlowChart011.My.Resources.Resources"></member><p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">
+<font SIZE="3">Chapter 1 <a href="#Abstract">Abstract</a></font></p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33"><font SIZE="3">Chapter 2
+<a href="#User_Interaction">User Interaction</a></font></p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">C<font SIZE="3">hapter 3
+<a href="#Window_Views">Window Views</a></font></p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">C<font SIZE="3">hapter 4&nbsp;
+<a href="#Items_on_the_screen.">Objects on the Screen</a></font></p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">C<font SIZE="3">hapter 5
+<a href="#File_Importing_">Importing/Export file formats</a></font>&nbsp;</p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">Chapter 6 Support 
+Tables</p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">General: </p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">/C<a href="#ComputerLanguage">omputerLanguageDialect</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageCase">ComputerLanguageCase</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageComment">ComputerLanguageComment</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageExtention">ComputerLanguageExtention</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageMultiLine">ComputerLanguageMultiLine</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageProcess">ComputerLanguageProcess</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#ComputerLanguageVariableNameCharacters">ComputerLanguageVariableNameCharacters</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Code">Macro Text, /Program</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/ThisCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Keyword_table">KeyWord</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Function_name_table">Function</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Operator_table">Operator</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Set">Set_</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Order">Order</a>&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">
+Support Tables:</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Color">Color</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Datatype">Datatype</a></p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">
+Symbol:</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+/<a href="#Name">Name</a>&nbsp;&nbsp;&nbsp; /<a href="#Point">Point</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Line">Line</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/NameOfFile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Stroke&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Version&nbsp; /Author&nbsp;&nbsp;&nbsp; /Opcode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">FlowChart:</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Path">Path</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Use">Use</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/<a href="#Constant">Constant</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			/Error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">
+Chapter 6 How to use FlowChart:</p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">For programming 
+languages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">For Data Flow 
+Programming</p>
+<p ALIGN="LEFT" STYLE="line-height: 100%" class="auto-style33">As a Hardware 
+Schematic simulator.</p>
+<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">Chapter 
+7 Support Tables&nbsp;&nbsp;&nbsp;
+			Color Table&nbsp;&nbsp;&nbsp; Data Type Table</p>
+<ul class="auto-style28">
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">
+	<font SIZE="3"><a href="#Syntax_Summary_for_Symbol_Library">Summary of the 
+	Import/Export file</a></font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; line-height: 100%" class="auto-style26">
+	<font SIZE="3"><a href="#Standard">Standard 2020</a></font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+	Message numbers</p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+	<font SIZE="3"><a href="#Glossary">Glossary</a></font></p>
+	</li>
+</ul>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%; page-break-before: always">
+<font SIZE="6" STYLE="font-size: 22pt">Chapter 1</font>&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%; page-break-before: always">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+<font SIZE="6" STYLE="font-size: 22pt"><a name="Abstract">Abstract</a></font>&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.04in; margin-bottom: 0.04in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Flow Chart computer language is an attempt to be able to program 
+in any computer language via the use of visual flow chart.&nbsp; A flowchart is most times thought of 
+as the logical flow of a program.&nbsp; A Data Flow is a program method where 
+each&nbsp; 'symbol' works when all of the required data arrives to it, and has 
+no logic paths.&nbsp; And 
+a software schematic has both logic and data flow.&nbsp; But for marketing 
+reasons FlowChart Computer Language program will be refered to as a FlowChart 
+program. </font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Flow Chart computer language is also made to be used by 
+anyone, in any spoken language. It is designed to be used with graphics and not text 
+based programming.&nbsp; This means that it can be used by anyone weather they 
+know the letters used by mostly European countries or one of the hundreds of 
+written languges that does not hav AaBbCc&nbsp; ....&nbsp; FlowChart is intended 
+to be used mostly without language.&nbsp; It will become more language 
+independant as versions become written.</font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Flow Chart computer language could be used for a number reasons. 
+It allows the source code for a program to be documented in a format that is 
+more easily understood by anyone. It is made so that the program can be 
+conterted to any new language that comes along (if that language can support 
+what the functions of the flow chart does.&nbsp; It is not intended for an 
+spoken, written, or programming 
+language. People who speak English should be able to use the process 
+as easily as someone who speaks or writes in another languages.</font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">&nbsp;</font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Flow Chart is an icon, picture oriented representation of what 
+the source code of a computer program is doing. It is&nbsp; then easier to understand 
+for non computer programmers.&nbsp; Providing of course that they symbol designs 
+makes sense to everyone.&nbsp;&nbsp; There is an assumption that certain symbols 
+have common universal meaning.&nbsp; The stop sign, a circle with an X through 
+it, A stick figure of a man, or a woman, these all have universal meaning.&nbsp; 
+Instead of Read, Write, which only has meaning in English.&nbsp;&nbsp; Read and 
+Write (or some form) is used in most programing languages.&nbsp; But you have to specialize in 
+each computer 
+language to understand what is happening in the computer 
+program.&nbsp; Since each symbol of a FlowChart can be changed with how it uses 
+the logic and data flow, changing the 'MacroProgram' text in the symbol will 
+then change it to another programming language, or to the language of the users 
+compiler. This means that anyone that can understand a flow chart or schematic of 
+any kind can also understand what the program is doing.&nbsp;&nbsp; </font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The Flow Chart program translates from or to almost any 
+programming language.&nbsp; Of course, like anything new and complex these first 
+versions will have lots of problems.&nbsp; Withe the hundreds of dialects of 
+just the BASIC computer language, it would be impossible to code and test for 
+every one.&nbsp; </font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The symbols that make up the Flow Charts can be customized 
+to (most) any computer language. And so conversion between computer languages can be 
+made on a line to line conversion. This should make it easier to translate any 
+computer language into another computer language by changing each of the symbols 
+macro text that creates the computer source code (do-able, but not easy). The 
+only requirement is that the programming language has a flow of logic, and uses 
+variable names to keep track of the data going from one statement to another. It 
+will not take into consideration the inherent advantages or pitfalls of each 
+computer language (Yet).</font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+<font SIZE="5">The Flow Chart is made up of two basic units.</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><a name="Symbols">Symbol Screen</a>:</font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<img alt="" height="300" src="Icons/Screen%20Menu%20Symbol%20First.jpg" width="687" /></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Symbols are made up of a number of parts. 
+Simple lines that are to be displayed to 
+show what this symbol does (i.e.: a square box for a process, a diamond for a 
+decision, a keyboard for getting keyboard input, and so on.&nbsp; Since the 
+symbols are made up, there is no limit to the number of sysmols. The limit to the 
+number of symbols is the amount memory that the computer has usable. Symbols can 
+be made from nothing, or automaticlly by typing in the program code. (or 
+importing an entire program, where syntax is derived and symbols made.) Symbols 
+can be changed and modified as needed. Symbols require:</font></p>
+<ul class="auto-style28">
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">A unique name for each symbol.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">Colored lines that make up the picture that this symbol shows 
+	on a flowchart.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">Points where paths connect to this symbol. And each point has</font></p>
+	<ol TYPE="a">
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">A data type for each point. Such as integer, real, 
+		string, record structure and so on.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">Macro code that is used to created the actual program 
+		source code text.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">Names in the macro code must match the point names where 
+		the names of the paths are replaced. This makes a symbols represent the 
+		syntax of the computer language basically.</font></p>
+		</li>
+	</ol>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">Optionally also:</font></p>
+	<ol TYPE="a">
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The the original file name where the symbol came from and 
+		goes to (optional, it is also where the symbol can be rewritten to).</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The version of this symbol.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The syntax of the macro. When a new symbols is made from 
+		source code, or if the program text is change it will update the syntax.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The notes about this symbol.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The author of the symbol.</font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		<font SIZE="3">The stroke mouse movement that selects this symbol. (not 
+		yet implemented)&nbsp; </font></p>
+		</li>
+		<li>
+		<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		&nbsp; </p>
+		</li>
+	</ol>
+	</li>
+</ul>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%" class="auto-style45">
+<strong>Flow Chart:</strong></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a href="Icons/Screen%20Menu%20FlowChart.jpg">
+<img alt="FlowChart Screen Menu" height="219" longdesc="This is the menu from the FlowCHart screen." src="Icons/Screen%20Menu%20FlowChart.jpg" width="881" class="auto-style44" /></a></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The second basic unit is a flow chart diragram.. The flow chart 
+is what the program does. It shows the flow of logic and data from one symbol to 
+another, This represents what a computer program does, when is to move data 
+around, to test and perform computations on. The symbols can be as simple as a 
+single machine instruction to a complete subroutine. Flow chart can also do such 
+things as create batch files to run programs to create a system. The flow chart 
+is made up of three basic items.</font>&nbsp;</p>
+<ul class="auto-style46">
+	<li><font SIZE="3">Paths (shown as colored and styled lines) that connect 
+	the symbol points together. They show the flow of logic, and data and 
+	information.</font></li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">Symbols (from above,) which are what each step of a program 
+	is doing.</font>&nbsp;</p>
+	<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	O</p>
+	</li>
+	<li></li>
+	<li><font SIZE="3">Symbols (from above,) which are what each step of a 
+	program is doing.</font>&nbsp;</li>
+	<li>&nbsp;Optionally<font SIZE="3">, sometimes paths will have connected to them a 
+	starting value, or a constant of the data.</font></li>
+</ul>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%; page-break-before: always">
+<font SIZE="6" STYLE="font-size: 22pt">Chapter 2</font></p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p ALIGN="CENTER" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6" STYLE="font-size: 22pt"><a name="User_Interaction">User 
+Interaction</a></font><br />
+</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><a name="Buttons_Symbols">Drawing Symbols</a></font></p>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><i><b><a name="Buttons_Symbols">Symbol Buttons:</a></b></i></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">FlowChart 
+Screen&nbsp; - will take you to the flowchart screen.&nbsp; The tool strip has 
+the following buttons.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Start New Symbol - will clear everything to start a new symbol, 
+note if you just type over a symbol name, that will rename that symbol and 
+everything that references.&nbsp; Only if you start with a blank symbol name 
+will it make a new one.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"> 
+Add Point 
+� Will put a new point on the symbol graphics area. Before the add 
+point button is enabled,&nbsp; The select the datatype dropdown must have been 
+used to select the default data type. and a point name must be entered into the 
+text area of the tool strip.&nbsp; All of the other drop down buttons have the 
+defaults set, but can and should be changed before the next point is placed. 
+(unless it is the exact same thing again.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"> 
+Add Line 
+� Will start a line with mouse button pressed down, and 
+stop the line where the mouse button is release. It will use the color from the 
+defaults from: The selected color, The select line style, The selected line 
+width, .</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">-Move 
+<img alt="Move points and line ends." height="64" longdesc="This will let you select a point or one end of a line and place it where you let the mouse button up." src="../Flow Chart Help Files/Icons/ButtonMoveToHere.jpg" width="64" />� will the select the closest point to the mouse button is 
+pressed down, and move it to where the mouse button is released.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Delete 
+<img alt="Delete object" height="64" longdesc="This button will delete the closest point or end of a line." src="../Flow Chart Help Files/Icons/ButtonDeleteObject.jpg" width="64" />� Will delete the first closest point when the mouse 
+button is released. (advice, move the point/line that you want to release to a 
+remote/separate location, to make sure that is in fact what you want to delete.)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Options<img alt="Show Option Screen." height="64" longdesc="This button will display the Option Screen so that you can select other options for dislaying." src="../Flow Chart Help Files/Icons/ButtonShowOptions.jpg" width="64" /> � will take you to the Options screen.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The second line of menu buttons have:</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Select the symbol<img alt="Select the Symbol" height="64" longdesc="This will give a drop down with all of the known symbols currently active." src="../Flow Chart Help Files/Icons/DropDownSymbolSelect.jpg" width="64" />&nbsp; 
+This will select the symbol to work on.&nbsp; (Future will be by other methods 
+also such as with a movement of the mouse and also by&nbsp; an ICON of the 
+symbol.).&nbsp;&nbsp; Going through the list of symbol will display each one in 
+the symbol screen. You can also import more symbols into the current flow chart.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Rotation:
+<img alt="Rotation Drop Down" height="64" longdesc="This will  give a drop down of the possible rotations of symbols.  " src="../Flow Chart Help Files/Icons/DropDownButtonButtonRotate.jpg" width="64" />.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Data Type:
+<img alt="Data Type Dropdown" height="64" longdesc="This button will give a drop down of the data types available." src="../Flow Chart Help Files/Icons/ButtonDataTypeSelector.jpg" width="64" />&nbsp; 
+Data typing is very important to some languages and operating systems, while not 
+to others.&nbsp; This will give a list of all of the data types currently 
+availble. (Note first version does not have arrays, lists, fields, structures, 
+and other data types that have offsets from the base to the item.).</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Line Style<img alt="Line Style" height="64" longdesc="This will give a drop down of the line styles available." src="../Flow Chart Help Files/Icons/DropDownButtonLineStyle.jpg" width="64" />&nbsp; 
+Line styles include solid, dot, dash, dash-dot, dash-dot-dot.&nbsp; There is no 
+meaning of the line style at this time.&nbsp; Only use solid at this time.) &nbsp;,&nbsp; 
+.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Color :
+<img alt="Color Drop Down" height="64" longdesc="This button will give a list of the names of the available colors.  Note: at this time the Microsoft color names are used.  Future versions will allow the color to be defined in red/gree/blue fasion." src="../Flow Chart Help Files/Icons/DropDownButtonSelectColor.jpg" width="64" /> 
+: This is used to select&nbsp; the name of the color of lines,.&nbsp; Datatypes 
+also use the same color names to make points and paths.. </font>&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">width and size .<img alt="Width and Size" height="64" longdesc="This sets the default path and point size" src="Icons/DropDownButtonLineWidth.jpg" width="64" />&nbsp; 
+This sets the default line and point size ( Note:&nbsp; paths get their color 
+and width from the data type used.)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Input/Output :
+<img alt=".Input Output" height="64" longdesc="This defines if a point is asking for input or givine output or both" src="Icons/DropDownInputOutput.jpg" width="64" />.&nbsp; 
+This defines if a point is asking for input or giving output or both : </font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Byte Size :
+<img alt="Byte Size" height="64" longdesc="This is the number of bytes for this point." src="Icons/DropDownButtonNumberOfBytes.jpg" width="64" />. 
+This is the number of bytes for this point.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Path start<font SIZE="3"> / end
+<img alt="Path Ends" height="64" longdesc="Path ends" src="Icons/DropDownButtonLineStart.jpg" width="64" /><img alt="Path end" height="64" longdesc="path end" src="Icons/DropDownButtonLineEnd.jpg" width="64" /> 
+This is to select the start and end of paths..</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The user can basically do things with and to symbols. </font></p>
+<ol class="auto-style37">
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">Selecting a symbol on either the symbol or flowchart screen 
+	will make it the next to be placed on the flowchart and the symbol that will 
+	come up to be edited.</font></p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	They can create a complete new symbol from scratch.</p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">They can modify a symbol with the symbol screen.</font></p>
+	</li>
+</ol>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><a name="Buttons_FlowChart">Drawing Flow Chart</a></font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A Flow Chart is drawn by selecting a start symbol and placing it 
+on the screen. This is done one of two ways. </font>&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">To select a symbol one of three ways. </font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">You can select the symbol button
+<img alt="Select a symbol" height="64" longdesc="This selects a symbol name to be placed on the FlowChart Screen or edited on the Symbol Screen." src="Icons/DropDownSymbolSelect.jpg" width="64" />, 
+. Here is a drop down of all of the currently known symbols you have included in 
+the current Flow Chart.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">You can also move the mouse in pattern that the symbol has 
+defined as it's stroke&nbsp;
+<img alt="Stroke" height="64" longdesc="Move the mouse to select the symbol" src="Icons/StrokeSymbolSelect64x64.jpg" width="64" />. 
+This will then select a symbol to place.&nbsp; The symbol will be placed at the location of the 
+mouse when you lift the button.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The third method type in the import command (or open an import 
+file)&nbsp; (More on that later in the import format)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">All programs must have a starting location. Even subroutines and 
+functions (device drivers, etc) must have a start symbol. This shows the start of a program 
+(or in the case of device drivers multiply entry points to start from), a 
+subroutine, or a function, ,&nbsp;&nbsp; So 
+the first symbol that you define should have Start as it's name (Which is not 
+the same as the subroutine or function name that is defined in the program code 
+of the symbol, more on that later.&nbsp; There is always a start symbol when the 
+program starts up.&nbsp; You will have to overwrite that with what ever computer 
+language/subroutin/function that starts that language (In the case of COBOL, it 
+might have the entire enviroment section)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A Flow Chart is expanded by placing more symbols on the Flow 
+Chart. This will show what else the program is to do. A Flow Chart is continued to be 
+completed by adding paths (Connecting lines) between dots (connection points 
+with V pointers showing input, output or both.) of the symbols, making sure that 
+you match the connection points colors and widths of the two symbol together, if 
+not an error messages warns you that you have two different data types, which 
+for languages like dartmouth basic you can almost completely ignore.)&nbsp; . 
+The color and widths is the represents the size of the data. (It does not mean 
+that larger width paths are larger sized data. only means that the same size 
+width need to match each other.&nbsp; It might be because a wide path might mean 
+that this is an import bit of data passing here.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<ul ALIGN="ABSMIDDLE" class="auto-style36" HEIGHT="16" SRC="FlowChartHelp_html_4191c4bd.gif" WIDTH="16">
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3">After the Flow Chart is complete then save the Flow Chart.
+	</font></p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<img ALIGN="ABSMIDDLE" HEIGHT="16" src="../Flow Chart Help Files/Icons/FlowChartHelp_html_4191c4bd.gif" WIDTH="16" />
+	<font SIZE="3">The next step is to generate and save the programming code 
+	for this program from this Flow Chart. If you have not errors then you 
+	should have a program ready for what ever compiler you are using. (And 
+	future versions should compile into assembly language directly for watching the Paths of the Flow Chart showing what the program is doing)</font></p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<img ALIGN="ABSMIDDLE" HEIGHT="16" src="../Flow Chart Help Files/Icons/FlowChartHelp_html_4191c4bd.gif" WIDTH="16" />
+	<font SIZE="3">The next step is to print out your Flow Chart (for 
+	documentation and checking).</font></p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+</ul>
+<ol class="auto-style37">
+	<ol>
+		<ol>
+			<ol>
+				<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+				</p>
+				<p class="auto-style22" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+				<font SIZE="5"><a name="Modifying_Symbols">Modifying Symbols</a></font></p>
+			</ol>
+		</ol>
+	</ol>
+</ol>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This is done just like making a Flow Chart , except that you you are working on 
+the symbol screen. Here you work with points and lines.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+To add a line, you need to have the color that you want selected in the color 
+drop down.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+To add a point, you need to have the data type that you want in the drop down. 
+start with your own symbol graphics, or another one and then make a Flow Chart 
+of what your new symbol does.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The third thing that you can do is to make a new symbol that has the programmers 
+code to insert into a Flow Chart </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This lowest level symbol has the graphic picture for the symbol that you see on 
+the screen and in the printout.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+A symbol also has the special programmers code inside it.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This code is nothing more than programmer code that replaces the names of the 
+Paths with with the names of the connection points inside the text of the 
+program code.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+You can 'drill into' a symbol and bring up it's definition </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Each symbol has a definition screen of what the symbol looks like.<br />
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">But each symbol is one of two types</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">First is just another Flow Chart (because it's a subroutine in 
+that language)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Or it is the bottom level definition of the computer language.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The bottom level is in text. It defines how the graphics is 
+converted into text. So the computer language text will be displayed.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">How to think about what happens</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Think of each symbol as doing something. Weather it is just 
+adding two numbers together or sorting megabyte data files.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Think of the Paths that go between the symbols as the data 
+flowing between symbols.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Some symbols will use data Paths (inputs), others will set data 
+Paths (output), and others will do both at the same time. Each symbol should 
+show that in the symbol graphics.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6">Chapter 3</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6"><a name="Window_Views">Window Views</a></font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="View_FlowChart:">
+<font SIZE="5">Flow Chart</font>:</a></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<img ALIGN="LEFT" BORDER="0" HEIGHT="256" NAME="graphics2" src="Icons/Screen%20Menu%20FlowChart.jpg" WIDTH="954" /><br CLEAR="LEFT" />
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This program is used to make a new Flow Chart of a computer program, convert an 
+existing computer language to the flowchart graphics.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+A Flow Chart has to have one symbol named start. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This is the entry point of programs. All programs start somewhere, and this is 
+the point that they start from. Subroutine also have a starting point. So a 
+flowchart that is just a subroutine has one start symbol in it.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Subroutines does every thing that a program with a start does, except it starts 
+with something name other than a start (or main()). It usually starts with a 
+programmers made up name for a subroutine. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+A start symbol could do any of the following.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Be the beginning of a program.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Be the entry point of a function, or subroutine.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Be the entry points of a device driver or other system routine.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Be the start of a batch file, and other computer directives.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+A function is something left over from the old programming school where a single 
+value is return by a subroutine, other than that, it is exactly like a 
+subroutine. Now days most modern languages can and do return multiply values 
+either by passing an address (sometimes called a by reference) to the variable 
+to be changed, or changing globally defined variables.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5">S<a name="Vies_Symbols">ymbols</a>:</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Symbol Pictures:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Symbol Graphics is what users see when they are writing/checking/reviewing 
+programs. It is and should be the only thing that programmers need to use to 
+write programs, just like they only need to use the programming language for 
+most of their text based written programs now.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The graphics is made up of only two atoms.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+First is simple lines that show on the screen to tell what they symbol is. It 
+can be anything from a simple box, to a complex drawing showing part of, or the 
+complete, internals of a CPU. The lines can have colors to help show what this 
+function does.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Second is points of where Paths can be connected to this symbol. The points 
+show:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Arrows showing, input, output, both, of if each is optional.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The color of the type of data/logic that can come and go.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Point can also have the option of displaying:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%" class="auto-style40">
+Symbol macro text </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The first kind of text is the actual text that would appear for the underlying 
+language to do this function that the graphic symbol implies.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The second kind of text is where the 'variables' would go. This would be 
+replaced with either a computer generated name, or the name of the line/path 
+from the Flow Chart</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+For example </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The simple computer language code could look like:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+A = A + B</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This would be written in the Symbol Import file as</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Program= {[(PointA.pathname))]}} = {[(PointA.pathname)]} + 
+{[(PointB.pathname)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+You can quickly see that the names of the lines (Paths) connect the symbols 
+together. This is the path that the data moves, just like the path that the 
+logic moves.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Now that the syntax is encoded, when the graphics symbol is used by the 
+programmer in a FlowChart, The replaceable text for the variables would be 
+replaced with the names of the paths that are connecting the points in the 
+graphics symbol when it is used. So it could be</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Assuming that the paths are named Total and Ticket_Item </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Total = Total + Ticket_Item</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The original filename of the symbol is also kept along with numerous other items 
+of information.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+An Opcode is for symbols that will (eventually) create the object files and 
+programs and interpetive running.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The 'stroke' is an encode list of mouse movements that define using this symbol 
+from the FlowChart screen with out having to go to the symbol screen to select 
+each symbol.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Items_on_the_screen."><font SIZE="6">Chapter 4</font></a></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font size="6">O</font><a name="Items_on_the_screen."><font SIZE="6">bjects on the screen</font>.</a></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<img BORDER="0" NAME="graphics3" src="Icons/Screen%20Menu%20FlowChart.jpg" /><br CLEAR="LEFT" />
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="4" STYLE="font-size: 16pt"><a name="Objects_FlowChart">FlowChart graphics screen</a>.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This screen is the control of the program flow. It only has three kinds of 
+objects. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+In the graphics screen, Paths which are the lines between symbols. Symbols, 
+which are from the symbols library</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="4" STYLE="font-size: 16pt"><a name="Objects_Symbol">Symbol screen.</a></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><i><b>Buttons</b></i></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>FlowChart - </b><span STYLE="font-weight: normal">This will return to the FlowChart screen</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Start New Symbol - </b><span STYLE="font-weight: normal">This 
+will clear out all current information and start a new symbol</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Add Point - </b><span STYLE="font-weight: normal">This will 
+add a point with the current select datatype/color/width... There is a bug, you 
+cant name/rename a point (Opps)</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Add Line - </b><span STYLE="font-weight: normal">This will add 
+line of the selected color. It starts where the mouse is pressed, and ends where 
+the mouse is released.</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Move - </b><span STYLE="font-weight: normal">This will select 
+something where the mouse is at when the button is pushed, and move it to where 
+the mouse button is released.</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Delete - </b><span STYLE="font-weight: normal">This ill delete 
+something where the mouse button is pushed.</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Remove Symbols -</b><span STYLE="font-weight: normal"> This 
+will remove all symbols that are not in the flowchart.</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Dump - </b><span STYLE="font-weight: normal">This will make a 
+file of everything inside the data structures to the root directory 
+\FlowChartDump.txt</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Options - </b><span STYLE="font-weight: normal">This will call 
+up one of the options screens</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Check All - </b><span STYLE="font-weight: normal">This calls 
+up a subroutine that checks everything that Could be wrong with anything it can 
+think of and puts error messages on the flowchart of the possible problems that 
+it found.</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Text Areas</b></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b>Symbol Names - </b><span STYLE="font-weight: normal">This Drop 
+Down has all of the symbols in memory. Selecting one will then be what is placed 
+on the FlowChart. (Mousemovement � stroke will make that symbol selected to be 
+placed on the FlowChart)</span></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Status Text - This is simply the status of messages of the 
+program working.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Symbol Name - This is the currently select symbol. Change it 
+before you use the Start New Symbol Button. It will use what ever name is here.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Data Type - This drop down has all of the symbol types. When you 
+select a symbol type (For points) it will change the color name.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Description - This is the description of this data type, so you 
+can know what someone made this datatype for. (Such as 
+AccountRecievableRecord...)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Color Name dropdown - This has a list of all of the colors that 
+you can use for lines.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Input/Output - This has a list for the point definations. If you 
+select input then an arrow will be in the symbol at that point pointing inward. 
+This is to let you know that that point wants data, and of course output points 
+outward, and inputoutput points bothways.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Width - This is used width of paths.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+<font SIZE="3">Bytes - This is to show how many bytes this data type uses.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; font-weight: normal; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax text - This is either the syntax made for this symbol, or the program has 
+made for the macro code that it has.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Macro Code text - This is the macro code that is used to make the program. The 
+Syntax, and Macro code are closely related.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+99.9% of the time you will use one of the following two (Which connects a path 
+to a placed symbol)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The name of the path connecting to this symbols point </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;{[(PointName.PathName)]} or {[(PointName.Variable)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Buttons:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3"><b><a name="Replacement_string">Replacement string</a></b></font><br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+As of this writing you can replace inside of the text with:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.name)]}=SymbolName</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.index)]}=2 (This give an internal index that is useless)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The location of the symbol in the graphics </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.x)]}=500</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.y)]}=1000</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.Rotation)]}=Default (from the rotation table)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.DataType)]}=Byte (From the datatype table</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.OpCode)]}=nop</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.notes)]}=Made with DeCompile</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.FileName)]}=SymbolSyntax.symbol (If missing will be created)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.Author)]}=YourName</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.Version)]}=1</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.Stroke)]}=ABC (The letters A through P)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.Pointer)]}=52 (This is an internal index that is useless)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.xa)]}=500 (The X of the connected path)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.ya)]}=1000 (The Y of the connected path)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(SymbolName.code)]}={ {[((number))]}} :A = B + C: GoTo { {[((number))]}} : </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.name)]}=PointNames </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.index)]}= 53 (Meaningless internal index number)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The location of the point in the graphics</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.x)]}= 5250 </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.y)]}= 9750 </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.IO)]}=both </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Rotation)]}=Default </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Datatype)]}=Byte</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.PathName)]}=PathName (The path at this location)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Variable)]}=PointName (The name of the Point of this symbol)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The location of the Path connecting to this point </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.PathX)]}= 4750 (The location of the Path)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.pathY)]}= 9750 (The location of the Path)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The distance between the placed symbol point and the Path .</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Distance)]}=500 </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.DataTypeName)]}=Byte</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.DataTypeDescribtion)]}=8 bit , usually a character</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Bytes)]}=1 </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.DataTypeColor)]}=Orange </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+{[(PointNames.Width)]}=1 </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+'Future not done as yet</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Comments (optional, which are of course ignored.) {[(SymbolName.Notes)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Values of constants with original starting values (optional) {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of constants connected to a path {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Value of the Path (for any Constants connected to a path). {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of connecting end Points in the Path. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of inputs in the Path. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of output in the Path. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of Inputs/output in the path {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Path data type information, from the datatype file. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Color information of the data type of the Path {[(PointName.DataTypeColor)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Width of the Path data type. {[(PointName.Width)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Style of the Path data type. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of errors caused in this Path {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Number of warnings caused in this Path {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+First Error in this Path. {[()]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The symbol opcode (if available) {[(SymbolName.OpCode)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Symbol made for this computer language {[(?.language)]} </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The author of this symbol. {[(SymbolName.Author)]} </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The version of this symbol {[(SymbolName.Version)]} </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The mouse movement that selects this symbol. {[(SymbolName.Stroke)]} </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><a name="File_Importing_">Chapter 5 </a></font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font size="5">F<a name="File_Importing_">ile importing</a> and exporting</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Ignore"></a>/Ignore=,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Anything that starts with this will be ignored by FlowChart.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguage"></a>ComputerLanguageDialect</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Computer LanguageGotoNextLine"></a>/computerlanguagegotonextline</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageCameFromLastLine"></a>computerlanguagecamefromlastline</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageProcess"></a>computerlanguageprocess</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Language"></a>/Language = Language Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ie: C, C++, R, F, Basic...</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="ComputerLanguageCase"></a>/ComputerLanguageCase = {Yes, No} </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageComment"></a>ComputerLanguageComment = Language Comment string ie: rem or ' or /* or // etc. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageExtention"></a>ComputerLanguageExtention = Language Extention ie:bas </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageMultiLine"></a>ComputerLanguageMultiLine = Language MultiLine ie:_ to continue on the next 
+line </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/<a name="ComputerLanguageVariableNameCharacters"></a>ComputerLanguageVariableNameCharacters = Language Variable Name Characters ie: 
+characters that are allowed besides letters and digits </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Options"></a>/Options=number,{0,1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Turns this 
+option or message on or off.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Set"></a>/Set=</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<u style="color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: x-large; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: -38.4px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<b><a name="Syntax_Summary_for_Symbol_Library0">Syntax Summary for FlowChart</a>:</b></u></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Path"></a>/Path=x1, y1, x2, y2, "Data Type Name", Path Name</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Data details:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code, x1,y1,x2,y2, Rotation name, Option Name, Data type Name {[(actual line of 
+source code ?)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This line segments from the points in one symbol to the points in another symbol inside a Flow 
+Chart. The Data Type matches the Data Type from the Point in the symbol to make 
+sure that the user has matches them correctly.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Use"></a>/Use=x1, y1, Rotation, xx, "Name of the symbol called"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code, x1, y1, rotation name, "name of the symbol"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+In a Flow Chart this is the symbol that is displayed for the user to connect his 
+lines to.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The rotations with flip or flop gives a mirror image of the symbol. Flip gives a 
+flip mirror image sideways, then a flop mirror image up and down, so flipflop 
+will first give a mirror image sideways and a flop will give a mirror image of 
+that up and down, turning it back forward. Which is the same as Rotate180.)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Constant"></a>/Constant=x1, y1, "Constant Value"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code, x, y, "constant text at this point"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The X,Y must be on the end or turn of a path.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><u><b><a name="Syntax_Summary_for_Symbol_Library">Syntax Summary 
+for Symbol</a>:</b></u></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Name"></a>/Name="NAME"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+NAME is the name that you give to the following symbol. This also the end of the 
+last symbol and the start of the next. The name must be the same as the name in 
+the /use command</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language="Computer Language"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+X and Y are used to display this as a comment on the screen</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This is for which computer language that this symbol works on. You can allow the 
+symbol to have output in many different languages (one at a time).</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+For example:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=BASIC</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=Visual Basic</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=C</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=C++</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=FORTRAN</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=COBOL</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=MyOwnPersonComputerLanguange</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language=ProgramInEnglishForManagement</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Code"></a>/Program= Order, TEXT</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This is the computer code that is generated for this symbol for the above 
+computer language. The reason to Flow Chart working is in how the Code is 
+written here. The code is just generalized code with the names of normal 
+variables replaced with what is between the {{[((Variable-name{{[(( and the 
+{{[((Variable-name{{[(( of the point. The two go together.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The location is used in some languages to separate one section from another 
+(Sort Order)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+for example:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Program=main, {{[((SUM{{[((={{[((NUM1{{[((+{{[((NUM2{{[((;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Point=50,0,-1,integer,"SUM"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Point=-200,0,1,integer,"NUM1"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Point=200,100,1,integer,"num2"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+When this Flow Chart is assembled the result replaces what ever the user has 
+named the paths from one symbol to another with his name (If the user has not 
+named the paths, then the computer assigns a name to each to each set of 
+line/paths that are connected together.) So the results would look something 
+like this in the generated code file.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+My Totals=Dept One+Shoes</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The /Program= lines must be in the order that they appear in the output.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Point"></a>/Point=X, Y, input/output,Data Type, "Variable-name"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code, x1, y1, input/output, Data Type, "name of this Point"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The Variable-name is replaced in exact Variable-name for the /Program that was in 
+this symbol. Just like the example in the /Program above.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Line"></a>/Line=x1, y1, x2, y2, "Color Name"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code, x1,y1,x2,y2, "name color"</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This just draws a line in side the symbol from x1,y1 to x2,y2 of what the symbol 
+displays, it has not other function. You have lines inside a symbol to display 
+only. You have paths inside a Flow Chart to connect the /Points inside one 
+displayed symbol to another. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Color"></a>/Color= Color Name, {[(Alpha, Red, Green, Blue)]}, {[(Style)]},{[( Start)]}, 
+{[(End)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+code,"name of this color" , {[( Alpha, Red, Green, Blue)]}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Color values for Alpha, Red, Green, Blue must be between 0 to 255 and they are 
+optional. Flowchart creates the standared Microsoft Color names (All 139 of 
+them) and will output them when you export. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Valid styles are: Solid, Dash, Dot, Dashdot, DashDotDot</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Valid for start and end are: AnchorMask, ArrorAnchor, DiamondAnchor, Flat, 
+NoAnchor, Round, RoundAnchor, Square, SquareAnchor, Triangle</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Order"></a>/Order= (order1,order2,(,order3,order4)...)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The order is where the source code is written out. For example, Globals should 
+be in order1 from above, and source code should be in order4, with all of the 
+definations of the variables in order3 group for the subroutine order4. If any 
+named order is not in this list then it will be added to the end. Order1 is 
+just an example, andy names can be used (like IncludeSection, GlobalSection, 
+MainSection, DefineSection, DeclareSections)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+example:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Order=(IncludeSection, GlobalSection), MainSection, (VariableSection, 
+CodeSection, FinishSection, ErrorTrappingSection ), OtherSections.</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6"><a name="Support_Tables">C</a>hapter 6</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font size="6">Other useages</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style49">
+Other thinks that FlowChart Computer Language can do is related.&nbsp; FlowChart&nbsp; 
+can also make Data Flow Diagrams, A flow diagram is a flow chart with out any 
+logic flow.&nbsp; This is done because each symbol waits until it hass all of 
+the data available before it does anything.&nbsp; There are a number of ways to 
+do this.&nbsp; One is to simply make every dtata line both a logic and a data.&nbsp; 
+Then a 'go subourinte' for every time that data is pub onto the path the symbols 
+that the path is connected to will all and each test if they have all of data to 
+execute, other wise store that bit of data and return,&nbsp; and when all of the 
+dtata is available then it ' calls ' every datat path that it outputs to .</p>
+<p class="auto-style49">
+&nbsp;</p>
+<p class="auto-style49">
+Another way is to loop through all of the symbols and execute each one that has 
+all of the data available.&nbsp; Then push / stack data on to each path.&nbsp;&nbsp;&nbsp; 
+In all cases, you must push a value onto this path. and then the symbol must use 
+it once. </p>
+<p class="auto-style49">
+&nbsp;</p>
+<p class="auto-style49">
+&nbsp;</p>
+<p class="auto-style49">
+&nbsp;</p>
+<p class="auto-style49">
+Flowchart can also be used for such things as making an electrical schematic.&nbsp; 
+Then make each symbol have the code to analize the 'wires' connected to this 
+symbol .&nbsp; Or think of it as each symbol is actually a chip (7400)&nbsp; 
+That way each symbol/chip can analysis what it is doine, (following, logic, 
+electric charactertics, you can check the logic, timeing, the&nbsp; earelest and 
+latest time.</p>
+<p class="auto-style48">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6">&nbsp;</font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6">C<a name="Support_Tables">hapter 7 </a></font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font size="6">S<a name="Support_Tables">upport Tables</a></font></p>
+<p class="auto-style1" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The program does not currently allow you to make changes to these 
+external tables, they must be edited by hand with</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">&nbsp;a program like note pad. They 
+are ASCII files, DO NOT CHANGE TO DOCUMENT FILE STRUCTURE.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="5"><a name="Data_Type_Table">Data Type Table</a> </font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This table contains the color/types of data that line paths in Flow Chart, and 
+the color of the connection points in symbols that they must connect to. It also 
+contains the color of lines that make up symbols.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The following description of the file layout also shows how the fields are used:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The following are imported via a flowchart, or symbol import file.&nbsp; </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Preceeded by :/Color (you must define a color before using it in a /datatype</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Syntax:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Datatype"></a>/Datatype=name, Description, Bytes, Color Name, Width/Radius, Style, Reserved</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Name is unique of this data type (or line color name as used in symbols).</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Description is what this data type is for. It can not have comma's in its name 
+(used as field delimiters).</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+This is the size of the number of bytes of this data variable (use 0 for Logic, 
+and -1 for strings)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Name of the color in the color support table.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+gWidth/Radius</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+When used as width it is the width of the lines in pixels</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+When used as a radius size, it is multiplied by 8 for the the connection points.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+(Ignored for now) Style is the name of the style of the line/path/circle and 
+must be the following.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Solid (default if absent), dotted (lines only) </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+</p>
+</members>
+</doc>
+<p ALIGN="LEFT" STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="4" STYLE="font-size: 16pt">Support tables.</font></p>
+<ol class="auto-style38">
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	C<font SIZE="3"><a name="Color_table">olor table</a>: This contains the 
+	colors of the lines and paths and text. They all use the same color support 
+	table names as defined by Microsoft. This table contains the names of the 
+	colors, It also contains optional things as the style of the line (Solid, 
+	Dot, Dash, DotDash) and the red/green/blue for non standard colors. All of 
+	the colors are available . They are saved each time that you save your flow 
+	chart.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3"><a name="Datatype_table">Datatype table</a>: This contains 
+	the name of the data type. Such as integer, real, double, byte. It should 
+	only contain the data types for the language that you are programming in. 
+	Such as C, Basic, FORTRAN, COBOL,. It can also have data types for the 
+	operating system that you are using (such as the datatype to interface with 
+	Windows APIs). The data type also contains the color, width, and other 
+	future items.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3"><a name="Keyword_table">Keyword table</a>: They are then made 
+	for each computer language. That is how the program tells what to do with a 
+	line of code.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3"><a name="Operator_table">Operator table</a>: They are special 
+	characters such as + - = , ( ) {[( )]} ^ &amp; * and keywords such as 'mod' It is 
+	the grammar of each line of source code. With keywords they tell how the 
+	line of code is to be matched to the syntax operator grammer of each symbol.</font></p>
+	</li>
+	<li>
+	<p ALIGN="LEFT" STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<font SIZE="3"><a name="Function_name_table">Function name table</a>, to 
+	help the flowchart program decide which symbol to match input lines of code 
+	to.</font></p>
+	</li>
+</ol>
+<doc>
+<members>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="6">Summary of the <a name="Import_Syntax">Import Syntax</a> 
+Statements allowed.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">If you must make changes to the import/export file. The latest 
+formats are listed there.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">(*1) marks the input statements that allow multiply lines</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageCase=no</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageMultiline=_</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageComment=rem</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageExtention=.VB</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageVariableNameCharacters=$%</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageDialect_=VisualBasic</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageGoTonextLine={{[((ComputerLanguageGoTonextLine))]}}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageCameGromLastLine={{[((ComputerLanguageCameGromLastLine))]}}</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageProcess=C:\ProgramFiles\FCVisualBasic.exe</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Color= Color Name, Alpha, Red, Green, Blue, Style, start, end</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Datatype= Name, Description, Number of Bytes, Display Width/Radius, Style</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Name= Name</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Language= Computer Language</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Program= Sort, Code of the Computer Language with {[(Replacements)]}.(*1)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Point= X,Y, {Input, Output, Both,OptionalInput, OptionalOutput, or 
+OptionalBoth}. The Data Type Name, Name of Points in symbol. (*1)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Line= X1, Y1, X2, Y2, Color Name.(*1)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Filename= Device:\Path\File Name. Extension of where to save only this symbol 
+(Optional)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Notes= Notes. (*1)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Path= X1, Y1, X2, Y2, Datatype, Name of The Path</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Use= X, Y, {'Flip', Rotate90, Rotate180, Rotate270. . . }, Symbol Name</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Constant= X, Y, Constant Value</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Syntax= Language Statement Syntax</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Opcode= Hex Values (&amp;Tables) (Not used yet)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The order of the file must be </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/ComputerLanguageDialect...</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Color before it is used, then (If missing the program will use Windows Default 
+colors</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Datatype</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Name </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Point</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Line</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+/Use, /Path, or /Constant.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%; page-break-before: always">
+<font SIZE="6"><a name="Standard">Standard 2021:</a></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">This should be the first standard of the language.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%" class="auto-style40">
+<em>&nbsp;Software Schematic should have three parts, a flowchart, a 
+symbol, support tables.</em></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%" class="auto-style41">
+<font SIZE="3"><strong>.FlowChart</strong></font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+The flowchart has three parts. </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Displaying complete symbols on the screen/page.&nbsp; </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+FlowChart symbol properities are the X,Y location, Rotation,</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Paths going between points on the symbols.&nbsp; </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Path properities are an (X,Y) to (X,Y), a path name, a logic/data type.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Optionally 'constant' which are what the path value starts with. Optionally but 
+ignored are errors of the program, such as:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+points on a symbol not being connected.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+logic paths that go to two symbol inputs, assume for now single liner 
+processers, but the language is not restricted by this</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Paths with no source, output from at least one symbol.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+two paths connect with different names.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Constant properities are (X&lt;Y), The starting value (data type and name comes 
+from the path it is connected to.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+optionally 'error' messages.&nbsp; When the program needs to display an error at 
+a location where the error occures. Or to point the user to where something 
+needs to be changed.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<ul class="auto-style39">
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%" class="auto-style42">
+	<strong>Symbol&nbsp; </strong> </p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	The symbol has a number of parts.&nbsp; It is defined inside a retangle of 
+	from -250 to 250 in the X and Y.&nbsp; This is an artificial limit and might 
+	go away, if there are to many people that need/want it larger.)</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	Symbol properities:</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Name:&nbsp; Each symbol is refered to by name.&nbsp;&nbsp; You can use 
+	almost any name that could be used as a variable.&nbsp; It begins and ends 
+	with 'white space', white can be things like a space, tab, return, and so 
+	on.&nbsp; The&nbsp; name of the symbol.&nbsp; This is so that the flowchart 
+	displays this symbol by name,</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Points: Each symbol has to have the points defined.&nbsp; </p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Point properities:</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	(X,Y)</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Name of the point (This is used to create the text for each symbol. (See 
+	Macro Text)</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	The Logic/Data Type of this point.</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Lines:&nbsp; Each Symbol must have some graphics that show what this symbol 
+	is.&nbsp; Usually, a flattened oval is used for the start, and also an end.&nbsp; 
+	An end is somtimes just a circle. diamonds&nbsp; are usually used for 
+	testing to determin directions of logic branches.&nbsp; That would include 
+	things like IF, CASE, Computer Goto, WHILE, and so on.</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Optionally Icons/Pictures.&nbsp; There should be Icons and pictures 
+	available also.&nbsp; </p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;</p>
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	<strong>Support Tables</strong></p>
+	<li class="auto-style43">
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	Color Table: The color table is used to be able to move from one system to 
+	another.&nbsp; Currently its format is based on Windows 10 Color Names.&nbsp; 
+	But it also has the Red/Green/Blue for other systems to create thier own 
+	Color names.&nbsp; (See The details in import/export section)</p>
+	</li>
+	<li class="auto-style43">
+	<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;</p>
+	</li>
+	<ul class="auto-style39">
+		<li>
+		<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		DataType Table:&nbsp;&nbsp; The data type table has information about a 
+		type of data this includes:</p>
+		</li>
+		<li>
+		<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		&nbsp;</p>
+		</li>
+	</ul>
+</ul>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">They 'should' have color and/or distinction to tell the 
+difference data types they represent.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Second is the symbols, which has a number of items.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The symbol must have a unique name.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A symbol must have the 'program macro code', which is just the 
+computer language code with variables replaced with {{[((names of the point{{[((.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">My Exceptions to my own standard:</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The File name that the symbol is contained in.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The Computer Language Of this symbol.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Notes.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Version.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Author.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Hex code for the Machine. (Only used in Assemble Language for 
+now.)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">An internal text representation of the mouse movement to identify 
+this symbol.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A symbol should have a graphics part represented by points. They 
+should have lines or graphics to show what this symbol does (ie: decision branch 
+(go to, go subroutine), process (subroutine, function calls), loops (do while, 
+for next, do until) and so on). </font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The points has a number of significant items.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Points must have associated with them the logic or data types 
+(i.e.: Integer, String, Floating Point) Depending on the language.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Points 'should' have a representation of the symbol using (input) 
+or returning (output)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">The lines might have colors and/or distinction but nothing else 
+of importance.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<br />
+<br />
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Third is support tables.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A support table of color names is helpful.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Showing at least the colors available, or select-able from a 
+pallet of colors</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">A support table of data types is helpful</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Showing the name of the data type (i.e.: byte, integer, Floating 
+Point, or language dependent for C, C++ in Windows and the new C Standards).</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">{[(My Exceptions)]}</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Color Table:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Alpha, Red, 
+Green, Blue of the color for those systems that can use it.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The types of 
+start and end points styles that can be used. (Currently turned off)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The line styles 
+that can be used. (Solid, Dot, Dash etc.)</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Data Type Table:</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Has a description of the data type.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Has a name of a color for this data type.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Has the size (in bytes) of this data type.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<font SIZE="3">Has the width of the line, with a minimum of 3 for this data 
+type.</font></p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%; page-break-before: always">
+Over-writable Internal Support Tables:</p>
+<ol class="auto-style38">
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	Direction Table: (A flip or a flop will reverse. An symbol can appear 8 
+	ways)</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	Number Named TopRight ? Top/Bottom Right/Left</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	&nbsp;Default</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;Rotate90</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;Rotate180, 
+	FlipFlop </p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;Rotate270&nbsp;&nbsp;&nbsp; </p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;Flip</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;FlopRotate180</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;FlipRotate90</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;FlopRotate270</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;&nbsp;FlipRotate180 </p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">&nbsp;Flop</p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	FlipRotate270 </p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	FlopRotate90 </p>
+	<p STYLE="margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	FlopRotate90, </p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Line Styles (Windows Dependant):</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">SOLID, dash, dot, dashdot, dashdotdot</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Line start/finish (Windows Dependant):</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">AnchorMask, ArrowAnchor, DiamondAnchor, flat, NoAnchor, Round, RoundAnchor, 
+	Square, SquareAnchor, Triangle</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Computer Languages: (Note that this will change to be an external table also 
+	later)</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Assembly , Bash , Basic , C , C# , C++ , COBOL , Clojure , Dart , Dos , 
+	Elixir , Forth , Fortran , Generic , Go , PowerShell , Java , JavaScript , 
+	Kotlin , Lisp , ObjectiveC , Pascal , Perl , PHP , Python , R , Ruby , Rust 
+	, Scala , SQL , Swift , TypeScript , VBA , WebAssembly </p>
+	<ol class="auto-style38">
+		<li>
+		<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		After selecting the language you also have to either load the keywords, 
+		or start up the language dependant program to preprocess the inputs.&nbsp; 
+		(See FClanguage)</p>
+		</li>
+	</ol>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Default Windows Color Names (Anything will display black)</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	(Windows 10 dependant colors)
+	AliceBlue, AntiqueWhite, aqua, aquamarine, Azure, beige, bisque, Black, 
+	BlanchedAlmond, Blue, BlueViolet, Brown, BurlyWood, CadetBlue, Chartreuse, 
+	Chocolate, Coral, CornflowerBlue, Cornsilk, Crimson, Cyan, DarkBlue, 
+	DarkCyan, DarkGoldenrod, DarkGray, DarkGreen, DarkKhaki, DarkMagenta, 
+	DarkOliveGreen, DarkOrange, DarkOrchid, DarkRed, DarkSalmon, DarkSeaGreen, 
+	DarkSlateBlue, DarkSlateGray, DarkTurquoise, DarkViolet, DataTypeError, 
+	DeepPink, DeepSkyBlue, DimGray, DodgerBlue, Firebrick, FloralWhite, 
+	ForestGreen, Fuchsia, Gainsboro, GhostWhite, Gold, Goldenrod, Gray, Green, 
+	GreenYellow, Honeydew, HotPink, IndianRed, Indigo, Ivory, Khaki, Lavender, 
+	LavenderBlush, LawnGreen, LemonChiffon, LightBlue, LightCoral, LightCyan, 
+	LightGoldenrodYellow, LightGray, LightGreen, LightPink, LightSalmon, 
+	LightSeaGreen, LightSkyBlue, LightSlateGray, LightSteelBlue, LightYellow, 
+	Lime, LimeGreen, Linen, Logic, Magenta, Maroon, MediumAquamarine, 
+	MediumBlue, MediumOrchid, MediumPurple, MediumSeaGreen, MediumSlateBlue, 
+	MediumSpringGreen, MediumTurquoise, MediumVioletRed, MidnightBlue, 
+	MintCream, MistyRose, Moccasin, NavajoWhite, Navy, OldLace, Olive, 
+	OliveDrab, Orange, OrangeRed, Orchid, PaleGoldenrod, PaleGreen, 
+	PaleTurquoise, PaleVioletRed, PapayaWhip, PeachPuff, Peru, Pink, Plum, 
+	PowderBlue, Purple, Red, RosyBrown, RoyalBlue, SaddleBrown, Salmon, 
+	SandyBrown, SeaGreen, SeaShell, Sienna, Silver, SkyBlue, SlateBlue, 
+	SlateGray, Snow, SpringGreen, SteelBlue, Tan, Teal, Thistle, Tomato, 
+	Transparent, Turquoise, Violet, Wheat, White, WhiteSmoke, Yellow, 
+	YellowGreen </p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+	</p>
+	</li>
+	<li>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Default DataTypes (expanded by external table from flowcharts)</p>
+	<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">Bit, Byte, errored, erase, Floating, Int16, Int32, Int64, INT8, Integer, 
+	logic, Long, Word</p>
+	<ol class="auto-style38">
+		<li>
+		<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+		Data Type properities: </p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Datatype0"></a>/Datatype=name, Description, Bytes, Color Name, Width/Radius, Style, Reserved</p>
+		<ol class="auto-style38">
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The name of this symbol (loading another with the same name will 
+			just sometimes add, and sometimes replace the existing system 
+			properities)</p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			A Description. Do not use comma's in the description because they 
+			are required in all imports instead of white space </p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The number of bytes that this data type requires.</p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The name of the color that this data type paths and points will be 
+			display with</p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The width of Paths and the size of symbol points.</p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The style (Solid, dot, dot dash etc Windows 10 dependant)</p>
+			</li>
+			<li>
+			<p STYLE="margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+			The line start and end.&nbsp; Arrow, flat, etc.&nbsp; (Windows 10 
+			Dependant)</p>
+			</li>
+		</ol>
+		</li>
+	</ol>
+	</li>
+</ol>
+</members>
+</doc>
+<doc>
+<members>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+&nbsp;</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+<a name="Glossary">Glossary </a>
+</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%; page-break-before: auto">
+Flow Chart : Is a graphical representation of the logic and data paths of a 
+program connecting the symbols together.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Symbol : Is a graphical representation of a basic unit inside a Flow Chart made 
+up of lines and points. It contains lines, points, and other information to make 
+the Flow Chart into a program.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Line : Is a graphical line in a symbol. It has color, but no width.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Path : Is a graphical line in a Flow Chart that represents the logic, or data 
+going from one symbol to another. It has a color and width representing the type 
+of data that that is moving in the program.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Point : Also called a connection point is in a symbol that is where the Paths 
+from different symbols connect. It show where a path goes into, and comes out of 
+a symbol. It has color and width for this type of data for this connection.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Connection Point: Is another name for Point.</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Color : This is a name that Windows has a set of colors for. (Currently new 
+color pens are not allowed, only the existing 139 color names.)</p>
+<p STYLE="margin-left: 0.5in; margin-right: 0.4in; text-indent: -0.4in; margin-top: 0.02in; margin-bottom: 0.02in; line-height: 100%">
+Data Type : This refers to the type of data that they symbol point is looking 
+for. Some computer languages get very picky about this (Like C++), other 
+computer languages could not care less (like BASIC).</p>
+</members>
+</doc>
+
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp; &nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+Quick Start</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+For starting quickly, first start the FlowChart ComputerLanguage Program.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+This can be done in a number of ways. In&nbsp; Microsoft Windows, press the 
+right mouse button over the windows start icon. This will let you see all 
+programs that are installed. . Then select FlowCHart.&nbsp; You can press the 
+Windows key.&nbsp; If you need more help on how to install or start a computer 
+program refer to your owners manual, or the Internet.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+After the FlowChart program is started, there will be a splash screen displayed 
+over the flowchart screen. They will both disappear and the option screen will 
+display, with only one button enabled.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+The button will allow you to select the computer language.&nbsp; The list will 
+have generic computer languages, and some specific ones for special useage.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+Early versions of the program made you select the computer language and then 
+input the symbol files neededfor that language.&nbsp; Later versionsloaded them 
+automaticly.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+If you have to load the Symbols, Which means keywords, syntax(s), and so on, 
+thendo the folloing steps</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+1, Select the FlowChart button (Far Left button )</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+2. Then on the Flowchart Screen, Select the third button (A file folder)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+3. Then on the File InputOutput screen select the folder with an arrow pointing 
+up (To open a file)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+4. Find and select the symbol file that you require.&nbsp; </p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; a. You might need to repeat opening symbols. depending on 
+your language.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; b. You will need a Keyword symbol file,</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; c, An operator ymbol file.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; d. a function keyword file.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; f. One or more files for the symbols sintax.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; g. OR itmight all becontained in a single file of the 
+computer language name,and the extension of *.Symbol.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+5. When you save a FlowChart all of the symbol files will besaved into the 
+flowchart file.&nbsp; The symbol files are the basis on which FlowChart uses to 
+&#39;translate&#39; to and from a computer language.&nbsp; Different symbol files are 
+required for different languages, and dialects of languages,</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+6.&nbsp; Next go back to the Symbol Screen.&nbsp; (Second buttonfrom the left)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+7.&nbsp; The Symbol screen has two rows of buttons.&nbsp; The top row is to edit 
+symbols.&nbsp; The second row is the defaults that are applied to editing.&nbsp; 
+Each button needs to have a default selected.&nbsp; The buttons shows what the 
+current default is.&nbsp; </p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+8.&nbsp; Last enter a name of the next point to add.&nbsp; Thetext box to enter 
+that is at the right of the buttons. (This will not be used until you add a 
+point to a symbol, but needs to be there anyway (for now)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+9.&nbsp; Goto the FlowChart screen again(first button on the left)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+10.&nbsp; Select the select a symbol button.&nbsp; A drop down will appear with 
+the defined symbols for this language.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+11. You can now place that symbol on the Flow Chart.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+12 To place paths (lines connecting the logic and data, The button with a line 
+and circles at the ends is the &#39;make a path connection. </p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+13.&nbsp; Where ever two paths end at the same location, both must have the same 
+path name (The path name is actually the name of the variable in the source 
+code.)</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+14. Continue placing symbols and connectingthem with paths.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+Additional Notes:</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+1. A symbol can be made by typeing in a line of source code.&nbsp; The program 
+will look for a symbol that matches the syntax and place that one the Flowchart 
+with Paths connecting them.&nbsp; If no syntaxmatches, it will create a symbol, 
+and then placethat one one the Flowchart.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+2. A FlowChart can be started from the File Input/Output screen with the text to 
+flow chart button.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; a. writting on the left of the button and symbols on the 
+right makes source into flowchart</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;&nbsp;&nbsp;&nbsp; b. writing on the right of the button and the symbols on the 
+left makes the source code form the flow chart.&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+2. If the auto router is turned on, it will make paths to connect any two paths 
+with the same name.&nbsp; (A background task, so it might take a while to &#39;catch 
+up&#39; to where new paths and data is entered.</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+3. </p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+<p STYLE="text-indent: -0.4in; line-height: 100%; margin-left: 0.5in; margin-right: 0.4in; margin-top: 0.02in; margin-bottom: 0.02in">
+&nbsp;</p>
+
+</body>
+
+</html>

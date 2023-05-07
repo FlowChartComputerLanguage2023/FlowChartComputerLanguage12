@@ -1,0 +1,138 @@
+/Ignore= /Color=Color Name, Alpha, Red, Green, Blue, Style, StartCap, EndCap, ,",1
+/Ignore= /datatype=datatypename, Number Of Bytes, Color Name, Color Width, Describtion, ,",2
+/Ignore= /Name=Symbol Name, options, ,",3
+/Ignore= /Point = X, Y, {Input/Output...}, Data Type, Name, ,",4
+/Ignore= /Line=x1, y1, x2, y2, Color, ,",5
+/Ignore= /FileName=Device:/Path/FileName.Extension, ,",6
+/Ignore= /language=Language Name, ,",7
+/Ignore= /Stroke={}, ,",8
+/Ignore= /Notes={}, ,",9
+/Ignore= /Order=name1,(name2,name3,(name4,name5),name6)..., ,",10
+/Ignore= /Version={}, ,",11
+/Ignore= /Author={}, ,",12
+/Ignore= /OpCode={}, ,",13
+/Ignore= /Path=Name, x1, y1, x2, y2, Data type, ,",14
+/Ignore= /Use=Name, X, Y, rotation, future dynamic options, ,",15
+/Ignore= /Constant=name , X, Y, Value, ,",16
+/Ignore= /microcodetext=OrderName, Text {[( replacements)]} text ..., ,",17
+/Ignore= /Option=number,{on or off}, ,",18
+/Ignore= /error = Code, name, x1, y1, Name , {other things maybe}, ,",19
+/Ignore= /Delete ..., ,",20
+/Ignore= /ThisCode added to /path or /constant , ,",21
+/Ignore= /Keyword=ReservedWord  {,only one word, no spaces allowed currently}, ,",22
+/Ignore= /Operator=Operator  {,only one operator ie: +, no space allowed currently}, ,",23
+/Ignore= /Function=FunctionWord  ,only one function name no (), {}, [] etc ,, ,",24
+/Ignore= /Syntax={keyword,special characters,{[(variables)]} for variables ,quote marks , between each one   ect..., ,",25
+/Option=275,off, ,",26
+/Option=276,off, ,",27
+/Option=419,off, ,",28
+/Option=1136,off, ,",29
+/Option=1293,off, ,",30
+/Option=1294,off, ,",31
+/keyword=zzzzzzzzzKeywords, ,",32
+/operator=zzzzzzzzzOperators, ,",33
+/Function=zzzzzzzzzFunctions, ,",34
+/color = AliceBlue,255,240,248,255,2,Triangle,RoundAnchor, ,",35
+/color = AntiqueWhite,255,250,235,215,4,RoundAnchor,ArrowAnchor, ,",36
+/color = aqua,255,1,255,255,0,Round,Round, ,",37
+/color = aquamarine,255,127,255,212,2,Round,NoAnchor, ,",38
+/color = Azure,255,240,255,255,4,Flat,NoAnchor, ,",39
+/color = beige,255,245,245,220,3,Flat,Square, ,",40
+/color = bisque,255,255,228,196,2,DiamondAnchor,SquareAnchor, ,",41
+/color = Black,255,1,1,1,0,Round,Round, ,",42
+/color = BlanchedAlmond,255,255,235,205,1,DiamondAnchor,Triangle, ,",43
+/color = Blue,255,1,1,255,0,Round,Round, ,",44
+/color = BlueViolet,255,138,43,226,2,Triangle,SquareAnchor, ,",45
+/color = Brown,255,165,42,42,1,NoAnchor,Flat, ,",46
+/color = BurlyWood,255,222,184,135,2,NoAnchor,NoAnchor, ,",47
+/color = CadetBlue,255,95,158,160,4,NoAnchor,Flat, ,",48
+/color = Chartreuse,255,127,255,1,1,DiamondAnchor,Round, ,",49
+/color = Chocolate,255,210,105,30,2,NoAnchor,Square, ,",50
+/color = Coral,255,255,127,80,4,NoAnchor,Flat, ,",51
+/color = CornflowerBlue,255,100,149,237,3,RoundAnchor,SquareAnchor, ,",52
+/color = Cornsilk,255,255,248,220,2,RoundAnchor,NoAnchor, ,",53
+/color = Crimson,255,220,20,60,4,Round,NoAnchor, ,",54
+/color = Cyan,255,1,255,255,0,Round,Round, ,",55
+/color = DarkBlue,255,1,1,139,3,Flat,SquareAnchor, ,",56
+/color = DarkCyan,255,1,139,139,2,Round,Flat, ,",57
+/color = DarkGoldenrod,255,184,134,11,4,Square,NoAnchor, ,",58
+/color = DarkGray,255,169,169,169,1,Square,Flat, ,",59
+/color = DarkGreen,255,1,100,1,3,Triangle,NoAnchor, ,",60
+/color = DarkKhaki,255,189,183,107,2,NoAnchor,SquareAnchor, ,",61
+/color = DarkMagenta,255,139,1,139,4,RoundAnchor,DiamondAnchor, ,",62
+/color = DarkOliveGreen,255,85,107,47,1,DiamondAnchor,RoundAnchor, ,",63
+/color = DarkOrange,255,255,140,1,3,Triangle,RoundAnchor, ,",64
+/color = DarkOrchid,255,153,50,204,2,NoAnchor,Round, ,",65
+/color = DarkRed,255,139,1,1,4,DiamondAnchor,Round, ,",66
+/color = DarkSalmon,255,233,150,122,3,Square,Square, ,",67
+/color = DarkSeaGreen,255,143,188,139,2,Flat,SquareAnchor, ,",68
+/color = DarkSlateBlue,255,72,61,139,4,NoAnchor,DiamondAnchor, ,",69
+/color = DarkSlateGray,255,47,79,79,1,Square,Triangle, ,",70
+/color = DarkTurquoise,255,1,206,209,3,Square,Square, ,",71
+/color = DarkViolet,255,148,1,211,2,Triangle,DiamondAnchor, ,",72
+/color = DataTypeError,255,255,1,1,2,Triangle,DiamondAnchor, ,",73
+/color = DeepPink,255,255,20,147,4,Square,Flat, ,",74
+/color = DeepSkyBlue,255,1,191,255,1,NoAnchor,Flat, ,",75
+/color = DimGray,255,105,105,105,3,NoAnchor,Square, ,",76
+/color = DodgerBlue,255,30,144,255,2,Triangle,ArrowAnchor, ,",77
+/color = Firebrick,255,178,34,34,4,Round,Triangle, ,",78
+/color = FloralWhite,255,255,250,240,1,Triangle,Flat, ,",79
+/color = ForestGreen,255,34,139,34,3,NoAnchor,Triangle, ,",80
+/color = Fuchsia,255,255,1,255,2,SquareAnchor,Round, ,",81
+/color = Gainsboro,255,220,220,220,1,Round,ArrowAnchor, ,",82
+/color = GhostWhite,255,248,248,255,3,NoAnchor,SquareAnchor, ,",83
+/color = Gold,255,255,215,1,0,Round,Round, ,",84
+/color = Goldenrod,255,218,165,32,4,NoAnchor,SquareAnchor, ,",85
+/color = Gray,255,128,128,128,0,Round,Round, ,",86
+/color = Green,255,1,128,1,0,Round,Round, ,",87
+/color = GreenYellow,255,173,255,47,4,NoAnchor,NoAnchor, ,",88
+/color = Honeydew,255,240,255,240,1,ArrowAnchor,NoAnchor, ,",89
+/color = HotPink,255,255,105,180,3,SquareAnchor,NoAnchor, ,",90
+/color = IndianRed,255,205,92,92,4,Triangle,NoAnchor, ,",91
+/color = Indigo,255,75,1,130,1,ArrowAnchor,NoAnchor, ,",92
+/color = Ivory,255,255,255,240,0,Round,Round, ,",93
+/color = Khaki,255,240,230,140,2,Flat,Round, ,",94
+/color = Lavender,255,230,230,250,4,RoundAnchor,SquareAnchor, ,",95
+/color = LavenderBlush,255,255,240,245,1,RoundAnchor,ArrowAnchor, ,",96
+/color = LawnGreen,255,124,252,1,3,SquareAnchor,ArrowAnchor, ,",97
+/color = LemonChiffon,255,255,250,205,4,Triangle,RoundAnchor, ,",98
+/color = LightBlue,255,173,216,230,2,NoAnchor,Flat, ,",99
+/color = LightCoral,255,240,128,128,4,Flat,NoAnchor, ,",100
+/color = LightCyan,255,224,255,255,1,Flat,Round, ,",101
+/color = LightGoldenrodYellow,255,250,250,210,3,Triangle,Square, ,",102
+/color = LightGray,255,211,211,211,2,RoundAnchor,Square, ,",103
+/color = LightGreen,255,144,238,144,4,Triangle,Round, ,",104
+/color = LightPink,255,255,182,193,1,SquareAnchor,NoAnchor, ,",105
+/color = LightSalmon,255,255,160,122,3,Triangle,SquareAnchor, ,",106
+/color = LightSeaGreen,255,32,178,170,2,ArrowAnchor,Flat, ,",107
+/color = LightSkyBlue,255,135,206,250,4,Triangle,NoAnchor, ,",108
+/color = LightSlateGray,255,119,136,153,3,DiamondAnchor,RoundAnchor, ,",109
+/color = LightSteelBlue,255,176,196,222,2,RoundAnchor,SquareAnchor, ,",110
+/color = LightYellow,255,255,255,224,4,ArrowAnchor,NoAnchor, ,",111
+/color = Lime,255,1,255,1,1,ArrowAnchor,Round, ,",112
+/color = LimeGreen,255,50,205,50,3,Flat,Round, ,",113
+/color = Linen,255,250,240,230,2,Round,Triangle, ,",114
+/color = Magenta,255,255,1,255,4,NoAnchor,Triangle, ,",115
+/color = Maroon,255,128,1,1,3,Triangle,ArrowAnchor, ,",116
+/color = MediumAquamarine,255,102,205,170,1,SquareAnchor,Square, ,",117
+/color = MediumBlue,255,1,1,205,3,NoAnchor,Round, ,",118
+/color = MediumOrchid,255,186,85,211,2,ArrowAnchor,Round, ,",119
+/color = MediumPurple,255,147,112,219,4,Square,RoundAnchor, ,",120
+/color = MediumSeaGreen,255,60,179,113,1,Triangle,NoAnchor, ,",121
+/color = MediumSlateBlue,255,123,104,238,3,SquareAnchor,Flat, ,",122
+/color = MediumSpringGreen,255,1,250,154,4,Triangle,Triangle, ,",123
+/color = MediumTurquoise,255,72,209,204,1,Flat,Triangle, ,",124
+/color = MediumVioletRed,255,199,21,133,3,NoAnchor,Round, ,",125
+/color = MidnightBlue,255,25,25,112,2,RoundAnchor,Square, ,",126
+/color = MintCream,255,245,255,250,4,RoundAnchor,DiamondAnchor, ,",127
+/color = MistyRose,255,255,228,225,1,ArrowAnchor,NoAnchor, ,",128
+/color = Moccasin,255,255,228,181,3,Square,DiamondAnchor, ,",129
+/color = NavajoWhite,255,255,222,173,2,SquareAnchor,NoAnchor, ,",130
+/color = Navy,255,1,1,128,0,Round,Round, ,",131
+/color = OldLace,255,253,245,230,1,NoAnchor,SquareAnchor, ,",132
+/color = Olive,255,128,128,1,3,Round,DiamondAnchor, ,",133
+/color = OliveDrab,255,107,142,35,4,NoAnchor,Square, ,",134
+/color = Orange,255,255,165,1,0,Round,Round, ,",135
+/color = OrangeRed,255,255,69,1,3,SquareAnchor,NoAnchor, ,",136
+/color = Orchid,255,218,112,214,2,Round,RoundAnchor, ,",137
+/color = PaleGoldenrod,

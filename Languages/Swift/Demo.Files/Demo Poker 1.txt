@@ -1,0 +1,260 @@
+import Foundation
+
+enum Suit: String, CustomStringConvertible {
+    case spades = "♤"
+    case clubs = "♧"
+    case hearts = "♡"
+    case diamonds = "♢"
+    
+    var description: String { self.rawValue }
+}
+
+enum Card: Comparable, Equatable, Hashable, CustomStringConvertible {
+    static func < (lhs: Card, rhs: Card) -> Bool {
+        lhs.value < rhs.value
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.value)
+    }
+
+    var description: String {
+        switch self {
+        case let .number(v, s): return "\(v)\(s)"
+        case let .jack(s): return "J\(s)"
+        case let .queen(s): return "Q\(s)"
+        case let .king(s): return "K\(s)"
+        case let .ace(s): return "A\(s)"
+        }
+    }
+    
+    var value: Int {
+        switch self {
+        case .number(let v, _): return v
+        case .jack: return 11
+        case .queen: return 12
+        case .king: return 13
+        case .ace: return 14
+        }
+    }
+    
+    var suit: Suit {
+        switch self {
+        case .number(_, let s), .jack(let s), .queen(let s), .king(let s), .ace(let s): return s
+        }
+    }
+
+    case number(Int, Suit), jack(Suit), queen(Suit), king(Suit), ace(Suit)
+    
+//    @available(macOS 10.15, *)
+    init?(_ card: String) {
+        let suits = "♤♧♡♢"
+        let csSuits = CharacterSet(charactersIn: suits)
+        let csFaces = CharacterSet(charactersIn: "JQKA")
+        let scanner = Scanner(string: card)
+        
+        var intVal = 0
+        var faceVal: NSString? = nil
+        var suitVal: NSString? = nil
+
+        if scanner.scanInt(&intVal) && 2...10 ~= intVal {
+            ()
+        } else {
+            if scanner.scanCharacters(from: csFaces, into: &faceVal) {
+                ()
+            } else {
+                return nil
+            }
+        }
+        if scanner.scanCharacters(from: csSuits, into: &suitVal) {
+            guard let suit = Suit(rawValue: String(suitVal!)) else { return nil }
+            print("got suit: \(suit.rawValue)")
+            if faceVal == nil {
+                self = .number(intVal, suit)
+            } else {
+                switch faceVal! {
+                    case "J": self = .jack(suit)
+                    case "Q": self = .queen(suit)
+                    case "K": self = .king(suit)
+                    case "A": self = .ace(suit)
+                    default: return nil
+                }
+            }
+        } else {
+            return nil
+        }
+//
+//        if let cardNum = scanner.scanInt(), 2...10 ~= cardNum {
+//            if let cardSuit = scanner.scanCharacters(from: csSuits), let suit = Suit(rawValue: cardSuit) {
+//                self = .number(cardNum, suit)
+//            } else {
+//                return nil
+//            }
+//        } else {
+//            if let face = scanner.scanCharacters(from: csFaces) {
+//                if let cardSuit = scanner.scanCharacters(from: csSuits), let suit = Suit(rawValue: cardSuit) {
+//                    switch face {
+//                    case "J": self = .jack(suit)
+//                    case "Q": self = .queen(suit)
+//                    case "K": self = .king(suit)
+//                    case "A": self = .ace(suit)
+//                    default: return nil
+//                    }
+//                } else {
+//                    return nil
+//                }
+//            } else {
+//                return nil
+//            }
+//        }
+//
+    }
+}
+
+extension Array where Element == Int {
+    static func < (_ lhs: [Int], _ rhs: [Int]) -> Bool {
+        for (l,r) in zip(lhs, rhs) {
+            if l < r { return true }
+            if l > r { return false }
+        }
+        return false
+    }
+    static func > (_ lhs: [Int], _ rhs: [Int]) -> Bool {
+        for (l,r) in zip(lhs, rhs) {
+            if l > r { return true }
+            if l < r { return false }
+        }
+        return false
+    }
+}
+
+//@available(macOS 10.15, *)
+struct PokerHand: CustomStringConvertible, Comparable {
+    enum Hand: Comparable {
+        case straightFlush(high: Int)
+        case four(four: Int, kicker: Int)
+        case fullHouse(three: Int, two: Int)
+        case flush(high: Int)
+        case straight(high: Int)
+        case three(three: Int, rest: [Int])
+        case twoPair(pairs: [Int], kicker: Int)
+        case pair(pair: Int, rest: [Int])
+        case nothing(cards: [Int])
+        
+        var rank: Int {
+            switch self {
+            case .straightFlush: return 9
+            case .four: return 8
+            case .fullHouse: return 7
+            case .flush: return 6
+            case .straight: return 5
+            case .three: return 4
+            case .twoPair: return 3
+            case .pair: return 2
+            case .nothing: return 1
+            }
+        }
+        
+        func arrLT(_ lhs: [Int], _ rhs: [Int]) -> Bool {
+            lhs < rhs
+        }
+        
+        static func < (_ lhs: Hand, _ rhs : Hand) -> Bool {
+            guard lhs.rank == rhs.rank else { return lhs.rank < rhs.rank }
+            switch (lhs, rhs) {
+            case let (.straightFlush(high: lh), .straightFlush(high: rh)), let (.flush(high: lh), .flush(high: rh)), let (.straight(high: lh), .straight(high: rh)):
+                return lh < rh
+            case let (.four(lf, lk), .four(four: rf, kicker: rk)):
+                return lf < rf ? true : lf > rf ? false : lk < rk
+            case let (.fullHouse(three: l3, two: l2), .fullHouse(three: r3, two: r2)):
+                return l3 < r3 ? true : l3 > r3 ? false : l2 < r2
+            case let (.three(three: l3, rest: lrest), .three(three: r3, rest: rrest)):
+                return l3 < r3 ? true : l3 > r3  ? false : lrest < rrest
+            case let (.twoPair(pairs: lpairs, kicker: lk), .twoPair(pairs: rpairs, kicker: rk)):
+                return lpairs < rpairs ? true : lpairs > rpairs ? false : lk < rk
+            case let (.pair(pair: lpair, rest: lrest), .pair(pair: rpair, rest: rrest)):
+                return lpair < rpair ? true : lpair > rpair ? false : lrest < rrest
+            case let (.nothing(cards: lhs), .nothing(cards: rhs)):
+                return lhs < rhs
+            default: fatalError("Unexpected case in switch (\(lhs), \(rhs)")
+            }
+        }
+        
+        init(cards: [Card]) {
+            var grouping = [Int: Int]()
+            cards.forEach { grouping[$0.value, default: 0] += 1 }
+            let counts = grouping.sorted(by: { $0.value > $1.value ? true : $0.value < $1.value ? false : $0.key > $1.key })
+                        
+            let isFlush: Bool  = cards.dropFirst().map(\.suit).allSatisfy { $0 == cards.first?.suit }
+            let vals = cards.map(\.value).sorted(by: >)
+            let isStraight: Bool = zip(vals, vals.dropFirst()).allSatisfy { $0 - $1 == 1 } || vals == [14, 5, 4, 3, 2]
+
+//            print("Hand.init:\n\tgrouping: \(grouping)\n\tcounts: \(counts)\n\tstraight: \(isStraight)\n\tflush: \(isFlush)")
+
+            switch (isFlush, isStraight) {
+            case (true, true):
+                self = .straightFlush(high: vals == [14, 5, 4, 3, 2] ? 5 : vals.first!)
+                return
+            case (true, false):
+                self = .flush(high: vals.first!)
+                return
+            case (false, true):
+                self = .straight(high: vals == [14, 5, 4, 3, 2] ? 5 : vals.first!)
+                return
+            case (false, false):
+                break
+            }
+            
+            switch counts.map(\.value) {
+            case [4, 1]:
+                self = .four(four: counts[0].key, kicker: counts[1].key)
+            case [3, 2]:
+                self = .fullHouse(three: counts[0].key, two: counts[1].key)
+            case [3,1,1]:
+                self = .three(three: counts[0].key, rest: counts.dropFirst().map(\.key))
+            case [2,2,1]:
+                self = .twoPair(pairs: counts.dropLast().map(\.key), kicker: counts.last!.key)
+            case [2,1,1,1]:
+                self = .pair(pair: counts[0].key, rest: counts.dropFirst().map(\.key))
+            default:
+                self = .nothing(cards: counts.map(\.key))
+            }
+        }
+    }
+    
+    
+    let cards: [Card]
+    let hand: Hand
+    
+    var description: String { cards.map(\.description).joined(separator: " ") }
+    
+    func sorted() -> [Card] {
+        return cards.sorted()
+    }
+    
+    static func < (_ lhs: PokerHand, _ rhs: PokerHand) -> Bool {
+        return lhs.hand < rhs.hand
+    }
+        
+    init?(_ cards: String) {
+        let rawCards = cards.components(separatedBy: .whitespaces)
+        guard rawCards.count == 5 else { return nil }
+        let cards = rawCards.compactMap(Card.init)
+        guard cards.count == 5 else { return nil }
+        
+        self.cards = cards
+        self.hand = Hand(cards: cards)
+//        print("init:\n\tcards: \(cards)\n\thand: \(hand)")
+    }
+    
+}
+
+//@available(macOS 10.15, *)
+enum Poker {
+    static func bestHand(_ hands: [String]) -> String {
+        let hands = hands.compactMap(PokerHand.init)
+        guard let bestHand = hands.max() else { fatalError("All hands invalid, no best") }
+//        print("\nhands: \(hands)\nbestHand: \(bestHand)\n")
+        return bestHand.description
+    }
+}

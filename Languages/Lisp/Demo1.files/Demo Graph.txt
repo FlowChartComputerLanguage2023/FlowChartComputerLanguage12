@@ -1,0 +1,63 @@
+(ns pov)
+
+(defn- find-node
+  "Returns the subgraph of `node` and the path from the root to it."
+  ([node graph] (find-node node graph []))
+  ([node [current-node & children :as graph] path]
+   (cond
+     (nil? current-node) nil
+     (= current-node node) [graph (conj path current-node)]
+     :else (->> children (keep #(find-node node % (conj path current-node))) first))))
+
+(defn- get-parent [path]
+  (->> path butlast last))
+
+(defn of
+  "Returns the POV of node by adding its subgraph to the POV of its parent excluding that subgraph."
+  [node graph]
+  (if (= node (first graph))
+    graph
+    (when-let [[subgraph path] (find-node node graph)]
+      (->> (of (get-parent path) graph)
+           (remove #{subgraph}) vec
+           (conj subgraph)))))
+
+(defn path-from-to [node-a node-b graph]
+  (->> (of node-a graph)
+       (find-node node-b)
+       last))
+
+
+
+
+
+--------------------
+
+
+
+
+(ns pov)
+
+(defn- list->map
+  ([lst] (list->map lst {} nil))
+  ([[me & children] rv prev]
+   (let [rv (reduce #(list->map %2 %1 me) (assoc rv me []) children)]
+     (if-not prev rv
+       (-> rv
+           (update me conj prev)
+           (update prev conj me))))))
+
+(defn- of-tree [start tree prev]
+  (when (tree start)
+    (apply vector start (map #(of-tree % tree start)
+                             (remove #(= % prev) (tree start))))))
+
+(defn of [start lst] (of-tree start (list->map lst) nil))
+
+(defn- path-to [to [me & children] rv]
+  (let [rv (conj rv me)]
+    (if (= me to) rv
+      (first (remove nil? (map #(path-to to % rv) children))))))
+
+(defn path-from-to [from to lst] (path-to to (of from lst) []))
+

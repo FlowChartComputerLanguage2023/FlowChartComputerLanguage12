@@ -1,0 +1,10 @@
+main()
+{
+fp = fopen("story.dat","a");
+if(fp != NULL)
+	{
+	fprintf(fp,"No %s\n",buffer);
+	fclose(fp);
+	}
+print("\nNo");
+}

@@ -1,0 +1,93 @@
+https://exercism.io/tracks/python/exercises/rest-api/solutions/0dfae1991aa74403bc94c8a8237f0d06
+
+from typing import Dict, List, Callable
+import json
+
+
+class RestAPI:
+    def __init__(self, database=None):
+        self.users: Dict[str, Person] = {}
+        self.debts: List[Debt] = []
+        if database:
+            if "users" in database:
+                self.users = {p.name: p for p in [Person(all_debts=self.debts, **u) for u in database['users']]}
+                for u in database['users']:
+                    for borrower, amount in u['owed_by'].items():
+                        self.debts.append(Debt(self.users[u['name']],
+                                               self.users[borrower],
+                                               amount))
+
+        self.get_routes: Dict[str, Callable] = {
+            "/users": self._get_users,
+        }
+
+        self.post_routes: Dict[str, Callable] = {
+            "/add": self._add_users,
+            "/iou": self._add_iou,
+        }
+
+    def get(self, url, payload=None):
+        response = self.get_routes[url](json.loads(payload) if payload else None)
+        return json.dumps(response)
+
+    def post(self, url, payload=None):
+        response = self.post_routes[url](json.loads(payload) if payload else None)
+        return json.dumps(response)
+
+    def _get_users(self, payload):
+        if payload:
+            return {"users": [p.to_dict() for p in self.users.values() if p.name in payload['users']]}
+        else:
+            return {"users": [p.to_dict() for p in self.users.values()]}
+
+    def _add_iou(self, payload):
+        debt = Debt(self.users[payload['lender']], self.users[payload['borrower']], payload['amount'])
+        self.debts.append(debt)
+        return self._get_users({"users": [debt.borrower.name, debt.lender.name]})
+
+    def _add_users(self, payload):
+        if "user" in payload:
+            name = payload['user']
+            self.users[name] = Person(name=name, all_debts=self.debts)
+            return self.users[name].to_dict()
+
+
+class Person:
+    def __init__(self, **kwargs):
+        self.name: str = kwargs['name']
+        # self.balance: float = kwargs.get('balance', 0.0)
+        self.all_debts = kwargs["all_debts"]
+
+    def __hash__(self):
+        return self.name.__hash__()
+
+    def __eq__(self, other):
+        assert isinstance(other, Person)
+        return self.name == other.name
+
+    def get_relation_to(self, user_name: "Person") -> float:
+        debt = sum(d.amount for d in self.all_debts if d.lender == user_name and d.borrower == self)
+        credit = sum(d.amount for d in self.all_debts if d.borrower == user_name and d.lender == self)
+        return credit - debt
+
+    def to_dict(self) -> Dict:
+        owes = {}
+        owed_by = {}
+        for user in set([d.lender for d in self.all_debts] + [d.borrower for d in self.all_debts]):
+            balance = self.get_relation_to(user)
+            if balance < 0:
+                owes[user.name] = -balance
+            elif balance > 0:
+                owed_by[user.name] = balance
+
+        return {"name": self.name,
+                "balance": sum(a for _, a in owed_by.items()) - sum(a for _, a in owes.items()),
+                "owes": owes,
+                "owed_by": owed_by}
+
+
+class Debt:
+    def __init__(self, lender: Person, borrower: Person, amount: float):
+        self.lender = lender
+        self.borrower = borrower
+        self.amount = amount

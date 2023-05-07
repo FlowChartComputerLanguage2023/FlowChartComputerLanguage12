@@ -1,0 +1,103 @@
+
+
+(in-package #:cl-user)
+(defpackage #:space-age
+  (:use #:common-lisp)
+  (:export
+    #:on-earth
+    #:on-jupiter
+    #:on-mars
+    #:on-mercury
+    #:on-neptune
+    #:on-saturn
+    #:on-uranus
+    #:on-venus))
+
+(in-package #:space-age)
+
+(defun calc-years (seconds period) 
+  (/ seconds (* period 31557600)))
+
+(defun on-earth (seconds) (calc-years seconds 1))
+(defun on-jupiter (seconds) (calc-years seconds 11.862615))
+(defun on-mars (seconds) (calc-years seconds 1.8808158))
+(defun on-mercury (seconds) (calc-years seconds 0.2408467))
+(defun on-neptune (seconds) (calc-years seconds 164.79132))
+(defun on-saturn (seconds) (calc-years seconds 29.447498))
+(defun on-uranus (seconds) (calc-years seconds 84.016846))
+(defun on-venus (seconds) (calc-years seconds 0.61519726))
+
+
+
+
+------------------
+(in-package #:cl-user)
+(defpackage #:space-age
+  (:use #:common-lisp)
+  (:export #:on-earth #:on-mercury #:on-venus #:on-mars #:on-jupiter #:on-saturn #:on-uranus #:on-neptune))
+
+(in-package #:space-age)
+
+(defvar *earth-year* 31557600.0)
+
+(defun on-earth (seconds)
+  (/ seconds *earth-year*))
+
+(defun on-mercury (seconds)
+  (/ (on-earth seconds) 0.2408467))
+
+(defun on-venus (seconds)
+  (/ (on-earth seconds) 0.61519726))
+
+(defun on-mars (seconds)
+  (/ (on-earth seconds) 1.8808158))
+ 
+(defun on-jupiter (seconds)
+  (/ (on-earth seconds) 11.862615))
+
+(defun on-saturn (seconds)
+  (/ (on-earth seconds) 29.447498))
+
+(defun on-uranus (seconds)
+  (/ (on-earth seconds) 84.016846))
+
+(defun on-neptune (seconds)
+  (/ (on-earth seconds) 164.79132))
+
+
+
+---------------
+
+(in-package #:cl-user)
+(defpackage #:space-age
+  (:use #:common-lisp)
+  (:export #:on-earth #:on-mercury #:on-mars #:on-venus #:on-saturn #:on-uranus #:on-neptune #:on-jupiter))
+
+(in-package #:space-age)
+
+(defun planet-calc (secs period)
+  (/ secs (* period 31557600)))
+
+(defun on-earth (secs)
+  (planet-calc secs 1))
+
+(defun on-mercury (secs)
+  (planet-calc secs 0.2408467))
+
+(defun on-jupiter (secs)
+  (planet-calc secs 11.862615))
+
+(defun on-mars (secs)
+  (planet-calc secs 1.8808158))
+
+(defun on-venus (secs)
+  (planet-calc secs 0.61519726))
+
+(defun on-saturn (secs)
+  (planet-calc secs 29.447498))
+
+(defun on-uranus (secs)
+  (planet-calc secs 84.016846))
+
+(defun on-neptune (secs)
+  (planet-calc secs 164.79132))

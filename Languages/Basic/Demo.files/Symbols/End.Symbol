@@ -1,0 +1,15 @@
+/name=End
+/author=SEH
+/version=1
+/filename = End1.symbol
+/stroke=ABCDEFGHIJKLMNOP
+/programtext=CameFrom return a
+/syntax=[ComeFrom.pathname],RETURN,[a.pathname]
+/notes=ComeFrom RETURN a
+/opcode=nop
+/line = -250,100,250,100,Red
+/line = 250,100,250,-100,Green
+/line = 250,-100,-250,-100,Yellow
+/line = -250,-100,-250,100,Blue
+/point = 0,100, input, logic, ComeFrom
+/point = -250 , 0 , Input , Integer , a

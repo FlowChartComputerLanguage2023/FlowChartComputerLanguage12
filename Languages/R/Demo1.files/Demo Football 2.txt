@@ -1,0 +1,65 @@
+https://exercism.io/tracks/r/exercises/tournament/solutions/43afd06c6dfb477a81422a8b776ccfb0
+
+tournament <- function(input) {
+ 
+  teamScore = data.frame();
+  parseLine<-function(x) {
+     ll= strsplit(x,";")[[1]];
+     team1 = ll[1]; team2 = ll[2]; result = ll[3];
+     if (length(ll)!=3) {
+       result = NA;
+     }
+     return(list(team1=team1, team2=team2, result=result));
+  }
+  
+  pushTeam<-function(t) {
+    if (nrow(teamScore)==0) {
+      teamScore <<- data.frame(Team=t, MP=0,W=0,D=0,L=0,P=0,stringsAsFactors = F);
+      return(1);
+    } 
+    if (!(t %in% teamScore$Team)) {
+      teamScore <<- rbind(teamScore, data.frame(Team=t, MP=0,W=0,D=0,L=0,P=0,stringsAsFactors = F));
+      return(nrow(teamScore));
+    } else {
+     return(which(teamScore$Team==t)); 
+    }
+  } 
+  
+  for (inp in input) {
+    line = parseLine(inp);
+    if (!any(is.na(line))) {
+      team1=line$team1;
+      team2=line$team2;
+      result= line$result;
+      it1= pushTeam(team1);
+      it2 = pushTeam(team2);
+      if (result =="win" || result=="loss" || result =="draw") {
+        teamScore[[it1,"MP"]] =teamScore[[it1,"MP"]]+1;
+        teamScore[[it2,"MP"]] =teamScore[[it2,"MP"]]+1;
+        
+        if (result == "win") {
+          teamScore[[it1,"W"]] = teamScore[[it1,"W"]] + 1;
+          teamScore[[it2,"L"]] = teamScore[[it2,"L"]] + 1;
+          teamScore[[it1,"P"]] = teamScore[[it1,"P"]] + 3;
+        } else if (result == "loss") {
+          teamScore[[it2,"W"]] = teamScore[[it2,"W"]] + 1;
+          teamScore[[it1,"L"]] = teamScore[[it1,"L"]] + 1;
+          teamScore[[it2,"P"]] = teamScore[[it2,"P"]] + 3;
+        } else if (result == "draw") {
+          teamScore[[it1,"D"]] = teamScore[[it1,"D"]] + 1;
+          teamScore[[it2,"D"]] = teamScore[[it2,"D"]] + 1;
+          teamScore[[it1,"P"]] = teamScore[[it1,"P"]] + 1;
+          teamScore[[it2,"P"]] = teamScore[[it2,"P"]] + 1;
+        }
+        
+      }
+      
+    }
+  }
+  alphabeticorder = order(teamScore$Team);
+  teamScore=teamScore[alphabeticorder,];
+  roworder = order(teamScore$P, decreasing=T);
+  teamScore=teamScore[roworder,];
+  row.names(teamScore)<-NULL;
+  return(teamScore);
+}

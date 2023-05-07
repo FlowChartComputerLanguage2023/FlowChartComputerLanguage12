@@ -1,0 +1,692 @@
+https://exercism.io/tracks/scheme/exercises/forth/solutions/8f5fde2b694a4893bba8d28fb9e32d23
+
+forth.scm
+
+(import (parser)
+        (interpreter))
+
+(define forth
+  (lambda (str)
+    (let ((stack (string-list->stack str)))
+      (evaluate stack))))
+
+interpreter.scm
+
+;;;; Representation independent Interpreter for simple Forth subset
+
+
+(library (interpreter)
+  (export evaluate)
+  
+  (import (rnrs)
+          (environment)
+          (stack)
+          (program))
+
+  
+  (define primitive-bindings
+    (lambda ()
+      "return a list of bindings for the primitive environment"
+      (list (cons '+ (lambda (program) (eval-arithmetic-op + program)))
+            (cons '* (lambda (program) (eval-arithmetic-op * program)))
+            (cons '- (lambda (program) (eval-arithmetic-op - program)))
+            (cons '/ (lambda (program) (eval-arithmetic-op (lambda (a b)
+                                                        (truncate (/ a b)))
+                                                      program)))
+            (cons 'dup duplicate)
+            (cons 'swap swap)
+            (cons 'over over)
+            (cons 'drop drop)
+            (cons '% bind))))
+
+  
+  (define make-primitive-environment
+    (lambda ()
+      "return the environment of primitive bindings"
+      (letrec ((builder (lambda  (xs env)
+                          (if (null? xs)
+                              env
+                              (let ((id (caar xs))
+                                    (value (cdar xs)))
+                                (builder (cdr xs)
+                                         (extend-environment id value env)))))))
+        (builder (primitive-bindings) (make-empty-environment)))))
+
+  
+  (define evaluate
+    (lambda (stack)
+      "return the stack which results from evaluating stack"
+      (get-stack (interprete-stack stack))))
+
+  
+  (define interprete-stack
+    (lambda (stack)
+      "return the value of interpreting stack"
+      (eval-program (make-program stack (make-primitive-environment)))))
+
+  
+  (define eval-program
+    (lambda (program)
+      "return a program P where P's stack cannot be simplified further given
+P's environment"
+      (let ((stack (get-stack program))
+            (env (get-environment program)))
+        (if (empty? stack)
+            program
+            (let* ((fe (first stack))
+                   (st (tail stack))
+                   (operator (environment-lookup fe env)))
+              (cond ((number? fe)
+                     (let ((new-program (eval-program (make-program st env))))
+                       (push-on-program-stack fe new-program)))
+                    ((symbol? fe)
+                     (let ((func (environment-lookup fe env)))
+                       (if func
+                           (let ((new-program (make-program st env)))
+                             (apply-operator func new-program))
+                           (error "Undfined symbol: " fe))))
+                    ((stack? fe)
+                     (let* ((prog-2 (eval-program (make-program fe env)))
+                            (stack-2 (get-stack prog-2))
+                            (env-2 (get-environment prog-2))
+                            (stack-3 (stack-adjoin stack-2 st)))
+                       (eval-program (make-program stack-3 env-2))))
+                    (#t (error "Invalid program: " stack))))))))
+
+
+  (define apply-operator
+    (lambda (operator program)
+      "return a program P which results from applying operator to program"
+      (cond ((procedure? operator)
+             (eval-program (operator program)))
+            ((stack? operator)
+             (eval-program (adjoin-program-stack operator program)))
+            (#t eval-program (push-on-program-stack operator program)))))
+
+  
+  (define drop
+    (lambda (program)
+      "return a new program P whose stack S obeys the following rules.
+Let program = <S1,E> in
+  if first S1 is an operator, then
+    let <S2,E2> be the result of evaluating the program <S1,E> in
+      P = drop <(tail S1),E2>
+    end
+  else
+    P = <(tail S1),E>
+end
+
+The drop function is undefined if S1 is empty."
+      (let ((stack (get-stack program))
+            (env (get-environment program)))
+        (cond ((empty? stack) (error "Insufficient elements on stack: " stack))
+              ((environment-lookup (first stack) env)
+               (drop (eval-program program)))
+              (#t (make-program (tail stack) env))))))
+
+  
+  (define duplicate
+    (lambda (program)
+      "return a new program P where P's stack is the stack of the input program
+with the element at the head duplicated.
+If the first element of program's stack is an operator, program is first
+evaluated, then duplicate is applied to the resulting program.
+
+Precondition: program's stack is not empty"
+      (let ((stack (get-stack program)))
+        (if (empty? stack)
+            (error "Insufficient elements on stack for duplicate: " stack)
+            (let ((fe (first stack))
+                  (env (get-environment program)))
+              (if (environment-lookup fe env)
+                  (duplicate (eval-program program))
+                  (push-on-program-stack fe program)))))))
+
+
+  (define swap
+    (lambda (program)
+      "return a new program P where the first two values of P's stack is
+the first two of program's but swapped.
+
+Precondition: program's stack has at least two elements"
+      (let ((stack (get-stack program)))
+        (if (empty? stack)
+            (error "Insufficient elements on stack for swap: " stack)
+            (let ((a (first stack))
+                  (env (get-environment program)))
+              (if (environment-lookup a env)
+                  (swap (eval-program program))
+                  (if (contains-at-least-two? stack)
+                      (let ((b (second stack)))
+                        (if (environment-lookup b env)
+                            (let ((p (eval-program (drop program))))
+                              (swap (push-on-program-stack a p)))
+                            (let ((p (drop (drop program))))
+                              (push-on-program-stack b
+                                                     (push-on-program-stack a p)))))
+                      (error "Insufficient elements on stack for swap: " stack))))))))
+  
+
+  (define over
+    (lambda (program)
+      "return a new program P such that the P's stack S is the second element
+of program's stack, and P's tail is program's stack after program has been 
+evaluated"
+      (let ((stack (get-stack program)))
+        (if (empty? stack)
+            (error "Insufficient elements on stack for over: " stack)
+            (let ((a (first stack))
+                  (env (get-environment program)))
+              (if (environment-lookup a env)
+                  (over (eval-program program))
+                  (if (contains-at-least-two? stack)
+                      (let ((b (second stack)))
+                        (if (environment-lookup b env)
+                            (let ((p (eval-program (drop program))))
+                              (over (push-on-program-stack a p)))
+                            (push-on-program-stack b program)))
+                      (error "Insufficient elements on stack for over: " stack))))))))
+  
+
+  ;;; Evaluating arithmetic operations
+  ;;; let us reperesent programs as follows <stack, environment>
+  ;;; op program -> program
+  ;;; let
+  ;;;   R = program, and
+  ;;;   <(a b rest), env> = R
+  ;;;   in
+  ;;; if a is a number then,
+  ;;;   if b is a number then,
+  ;;;     let
+  ;;;       c = b `op` a
+  ;;;     in
+  ;;;      return <(c rest),env>
+  ;;;     end-let
+  ;;;   else if b is a symbol then,
+  ;;;     let
+  ;;;       <(e gs), env2> = evaluate <(b rest), env>
+  ;;;     in
+  ;;;       eval-arithmetic-op op <(a e gs), env2>
+  ;;;     end-let
+  ;;; else if a is a symbol, 
+  ;;;     let
+  ;;;       Pa = evaluate R
+  ;;;       in
+  ;;;     eval-aritmetic-op op Pa
+
+  (define eval-arithmetic-op
+    (lambda (op program)
+      "return a program P which results from applying op to program.
+Precondition: the stack S in program must have at least two elements."
+      (let ((stack (get-stack program)))
+        (if (empty? stack)
+            (error "Insufficient elements on stack for arithmetic operation: " stack)
+            (let ((a (first stack)))
+              (if (number? a)
+                  (let ((b (second stack)))
+                    (if (number? b)
+                        (push-on-program-stack (op b a) (drop (drop program)))
+                        (let ((prog (eval-program (drop program))))
+                          (eval-arithmetic-op op (push-on-program-stack a prog)))))
+                  (eval-arithmetic-op op (eval-program program))))))))
+
+  
+  ;;; Bindings
+  ;;; A primitive value in the language of definition is either
+  ;;; 1. a number
+  ;;; 2. a primitive procedure
+  ;;; 3. a stack in its simplest form
+  ;;;
+  ;;; For the sake of uniformity and simplicity, all bindings in
+  ;;; the environment will have the form <symbol, procedure>
+  ;;; 
+  ;;; Bindings come in a binding stack BS which can have 2 forms.
+  ;;; FORM-1:
+  ;;;      <% value id :>
+  ;;; FORM-2:
+  ;;;      <% v1 v2 .. vn id :>
+  ;;; where <v1 v2 .. vn> can be numbers and or bound symbols.
+  ;;;
+  ;;; First, we define some helper functions
+  ;;; make-operator x = (lambda (program)
+  ;;;                           (adjoin-program-stack (stackify x) program))
+  ;;; 
+  ;;; Let the program with the binding be <S,E>.
+  ;;;     In the case where the binding is in FORM-1,
+  ;;;     S = <% value id :>
+  ;;;     if value is a number, then
+  ;;;         return <,extend E with id (make-operator value)>
+  ;;;    else if value is a symbol, then
+  ;;;         let
+  ;;;             v* be the value of value in E
+  ;;;             if v* is defined it must be a primitive value, then
+  ;;;                 return <,extend E with id v*>
+  ;;;             else
+  ;;;                raise illegalBindingForm
+  ;;;         end-let
+  ;;;
+  ;;;    When  the binding is in FORM-2,
+  ;;;    S = < v1 v2 .. vn>
+  ;;;    if every v in <v1 .. vn> is a number, then
+  ;;;        return <, extend environment E with id (make-operator <v1 .. vn>)
+  ;;;    else if every v in <v1 .. vn> is a symbol bound in E then,
+  ;;;        let v* = compose v1 .. vn
+  ;;;            return <,extend E with id v*
+  ;;;        end
+  ;;;    else
+  ;;;        let <V,W> = eval-prog <v1 .. vn,E>
+  ;;;            return <,extend W with id (make-operator V)
+  ;;;        end
+  ;;; end
+  ;;;
+  (define bind
+    (lambda (program)
+      "return a program <,E> where the binding at the head of program is
+established in E"
+      (let* ((vs-id (get-binding (get-stack program)))
+             (vs (but-last vs-id))
+             (id (last vs-id))
+             (env (get-environment program))
+             (mpes make-program-with-empty-stack)
+             (extend-env extend-environment))
+        (if (singleton? vs)
+            (let ((v (first vs)))
+              (cond ((number? v)
+                     (mpes  (extend-env id (make-operator v) env)))
+                    ((symbol? v)
+                     (mpes (extend-env id (environment-lookup v env) env)))
+                    (#t (error "Illegal binding form" program))))
+            (let ((proc-stack (all-procedures? vs env)))
+              (cond (proc-stack
+                     (mpes (extend-env id (stack-compose proc-stack) env)))
+                    ((stack-all? number? vs)
+                     (mpes (extend-env id (make-operator vs) env)))
+                    (#t (let* ((pr (eval-program (make-program vs env)))
+                               (v (get-stack pr))
+                               (env-2 (get-environment pr)))
+                          (mpes (extend-env id (make-operator v) env-2))))))))))
+  
+  
+  (define all-procedures?
+    (lambda (stack env)
+      "Return a stack of which contains the binding of each element of stack
+in the environment env. Return #f if any element of stack is not bound in env."
+      (letrec ((rec (lambda (s acc)
+                      (if (empty? s)
+                          (stack-reverse acc)
+                          (let ((x (environment-lookup (first s) env)))
+                            (if x
+                                (rec (tail s) (push x acc))
+                                #f))))))
+        (and (not-empty? stack) (rec stack (make-empty-stack))))))
+
+
+  (define make-operator
+    (lambda (x)
+      "if x i s a procedure, return x, else return a procedure which
+takes a program ans an argument, and pushes x on the program's stack"
+      (if (procedure? x)
+          x
+          (lambda (program)
+            (push-on-program-stack x program)))))
+
+
+  (define get-binding
+    (lambda (stack)
+      "return a stack containing only the id and value from stack"
+      (let* ((vs-id (but-last stack))
+             (lst (last stack))
+             (id (last vs-id)))
+        (if (and (not (singleton? stack))
+                 (eq? ': lst)
+                 (not (number? id)))
+            (but-last stack)
+            (error "Illegal binding form"))))))
+
+stack.scm
+
+;;;; Stack ADT
+(library (stack)
+  (export  make-empty-stack
+           stack?
+           empty?
+           not-empty?
+           head
+           last
+           contains-at-least-two?
+           singleton?
+           tail
+           first
+           second
+           but-last
+           push
+           stack-reverse
+           stack-adjoin
+           stack-all?
+           stack-map
+           stack-compose
+           list->stack)
+  
+  (import (rnrs))
+
+  
+  ;;; Stack representation
+  (define make-empty-stack
+    (lambda ()
+      "return an empty stack"
+      (list)))
+
+  ;;; Primitive predicates
+  (define stack?
+    (lambda (x)
+      "return #t iff x is a stack"
+      (list? x)))
+  
+  (define empty?
+    (lambda (stack)
+      "return #t iff stack is empty"
+      (null? stack)))
+
+  (define not-empty?
+    (lambda (stack)
+      "return #tt iff stack is not empty"
+      (not (empty? stack))))
+
+  ;; Primitive accessors
+  (define head
+    (lambda (stack)
+      "return the first element of stack"
+      (if (not-empty? stack)
+          (car stack)
+          (error "Stack empty: " stack))))
+
+  (define tail
+    (lambda (stack)
+      "return the resulting stack with the first element removed"
+      (if (not-empty? stack)
+          (cdr stack)
+          (error "Cannot take the tail of an empty stack!: " stack))))
+
+  ;;; High level stack predicates and accessors.
+  ;;; Procedures at this level must be indpendent of the Stack representation.
+  (define first head)
+
+  
+    (define last
+    (lambda (stack)
+      "return the last element of stack"
+      (cond ((empty? stack) (error "stack is empty!: " stack))
+            ((empty? (tail stack)) (first stack))
+            (#t (last (tail stack))))))
+
+    
+  (define contains-at-least-two?
+    (lambda (stack)
+      "return #t iff stack contains at least two elements"
+      (and (not-empty? stack)
+           (not-empty? (tail stack)))))
+
+  
+  (define singleton?
+    (lambda (stack)
+      "return #t iff stack contains only one element"
+      (and (not-empty? stack) (not (contains-at-least-two? stack)))))
+
+  
+    (define second
+    (lambda (stack)
+      "return the second element of stack"
+      (if (contains-at-least-two? stack)
+          (first (tail stack))
+          (error "stack must contain at least 2 elements: " stack))))
+
+
+    (define but-last
+    (lambda (stack)
+      "return a new stack S which contains all the elements of stack
+except the last element."
+      (let ((f (first stack))
+            (st (tail stack)))
+        (if (empty? st)
+            (make-empty-stack)
+            (push f (but-last st))))))
+
+  
+  ;;; Stack manipulation operations.
+  (define push
+    (lambda (element stack)
+      "return a new stack with element as the first element and
+stack as the tail of the new stack."
+      (cons element stack)))
+
+  
+   (define stack-foldl
+    (lambda (func initial-value stack)
+      "the foldl function defined on stacks"
+      (if (empty? stack)
+          initial-value
+          (stack-foldl func
+                       (func initial-value (first stack))
+                       (tail stack)))))
+
+  
+  (define stack-reverse
+    (lambda (stack)
+      "return the reverse of stack"
+      (stack-foldl (lambda (acc x) (push x acc))
+                   (make-empty-stack)
+                   stack)))
+
+
+  (define stack-adjoin
+    (lambda (s1 s2)
+      "return a new stack S which consists of the elements of s1 and s2
+in order"
+      (stack-foldl (lambda (acc x) (push x acc))
+                   s2
+                   (stack-reverse s1))))
+
+  
+  (define stack-all?
+    (lambda (predicate stack)
+      "return #t iff predicate is true for every element in stack"
+      (or (empty? stack)
+          (and (predicate (first stack))
+               (stack-all? predicate (tail stack))))))
+  
+
+  (define stack-map
+    (lambda (func stack)
+      "the map function defined on stacks"
+      (stack-reverse (stack-foldl (lambda (acc x) (push (func x) acc))
+                                  (make-empty-stack)
+                                  stack))))
+
+
+  (define stack-compose
+    (lambda (stack)
+      "return a function which is the composition of all functions in stack.
+Precondition: every element in stack is a function."
+      (stack-foldl (lambda (f g)
+                    (compose-2 f g))
+                  (lambda (x) x)
+                  stack)))
+
+  
+  (define compose-2
+    (lambda (f g)
+      "simple function composition"
+      (lambda (x)
+        (f (g x)))))
+
+  
+  (define list->stack
+    (lambda (some-list)
+      "retun the stack equivalent of lst.
+The first element of lst is the head of the stack"
+      (letrec ((builder (lambda (lst stack)
+                          (if (null? lst)
+                              (stack-reverse stack)
+                              (builder (cdr lst) (push (car lst) stack))))))
+        (builder some-list (make-empty-stack))))))
+
+environment.scm
+
+;;;; Environment ADT
+(library (environment)
+  (export environment-lookup extend-environment make-empty-environment)
+  (import (rnrs))
+  
+  (define make-empty-environment
+    (lambda ()
+      (list)))
+
+  
+  (define extend-environment
+    (lambda (id value environment)
+      "return a new environment with `id` added to `environment`
+with the value `value`"
+      (cons (cons id value) environment)))
+
+  
+  (define environment-lookup
+    (lambda (id environment)
+      "return the value of id in evironment"
+      (let ((value (assq id environment)))
+        (if value
+            (cdr value)
+            #f)))))
+
+program.scm
+
+;;;; Program abstraction
+;;; A program is a datastructure which consists of a stack and an envronment
+(library (program)
+  (export make-program
+          get-stack
+          get-environment
+          push-on-program-stack
+          adjoin-program-stack
+          make-program-with-empty-stack)
+  
+  (import (rnrs)
+          (stack)
+          (environment))
+
+  
+  (define make-program
+    (lambda (stack env)
+      "return a new program"
+      (list stack env)))
+
+  
+  (define get-stack
+    (lambda (program)
+      "return the stack in program"
+      (car program)))
+
+  
+  (define get-environment
+    (lambda (program)
+      "return the environment in program"
+      (cadr program)))
+
+  
+  (define push-on-program-stack
+    (lambda (element program)
+      "return a new program P with the element S pushed on programs stack"
+      (let ((stack (get-stack program))
+            (env (get-environment program)))
+        (make-program (push element stack) env))))
+
+  
+  (define adjoin-program-stack
+    (lambda (stack program)
+      "return the result of adjoining stack and program's stack"
+      (let ((new-stack (stack-adjoin stack (get-stack program))))
+        (make-program new-stack (get-environment program)))))
+
+  
+  (define make-program-with-empty-stack
+    (lambda (env)
+      "return a new program P with an empty stack and environment env"
+      (make-program (make-empty-stack) env))))
+
+parser.scm
+
+;;;; Parser for Forth subset
+
+(library (parser)
+  (export string->stack string-list->stack)
+  (import (rnrs)
+          (stack))
+
+
+  (define space?
+    (lambda (c)
+      "return #t iff c is the space character"
+      (char=? c #\space)))
+
+  
+  (define char-list->forth-value
+    (lambda (char-list)
+      "return the baby-forth value resulting from reversing the concatenated
+elements of char-list.
+A value is either a symbol or an integer.
+If the elements of char-list are all digits, the value is an integer
+else it is a symbol
+
+Precondition:
+------------
+char-list is a list of characters with no blanks"
+      (let ((str (list->string  (reverse char-list))))
+        (let ((num (string->number str)))
+          (if num
+              num
+              (string->symbol str))))))
+
+  
+  (define push-val
+    (lambda (char-list stack)
+      "return a new stack S which has the forth-value resulting from 
+reversing the concatenated  elements of char-list pushed on stack.
+If char-list is empty, return stack"
+      (if (null? char-list)
+          stack
+          (push (char-list->forth-value char-list) stack))))
+
+  
+  (define string-list->stack
+    (lambda (string-list)
+      (let ((f (lambda (str)
+                 (string->stack str))))
+        (stack-map f string-list))))
+
+
+  (define semi-colon->percent
+    (lambda (c)
+      (if (char=? c #\;)
+          #\%
+          c)))
+  
+
+  (define string->stack
+    (lambda (str)
+      "return a stack S of symbols where the elements of S are the symbol
+version of the words in str pushed onto S in the order they appear in
+string-list.
+A word is a collection of consecutive characters not including a blank."
+      (letrec ((len (string-length str))
+               (parser (lambda (idx acc stack)
+                         (if (= idx len)
+                             (push-val acc stack)
+                             (let ((c (char-downcase (string-ref str idx)))
+                                   (next (+ 1 idx)))
+                               (if (space? c)
+                                   (parser next
+                                           (make-empty-stack)
+                                           (push-val acc stack))
+                                   (parser next
+                                           (cons (semi-colon->percent c) acc)
+                                           stack)))))))
+        (parser 0 (make-empty-stack) (make-empty-stack))))))
